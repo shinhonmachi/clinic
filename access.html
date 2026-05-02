@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>アクセス | さくらクリニック</title>
+<title>アクセス | 新本町クリニック</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -25,19 +25,11 @@
   .page-title { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; }
   .page-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
   .container { max-width: 680px; margin: 0 auto; padding: 48px 32px; }
-  .map-area {
-    background: var(--green-light); border: 1px solid #c5dece; border-radius: 20px;
-    height: 240px; display: flex; align-items: center; justify-content: center;
-    flex-direction: column; gap: 10px; margin-bottom: 28px;
-    font-size: 14px; color: var(--text-muted);
-  }
+  .map-area { background: var(--green-light); border: 1px solid #c5dece; border-radius: 20px; height: 240px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; margin-bottom: 28px; font-size: 14px; color: var(--text-muted); }
   .map-area .map-pin { font-size: 36px; }
   .map-area small { font-size: 12px; }
   .info-grid { display: grid; gap: 14px; margin-bottom: 28px; }
-  .info-row {
-    background: white; border: 1px solid var(--border); border-radius: 14px;
-    padding: 18px 22px; display: flex; align-items: flex-start; gap: 16px;
-  }
+  .info-row { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 18px 22px; display: flex; align-items: flex-start; gap: 16px; }
   .info-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
   .info-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
   .info-value { font-size: 14px; font-weight: 500; color: var(--text); }
@@ -54,20 +46,20 @@
 </head>
 <body>
 <nav>
-  <a href="index.html" class="logo"><div class="logo-icon">🌸</div>さくらクリニック</a>
+  <a href="clinic_homepage.html" class="logo"><div class="logo-icon">🏥</div>新本町クリニック</a>
   <ul class="nav-links">
     <li><a href="shinryo_annai.html">診療案内</a></li>
     <li><a href="shinryo_jikan.html">診療時間</a></li>
     <li><a href="access.html" class="active">アクセス</a></li>
     <li><a href="staff.html">スタッフ</a></li>
   </ul>
-  <div class="nav-tel">📞 03-1234-5678</div>
+  <div class="nav-tel">📞 088-856-7511</div>
 </nav>
 
 <div class="page-hero">
   <span class="page-label">Access</span>
   <div class="page-title">アクセス</div>
-  <div class="page-sub">〇〇駅から徒歩3分です</div>
+  <div class="page-sub">高知県高知市北金田 ソフィアビル5F</div>
 </div>
 
 <div class="container">
@@ -83,58 +75,57 @@
       <span class="info-icon">🏥</span>
       <div>
         <div class="info-label">クリニック名</div>
-        <div class="info-value">さくらクリニック</div>
+        <div class="info-value">新本町クリニック</div>
       </div>
     </div>
     <div class="info-row">
       <span class="info-icon">📍</span>
       <div>
         <div class="info-label">住所</div>
-        <div class="info-value">〒000-0000 東京都〇〇区〇〇1-2-3 さくらビル2F</div>
+        <div class="info-value">高知県高知市北金田11-22 ソフィアビル5F</div>
       </div>
     </div>
     <div class="info-row">
       <span class="info-icon">📞</span>
       <div>
         <div class="info-label">電話番号</div>
-        <div class="info-value">03-1234-5678</div>
-        <div class="info-note">受付時間：診療時間内（水・日・祝除く）</div>
+        <div class="info-value">088-856-7511</div>
+        <div class="info-note">受付時間：診療時間内（木・日・祝除く）</div>
       </div>
     </div>
     <div class="info-row">
-      <span class="info-icon">🅿️</span>
+      <span class="info-icon">🕐</span>
       <div>
-        <div class="info-label">駐車場</div>
-        <div class="info-value">近隣提携駐車場あり（3ヶ所）</div>
-        <div class="info-note">受付にてサービス券をお渡ししております</div>
+        <div class="info-label">診療時間</div>
+        <div class="info-value">月・火・水・金　9:00〜12:00 / 14:00〜18:00</div>
+        <div class="info-note">土曜 9:00〜12:00　／　木・土午後・日・祝 休診</div>
       </div>
-    </div>
-  </div>
-
-  <div class="route-card">
-    <div class="route-title">🚉 電車でお越しの方</div>
-    <div class="route-steps">
-      <div class="route-step">〇〇線 <strong>「〇〇駅」</strong> 北口を出ます</div>
-      <div class="route-step">〇〇通りを直進（約200m）</div>
-      <div class="route-step"><strong>さくらビル2F</strong> が当クリニックです（徒歩約3分）</div>
     </div>
   </div>
 
   <div class="route-card">
     <div class="route-title">🚗 お車でお越しの方</div>
     <div class="route-steps">
-      <div class="route-step">〇〇インターを降りて〇〇方面へ</div>
-      <div class="route-step">〇〇交差点を右折</div>
-      <div class="route-step">近隣の<strong>提携駐車場</strong>をご利用ください（受付にてサービス券あり）</div>
+      <div class="route-step">高知市北金田エリアへお越しください</div>
+      <div class="route-step"><strong>ソフィアビル5F</strong> が当クリニックです</div>
+      <div class="route-step">お車でお越しの際は近隣駐車場をご利用ください</div>
+    </div>
+  </div>
+
+  <div class="route-card">
+    <div class="route-title">🚌 バスでお越しの方</div>
+    <div class="route-steps">
+      <div class="route-step">最寄りのバス停よりお越しください</div>
+      <div class="route-step">詳しいアクセスは<strong>お電話（088-856-7511）</strong>にてお問い合わせください</div>
     </div>
   </div>
 
 </div>
 
 <footer>
-  <div class="footer-logo">🌸 さくらクリニック</div>
-  <p>〒000-0000 東京都〇〇区〇〇1-2-3 ｜ TEL: 03-1234-5678</p>
-  <p style="margin-top:8px;">© 2025 さくらクリニック. All rights reserved.</p>
+  <div class="footer-logo">🏥 新本町クリニック</div>
+  <p>高知県高知市北金田11-22 ソフィアビル5F ｜ TEL: 088-856-7511</p>
+  <p style="margin-top:8px;">© 2025 新本町クリニック. All rights reserved.</p>
 </footer>
 </body>
 </html>
