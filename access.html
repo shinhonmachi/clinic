@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>アクセス | さくらクリニック</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --sakura: #f7c5c5; --sakura-deep: #e8918e; --sakura-light: #fdf0f0;
+    --green: #7aab8a; --green-light: #eef5f0; --cream: #fdfaf6;
+    --text: #3a3530; --text-muted: #8a807a; --border: #ecdfd9;
+  }
+  body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--cream); font-size: 14px; line-height: 1.8; }
+  nav { background: rgba(253,250,246,0.95); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; color: var(--sakura-deep); display: flex; align-items: center; gap: 8px; text-decoration: none; }
+  .logo-icon { width: 28px; height: 28px; background: var(--sakura); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 13px; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--sakura-deep); }
+  .nav-tel { font-size: 13px; color: var(--sakura-deep); font-weight: 500; }
+  .page-hero { background: linear-gradient(135deg, #fdf6f6 0%, #fdf0f0 60%, #f0f7f2 100%); padding: 48px 32px 40px; text-align: center; border-bottom: 1px solid var(--border); }
+  .page-label { font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; display: block; }
+  .page-title { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; }
+  .page-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+  .container { max-width: 680px; margin: 0 auto; padding: 48px 32px; }
+  .map-area {
+    background: var(--green-light); border: 1px solid #c5dece; border-radius: 20px;
+    height: 240px; display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 10px; margin-bottom: 28px;
+    font-size: 14px; color: var(--text-muted);
+  }
+  .map-area .map-pin { font-size: 36px; }
+  .map-area small { font-size: 12px; }
+  .info-grid { display: grid; gap: 14px; margin-bottom: 28px; }
+  .info-row {
+    background: white; border: 1px solid var(--border); border-radius: 14px;
+    padding: 18px 22px; display: flex; align-items: flex-start; gap: 16px;
+  }
+  .info-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .info-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
+  .info-value { font-size: 14px; font-weight: 500; color: var(--text); }
+  .info-note { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  .route-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 14px; }
+  .route-title { font-size: 14px; font-weight: 500; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .route-steps { display: flex; flex-direction: column; gap: 10px; padding-left: 12px; border-left: 2px dashed var(--sakura); }
+  .route-step { font-size: 13px; color: var(--text-muted); position: relative; padding-left: 16px; }
+  .route-step::before { content: ''; position: absolute; left: -18px; top: 8px; width: 8px; height: 8px; background: var(--sakura-deep); border-radius: 50%; }
+  .route-step strong { color: var(--text); font-weight: 500; }
+  footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 32px; font-size: 12px; }
+  .footer-logo { font-family: 'Noto Serif JP', serif; font-size: 16px; color: white; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="logo"><div class="logo-icon">🌸</div>さくらクリニック</a>
+  <ul class="nav-links">
+    <li><a href="shinryo_annai.html">診療案内</a></li>
+    <li><a href="shinryo_jikan.html">診療時間</a></li>
+    <li><a href="access.html" class="active">アクセス</a></li>
+    <li><a href="staff.html">スタッフ</a></li>
+  </ul>
+  <div class="nav-tel">📞 03-1234-5678</div>
+</nav>
+
+<div class="page-hero">
+  <span class="page-label">Access</span>
+  <div class="page-title">アクセス</div>
+  <div class="page-sub">〇〇駅から徒歩3分です</div>
+</div>
+
+<div class="container">
+
+  <div class="map-area">
+    <div class="map-pin">🗺️</div>
+    <div>ここに Google マップを埋め込んでください</div>
+    <small>例: &lt;iframe src="https://maps.google.com/..."&gt;&lt;/iframe&gt;</small>
+  </div>
+
+  <div class="info-grid">
+    <div class="info-row">
+      <span class="info-icon">🏥</span>
+      <div>
+        <div class="info-label">クリニック名</div>
+        <div class="info-value">さくらクリニック</div>
+      </div>
+    </div>
+    <div class="info-row">
+      <span class="info-icon">📍</span>
+      <div>
+        <div class="info-label">住所</div>
+        <div class="info-value">〒000-0000 東京都〇〇区〇〇1-2-3 さくらビル2F</div>
+      </div>
+    </div>
+    <div class="info-row">
+      <span class="info-icon">📞</span>
+      <div>
+        <div class="info-label">電話番号</div>
+        <div class="info-value">03-1234-5678</div>
+        <div class="info-note">受付時間：診療時間内（水・日・祝除く）</div>
+      </div>
+    </div>
+    <div class="info-row">
+      <span class="info-icon">🅿️</span>
+      <div>
+        <div class="info-label">駐車場</div>
+        <div class="info-value">近隣提携駐車場あり（3ヶ所）</div>
+        <div class="info-note">受付にてサービス券をお渡ししております</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="route-card">
+    <div class="route-title">🚉 電車でお越しの方</div>
+    <div class="route-steps">
+      <div class="route-step">〇〇線 <strong>「〇〇駅」</strong> 北口を出ます</div>
+      <div class="route-step">〇〇通りを直進（約200m）</div>
+      <div class="route-step"><strong>さくらビル2F</strong> が当クリニックです（徒歩約3分）</div>
+    </div>
+  </div>
+
+  <div class="route-card">
+    <div class="route-title">🚗 お車でお越しの方</div>
+    <div class="route-steps">
+      <div class="route-step">〇〇インターを降りて〇〇方面へ</div>
+      <div class="route-step">〇〇交差点を右折</div>
+      <div class="route-step">近隣の<strong>提携駐車場</strong>をご利用ください（受付にてサービス券あり）</div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="footer-logo">🌸 さくらクリニック</div>
+  <p>〒000-0000 東京都〇〇区〇〇1-2-3 ｜ TEL: 03-1234-5678</p>
+  <p style="margin-top:8px;">© 2025 さくらクリニック. All rights reserved.</p>
+</footer>
+</body>
+</html>
