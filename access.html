@@ -25,9 +25,9 @@
   .page-title { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; }
   .page-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
   .container { max-width: 680px; margin: 0 auto; padding: 48px 32px; }
-  .map-area { background: var(--green-light); border: 1px solid #c5dece; border-radius: 20px; height: 240px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; margin-bottom: 28px; font-size: 14px; color: var(--text-muted); }
+  .map-area { display: block; background: var(--green-light); border: 1px solid #c5dece; border-radius: 20px; height: 240px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; margin-bottom: 28px; font-size: 14px; color: var(--text-muted); text-decoration: none; transition: background 0.2s; }
+  .map-area:hover { background: #e6f0ea; }
   .map-area .map-pin { font-size: 36px; }
-  .map-area small { font-size: 12px; }
   .info-grid { display: grid; gap: 14px; margin-bottom: 28px; }
   .info-row { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 18px 22px; display: flex; align-items: flex-start; gap: 16px; }
   .info-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
@@ -46,7 +46,7 @@
 </head>
 <body>
 <nav>
-  <a href="clinic_homepage.html" class="logo"><div class="logo-icon">🏥</div>新本町クリニック</a>
+  <a href="index.html" class="logo"><div class="logo-icon">🏥</div>新本町クリニック</a>
   <ul class="nav-links">
     <li><a href="shinryo_annai.html">診療案内</a></li>
     <li><a href="shinryo_jikan.html">診療時間</a></li>
@@ -64,11 +64,10 @@
 
 <div class="container">
 
-  <div class="map-area">
+  <a href="https://www.google.com/maps/search/?api=1&query=高知県高知市北金田11-22+ソフィアビル5F" target="_blank" rel="noopener noreferrer" class="map-area">
     <div class="map-pin">🗺️</div>
-    <div>ここに Google マップを埋め込んでください</div>
-    <small>例: &lt;iframe src="https://maps.google.com/..."&gt;&lt;/iframe&gt;</small>
-  </div>
+    <div>Google マップで開く</div>
+  </a>
 
   <div class="info-grid">
     <div class="info-row">
