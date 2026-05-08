@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>新本町クリニック</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --sakura: #f7c5c5; --sakura-deep: #e8918e; --sakura-light: #fdf0f0;
+    --green: #7aab8a; --green-light: #eef5f0; --cream: #fdfaf6;
+    --text: #3a3530; --text-muted: #8a807a; --white: #ffffff; --border: #ecdfd9;
+  }
+  body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--cream); font-size: 14px; line-height: 1.8; }
+  nav { background: rgba(253,250,246,0.95); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; color: var(--sakura-deep); display: flex; align-items: center; gap: 8px; }
+  .logo-icon { width: 28px; height: 28px; background: var(--sakura); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 13px; transition: color 0.2s; }
+  .nav-links a:hover { color: var(--sakura-deep); }
+  .nav-tel { font-size: 13px; color: var(--sakura-deep); font-weight: 500; }
+  .hero { background: linear-gradient(135deg, #fdf6f6 0%, #fdf0f0 50%, #f0f7f2 100%); padding: 64px 32px; text-align: center; position: relative; overflow: hidden; }
+  .hero::before { content: ''; position: absolute; top: -80px; left: -80px; width: 300px; height: 300px; background: radial-gradient(circle, rgba(247,197,197,0.3), transparent 70%); border-radius: 50%; }
+  .hero::after { content: ''; position: absolute; bottom: -60px; right: -60px; width: 240px; height: 240px; background: radial-gradient(circle, rgba(122,171,138,0.2), transparent 70%); border-radius: 50%; }
+  .petals { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; }
+  .petal { position: absolute; width: 10px; height: 10px; background: var(--sakura); border-radius: 50% 0 50% 0; opacity: 0.5; animation: float 8s ease-in-out infinite; }
+  .petal:nth-child(1) { top: 10%; left: 15%; animation-delay: 0s; }
+  .petal:nth-child(2) { top: 20%; left: 70%; animation-delay: 2s; width: 7px; height: 7px; }
+  .petal:nth-child(3) { top: 60%; left: 10%; animation-delay: 4s; width: 6px; height: 6px; }
+  .petal:nth-child(4) { top: 30%; right: 20%; animation-delay: 1s; }
+  .petal:nth-child(5) { top: 70%; right: 15%; animation-delay: 3s; width: 8px; height: 8px; }
+  @keyframes float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-12px) rotate(20deg); } }
+  .hero-tag { display: inline-block; background: var(--sakura); color: var(--sakura-deep); font-size: 12px; padding: 4px 14px; border-radius: 20px; margin-bottom: 20px; font-weight: 500; letter-spacing: 0.05em; }
+  .hero h1 { font-family: 'Noto Serif JP', serif; font-size: 30px; font-weight: 600; line-height: 1.5; margin-bottom: 16px; color: var(--text); position: relative; z-index: 1; }
+  .hero p { font-size: 14px; color: var(--text-muted); max-width: 400px; margin: 0 auto 32px; line-height: 1.9; }
+  .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; position: relative; z-index: 1; }
+  .btn-primary { background: var(--sakura-deep); color: white; border: none; padding: 12px 28px; border-radius: 30px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.2s; font-weight: 500; }
+  .btn-primary:hover { background: #d97a77; transform: translateY(-1px); }
+  .btn-outline { background: white; color: var(--sakura-deep); border: 1.5px solid var(--sakura); padding: 12px 28px; border-radius: 30px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.2s; font-weight: 500; }
+  .btn-outline:hover { background: var(--sakura-light); transform: translateY(-1px); }
+  section { padding: 48px 32px; }
+  .section-header { text-align: center; margin-bottom: 32px; }
+  .section-label { display: inline-block; font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 600; color: var(--text); }
+  .section-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+  .departments { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; max-width: 640px; margin: 0 auto; }
+  .dept-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 24px 16px; text-align: center; cursor: pointer; transition: all 0.25s; }
+  .dept-card:hover { border-color: var(--sakura); box-shadow: 0 4px 16px rgba(232,145,142,0.12); transform: translateY(-2px); }
+  .dept-icon { width: 52px; height: 52px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 14px; font-size: 22px; }
+  .dept-name { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+  .dept-desc { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+  .news-section { background: white; }
+  .news-list { max-width: 580px; margin: 0 auto; }
+  .news-item { display: flex; align-items: flex-start; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--border); }
+  .news-item:last-child { border-bottom: none; }
+  .news-date { font-size: 12px; color: var(--text-muted); min-width: 80px; padding-top: 1px; }
+  .news-badge { font-size: 10px; padding: 2px 8px; border-radius: 10px; min-width: 54px; text-align: center; font-weight: 500; }
+  .badge-info { background: #e8f4fd; color: #3b85c0; }
+  .badge-new { background: var(--sakura-light); color: var(--sakura-deep); }
+  .badge-holiday { background: var(--green-light); color: var(--green); }
+  .news-text { font-size: 13px; color: var(--text); flex: 1; }
+  .hours-section { background: var(--sakura-light); }
+  .hours-card { background: white; border-radius: 20px; padding: 28px; max-width: 560px; margin: 0 auto; border: 1px solid var(--border); }
+  .hours-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .hours-table th { text-align: center; padding: 8px 6px; font-size: 12px; color: var(--text-muted); font-weight: 400; border-bottom: 1px solid var(--border); }
+  .hours-table td { text-align: center; padding: 10px 6px; border-bottom: 1px dashed var(--border); }
+  .hours-table tr:last-child td { border-bottom: none; }
+  .hours-table td:first-child { text-align: left; font-weight: 500; padding-left: 0; color: var(--text); }
+  .check { color: var(--sakura-deep); font-size: 16px; }
+  .dash { color: var(--border); }
+  .note { display: flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 12px; color: var(--text-muted); background: var(--green-light); padding: 10px 14px; border-radius: 10px; }
+  .access-inner { max-width: 560px; margin: 0 auto; display: grid; gap: 16px; }
+  .access-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 20px; display: flex; align-items: flex-start; gap: 14px; }
+  .access-icon { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 18px; }
+  .access-icon.pink { background: var(--sakura-light); }
+  .access-icon.green { background: var(--green-light); }
+  .access-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
+  .access-value { font-size: 14px; color: var(--text); font-weight: 500; }
+  .map-placeholder { background: var(--green-light); border: 1px solid var(--border); border-radius: 16px; height: 160px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 8px; color: var(--text-muted); font-size: 13px; cursor: pointer; transition: all 0.2s; }
+  .map-placeholder:hover { background: #e6f0ea; }
+  .map-pin { font-size: 28px; }
+  footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 32px; font-size: 12px; }
+  .footer-logo { font-family: 'Noto Serif JP', serif; font-size: 16px; color: white; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="logo">
+    <div class="logo-icon">🏥</div>
+    新本町クリニック
+  </div>
+  <ul class="nav-links">
+    <li><a href="shinryo_annai.html">診療案内</a></li>
+    <li><a href="ryokin.html">料金案内</a></li>
+    <li><a href="shisetsu.html">施設案内</a></li>
+    <li><a href="access.html">アクセス・診療時間</a></li>
+    <li><a href="staff.html">スタッフ</a></li>
+  </ul>
+  <div class="nav-tel">📞 088-856-7511</div>
+</nav>
+
+<div class="hero">
+  <div class="petals">
+    <div class="petal"></div><div class="petal"></div><div class="petal"></div>
+    <div class="petal"></div><div class="petal"></div>
+  </div>
+  <div class="hero-tag">地域に寄り添うクリニック</div>
+  <h1>おからだの<br>ことを、いつでも。</h1>
+  <p>患者さまお一人おひとりに丁寧に向き合い、<br>安心して通えるクリニックを目指しています。</p>
+  <div class="hero-btns">
+    <button class="btn-primary">📞 お電話でご予約</button>
+    <button class="btn-outline">診療内容を見る</button>
+  </div>
+</div>
+
+<section>
+  <div class="section-header">
+    <div class="section-label">Departments</div>
+    <div class="section-title">診療科目</div>
+    <div class="section-sub">幅広い症状に対応しています</div>
+  </div>
+  <div class="departments">
+    <div class="dept-card">
+      <div class="dept-icon" style="background:#fdf0f0;">🩺</div>
+      <div class="dept-name">内科</div>
+      <div class="dept-desc">かぜ・発熱・慢性疾患など</div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-icon" style="background:#edf3fb;">🧠</div>
+      <div class="dept-name">心療内科</div>
+      <div class="dept-desc">ストレス・心身の不調など</div>
+    </div>
+    <div class="dept-card">
+      <div class="dept-icon" style="background:#eef5f0;">🌿</div>
+      <div class="dept-name">漢方内科</div>
+      <div class="dept-desc">漢方薬による体質改善</div>
+    </div>
+  </div>
+</section>
+
+<section class="news-section">
+  <div class="section-header">
+    <div class="section-label">News</div>
+    <div class="section-title">お知らせ</div>
+  </div>
+  <div class="news-list">
+    <div class="news-item">
+      <span class="news-date">2025.05.01</span>
+      <span class="news-badge badge-new">新着</span>
+      <span class="news-text">GW期間中（5月3日〜6日）は休診となります。</span>
+    </div>
+    <div class="news-item">
+      <span class="news-date">2025.04.01</span>
+      <span class="news-badge badge-holiday">休診</span>
+      <span class="news-text">休診日：木曜・土曜午後・日曜・祝日</span>
+    </div>
+  </div>
+</section>
+
+<section class="hours-section">
+  <div class="section-header">
+    <div class="section-label">Hours</div>
+    <div class="section-title">診療時間</div>
+  </div>
+  <div class="hours-card">
+    <table class="hours-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日・祝</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>午前<br><small style="color:var(--text-muted);font-weight:400;">9:00〜12:00</small></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="dash">—</span></td>
+        </tr>
+        <tr>
+          <td>午後<br><small style="color:var(--text-muted);font-weight:400;">14:00〜18:00</small></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="dash">—</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">
+      🌿 木曜・土曜午後・日曜・祝日は休診です。土曜は午前のみの診療となります。
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="section-header">
+    <div class="section-label">Access</div>
+    <div class="section-title">アクセス</div>
+  </div>
+  <div class="access-inner">
+    <div class="access-card">
+      <div class="access-icon pink">📍</div>
+      <div>
+        <div class="access-label">住所</div>
+        <div class="access-value">高知県高知市北金田11-22 ソフィアビル5F</div>
+      </div>
+    </div>
+    <div class="access-card">
+      <div class="access-icon green">📞</div>
+      <div>
+        <div class="access-label">電話番号</div>
+        <div class="access-value">088-856-7511</div>
+      </div>
+    </div>
+    <a href="https://www.google.com/maps/search/?api=1&query=高知県高知市北金田11-22+ソフィアビル5F" target="_blank" rel="noopener noreferrer" class="map-placeholder" style="text-decoration:none;">
+      <div class="map-pin">🗺️</div>
+      <div>Google マップで開く</div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">🏥 新本町クリニック</div>
+  <p>高知県高知市北金田11-22 ソフィアビル5F ｜ TEL: 088-856-7511</p>
+  <p style="margin-top:8px;">© 2025 新本町クリニック. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
