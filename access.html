@@ -24,14 +24,52 @@
   .page-label { font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; display: block; }
   .page-title { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; }
   .page-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
-  .tab-nav { max-width: 680px; margin: 32px auto 0; padding: 0 32px; display: flex; gap: 8px; }
-  .tab-btn { flex: 1; padding: 12px; border: 1px solid var(--border); border-radius: 12px; background: white; font-size: 13px; font-family: 'Noto Sans JP', sans-serif; color: var(--text-muted); cursor: pointer; transition: all 0.2s; font-weight: 500; }
-  .tab-btn.active { background: var(--sakura-deep); color: white; border-color: var(--sakura-deep); }
-  .tab-btn:hover:not(.active) { border-color: var(--sakura-deep); color: var(--sakura-deep); }
-  .container { max-width: 680px; margin: 0 auto; padding: 32px 32px 48px; }
-  .tab-panel { display: none; }
-  .tab-panel.active { display: block; }
-  .info-grid { display: grid; gap: 14px; margin-bottom: 28px; }
+  .container { max-width: 680px; margin: 0 auto; padding: 48px 32px; }
+
+  /* セクション見出し */
+  .section-heading {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-heading::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background: var(--sakura-deep);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .section-gap { margin-bottom: 48px; }
+
+  /* 診療時間 */
+  .hours-card { background: white; border-radius: 20px; padding: 32px; border: 1px solid var(--border); margin-bottom: 16px; }
+  .hours-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .hours-table th { text-align: center; padding: 10px 6px; font-size: 12px; color: var(--text-muted); font-weight: 400; border-bottom: 2px solid var(--border); }
+  .hours-table td { text-align: center; padding: 12px 6px; border-bottom: 1px dashed var(--border); }
+  .hours-table tr:last-child td { border-bottom: none; }
+  .hours-table td:first-child { text-align: left; font-weight: 500; padding-left: 0; }
+  .check { color: var(--sakura-deep); font-size: 18px; }
+  .dash { color: #ddd; }
+  .note-list { display: grid; gap: 12px; margin-bottom: 16px; }
+  .note-item { display: flex; align-items: flex-start; gap: 12px; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+  .note-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .note-text { font-size: 13px; color: var(--text); }
+  .note-text strong { font-weight: 500; display: block; margin-bottom: 2px; }
+  .tel-card { background: var(--sakura-light); border: 1px solid var(--sakura); border-radius: 16px; padding: 24px; text-align: center; margin-bottom: 16px; }
+  .tel-label { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+  .tel-number { font-family: 'Noto Serif JP', serif; font-size: 24px; color: var(--sakura-deep); font-weight: 600; }
+  .tel-hours { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+
+  /* アクセス */
+  .info-grid { display: grid; gap: 14px; margin-bottom: 16px; }
   .info-row { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 18px 22px; display: flex; align-items: flex-start; gap: 16px; }
   .info-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
   .info-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
@@ -43,24 +81,7 @@
   .route-step { font-size: 13px; color: var(--text-muted); position: relative; padding-left: 16px; }
   .route-step::before { content: ''; position: absolute; left: -18px; top: 8px; width: 8px; height: 8px; background: var(--sakura-deep); border-radius: 50%; }
   .route-step strong { color: var(--text); font-weight: 500; }
-  .hours-card { background: white; border-radius: 20px; padding: 32px; border: 1px solid var(--border); margin-bottom: 24px; }
-  .hours-card-title { font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 600; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; }
-  .hours-table { width: 100%; border-collapse: collapse; font-size: 13px; }
-  .hours-table th { text-align: center; padding: 10px 6px; font-size: 12px; color: var(--text-muted); font-weight: 400; border-bottom: 2px solid var(--border); }
-  .hours-table td { text-align: center; padding: 12px 6px; border-bottom: 1px dashed var(--border); }
-  .hours-table tr:last-child td { border-bottom: none; }
-  .hours-table td:first-child { text-align: left; font-weight: 500; padding-left: 0; }
-  .check { color: var(--sakura-deep); font-size: 18px; }
-  .dash { color: #ddd; }
-  .note-list { display: grid; gap: 12px; margin-bottom: 24px; }
-  .note-item { display: flex; align-items: flex-start; gap: 12px; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
-  .note-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
-  .note-text { font-size: 13px; color: var(--text); }
-  .note-text strong { font-weight: 500; display: block; margin-bottom: 2px; }
-  .tel-card { background: var(--sakura-light); border: 1px solid var(--sakura); border-radius: 16px; padding: 24px; text-align: center; }
-  .tel-label { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
-  .tel-number { font-family: 'Noto Serif JP', serif; font-size: 24px; color: var(--sakura-deep); font-weight: 600; }
-  .tel-hours { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+
   footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 32px; font-size: 12px; }
   .footer-logo { font-family: 'Noto Serif JP', serif; font-size: 16px; color: white; margin-bottom: 8px; }
 </style>
@@ -84,69 +105,13 @@
   <div class="page-sub">高知県高知市北金田 ソフィアビル5F</div>
 </div>
 
-<div class="tab-nav">
-  <button class="tab-btn active" onclick="switchTab('access', this)">📍 アクセス</button>
-  <button class="tab-btn" onclick="switchTab('hours', this)">🕐 診療時間</button>
-</div>
-
 <div class="container">
 
-  <div class="tab-panel active" id="tab-access">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.523028083669!2d133.5585686!3d33.5657669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354e1ea99f25a341%3A0x5e28a60ba852b561!2z44CSNzgxLTAwNzMg6auY55-l55yM6auY55-l5biC5YyX6YeR55Sw77yR77yR4oiS77yS77ySIOOCveODleOCo-OCouODk-ODqyA1Zg!5e0!3m2!1sja!2sjp!4v1777948753661!5m2!1sja!2sjp" width="100%" height="300" style="border:0; border-radius:20px; margin-bottom:28px; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <div class="info-grid">
-      <div class="info-row">
-        <span class="info-icon">🏥</span>
-        <div>
-          <div class="info-label">クリニック名</div>
-          <div class="info-value">新本町クリニック</div>
-        </div>
-      </div>
-      <div class="info-row">
-        <span class="info-icon">📍</span>
-        <div>
-          <div class="info-label">住所</div>
-          <div class="info-value">高知県高知市北金田11-22 ソフィアビル5F</div>
-        </div>
-      </div>
-      <div class="info-row">
-        <span class="info-icon">📞</span>
-        <div>
-          <div class="info-label">電話番号</div>
-          <div class="info-value">088-856-7511</div>
-          <div class="info-note">受付時間：診療時間内（木・日・祝除く）</div>
-        </div>
-      </div>
-      <div class="info-row">
-        <span class="info-icon">🕐</span>
-        <div>
-          <div class="info-label">診療時間</div>
-          <div class="info-value">月・火・水・金　9:00〜12:00 / 14:00〜18:00</div>
-          <div class="info-note">土曜 9:00〜12:00　／　木・土午後・日・祝 休診</div>
-        </div>
-      </div>
-    </div>
-    <div class="route-card">
-      <div class="route-title">🚗 お車でお越しの方</div>
-      <div class="route-steps">
-        <div class="route-step">高知市北金田エリアへお越しください</div>
-        <div class="route-step"><strong>ソフィアビル5F</strong> が当クリニックです</div>
-        <div class="route-step">お車でお越しの際は近隣駐車場をご利用ください</div>
-      </div>
-    </div>
-    <div class="route-card">
-      <div class="route-title">🚌 バスでお越しの方</div>
-      <div class="route-steps">
-        <div class="route-step">最寄りのバス停【金田橋】よりお越しください</div>
-        <div class="route-step">バス停より徒歩2分程の場所に<strong>ソフィアビル</strong>ございます。</div>
-        <div class="route-step"><strong>ソフィアビル5F</strong> が当クリニックです</div>
-        <div class="route-step">詳しいアクセスは<strong>お電話（088-856-7511）</strong>にてお問い合わせください</div>
-      </div>
-    </div>
-  </div>
+  <!-- 診療時間 -->
+  <div class="section-gap">
+    <div class="section-heading">🕐 診療時間</div>
 
-  <div class="tab-panel" id="tab-hours">
     <div class="hours-card">
-      <div class="hours-card-title">🕐 診療時間表</div>
       <table class="hours-table">
         <thead>
           <tr>
@@ -178,6 +143,7 @@
         </tbody>
       </table>
     </div>
+
     <div class="note-list">
       <div class="note-item">
         <span class="note-icon">🌿</span>
@@ -196,10 +162,54 @@
         <div class="note-text"><strong>漢方・心療内科のご予約</strong>事前にお電話でのご予約をお願いしております。</div>
       </div>
     </div>
-    <div class="tel-card">
-      <div class="tel-label">お電話でのお問い合わせ</div>
-      <div class="tel-number">📞 088-856-7511</div>
-      <div class="tel-hours">受付時間：診療時間内（木・日・祝除く）</div>
+
+  <!-- アクセス -->
+  <div>
+    <div class="section-heading">📍 アクセス</div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.523028083669!2d133.5585686!3d33.5657669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354e1ea99f25a341%3A0x5e28a60ba852b561!2z44CSNzgxLTAwNzMg6auY55-l55yM6auY55-l5biC5YyX6YeR55Sw77yR77yR4oiS77yS77ySIOOCveODleOCo-OCouODk-ODqyA1Zg!5e0!3m2!1sja!2sjp!4v1777948753661!5m2!1sja!2sjp" width="100%" height="300" style="border:0; border-radius:20px; margin-bottom:16px; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="info-grid">
+      <div class="info-row">
+        <span class="info-icon">🏥</span>
+        <div>
+          <div class="info-label">クリニック名</div>
+          <div class="info-value">新本町クリニック</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">📍</span>
+        <div>
+          <div class="info-label">住所</div>
+          <div class="info-value">高知県高知市北金田11-22 ソフィアビル5F</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">📞</span>
+        <div>
+          <div class="info-label">電話番号</div>
+          <div class="info-value">088-856-7511</div>
+          <div class="info-note">受付時間：診療時間内（木・日・祝除く）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="route-card">
+      <div class="route-title">🚗 お車でお越しの方</div>
+      <div class="route-steps">
+        <div class="route-step">高知市北金田エリアへお越しください</div>
+        <div class="route-step"><strong>ソフィアビル5F</strong> が当クリニックです</div>
+        <div class="route-step">お車でお越しの際は近隣駐車場をご利用ください</div>
+      </div>
+    </div>
+    <div class="route-card">
+      <div class="route-title">🚌 バスでお越しの方</div>
+      <div class="route-steps">
+        <div class="route-step">最寄りのバス停【金田橋】よりお越しください</div>
+        <div class="route-step">バス停より徒歩2分程の場所に<strong>ソフィアビル</strong>がございます。</div>
+        <div class="route-step"><strong>ソフィアビル5F</strong> が当クリニックです</div>
+        <div class="route-step">詳しいアクセスは<strong>お電話（088-856-7511）</strong>にてお問い合わせください</div>
+      </div>
     </div>
   </div>
 
@@ -210,14 +220,5 @@
   <p>高知県高知市北金田11-22 ソフィアビル5F ｜ TEL: 088-856-7511</p>
   <p style="margin-top:8px;">© 2025 新本町クリニック. All rights reserved.</p>
 </footer>
-
-<script>
-  function switchTab(tab, btn) {
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById('tab-' + tab).classList.add('active');
-    btn.classList.add('active');
-  }
-</script>
 </body>
 </html>
