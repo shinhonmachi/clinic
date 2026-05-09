@@ -3,30 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>料金案内 | 新本町クリニック</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<title>料金案内｜保険診療・自費診療｜新本町クリニック</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="common.css">
+  <meta name="description" content="新本町クリニックの料金案内。保険診療（初診料・再診料）と自費診療（プラセンタ・オゾン点滴・ビタミンCほか）の料金目安をご案内します。現金・カード・PayPay対応。">
+  <link rel="canonical" href="https://shinhonmachi.jp/ryokin.html">
+
+  <!-- OGP -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="料金案内｜保険診療・自費診療｜新本町クリニック">
+  <meta property="og:description" content="新本町クリニックの料金案内。保険診療（初診料・再診料）と自費診療（プラセンタ・オゾン点滴・ビタミンCほか）の料金目安をご案内します。現金・カード・PayPay対応。">
+  <meta property="og:url" content="https://shinhonmachi.jp/ryokin.html">
+  <meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+  <meta property="og:site_name" content="新本町クリニック">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="料金案内｜保険診療・自費診療｜新本町クリニック">
+  <meta name="twitter:description" content="新本町クリニックの料金案内。保険診療（初診料・再診料）と自費診療（プラセンタ・オゾン点滴・ビタミンCほか）の料金目安をご案内します。現金・カード・PayPay対応。">
+  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --sakura: #f7c5c5; --sakura-deep: #e8918e; --sakura-light: #fdf0f0;
-    --green: #7aab8a; --green-light: #eef5f0; --cream: #fdfaf6;
-    --text: #3a3530; --text-muted: #8a807a; --border: #ecdfd9;
-  }
-  body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--cream); font-size: 14px; line-height: 1.8; }
-  nav { background: rgba(253,250,246,0.95); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
-  .logo { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; color: var(--sakura-deep); display: flex; align-items: center; gap: 8px; text-decoration: none; }
-  .logo-icon { width: 28px; height: 28px; background: var(--sakura); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-  .nav-links { display: flex; gap: 24px; list-style: none; }
-  .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 13px; transition: color 0.2s; }
-  .nav-links a:hover, .nav-links a.active { color: var(--sakura-deep); }
-  .nav-tel { font-size: 13px; color: var(--sakura-deep); font-weight: 500; }
-
-  .page-hero { background: linear-gradient(135deg, #fdf6f6 0%, #fdf0f0 60%, #f0f7f2 100%); padding: 48px 32px 40px; text-align: center; border-bottom: 1px solid var(--border); }
-  .page-label { font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; display: block; }
-  .page-title { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; }
-  .page-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
-
+                  
+        
   .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
 
   /* 保険証セクション */
@@ -68,12 +74,8 @@
   .info-box ul { padding-left: 16px; }
   .info-box li { font-size: 13px; color: var(--text-muted); line-height: 1.9; }
 
-  footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 32px; font-size: 12px; }
-  .footer-logo { font-family: 'Noto Serif JP', serif; font-size: 16px; color: white; margin-bottom: 8px; }
-
+    
   @media (max-width: 540px) {
-    nav { padding: 0 16px; }
-    .nav-links { gap: 14px; }
     .container { padding: 32px 16px; }
     .self-pay-grid { grid-template-columns: 1fr; }
   }
