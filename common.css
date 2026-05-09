@@ -5,6 +5,8 @@
   --green: #7aab8a; --green-light: #eef5f0; --cream: #fdfaf6;
   --text: #3a3530; --text-muted: #8a807a; --white: #ffffff; --border: #ecdfd9;
 }
+
+/* ===== ベース ===== */
 body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--cream); font-size: 14px; line-height: 1.8; }
 
 /* ===== ヘッダー（nav）===== */
@@ -15,6 +17,12 @@ nav { background: rgba(253,250,246,0.95); border-bottom: 1px solid var(--border)
 .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 13px; transition: color 0.2s; }
 .nav-links a:hover, .nav-links a.active { color: var(--sakura-deep); }
 .nav-tel { font-size: 13px; color: var(--sakura-deep); font-weight: 500; }
+
+/* ===== サブページ共通ヒーロー ===== */
+.page-hero { background: linear-gradient(135deg, #fdf6f6 0%, #fdf0f0 60%, #f0f7f2 100%); padding: 48px 32px 40px; text-align: center; border-bottom: 1px solid var(--border); }
+.page-label { font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; display: block; }
+.page-title { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; }
+.page-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
 
 /* ===== フッター ===== */
 footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 32px; font-size: 12px; }

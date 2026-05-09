@@ -3,29 +3,35 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>スタッフ | 新本町クリニック</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<title>スタッフ紹介｜院長・看護師・スタッフ｜新本町クリニック</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="common.css">
+  <meta name="description" content="新本町クリニックのスタッフ紹介。内科・心療内科・漢方内科を専門とする院長をはじめ、患者さまに寄り添うスタッフ一同でお迎えします。">
+  <link rel="canonical" href="https://shinhonmachi.jp/staff.html">
+
+  <!-- OGP -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="スタッフ紹介｜院長・看護師・スタッフ｜新本町クリニック">
+  <meta property="og:description" content="新本町クリニックのスタッフ紹介。内科・心療内科・漢方内科を専門とする院長をはじめ、患者さまに寄り添うスタッフ一同でお迎えします。">
+  <meta property="og:url" content="https://shinhonmachi.jp/staff.html">
+  <meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+  <meta property="og:site_name" content="新本町クリニック">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="スタッフ紹介｜院長・看護師・スタッフ｜新本町クリニック">
+  <meta name="twitter:description" content="新本町クリニックのスタッフ紹介。内科・心療内科・漢方内科を専門とする院長をはじめ、患者さまに寄り添うスタッフ一同でお迎えします。">
+  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --sakura: #f7c5c5; --sakura-deep: #e8918e; --sakura-light: #fdf0f0;
-    --green: #7aab8a; --green-light: #eef5f0; --cream: #fdfaf6;
-    --text: #3a3530; --text-muted: #8a807a; --border: #ecdfd9;
-  }
-  body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--cream); font-size: 14px; line-height: 1.8; }
-  nav { background: rgba(253,250,246,0.95); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
-  .logo { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; color: var(--sakura-deep); display: flex; align-items: center; gap: 8px; text-decoration: none; }
-  .logo-icon { width: 28px; height: 28px; background: var(--sakura); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-  .nav-links { display: flex; gap: 24px; list-style: none; }
-  .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 13px; transition: color 0.2s; }
-  .nav-links a:hover, .nav-links a.active { color: var(--sakura-deep); }
-  .nav-tel { font-size: 13px; color: var(--sakura-deep); font-weight: 500; }
-  .page-hero { background: linear-gradient(135deg, #fdf6f6 0%, #fdf0f0 60%, #f0f7f2 100%); padding: 48px 32px 40px; text-align: center; border-bottom: 1px solid var(--border); }
-  .page-label { font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; display: block; }
-  .page-title { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; }
-  .page-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
-  .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
+                            .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
   .staff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
   .staff-card { background: white; border: 1px solid var(--border); border-radius: 20px; padding: 28px 24px; text-align: center; transition: all 0.25s; }
   .staff-card:hover { box-shadow: 0 4px 18px rgba(232,145,142,0.1); transform: translateY(-2px); }
@@ -41,9 +47,7 @@
   .message-card { background: var(--sakura-light); border: 1px solid var(--sakura); border-radius: 16px; padding: 28px 32px; text-align: center; }
   .message-card .quote { font-family: 'Noto Serif JP', serif; font-size: 15px; color: var(--sakura-deep); line-height: 1.9; margin-bottom: 10px; }
   .message-card .quote-from { font-size: 12px; color: var(--text-muted); }
-  footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 32px; font-size: 12px; }
-  .footer-logo { font-family: 'Noto Serif JP', serif; font-size: 16px; color: white; margin-bottom: 8px; }
-</style>
+    </style>
 </head>
 <body>
 

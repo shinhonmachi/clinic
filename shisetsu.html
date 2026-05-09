@@ -3,31 +3,37 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>施設案内 | 新本町クリニック</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<title>施設案内｜清潔で落ち着いた院内環境｜新本町クリニック</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="common.css">
+  <meta name="description" content="新本町クリニックの施設案内。清潔で落ち着いた受付・待合室・診療室の写真をご覧いただけます。高知市北金田 ソフィアビル5階。">
+  <link rel="canonical" href="https://shinhonmachi.jp/shisetsu.html">
+
+  <!-- OGP -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="施設案内｜清潔で落ち着いた院内環境｜新本町クリニック">
+  <meta property="og:description" content="新本町クリニックの施設案内。清潔で落ち着いた受付・待合室・診療室の写真をご覧いただけます。高知市北金田 ソフィアビル5階。">
+  <meta property="og:url" content="https://shinhonmachi.jp/shisetsu.html">
+  <meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+  <meta property="og:site_name" content="新本町クリニック">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="施設案内｜清潔で落ち着いた院内環境｜新本町クリニック">
+  <meta name="twitter:description" content="新本町クリニックの施設案内。清潔で落ち着いた受付・待合室・診療室の写真をご覧いただけます。高知市北金田 ソフィアビル5階。">
+  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
-* { margin: 0; padding: 0; box-sizing: border-box; }
-  :root {
-    --sakura: #f7c5c5; --sakura-deep: #e8918e; --sakura-light: #fdf0f0;
-    --green: #7aab8a; --green-light: #eef5f0; --cream: #fdfaf6;
-    --text: #3a3530; --text-muted: #8a807a; --border: #ecdfd9;
-  }
-  body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--cream); font-size: 14px; line-height: 1.8; }
-
-  nav { background: rgba(253,250,246,0.95); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
-  .logo { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; color: var(--sakura-deep); display: flex; align-items: center; gap: 8px; text-decoration: none; }
-  .logo-icon { width: 28px; height: 28px; background: var(--sakura); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
-  .nav-links { display: flex; gap: 24px; list-style: none; }
-  .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 13px; transition: color 0.2s; }
-  .nav-links a:hover, .nav-links a.active { color: var(--sakura-deep); }
-  .nav-tel { font-size: 13px; color: var(--sakura-deep); font-weight: 500; }
-
-  .page-hero { background: linear-gradient(135deg, #fdf6f6 0%, #fdf0f0 60%, #f0f7f2 100%); padding: 48px 32px 40px; text-align: center; border-bottom: 1px solid var(--border); }
-  .page-label { font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; display: block; }
-  .page-title { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; }
-  .page-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
-
+    
+              
+        
   /* メインビジュアル */
   .hero-photo {
     width: 100%;
@@ -156,9 +162,7 @@
   .lightbox-prev { left: 12px; }
   .lightbox-next { right: 12px; }
 
-  footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 32px; font-size: 12px; }
-  .footer-logo { font-family: 'Noto Serif JP', serif; font-size: 16px; color: white; margin-bottom: 8px; }
-
+    
   @media (max-width: 600px) {
     .photo-grid-3 { grid-template-columns: 1fr 1fr; }
     .hero-photo { height: 260px; }
@@ -176,7 +180,10 @@
 </div>
 
 <!-- 外観メインビジュアル -->
-<img src="pics/外観.JPG" class="hero-photo" alt="クリニック外観" onclick="openLightbox(0)">
+<picture>
+  <source srcset="pics/gaikan.webp" type="image/webp">
+  <img src="pics/gaikan.JPG" class="hero-photo" alt="クリニック外観" onclick="openLightbox(0)" loading="eager" decoding="async" width="1440" height="1080">
+</picture>
 
 <div class="container">
 
@@ -184,11 +191,17 @@
   <div class="section-title">受付</div>
   <div class="photo-grid-2">
     <div class="photo-item" onclick="openLightbox(1)">
-      <img src="pics/受付.JPG" alt="受付">
+      <picture>
+      <source srcset="pics/uketsuke.webp" type="image/webp">
+      <img src="pics/uketsuke.JPG" alt="受付" loading="lazy" decoding="async" width="1200" height="1600">
+    </picture>
       <div class="photo-caption">受付カウンター</div>
     </div>
     <div class="photo-item" onclick="openLightbox(2)">
-      <img src="pics/受付2.JPG" alt="受付2">
+      <picture>
+      <source srcset="pics/uketsuke2.webp" type="image/webp">
+      <img src="pics/uketsuke2.JPG" alt="受付2" loading="lazy" decoding="async" width="1200" height="1600">
+    </picture>
       <div class="photo-caption">待合スペース</div>
     </div>
   </div>
@@ -197,15 +210,24 @@
   <div class="section-title">診療室</div>
   <div class="photo-grid-3">
     <div class="photo-item" onclick="openLightbox(3)">
-      <img src="pics/診療台1.JPG" alt="診療台1">
+      <picture>
+      <source srcset="pics/shinryodai1.webp" type="image/webp">
+      <img src="pics/shinryodai1.JPG" alt="診療台1" loading="lazy" decoding="async" width="1000" height="1333">
+    </picture>
       <div class="photo-caption">診療台</div>
     </div>
     <div class="photo-item" onclick="openLightbox(4)">
-      <img src="pics/診療台2.JPG" alt="診療台2">
+      <picture>
+      <source srcset="pics/shinryodai2.webp" type="image/webp">
+      <img src="pics/shinryodai2.JPG" alt="診療台2" loading="lazy" decoding="async" width="1000" height="1333">
+    </picture>
       <div class="photo-caption">診療台</div>
     </div>
     <div class="photo-item" onclick="openLightbox(5)">
-      <img src="pics/診療台4.JPG" alt="診療台4">
+      <picture>
+      <source srcset="pics/shinryodai4.webp" type="image/webp">
+      <img src="pics/shinryodai4.JPG" alt="診療台4" loading="lazy" decoding="async" width="1000" height="1333">
+    </picture>
       <div class="photo-caption">診療台</div>
     </div>
   </div>
@@ -214,7 +236,10 @@
   <div class="section-title">医療機器</div>
   <div class="photo-grid-2" style="grid-template-columns: 1fr 2fr;">
     <div class="photo-item" onclick="openLightbox(6)">
-      <img src="pics/Ozon.JPG" alt="オゾン発生器" style="height:200px;">
+      <picture>
+      <source srcset="pics/Ozon.webp" type="image/webp">
+      <img src="pics/Ozon.JPG" alt="オゾン発生器" loading="lazy" decoding="async" width="800" height="1067" style="height:200px;">
+    </picture>
       <div class="photo-caption">オゾン発生器</div>
     </div>
   </div>
@@ -234,13 +259,13 @@
 
 <script>
   const photos = [
-    { src: 'pics/外観.JPG', caption: 'クリニック外観' },
-    { src: 'pics/受付.JPG', caption: '受付カウンター' },
-    { src: 'pics/受付2.JPG', caption: '待合スペース' },
-    { src: 'pics/診療台1.JPG', caption: '診療台' },
-    { src: 'pics/診療台2.JPG', caption: '診療台' },
-    { src: 'pics/診療台4.JPG', caption: '診療台' },
-    { src: 'pics/Ozon.JPG', caption: 'オゾン発生器' },
+    { src: 'pics/gaikan.webp', caption: 'クリニック外観' },
+    { src: 'pics/uketsuke.webp', caption: '受付カウンター' },
+    { src: 'pics/uketsuke2.webp', caption: '待合スペース' },
+    { src: 'pics/shinryodai1.webp', caption: '診療台' },
+    { src: 'pics/shinryodai2.webp', caption: '診療台' },
+    { src: 'pics/shinryodai4.webp', caption: '診療台' },
+    { src: 'pics/Ozon.webp', caption: 'オゾン発生器' },
   ];
   let current = 0;
 
