@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>診療時間・アクセス | 新本町クリニック</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --sakura: #f7c5c5; --sakura-deep: #e8918e; --sakura-light: #fdf0f0;
+    --green: #7aab8a; --green-light: #eef5f0; --cream: #fdfaf6;
+    --text: #3a3530; --text-muted: #8a807a; --border: #ecdfd9;
+  }
+  body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--cream); font-size: 14px; line-height: 1.8; }
+  nav { background: rgba(253,250,246,0.95); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; color: var(--sakura-deep); display: flex; align-items: center; gap: 8px; text-decoration: none; }
+  .logo-icon { width: 28px; height: 28px; background: var(--sakura); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 13px; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--sakura-deep); }
+  .nav-tel { font-size: 13px; color: var(--sakura-deep); font-weight: 500; }
+  .page-hero { background: linear-gradient(135deg, #fdf6f6 0%, #fdf0f0 60%, #f0f7f2 100%); padding: 48px 32px 40px; text-align: center; border-bottom: 1px solid var(--border); }
+  .page-label { font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; display: block; }
+  .page-title { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; }
+  .page-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+  .container { max-width: 680px; margin: 0 auto; padding: 48px 32px; }
+
+  /* セクション見出し */
+  .section-heading {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-heading::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background: var(--sakura-deep);
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+  .section-gap { margin-bottom: 48px; }
+
+  /* 診療時間 */
+  .hours-card { background: white; border-radius: 20px; padding: 32px; border: 1px solid var(--border); margin-bottom: 16px; }
+  .hours-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .hours-table th { text-align: center; padding: 10px 6px; font-size: 12px; color: var(--text-muted); font-weight: 400; border-bottom: 2px solid var(--border); }
+  .hours-table td { text-align: center; padding: 12px 6px; border-bottom: 1px dashed var(--border); }
+  .hours-table tr:last-child td { border-bottom: none; }
+  .hours-table td:first-child { text-align: left; font-weight: 500; padding-left: 0; }
+  .check { color: var(--sakura-deep); font-size: 18px; }
+  .dash { color: #ddd; }
+  .note-list { display: grid; gap: 12px; margin-bottom: 16px; }
+  .note-item { display: flex; align-items: flex-start; gap: 12px; background: white; border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
+  .note-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .note-text { font-size: 13px; color: var(--text); }
+  .note-text strong { font-weight: 500; display: block; margin-bottom: 2px; }
+  .tel-card { background: var(--sakura-light); border: 1px solid var(--sakura); border-radius: 16px; padding: 24px; text-align: center; margin-bottom: 16px; }
+  .tel-label { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; }
+  .tel-number { font-family: 'Noto Serif JP', serif; font-size: 24px; color: var(--sakura-deep); font-weight: 600; }
+  .tel-hours { font-size: 12px; color: var(--text-muted); margin-top: 6px; }
+
+  /* アクセス */
+  .info-grid { display: grid; gap: 14px; margin-bottom: 16px; }
+  .info-row { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 18px 22px; display: flex; align-items: flex-start; gap: 16px; }
+  .info-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+  .info-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; }
+  .info-value { font-size: 14px; font-weight: 500; color: var(--text); }
+  .info-note { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+  .route-card { background: white; border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-bottom: 14px; }
+  .route-title { font-size: 14px; font-weight: 500; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .route-steps { display: flex; flex-direction: column; gap: 10px; padding-left: 12px; border-left: 2px dashed var(--sakura); }
+  .route-step { font-size: 13px; color: var(--text-muted); position: relative; padding-left: 16px; }
+  .route-step::before { content: ''; position: absolute; left: -18px; top: 8px; width: 8px; height: 8px; background: var(--sakura-deep); border-radius: 50%; }
+  .route-step strong { color: var(--text); font-weight: 500; }
+
+  footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 32px; font-size: 12px; }
+  .footer-logo { font-family: 'Noto Serif JP', serif; font-size: 16px; color: white; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <span class="page-label">Access &amp; Hours</span>
+  <div class="page-title">診療時間・アクセス</div>
+  <div class="page-sub">高知県高知市北金田 ソフィアビル5F</div>
+</div>
+
+<div class="container">
+
+  <!-- 診療時間 -->
+  <div class="section-gap">
+    <div class="section-heading">🕐 診療時間</div>
+
+    <div class="hours-card">
+      <table class="hours-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>月</th><th>火</th><th>水</th><th>木</th><th>金</th><th>土</th><th>日・祝</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>午前<br><small style="color:var(--text-muted);font-weight:400;font-size:11px;">9:00〜12:00</small></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="dash">—</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="dash">—</span></td>
+          </tr>
+          <tr>
+            <td>午後<br><small style="color:var(--text-muted);font-weight:400;font-size:11px;">14:00〜18:00</small></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="dash">—</span></td>
+            <td><span class="check">✓</span></td>
+            <td><span class="dash">—</span></td>
+            <td><span class="dash">—</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="note-list">
+      <div class="note-item">
+        <span class="note-icon">🌿</span>
+        <div class="note-text"><strong>休診日</strong>木曜・土曜午後・日曜・祝日は休診です。土曜日は午前のみ（9:00〜12:00）の診療となります。</div>
+      </div>
+      <div class="note-item">
+        <span class="note-icon">📋</span>
+        <div class="note-text"><strong>受付について</strong>受付は診療終了の30分前までとなります。お時間に余裕を持ってお越しください。</div>
+      </div>
+      <div class="note-item">
+        <span class="note-icon">🗓️</span>
+        <div class="note-text"><strong>年末年始・GW・お盆</strong>休診日が変わる場合があります。詳細はお知らせページをご確認ください。</div>
+      </div>
+      <div class="note-item">
+        <span class="note-icon">🌱</span>
+        <div class="note-text"><strong>漢方・心療内科のご予約</strong>事前にお電話でのご予約をお願いしております。</div>
+      </div>
+    </div>
+
+  <!-- アクセス -->
+  <div>
+    <div class="section-heading">📍 アクセス</div>
+
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.523028083669!2d133.5585686!3d33.5657669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354e1ea99f25a341%3A0x5e28a60ba852b561!2z44CSNzgxLTAwNzMg6auY55-l55yM6auY55-l5biC5YyX6YeR55Sw77yR77yR4oiS77yS77ySIOOCveODleOCo-OCouODk-ODqyA1Zg!5e0!3m2!1sja!2sjp!4v1777948753661!5m2!1sja!2sjp" width="100%" height="300" style="border:0; border-radius:20px; margin-bottom:16px; display:block;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+    <div class="info-grid">
+      <div class="info-row">
+        <span class="info-icon">🏥</span>
+        <div>
+          <div class="info-label">クリニック名</div>
+          <div class="info-value">新本町クリニック</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">📍</span>
+        <div>
+          <div class="info-label">住所</div>
+          <div class="info-value">高知県高知市北金田11-22 ソフィアビル5F</div>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">📞</span>
+        <div>
+          <div class="info-label">電話番号</div>
+          <div class="info-value">088-856-7511</div>
+          <div class="info-note">受付時間：診療時間内（木・日・祝除く）</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="route-card">
+      <div class="route-title">🚗 お車でお越しの方</div>
+      <div class="route-steps">
+        <div class="route-step">高知市北金田エリアへお越しください</div>
+        <div class="route-step"><strong>ソフィアビル5F</strong> が当クリニックです</div>
+        <div class="route-step">お車でお越しの際は駐車場をご利用ください</div>
+      </div>
+    </div>
+    <div class="route-card">
+      <div class="route-title">🚌 バスでお越しの方</div>
+      <div class="route-steps">
+        <div class="route-step">最寄りのバス停【金田橋】よりお越しください</div>
+        <div class="route-step">バス停より徒歩2分程の場所に<strong>ソフィアビル</strong>がございます。</div>
+        <div class="route-step"><strong>ソフィアビル5F</strong> が当クリニックです</div>
+        <div class="route-step">詳しいアクセスは<strong>お電話（088-856-7511）</strong>にてお問い合わせください</div>
+      </div>
+    </div>
+  </div>
+</div><!-- /.container -->
+
+<div id="footer-placeholder"></div>
+
+
+<script src="common.js"></script>
+</body>
+</html>
