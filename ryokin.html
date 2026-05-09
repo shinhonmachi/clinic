@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>料金案内 | 新本町クリニック</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --sakura: #f7c5c5; --sakura-deep: #e8918e; --sakura-light: #fdf0f0;
+    --green: #7aab8a; --green-light: #eef5f0; --cream: #fdfaf6;
+    --text: #3a3530; --text-muted: #8a807a; --border: #ecdfd9;
+  }
+  body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--cream); font-size: 14px; line-height: 1.8; }
+  nav { background: rgba(253,250,246,0.95); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; color: var(--sakura-deep); display: flex; align-items: center; gap: 8px; text-decoration: none; }
+  .logo-icon { width: 28px; height: 28px; background: var(--sakura); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 13px; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--sakura-deep); }
+  .nav-tel { font-size: 13px; color: var(--sakura-deep); font-weight: 500; }
+
+  .page-hero { background: linear-gradient(135deg, #fdf6f6 0%, #fdf0f0 60%, #f0f7f2 100%); padding: 48px 32px 40px; text-align: center; border-bottom: 1px solid var(--border); }
+  .page-label { font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; display: block; }
+  .page-title { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; }
+  .page-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
+
+  /* 保険証セクション */
+  .insurance-banner { display: flex; align-items: center; gap: 14px; background: white; border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px; margin-bottom: 36px; border-left: 4px solid var(--sakura-deep); }
+  .insurance-icon { font-size: 28px; flex-shrink: 0; }
+  .insurance-text { font-size: 13px; color: var(--text); line-height: 1.8; }
+  .insurance-text strong { font-size: 15px; font-family: 'Noto Serif JP', serif; display: block; margin-bottom: 4px; }
+
+  /* 料金セクション */
+  .fee-section { margin-bottom: 36px; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .section-icon { font-size: 22px; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; }
+  .fee-table-wrap { background: white; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .fee-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .fee-table thead tr { background: var(--sakura-light); }
+  .fee-table th { padding: 12px 18px; text-align: left; font-size: 12px; font-weight: 500; color: var(--sakura-deep); }
+  .fee-table th:last-child { text-align: right; }
+  .fee-table td { padding: 13px 18px; border-top: 1px dashed var(--border); color: var(--text); }
+  .fee-table td:last-child { text-align: right; font-weight: 500; color: var(--sakura-deep); white-space: nowrap; }
+  .fee-table tr:hover td { background: #fdfaf8; }
+  .fee-note { font-size: 11px; color: var(--text-muted); margin-top: 8px; padding: 0 4px; }
+
+  /* 自費診療 */
+  .self-pay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .self-pay-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+  .self-pay-name { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .self-pay-desc { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; line-height: 1.6; }
+  .self-pay-price { font-family: 'Noto Serif JP', serif; font-size: 18px; color: var(--sakura-deep); font-weight: 600; }
+  .self-pay-price small { font-size: 11px; font-weight: 400; color: var(--text-muted); font-family: 'Noto Sans JP', sans-serif; }
+
+  /* 支払い方法 */
+  .payment-list { display: flex; flex-wrap: wrap; gap: 10px; }
+  .payment-tag { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 8px 16px; font-size: 13px; display: flex; align-items: center; gap: 6px; }
+
+  /* 注意事項 */
+  .info-box { background: var(--green-light); border: 1px solid #c5dece; border-radius: 12px; padding: 20px 24px; margin-top: 8px; }
+  .info-box-title { font-size: 14px; font-weight: 500; color: var(--green); margin-bottom: 10px; }
+  .info-box ul { padding-left: 16px; }
+  .info-box li { font-size: 13px; color: var(--text-muted); line-height: 1.9; }
+
+  footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 32px; font-size: 12px; }
+  .footer-logo { font-family: 'Noto Serif JP', serif; font-size: 16px; color: white; margin-bottom: 8px; }
+
+  @media (max-width: 540px) {
+    nav { padding: 0 16px; }
+    .nav-links { gap: 14px; }
+    .container { padding: 32px 16px; }
+    .self-pay-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <span class="page-label">Fee Guide</span>
+  <div class="page-title">料金案内</div>
+  <div class="page-sub">保険診療・自費診療の料金目安をご案内します</div>
+</div>
+
+<div class="container">
+
+  <div class="insurance-banner">
+    <div class="insurance-icon">🪪</div>
+    <div class="insurance-text">
+      <strong>保険証をお持ちください</strong>
+      当クリニックは保険診療を行っています。受診の際は必ず健康保険証をお持ちください。マイナ保険証にも対応しています。
+    </div>
+  </div>
+
+  <!-- 保険診療 -->
+  <div class="fee-section">
+    <div class="section-header">
+      <span class="section-icon">🩺</span>
+      <div class="section-title">保険診療（目安）</div>
+    </div>
+    <div class="fee-table-wrap">
+      <table class="fee-table">
+        <thead>
+          <tr>
+            <th>診療内容</th>
+            <th>1割負担</th>
+            <th>2割負担</th>
+            <th>3割負担</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>初診料</td>
+            <td>約290円</td>
+            <td>約580円</td>
+            <td>約870円</td>
+          </tr>
+          <tr>
+            <td>再診料</td>
+            <td>約75円</td>
+            <td>約150円</td>
+            <td>約225円</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fee-note">※ 上記は目安金額です。診療内容・加算により異なります。薬代は含みません（院外処方）。</p>
+  </div>
+
+  <!-- 自費診療 -->
+  <div class="fee-section">
+    <div class="section-header">
+      <span class="section-icon">📋</span>
+      <div class="section-title">自費診療</div>
+    </div>
+    <div class="self-pay-grid">
+      <div class="self-pay-card">
+        <div class="self-pay-name">プラセンタ</div>
+        <div class="self-pay-desc">1A〜5A</div>
+        <div class="self-pay-price">2000円〜<small></small></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">顔プラセンタ</div>
+        <div class="self-pay-desc"></div>
+        <div class="self-pay-price">5500円<small></small></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">オゾン点滴</div>
+        <div class="self-pay-desc"></div>
+        <div class="self-pay-price">22000円<small></small></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">ビタミンC</div>
+        <div class="self-pay-desc">25g〜</div>
+        <div class="self-pay-price">19800円～<small></small></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">α-リポ酸</div>
+        <div class="self-pay-desc">600mg</div>
+        <div class="self-pay-price">17600円</div>
+      </div>
+       <div class="self-pay-card">
+        <div class="self-pay-name">マイヤーズカクテル点滴</div>
+        <div class="self-pay-desc"></div>
+        <div class="self-pay-price">8250円</div>
+      </div>
+       <div class="self-pay-card">
+        <div class="self-pay-name">白玉点滴</div>
+        <div class="self-pay-desc">グルタチオン5A入り</div>
+        <div class="self-pay-price">8500円</div>
+      </div>
+       <div class="self-pay-card">
+        <div class="self-pay-name">オゾンつぼ注射</div>
+        <div class="self-pay-desc"></div>
+        <div class="self-pay-price">8000円</div>
+      </div>
+           <div class="self-pay-card">
+        <div class="self-pay-name">プラセンタつぼ注射</div>
+        <div class="self-pay-desc"></div>
+        <div class="self-pay-price">13200円</div>
+      </div>
+           <div class="self-pay-card">
+        <div class="self-pay-name">はり</div>
+        <div class="self-pay-desc"></div>
+        <div class="self-pay-price">お問い合わせください</div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">漢方相談</div>
+        <div class="self-pay-desc"></div>
+        <div class="self-pay-price">お問い合わせください</div>
+      </div>
+    </div>
+    <p class="fee-note">※ 自費診療の料金は変更になる場合があります。詳細はお電話でお問い合わせください。</p>
+  </div>
+
+  <!-- お支払い方法 -->
+  <div class="fee-section">
+    <div class="section-header">
+      <span class="section-icon">💳</span>
+      <div class="section-title">お支払い方法</div>
+    </div>
+    <div class="payment-list">
+      <div class="payment-tag">💴 現金</div>
+      <div class="payment-tag">💳 クレジットカード</div>
+      <div class="payment-tag">📲 PayPay</div>
+    </div>
+    <p class="fee-note" style="margin-top:10px;">※ 対応カードブランド：Visa・Mastercard・JCB・American Express</p>
+  </div>
+
+  <!-- 注意事項 -->
+  <div class="info-box">
+    <div class="info-box-title">🌿 ご注意事項</div>
+    <ul>
+      <li>保険証をお持ちでない場合は、全額自費となります。</li>
+      <li>乳幼児・高齢者の方は、お住まいの市区町村の医療費助成をご確認ください。</li>
+      <li>料金は診療内容・検査・処方によって異なります。詳細は受付までお気軽にお尋ねください。</li>
+      <li>領収書・明細書は会計時に発行します。再発行はできませんのでご注意ください。</li>
+    </ul>
+  </div>
+
+</div>
+
+<div id="footer-placeholder"></div>
+
+
+<script src="common.js"></script>
+</body>
+</html>

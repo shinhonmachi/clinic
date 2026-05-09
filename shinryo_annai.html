@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>診療案内 | 新本町クリニック</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --sakura: #f7c5c5; --sakura-deep: #e8918e; --sakura-light: #fdf0f0;
+    --green: #7aab8a; --green-light: #eef5f0; --cream: #fdfaf6;
+    --text: #3a3530; --text-muted: #8a807a; --border: #ecdfd9;
+  }
+  body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--cream); font-size: 14px; line-height: 1.8; }
+  nav { background: rgba(253,250,246,0.95); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; color: var(--sakura-deep); display: flex; align-items: center; gap: 8px; text-decoration: none; }
+  .logo-icon { width: 28px; height: 28px; background: var(--sakura); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 13px; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--sakura-deep); }
+  .nav-tel { font-size: 13px; color: var(--sakura-deep); font-weight: 500; }
+  .page-hero { background: linear-gradient(135deg, #fdf6f6 0%, #fdf0f0 60%, #f0f7f2 100%); padding: 48px 32px 40px; text-align: center; border-bottom: 1px solid var(--border); }
+  .page-label { font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; display: block; }
+  .page-title { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; }
+  .page-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
+  .dept-section { margin-bottom: 40px; }
+  .dept-header { display: flex; align-items: center; gap: 14px; background: white; border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px; margin-bottom: 16px; border-left: 4px solid var(--sakura-deep); }
+  .dept-icon-lg { font-size: 28px; }
+  .dept-title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; }
+  .dept-title-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .dept-body { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; }
+  .dept-body p { font-size: 13px; color: var(--text); line-height: 1.9; margin-bottom: 12px; }
+  .dept-body p:last-child { margin-bottom: 0; }
+  .symptom-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .symptom-tag { background: var(--sakura-light); color: var(--sakura-deep); font-size: 12px; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--sakura); }
+  .clinic-photo { border-radius: 16px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+  .clinic-photo img { width: 100%; height: 280px; object-fit: cover; display: block; }
+  .clinic-photo-caption { background: white; border: 1px solid var(--border); border-top: none; border-radius: 0 0 16px 16px; padding: 12px 20px; font-size: 12px; color: var(--text-muted); text-align: center; }
+  .info-box { background: var(--green-light); border: 1px solid #c5dece; border-radius: 12px; padding: 20px 24px; margin-top: 32px; }
+  .info-box-title { font-size: 14px; font-weight: 500; color: var(--green); margin-bottom: 8px; }
+  .info-box p { font-size: 13px; color: var(--text-muted); }
+  footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 32px; font-size: 12px; }
+  .footer-logo { font-family: 'Noto Serif JP', serif; font-size: 16px; color: white; margin-bottom: 8px; }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <span class="page-label">Medical Guide</span>
+  <div class="page-title">診療案内</div>
+  <div class="page-sub">各科の診療内容をご案内します</div>
+</div>
+
+<div class="container">
+
+  <div class="clinic-photo">
+    <img src="pics/診察風景.jpeg" alt="診察風景">
+    <div class="clinic-photo-caption">実際の診察の様子</div>
+  </div>
+
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">🩺</div>
+      <div>
+        <div class="dept-title">内科</div>
+        <div class="dept-title-sub">Internal Medicine</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>発熱・かぜ・インフルエンザなどの急性疾患から、高血圧・糖尿病・脂質異常症などの生活習慣病まで、幅広く診察いたします。</p>
+      <p>「なんとなく体調が優れない」「健康管理をしたい」といったご相談もお気軽にどうぞ。</p>
+      <div class="symptom-list">
+        <span class="symptom-tag">発熱・かぜ</span>
+        <span class="symptom-tag">インフルエンザ</span>
+        <span class="symptom-tag">高血圧</span>
+        <span class="symptom-tag">糖尿病</span>
+        <span class="symptom-tag">脂質異常症</span>
+        <span class="symptom-tag">めまい・頭痛</span>
+        <span class="symptom-tag">貧血</span>
+        <span class="symptom-tag">胃腸の不調</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">🧠</div>
+      <div>
+        <div class="dept-title">心療内科</div>
+        <div class="dept-title-sub">Psychosomatic Medicine</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>ストレスや心理的な要因から生じる身体症状・こころの不調を、丁寧に診察いたします。うつ・不安・不眠など、ひとりで抱え込まずにお気軽にご相談ください。</p>
+      <p>患者さまのペースに合わせた治療を心がけています。</p>
+      <div class="symptom-list">
+        <span class="symptom-tag">うつ・気分の落ち込み</span>
+        <span class="symptom-tag">不安・パニック</span>
+        <span class="symptom-tag">不眠</span>
+        <span class="symptom-tag">ストレス反応</span>
+        <span class="symptom-tag">倦怠感・意欲低下</span>
+        <span class="symptom-tag">過呼吸</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">🌿</div>
+      <div>
+        <div class="dept-title">漢方内科</div>
+        <div class="dept-title-sub">Kampo Medicine</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>患者さまの体質・体調・生活習慣を丁寧に問診し、一人ひとりに合った漢方薬を処方いたします。西洋医学では改善しにくい症状や、慢性的な体質の悩みにも対応しています。</p>
+      <p>漢方と西洋医学を組み合わせた統合的なアプローチで、根本からの健康回復をサポートします。</p>
+      <div class="symptom-list">
+        <span class="symptom-tag">冷え・むくみ</span>
+        <span class="symptom-tag">疲労・倦怠感</span>
+        <span class="symptom-tag">胃腸の不調</span>
+        <span class="symptom-tag">更年期症状</span>
+        <span class="symptom-tag">アレルギー体質</span>
+        <span class="symptom-tag">体質改善</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-box">
+    <div class="info-box-title">🌿 受診の流れについて</div>
+    <p>初診の方は保険証をお持ちください。お電話でご予約いただくとスムーズです。お気軽にご相談ください。</p>
+  </div>
+
+</div>
+
+<div id="footer-placeholder"></div>
+
+
+<script src="common.js"></script>
+</body>
+</html>

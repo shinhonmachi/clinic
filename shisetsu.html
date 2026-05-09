@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>施設案内 | 新本町クリニック</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --sakura: #f7c5c5; --sakura-deep: #e8918e; --sakura-light: #fdf0f0;
+    --green: #7aab8a; --green-light: #eef5f0; --cream: #fdfaf6;
+    --text: #3a3530; --text-muted: #8a807a; --border: #ecdfd9;
+  }
+  body { font-family: 'Noto Sans JP', sans-serif; color: var(--text); background: var(--cream); font-size: 14px; line-height: 1.8; }
+
+  nav { background: rgba(253,250,246,0.95); border-bottom: 1px solid var(--border); padding: 0 32px; display: flex; align-items: center; justify-content: space-between; height: 60px; position: sticky; top: 0; z-index: 100; }
+  .logo { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; color: var(--sakura-deep); display: flex; align-items: center; gap: 8px; text-decoration: none; }
+  .logo-icon { width: 28px; height: 28px; background: var(--sakura); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+  .nav-links { display: flex; gap: 24px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 13px; transition: color 0.2s; }
+  .nav-links a:hover, .nav-links a.active { color: var(--sakura-deep); }
+  .nav-tel { font-size: 13px; color: var(--sakura-deep); font-weight: 500; }
+
+  .page-hero { background: linear-gradient(135deg, #fdf6f6 0%, #fdf0f0 60%, #f0f7f2 100%); padding: 48px 32px 40px; text-align: center; border-bottom: 1px solid var(--border); }
+  .page-label { font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 10px; display: block; }
+  .page-title { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; }
+  .page-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; }
+
+  /* メインビジュアル */
+  .hero-photo {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .hero-photo:hover { opacity: 0.95; }
+
+  .container { max-width: 800px; margin: 0 auto; padding: 48px 32px; }
+
+  /* セクションタイトル */
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background: var(--sakura-deep);
+    border-radius: 2px;
+  }
+
+  /* フォトグリッド */
+  .photo-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .photo-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 48px;
+  }
+  .photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--border);
+    cursor: pointer;
+  }
+  .photo-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .photo-grid-2 .photo-item img { height: 240px; }
+  .photo-item:hover img { transform: scale(1.04); }
+  .photo-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(58,53,48,0.7) 0%, transparent 100%);
+    color: white;
+    font-size: 12px;
+    padding: 28px 14px 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .photo-item:hover .photo-caption { opacity: 1; }
+
+  /* ライトボックス */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(30,25,22,0.92);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  }
+  .lightbox-caption { color: rgba(255,255,255,0.7); font-size: 13px; }
+  .lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .lightbox-close:hover { opacity: 1; }
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    padding: 12px;
+  }
+  .lightbox-nav:hover { opacity: 1; }
+  .lightbox-prev { left: 12px; }
+  .lightbox-next { right: 12px; }
+
+  footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; padding: 28px 32px; font-size: 12px; }
+  .footer-logo { font-family: 'Noto Serif JP', serif; font-size: 16px; color: white; margin-bottom: 8px; }
+
+  @media (max-width: 600px) {
+    .photo-grid-3 { grid-template-columns: 1fr 1fr; }
+    .hero-photo { height: 260px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <span class="page-label">Facility</span>
+  <div class="page-title">施設案内</div>
+  <div class="page-sub">清潔で落ち着いた環境でお迎えします</div>
+</div>
+
+<!-- 外観メインビジュアル -->
+<img src="pics/外観.JPG" class="hero-photo" alt="クリニック外観" onclick="openLightbox(0)">
+
+<div class="container">
+
+  <!-- 受付 -->
+  <div class="section-title">受付</div>
+  <div class="photo-grid-2">
+    <div class="photo-item" onclick="openLightbox(1)">
+      <img src="pics/受付.JPG" alt="受付">
+      <div class="photo-caption">受付カウンター</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(2)">
+      <img src="pics/受付2.JPG" alt="受付2">
+      <div class="photo-caption">待合スペース</div>
+    </div>
+  </div>
+
+  <!-- 診療室 -->
+  <div class="section-title">診療室</div>
+  <div class="photo-grid-3">
+    <div class="photo-item" onclick="openLightbox(3)">
+      <img src="pics/診療台1.JPG" alt="診療台1">
+      <div class="photo-caption">診療台</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(4)">
+      <img src="pics/診療台2.JPG" alt="診療台2">
+      <div class="photo-caption">診療台</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(5)">
+      <img src="pics/診療台4.JPG" alt="診療台4">
+      <div class="photo-caption">診療台</div>
+    </div>
+  </div>
+
+  <!-- 医療機器 -->
+  <div class="section-title">医療機器</div>
+  <div class="photo-grid-2" style="grid-template-columns: 1fr 2fr;">
+    <div class="photo-item" onclick="openLightbox(6)">
+      <img src="pics/Ozon.JPG" alt="オゾン発生器" style="height:200px;">
+      <div class="photo-caption">オゾン発生器</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- ライトボックス -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightboxBtn()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">‹</button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">›</button>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  const photos = [
+    { src: 'pics/外観.JPG', caption: 'クリニック外観' },
+    { src: 'pics/受付.JPG', caption: '受付カウンター' },
+    { src: 'pics/受付2.JPG', caption: '待合スペース' },
+    { src: 'pics/診療台1.JPG', caption: '診療台' },
+    { src: 'pics/診療台2.JPG', caption: '診療台' },
+    { src: 'pics/診療台4.JPG', caption: '診療台' },
+    { src: 'pics/Ozon.JPG', caption: 'オゾン発生器' },
+  ];
+  let current = 0;
+
+  function openLightbox(index) {
+    current = index;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightboxBtn() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeLightbox(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightboxBtn();
+  }
+  function navLightbox(dir) {
+    current = (current + dir + photos.length) % photos.length;
+    updateLightbox();
+  }
+  function updateLightbox() {
+    document.getElementById('lightbox-img').src = photos[current].src;
+    document.getElementById('lightbox-caption').textContent = photos[current].caption;
+  }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') navLightbox(-1);
+    if (e.key === 'ArrowRight') navLightbox(1);
+    if (e.key === 'Escape') closeLightboxBtn();
+  });
+</script>
+
+<script src="common.js"></script>
+</body>
+</html>
