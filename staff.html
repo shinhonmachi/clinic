@@ -3,124 +3,202 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>スタッフ紹介｜院長・看護師・スタッフ｜新本町クリニック</title>
+<title>院長のあいさつ｜新本町クリニック</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
 <link rel="stylesheet" href="common.css">
-  <meta name="description" content="新本町クリニックのスタッフ紹介。内科・心療内科・漢方内科を専門とする院長をはじめ、患者さまに寄り添うスタッフ一同でお迎えします。">
-  <link rel="canonical" href="https://shinhonmachi.jp/staff.html">
-
-  <!-- OGP -->
-  <meta property="og:type" content="article">
-  <meta property="og:title" content="スタッフ紹介｜院長・看護師・スタッフ｜新本町クリニック">
-  <meta property="og:description" content="新本町クリニックのスタッフ紹介。内科・心療内科・漢方内科を専門とする院長をはじめ、患者さまに寄り添うスタッフ一同でお迎えします。">
-  <meta property="og:url" content="https://shinhonmachi.jp/staff.html">
-  <meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
-  <meta property="og:site_name" content="新本町クリニック">
-  <meta property="og:locale" content="ja_JP">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="スタッフ紹介｜院長・看護師・スタッフ｜新本町クリニック">
-  <meta name="twitter:description" content="新本町クリニックのスタッフ紹介。内科・心療内科・漢方内科を専門とする院長をはじめ、患者さまに寄り添うスタッフ一同でお迎えします。">
-  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
-
-  <!-- Favicon -->
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="description" content="新本町クリニック院長・吉村尚子のごあいさつ。内科・心療内科・漢方内科を専門とし、患者さまお一人おひとりに寄り添う医療を提供しています。">
+<link rel="canonical" href="https://shinhonmachi.jp/staff.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="院長のあいさつ｜新本町クリニック">
+<meta property="og:description" content="新本町クリニック院長・吉村尚子のごあいさつ。内科・心療内科・漢方内科を専門とし、患者さまお一人おひとりに寄り添う医療を提供しています。">
+<meta property="og:url" content="https://shinhonmachi.jp/staff.html">
+<meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+<meta property="og:site_name" content="新本町クリニック">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="院長のあいさつ｜新本町クリニック">
+<meta name="twitter:description" content="新本町クリニック院長・吉村尚子のごあいさつ。内科・心療内科・漢方内科を専門とし、患者さまお一人おひとりに寄り添う医療を提供しています。">
+<meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
-                            .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
-  .staff-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
-  .staff-card { background: white; border: 1px solid var(--border); border-radius: 20px; padding: 28px 24px; text-align: center; transition: all 0.25s; }
-  .staff-card:hover { box-shadow: 0 4px 18px rgba(232,145,142,0.1); transform: translateY(-2px); }
-  .staff-avatar { width: 80px; height: 80px; border-radius: 50%; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 32px; border: 2px solid var(--sakura); }
-  .staff-role { font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.1em; margin-bottom: 6px; }
-  .staff-name { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; margin-bottom: 4px; }
-  .staff-name-en { font-size: 11px; color: var(--text-muted); margin-bottom: 14px; }
-  .staff-divider { border: none; border-top: 1px dashed var(--border); margin: 14px 0; }
-  .staff-bio { font-size: 12px; color: var(--text-muted); line-height: 1.8; text-align: left; }
-  .staff-tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: 14px; }
-  .staff-tag { background: var(--sakura-light); color: var(--sakura-deep); font-size: 11px; padding: 3px 10px; border-radius: 20px; }
-  .staff-tag.green { background: var(--green-light); color: var(--green); }
-  .message-card { background: var(--sakura-light); border: 1px solid var(--sakura); border-radius: 16px; padding: 28px 32px; text-align: center; }
-  .message-card .quote { font-family: 'Noto Serif JP', serif; font-size: 15px; color: var(--sakura-deep); line-height: 1.9; margin-bottom: 10px; }
-  .message-card .quote-from { font-size: 12px; color: var(--text-muted); }
-    </style>
+  .outer { max-width: 760px; margin: 0 auto; padding: 56px 32px 80px; }
+
+  /* プロフィールブロック */
+  .profile-block {
+    display: flex; align-items: flex-start; gap: 32px;
+    background: white; border: 1px solid var(--border);
+    border-radius: 24px; padding: 36px;
+    margin-bottom: 32px;
+    position: relative; overflow: hidden;
+  }
+  .profile-block::after {
+    content: ''; position: absolute; top: 0; right: 0;
+    width: 140px; height: 140px;
+    background: radial-gradient(circle at top right, var(--sakura-light) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .profile-photo {
+    flex-shrink: 0; width: 110px; height: 110px; border-radius: 50%;
+    background: var(--sakura-light); border: 3px solid var(--sakura);
+    display: flex; align-items: center; justify-content: center; font-size: 48px;
+    overflow: hidden;
+  }
+  .profile-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+  .profile-info { flex: 1; }
+  .profile-role { font-size: 11px; color: var(--sakura-deep); letter-spacing: 0.12em; margin-bottom: 8px; }
+  .profile-name { font-family: 'Noto Serif JP', serif; font-size: 26px; font-weight: 600; margin-bottom: 3px; line-height: 1.3; }
+  .profile-name-en { font-size: 12px; color: var(--text-muted); margin-bottom: 18px; }
+  .profile-tags { display: flex; flex-wrap: wrap; gap: 7px; }
+  .profile-tag {
+    font-size: 11px; padding: 4px 12px; border-radius: 20px;
+    background: var(--sakura-light); color: var(--sakura-deep); border: 1px solid var(--sakura);
+  }
+  .profile-tag.green { background: var(--green-light); color: var(--green); border-color: #b5d4bf; }
+
+  /* あいさつ本文 */
+  .greeting-wrap {
+    background: white; border: 1px solid var(--border);
+    border-radius: 24px; padding: 44px;
+    margin-bottom: 32px;
+  }
+  .chapter {
+    display: flex; align-items: center; gap: 12px;
+    margin: 36px 0 20px;
+  }
+  .chapter:first-child { margin-top: 0; }
+  .chapter-line { flex: 1; height: 1px; background: var(--border); }
+  .chapter-label { font-size: 10px; letter-spacing: 0.2em; color: var(--sakura-deep); white-space: nowrap; text-transform: uppercase; }
+  .greeting-body { margin-bottom: 0; }
+  .greeting-body p {
+    font-size: 14px; line-height: 2.0; color: var(--text);
+    margin-bottom: 1.3em; text-align: justify;
+  }
+  .greeting-body p:last-child { margin-bottom: 0; }
+  .highlight-quote {
+    border-left: 3px solid var(--sakura-deep);
+    padding: 6px 0 6px 18px; margin: 22px 0;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px; line-height: 1.9; color: var(--sakura-deep);
+  }
+
+  /* 締めカード */
+  .closing-card {
+    background: linear-gradient(135deg, var(--sakura-light) 0%, #f0f7f2 100%);
+    border: 1px solid var(--sakura); border-radius: 20px;
+    padding: 40px; text-align: center;
+  }
+  .closing-icon { font-size: 28px; margin-bottom: 18px; }
+  .closing-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 15px; line-height: 2.1; color: var(--text);
+    margin-bottom: 16px;
+  }
+  .closing-from { font-size: 12px; color: var(--text-muted); }
+
+  /* フェードイン */
+  .fade-in { opacity: 0; transform: translateY(18px); animation: fadeUp 0.65s ease forwards; }
+  .fade-in:nth-child(1) { animation-delay: 0.05s; }
+  .fade-in:nth-child(2) { animation-delay: 0.18s; }
+  .fade-in:nth-child(3) { animation-delay: 0.30s; }
+  @keyframes fadeUp { to { opacity: 1; transform: translateY(0); } }
+
+  @media (max-width: 560px) {
+    .outer { padding: 32px 16px 60px; }
+    .profile-block { flex-direction: column; align-items: center; text-align: center; padding: 28px 24px; gap: 20px; }
+    .profile-tags { justify-content: center; }
+    .greeting-wrap { padding: 28px 22px; }
+    .closing-card { padding: 28px 22px; }
+    .closing-text { font-size: 14px; }
+  }
+</style>
 </head>
 <body>
 
 <div id="header-placeholder"></div>
 
 <div class="page-hero">
-  <span class="page-label">Our Staff</span>
-  <div class="page-title">スタッフ紹介</div>
-  <div class="page-sub">患者さまに寄り添うチームをご紹介します</div>
+  <span class="page-label">Director's Message</span>
+  <div class="page-title">院長のあいさつ</div>
+  <div class="page-sub">新本町クリニック 院長　吉村 尚子</div>
 </div>
 
-<div class="container">
+<div class="outer">
 
-  <div class="staff-grid">
-
-    <div class="staff-card">
-      <div class="staff-avatar" style="background:#fdf0f0;">👨‍⚕️</div>
-      <div class="staff-role">吉村院長 / 内科・心療内科・漢方内科</div>
-      <div class="staff-name">吉村院長</div>
-      <div class="staff-name-en">Director, M.D.</div>
-      <hr class="staff-divider">
-      <div class="staff-bio">
-        内科・心療内科・漢方内科を専門とし、地域の皆さまの健康を総合的にサポートいたします。患者さまお一人おひとりのお話をしっかりとお聞きし、丁寧な診察を心がけています。
-      </div>
-      <div class="staff-tags">
-        <span class="staff-tag">内科</span>
-        <span class="staff-tag">心療内科</span>
-        <span class="staff-tag">漢方内科</span>
+  <!-- プロフィール -->
+  <div class="profile-block fade-in">
+    <div class="profile-photo">👩‍⚕️</div>
+    <div class="profile-info">
+      <div class="profile-role">院長 / Director, M.D.</div>
+      <div class="profile-name">吉村 尚子</div>
+      <div class="profile-name-en">Naoko Yoshimura</div>
+      <div class="profile-tags">
+        <span class="profile-tag">内科</span>
+        <span class="profile-tag">心療内科</span>
+        <span class="profile-tag">漢方内科</span>
+        <span class="profile-tag green">画像診断</span>
+        <span class="profile-tag green">栄養療法</span>
+        <span class="profile-tag green">点滴療法</span>
       </div>
     </div>
-
-    <div class="staff-card">
-      <div class="staff-avatar" style="background:#eef5f0;">👩‍💼</div>
-      <div class="staff-role">看護師</div>
-      <div class="staff-name">看護スタッフ</div>
-      <div class="staff-name-en">Nursing Staff, R.N.</div>
-      <hr class="staff-divider">
-      <div class="staff-bio">
-        患者さまが安心して受診いただけるよう、温かく丁寧なサポートを心がけています。診察前のご不安やご質問もお気軽にお声がけください。
-      </div>
-      <div class="staff-tags">
-        <span class="staff-tag">看護師</span>
-        <span class="staff-tag green">認定看護師</span>
-      </div>
-    </div>
-
-    <div class="staff-card">
-      <div class="staff-avatar" style="background:#fdf6e8;">💊</div>
-      <div class="staff-role">医療事務・受付</div>
-      <div class="staff-name">受付スタッフ</div>
-      <div class="staff-name-en">Reception Staff</div>
-      <hr class="staff-divider">
-      <div class="staff-bio">
-        ご来院の際は受付にてお声がけください。ご予約・お問い合わせ・保険証の確認など、笑顔でご対応いたします。
-      </div>
-      <div class="staff-tags">
-        <span class="staff-tag">医療事務</span>
-        <span class="staff-tag green">医療事務認定資格</span>
-      </div>
-    </div>
-
   </div>
 
-  <div class="message-card">
-    <div class="quote">「高知の地域の皆さまの健康を、心を込めてサポートしてまいります。<br>どんな小さなお悩みでも、お気軽にご相談ください。」</div>
-    <div class="quote-from">— 新本町クリニック 院長</div>
+  <!-- 本文 -->
+  <div class="greeting-wrap fade-in">
+
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <div class="chapter-label">Origin &mdash; 私の原点</div>
+      <div class="chapter-line"></div>
+    </div>
+    <div class="greeting-body">
+      <p>はじめまして。新本町クリニック院長の吉村尚子です。</p>
+      <p>私は幼少期、気管支喘息や肺炎を繰り返し、医療に支えられながら過ごしてきました。治療を受けてもなかなか改善しない日々の中で、漢方や鍼灸といった東洋医学に出会い、少しずつ回復していった経験があります。</p>
+      <div class="highlight-quote">「一つの方法だけでは救えない患者様がいる。<br>だからこそ、より広い視点で身体を診る医療が必要である。」</div>
+      <p>この体験は、私の医師としての原点となりました。そう強く感じるようになったからこそ、現在の診療スタイルへとつながっています。</p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <div class="chapter-label">Philosophy &mdash; 診療への想い</div>
+      <div class="chapter-line"></div>
+    </div>
+    <div class="greeting-body">
+      <p>医師となってからは、まず西洋医学に基づいた正確な診断力を身につけるため、画像診断の分野で研鑽を積んできました。病気を見逃さないこと、安全であることは、すべての医療の土台であると考えています。</p>
+      <p>その上で現在は、漢方・栄養療法・点滴療法なども取り入れながら、患者様一人ひとりの状態に応じた医療を提供しています。症状だけでなく、その背景にある体質や生活、ホルモンバランス、ストレスなどにも目を向け、「なぜ今その不調が起きているのか」を丁寧に考えていきます。</p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <div class="chapter-label">Values &mdash; 大切にしていること</div>
+      <div class="chapter-line"></div>
+    </div>
+    <div class="greeting-body">
+      <p>私が大切にしているのは、「身体が本来持っている回復する力を引き出すこと」です。無理に抑え込むのではなく、できるだけ負担の少ない方法で、自然な回復へと導くことを目指しています。</p>
+      <p>また、検査データや身体の状態を分かりやすくお伝えし、患者様ご自身が納得して治療に取り組めることも重視しています。医療は「任せるもの」ではなく、「一緒に取り組むもの」であると考えています。</p>
+      <p>体調の不安や原因の分からない不調に悩まれている方、これまでの治療で十分な改善を感じられなかった方にとって、安心してご相談いただける場所でありたいと願っています。</p>
+    </div>
+
+  </div><!-- /.greeting-wrap -->
+
+  <!-- 締めのメッセージ -->
+  <div class="closing-card fade-in">
+    <div class="closing-icon">🌸</div>
+    <div class="closing-text">
+      新本町クリニックが、皆様にとって「ほっとできる場所」であり、<br>
+      前向きに回復へ進んでいけるきっかけとなれば幸いです。<br><br>
+      高知の地域の皆さまの健康を、心を込めてサポートしてまいります。<br>
+      どんな小さなお悩みでも、お気軽にご相談ください。
+    </div>
+    <div class="closing-from">— 新本町クリニック 院長　吉村 尚子</div>
   </div>
 
 </div>
 
 <div id="footer-placeholder"></div>
-
-
 <script src="common.js"></script>
 </body>
 </html>
