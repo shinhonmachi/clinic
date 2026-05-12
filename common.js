@@ -34,16 +34,15 @@
       });
 
       // ── ハンバーガーメニュー ──────────────────────────────
-      const headerTop = document.querySelector(".header-top");
-      const drawerTop = headerTop ? headerTop.offsetHeight : 69;
-      drawer.style.top = drawerTop + "px";
-      drawer.style.height = `calc(100vh - ${drawerTop}px)`;
-      const overlay = document.querySelector(".nav-overlay");
-      if (overlay) overlay.style.top = drawerTop + "px";
-
       const btn     = document.querySelector(".nav-hamburger");
       const drawer  = document.querySelector(".nav-drawer");
       const overlay = document.querySelector(".nav-overlay");
+
+      // ドロワーのtopをヘッダー上段の実際の高さに合わせる
+      const headerTop = document.querySelector(".header-top");
+      const drawerTop = headerTop ? headerTop.offsetHeight : 69;
+      if (drawer)  { drawer.style.top  = drawerTop + "px"; drawer.style.height = `calc(100vh - ${drawerTop}px)`; }
+      if (overlay) { overlay.style.top = drawerTop + "px"; }
 
       function openMenu() {
         btn.classList.add("is-open");
