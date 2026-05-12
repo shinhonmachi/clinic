@@ -328,7 +328,36 @@ section { padding: 56px 32px; }
   <div class="slider-dots" id="sliderDots"></div>
 </div>
 
-<!-- ② 診療科目 -->
+<!-- ① お知らせ（最新3件） -->
+<section class="news-section">
+  <div class="section-header">
+    <div class="section-label">News</div>
+    <div class="section-title">お知らせ</div>
+  </div>
+  <div class="news-list" id="news-placeholder"></div>
+  <div class="news-more" id="news-more" style="display:none;">
+    <a href="news.html">お知らせ一覧を見る →</a>
+  </div>
+</section>
+
+<!-- ② 院長ごあいさつ -->
+<section class="doctor-section">
+  <div class="section-header">
+    <div class="section-label">Doctor</div>
+    <div class="section-title">院長ごあいさつ</div>
+  </div>
+  <div class="doctor-inner">
+    <div class="doctor-avatar">👩‍⚕️</div>
+    <div>
+      <div class="doctor-role">院長</div>
+      <div class="doctor-name">吉村 尚子</div>
+      <div class="doctor-msg">地域の皆さまが「ちょっと気になること」を気軽に相談できるクリニックでありたいと思っています。体のことだけでなく、こころのこと、生活のことも含めて、一緒に考えていきましょう。</div>
+      <div class="doctor-link"><a href="staff.html">院長のプロフィール・メッセージを読む →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ③ 診療科目 -->
 <section>
   <div class="section-header">
     <div class="section-label">Departments</div>
@@ -375,7 +404,41 @@ section { padding: 56px 32px; }
   </div>
 </section>
 
-<!-- ③ 初めての方へ -->
+<!-- ④ 自費診療PR -->
+<section class="selfpay-section">
+  <div class="section-header">
+    <div class="section-label">Self-pay Treatment</div>
+    <div class="section-title">自費診療メニュー</div>
+    <div class="section-sub">保険診療に加え、さまざまな自費診療も行っています</div>
+  </div>
+  <div class="selfpay-grid">
+    <div class="selfpay-card">
+      <div class="selfpay-icon">🌸</div>
+      <div class="selfpay-name">プラセンタ注射</div>
+      <div class="selfpay-desc">更年期・疲労回復・肌荒れ改善</div>
+    </div>
+    <div class="selfpay-card">
+      <div class="selfpay-icon">🌀</div>
+      <div class="selfpay-name">オゾン点滴</div>
+      <div class="selfpay-desc">免疫力向上・抗酸化・慢性疲労</div>
+    </div>
+    <div class="selfpay-card">
+      <div class="selfpay-icon">✨</div>
+      <div class="selfpay-name">白玉・ビタミンC点滴</div>
+      <div class="selfpay-desc">美白・シミ・くすみ改善</div>
+    </div>
+    <div class="selfpay-card">
+      <div class="selfpay-icon">🌿</div>
+      <div class="selfpay-name">漢方・鍼</div>
+      <div class="selfpay-desc">体質改善・冷え・自律神経</div>
+    </div>
+  </div>
+  <div class="selfpay-cta">
+    <a href="ryokin.html">料金・詳細を見る →</a>
+  </div>
+</section>
+
+<!-- ⑤ 初めての方へ -->
 <section class="first-visit-section">
   <div class="section-header">
     <div class="section-label">First Visit</div>
@@ -416,70 +479,7 @@ section { padding: 56px 32px; }
   </div>
 </section>
 
-<!-- ④ 自費診療PR -->
-<section class="selfpay-section">
-  <div class="section-header">
-    <div class="section-label">Self-pay Treatment</div>
-    <div class="section-title">自費診療メニュー</div>
-    <div class="section-sub">保険診療に加え、さまざまな自費診療も行っています</div>
-  </div>
-  <div class="selfpay-grid">
-    <div class="selfpay-card">
-      <div class="selfpay-icon">🌸</div>
-      <div class="selfpay-name">プラセンタ注射</div>
-      <div class="selfpay-desc">更年期・疲労回復・肌荒れ改善</div>
-    </div>
-    <div class="selfpay-card">
-      <div class="selfpay-icon">🌀</div>
-      <div class="selfpay-name">オゾン点滴</div>
-      <div class="selfpay-desc">免疫力向上・抗酸化・慢性疲労</div>
-    </div>
-    <div class="selfpay-card">
-      <div class="selfpay-icon">✨</div>
-      <div class="selfpay-name">白玉・ビタミンC点滴</div>
-      <div class="selfpay-desc">美白・シミ・くすみ改善</div>
-    </div>
-    <div class="selfpay-card">
-      <div class="selfpay-icon">🌿</div>
-      <div class="selfpay-name">漢方・鍼</div>
-      <div class="selfpay-desc">体質改善・冷え・自律神経</div>
-    </div>
-  </div>
-  <div class="selfpay-cta">
-    <a href="ryokin.html">料金・詳細を見る →</a>
-  </div>
-</section>
-
-<!-- ⑤ お知らせ（最新3件） -->
-<section class="news-section">
-  <div class="section-header">
-    <div class="section-label">News</div>
-    <div class="section-title">お知らせ</div>
-  </div>
-  <div class="news-list" id="news-placeholder"></div>
-  <div class="news-more" id="news-more" style="display:none;">
-    <a href="news.html">お知らせ一覧を見る →</a>
-  </div>
-</section>
-
-<!-- ⑥ 院長ごあいさつ -->
-<section class="doctor-section">
-  <div class="section-header">
-    <div class="section-label">Doctor</div>
-    <div class="section-title">院長ごあいさつ</div>
-  </div>
-  <div class="doctor-inner">
-    <div class="doctor-avatar">👩‍⚕️</div>
-    <div>
-      <div class="doctor-role">院長</div>
-      <div class="doctor-name">吉村 尚子</div>
-      <div class="doctor-msg">地域の皆さまが「ちょっと気になること」を気軽に相談できるクリニックでありたいと思っています。体のことだけでなく、こころのこと、生活のことも含めて、一緒に考えていきましょう。</div>
-      <div class="doctor-link"><a href="staff.html">院長のプロフィール・メッセージを読む →</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- ⑦ 診療時間 -->
+<!-- ⑥ 診療時間 -->
 <section class="hours-section">
   <div class="section-header">
     <div class="section-label">Hours</div>
@@ -514,7 +514,7 @@ section { padding: 56px 32px; }
   </div>
 </section>
 
-<!-- ⑧ アクセス（マップ埋め込み＋電話リンク） -->
+<!-- ⑦ アクセス -->
 <section class="access-section">
   <div class="section-header">
     <div class="section-label">Access</div>
