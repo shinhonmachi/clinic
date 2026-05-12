@@ -15,13 +15,13 @@
 <meta property="og:title" content="院長のあいさつ｜新本町クリニック">
 <meta property="og:description" content="新本町クリニック院長・吉村尚子のごあいさつ。内科・心療内科・漢方内科を専門とし、患者さまお一人おひとりに寄り添う医療を提供しています。">
 <meta property="og:url" content="https://shinhonmachi.jp/staff.html">
-<meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+<meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.webp">
 <meta property="og:site_name" content="新本町クリニック">
 <meta property="og:locale" content="ja_JP">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="院長のあいさつ｜新本町クリニック">
 <meta name="twitter:description" content="新本町クリニック院長・吉村尚子のごあいさつ。内科・心療内科・漢方内科を専門とし、患者さまお一人おひとりに寄り添う医療を提供しています。">
-<meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+<meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.webp">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
@@ -99,7 +99,47 @@
   }
   .closing-from { font-size: 12px; color: var(--text-muted); }
 
-  /* フェードイン */
+  /* 経歴・資格ブロック */
+  .career-wrap {
+    background: white; border: 1px solid var(--border);
+    border-radius: 24px; padding: 44px;
+    margin-bottom: 32px;
+  }
+  .career-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .career-section-title {
+    font-size: 11px; letter-spacing: 0.18em; color: var(--sakura-deep);
+    text-transform: uppercase; margin-bottom: 16px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .career-section-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+  /* 出身・学位 */
+  .career-table { width: 100%; border-collapse: collapse; }
+  .career-table tr { border-bottom: 1px dashed var(--border); }
+  .career-table tr:last-child { border-bottom: none; }
+  .career-table td { padding: 10px 0; font-size: 13px; line-height: 1.7; vertical-align: top; }
+  .career-table td:first-child {
+    color: var(--text-muted); font-size: 11px; min-width: 72px;
+    padding-right: 12px; padding-top: 12px; white-space: nowrap;
+  }
+  .career-table td:last-child { color: var(--text); font-weight: 500; }
+
+  /* 資格リスト */
+  .cert-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .cert-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; color: var(--text); line-height: 1.7;
+  }
+  .cert-icon {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--green-light); color: var(--green);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; flex-shrink: 0; margin-top: 1px;
+  }
+
+  @media (max-width: 600px) {
+    .career-grid { grid-template-columns: 1fr; gap: 28px; }
+  }
   .fade-in { opacity: 0; transform: translateY(18px); animation: fadeUp 0.65s ease forwards; }
   .fade-in:nth-child(1) { animation-delay: 0.05s; }
   .fade-in:nth-child(2) { animation-delay: 0.18s; }
@@ -185,6 +225,52 @@
     </div>
 
   </div><!-- /.greeting-wrap -->
+
+  <!-- 経歴・資格 -->
+  <div class="career-wrap fade-in">
+    <div class="career-grid">
+
+      <!-- 出身・専門・学位 -->
+      <div>
+        <div class="career-section-title">Education &amp; Specialty</div>
+        <table class="career-table">
+          <tr>
+            <td>出身校</td>
+            <td>高知学芸高校<br>高知大学医学部</td>
+          </tr>
+          <tr>
+            <td>専門領域</td>
+            <td>内科・心療内科・漢方内科<br>画像診断・栄養療法・点滴療法</td>
+          </tr>
+          <tr>
+            <td>学位</td>
+            <td>医学博士（MD, PhD）</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- 資格・認定 -->
+      <div>
+        <div class="career-section-title">Certifications</div>
+        <ul class="cert-list">
+          <li class="cert-item">
+            <div class="cert-icon">✓</div>
+            日本医師会認定 健康スポーツ医
+          </li>
+          <li class="cert-item">
+            <div class="cert-icon">✓</div>
+            オゾン療法研修修了<br>
+            <span style="font-size:11px;color:var(--text-muted);">（日本医療・環境オゾン学会）</span>
+          </li>
+          <li class="cert-item">
+            <div class="cert-icon">✓</div>
+            活性化自己リンパ球療法（ALT）研修修了
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div><!-- /.career-wrap -->
 
   <!-- 締めのメッセージ -->
   <div class="closing-card fade-in">
