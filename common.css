@@ -193,8 +193,9 @@ footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; 
   z-index: 140;
   opacity: 0;
   transition: opacity 0.3s;
+  pointer-events: none;
 }
-.nav-overlay.is-open { opacity: 1; }
+.nav-overlay.is-open { opacity: 1; pointer-events: auto; }
 
 /* ===== レスポンシブ（共通） ===== */
 @media (max-width: 767px) {
