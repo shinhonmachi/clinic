@@ -6,8 +6,8 @@
 <title>診療案内｜内科・心療内科・漢方内科｜新本町クリニック</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="common.css">
   <meta name="description" content="新本町クリニックの診療案内。内科（発熱・生活習慣病）、心療内科（うつ・不眠・ストレス）、漢方内科（体質改善・冷え・更年期）の3科を診療しています。">
   <link rel="canonical" href="https://shinhonmachi.jp/shinryo_annai.html">
@@ -17,7 +17,7 @@
   <meta property="og:title" content="診療案内｜内科・心療内科・漢方内科｜新本町クリニック">
   <meta property="og:description" content="新本町クリニックの診療案内。内科（発熱・生活習慣病）、心療内科（うつ・不眠・ストレス）、漢方内科（体質改善・冷え・更年期）の3科を診療しています。">
   <meta property="og:url" content="https://shinhonmachi.jp/shinryo_annai.html">
-  <meta property="og:image" content="https://shinhonmachi.jp/pics/shinsatsu_fukei.jpeg">
+  <meta property="og:image" content="https://shinhonmachi.jp/pics/shinsatsu_fukei.webp">
   <meta property="og:site_name" content="新本町クリニック">
   <meta property="og:locale" content="ja_JP">
 
@@ -25,7 +25,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="診療案内｜内科・心療内科・漢方内科｜新本町クリニック">
   <meta name="twitter:description" content="新本町クリニックの診療案内。内科（発熱・生活習慣病）、心療内科（うつ・不眠・ストレス）、漢方内科（体質改善・冷え・更年期）の3科を診療しています。">
-  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/shinsatsu_fukei.jpeg">
+  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/shinsatsu_fukei.webp">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -48,6 +48,38 @@
   .info-box { background: var(--green-light); border: 1px solid #c5dece; border-radius: 12px; padding: 20px 24px; margin-top: 32px; }
   .info-box-title { font-size: 14px; font-weight: 500; color: var(--green); margin-bottom: 8px; }
   .info-box p { font-size: 13px; color: var(--text-muted); }
+
+  /* 自費診療カード */
+  .jhi-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin: 40px 0 8px;
+  }
+  .jhi-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px 24px 22px;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.25s;
+  }
+  .jhi-card:hover {
+    border-color: var(--sakura);
+    box-shadow: 0 6px 24px rgba(232,145,142,0.14);
+    transform: translateY(-3px);
+  }
+  .jhi-card-icon { font-size: 32px; margin-bottom: 14px; }
+  .jhi-card-label { font-size: 10px; color: var(--sakura-deep); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 6px; }
+  .jhi-card-title { font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 600; color: var(--text); margin-bottom: 12px; line-height: 1.5; }
+  .jhi-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.85; flex: 1; margin-bottom: 16px; }
+  .jhi-card-more { font-size: 12px; color: var(--sakura-deep); border-top: 1px dashed var(--border); padding-top: 12px; }
+
+  @media (max-width: 540px) {
+    .jhi-cards { grid-template-columns: 1fr; }
+  }
     </style>
 </head>
 <body>
@@ -65,7 +97,7 @@
   <div class="clinic-photo">
     <picture>
       <source srcset="pics/shinsatsu_fukei.webp" type="image/webp">
-      <img src="pics/shinsatsu_fukei.jpeg" alt="診察風景" loading="lazy" decoding="async" width="1113" height="1471">
+      <img src="pics/shinsatsu_fukei.webp" alt="診察風景" loading="lazy" decoding="async" width="1113" height="1471">
     </picture>
     <div class="clinic-photo-caption">実際の診察の様子</div>
   </div>
@@ -149,29 +181,23 @@
   </div>
 
 
-  <section class="selfpay-section">
-  <div class="section-header">
-    <div class="section-label">CANCER IMMUNOTHERAPY</div>
-    <div class="section-title">がん免疫細胞療法</div>
-    <div class="section-sub"></div>
+  <!-- 自費診療カード -->
+  <div class="jhi-cards">
+    <a href="canser.html" class="jhi-card">
+      <div class="jhi-card-icon">🧬</div>
+      <div class="jhi-card-label">Cancer Immunotherapy</div>
+      <div class="jhi-card-title">がん免疫細胞療法</div>
+      <div class="jhi-card-desc">自家がんワクチン療法・活性化リンパ球療法（ALT）。患者さま自身の免疫力を科学的に高め、がんの制御・再発予防を目指します。</div>
+      <div class="jhi-card-more">詳細・料金を見る →</div>
+    </a>
+    <a href="hari.html" class="jhi-card">
+      <div class="jhi-card-icon">🪡</div>
+      <div class="jhi-card-label">YNSA</div>
+      <div class="jhi-card-title">山元式新頭鍼療法</div>
+      <div class="jhi-card-desc">日本発・世界数千人の医師が実践する頭鍼治療。麻痺・腰痛・肩こり・耳鳴り・めまいなど幅広い症状に対応します。</div>
+      <div class="jhi-card-more">詳細・料金を見る →</div>
+    </a>
   </div>
-  </div>
-  <div class="selfpay-cta">
-    <a href="subsection_cancer.html">料金・詳細を見る →</a>
-  </div>
-</section>
-
-  <section class="selfpay-section">
-  <div class="section-header">
-    <div class="section-label">YNSA</div>
-    <div class="section-title">山元式新頭鍼療法</div>
-    <div class="section-sub"></div>
-  </div>
-  </div>
-  <div class="selfpay-cta">
-    <a href="subsection_hari.html">料金・詳細を見る →</a>
-  </div>
-</section>
 
    
   <div class="info-box">
