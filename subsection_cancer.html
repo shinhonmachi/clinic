@@ -157,6 +157,52 @@
   }
   .consult-hours { font-size: 12px; color: var(--text-muted); }
 
+  /* 論文紹介 */
+  .paper-section {
+    margin-bottom: 40px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .paper-section-title {
+    background: #f5f0eb;
+    padding: 14px 24px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-muted);
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid var(--border);
+  }
+  .paper-card {
+    background: white;
+    padding: 20px 24px;
+    border-bottom: 1px dashed var(--border);
+  }
+  .paper-card:last-child { border-bottom: none; }
+  .paper-meta {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .paper-title {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+  .paper-title a {
+    color: var(--sakura-deep);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    word-break: break-word;
+  }
+  .paper-body {
+    font-size: 13px;
+    color: var(--text);
+    line-height: 2;
+    margin: 0;
+  }
+
   @media (max-width: 540px) {
     .container { padding: 32px 20px; }
     .lead-box { padding: 22px 20px; }
@@ -183,17 +229,33 @@
     当クリニックでは、この免疫力を科学的に高めることでがんの制御を目指す<strong>免疫細胞療法</strong>を自由診療として提供しています。手術・抗がん剤・放射線といった標準治療との併用はもちろん、再発予防・転移抑制を目的とした維持療法としてもご相談いただけます。
   </div>
 
-    <!-- 論文紹介 -->
-  <div class="lead-box">
-    《論文紹介》
-    最新のnatureによるメタ解析論文(Safety and efficacy of autologous cell vaccines in solid tumors: a systematic review and meta-analysis of randomized control trials)[https://www.nature.com/articles/s41598-023-29630-9]によると
-    総患者数: 1,522名（ワクチン群 808名、対照群 714名）に対してハザード比1.33、つまりワクチンを投与したグループは、投与しなかったグループに比べて、「再発せずに元気に過ごせている状態」が統計的に約33%上回っているという明らかに優位な結果を示してます。
-    また、重篤な副作用（グレード3以上)は全体でわずか5件、治療に関連した死亡0件と非常にに安全であることが証明されています。　
+  <!-- 論文紹介 -->
+  <div class="paper-section">
+    <div class="paper-section-title">📄 論文紹介</div>
 
-    <br><br>
-また論文「Association between autologous formalin-fixed tumor vaccine (AFTV) therapy, molecular pathological markers, and survival outcomes in glioblastoma」[https://pubmed.ncbi.nlm.nih.gov/40773050/]
-    においてはAFTV療法は膠芽腫の総患者数: 375名（ワクチン群 164名、対照群 211名）に対して六ヶ月ほどの遅延効果も報告されています。
-    
+    <div class="paper-card">
+      <div class="paper-meta">Nature Scientific Reports｜メタ解析（RCT系統的レビュー）｜2023年</div>
+      <div class="paper-title">
+        <a href="https://www.nature.com/articles/s41598-023-29630-9" target="_blank" rel="noopener">
+          Safety and efficacy of autologous cell vaccines in solid tumors: a systematic review and meta-analysis of randomized control trials
+        </a>
+      </div>
+      <p class="paper-body">
+        総患者数1,522名（ワクチン群808名、対照群714名）を対象としたメタ解析です。ハザード比1.33という結果は、ワクチンを投与したグループが投与しなかったグループに比べて、再発なく良好な状態を維持している割合が統計的に約33%高いことを示しており、有意な有効性が確認されています。また、重篤な副作用（グレード3以上）は全体でわずか5件、治療関連死は0件と、非常に高い安全性も証明されています。
+      </p>
+    </div>
+
+    <div class="paper-card">
+      <div class="paper-meta">Brain Tumor Pathology｜後ろ向きコホート研究｜2025年</div>
+      <div class="paper-title">
+        <a href="https://pubmed.ncbi.nlm.nih.gov/40773050/" target="_blank" rel="noopener">
+          Association between autologous formalin-fixed tumor vaccine (AFTV) therapy, molecular pathological markers, and survival outcomes in glioblastoma
+        </a>
+      </div>
+      <p class="paper-body">
+        新規診断の膠芽腫（GBM）375名（AFTV群164名、非AFTV群211名）を対象とした後ろ向き研究です。AFTV療法を受けたグループでは、無増悪生存期間（PFS）が8.7ヶ月から14.0ヶ月へ、全生存期間（OS）が21.9ヶ月から32.0ヶ月へと有意に改善（いずれもp&lt;0.05）。特にIDH野生型かつPD-L1・p53陰性の患者において効果が顕著でした。
+      </p>
+    </div>
   </div>
 
   <!-- 注意書き -->
