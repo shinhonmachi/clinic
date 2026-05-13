@@ -3,115 +3,264 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>診療案内｜内科・心療内科・漢方内科｜新本町クリニック</title>
+<title>がん治療（自費）｜免疫細胞療法・自家がんワクチン｜新本町クリニック</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="common.css">
-  <meta name="description" content="新本町クリニック。">
-  <link rel="canonical" href="https://shinhonmachi.jp/shinryo_annai.html">
+  <meta name="description" content="新本町クリニックでは、自家がんワクチン療法・活性化リンパ球療法（ALT）など、自費によるがん免疫細胞療法を行っています。手術後の再発予防・転移抑制を目的とした治療です。">
+  <link rel="canonical" href="https://shinhonmachi.jp/canser.html">
 
   <!-- OGP -->
   <meta property="og:type" content="article">
-  <meta property="og:title" content="診療案内｜内科・心療内科・漢方内科｜新本町クリニック">
-  <meta property="og:description" content="新本町クリニックの。">
-  <meta property="og:url" content="https://shinhonmachi.jp/shinryo_annai.html">
-  <meta property="og:image" content="https://shinhonmachi.jp/pics/shinsatsu_fukei.jpeg">
+  <meta property="og:title" content="がん治療（自費）｜免疫細胞療法・自家がんワクチン｜新本町クリニック">
+  <meta property="og:description" content="新本町クリニックでは、自家がんワクチン療法・活性化リンパ球療法（ALT）など、自費によるがん免疫細胞療法を行っています。">
+  <meta property="og:url" content="https://shinhonmachi.jp/canser.html">
+  <meta property="og:image" content="https://shinhonmachi.jp/pics/shinsatsu_fukei.webp">
   <meta property="og:site_name" content="新本町クリニック">
   <meta property="og:locale" content="ja_JP">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="診療案内｜内科・心療内科・漢方内科｜新本町クリニック">
-  <meta name="twitter:description" content="新本町クリニックの">
-  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/shinsatsu_fukei.jpeg">
+  <meta name="twitter:title" content="がん治療（自費）｜免疫細胞療法・自家がんワクチン｜新本町クリニック">
+  <meta name="twitter:description" content="新本町クリニックでは、自家がんワクチン療法・活性化リンパ球療法（ALT）など、自費によるがん免疫細胞療法を行っています。">
+  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/shinsatsu_fukei.webp">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <style>
-                            .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
-  .dept-section { margin-bottom: 40px; }
-  .dept-header { display: flex; align-items: center; gap: 14px; background: white; border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px; margin-bottom: 16px; border-left: 4px solid var(--sakura-deep); }
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
+
+  /* 概要リード文 */
+  .lead-box {
+    background: linear-gradient(135deg, #fdf6f6 0%, #f0f7f2 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 2;
+  }
+  .lead-box strong { color: var(--sakura-deep); }
+
+  /* 注意バナー */
+  .caution-banner {
+    background: #fff8e1;
+    border: 1px solid #f0c040;
+    border-radius: 12px;
+    padding: 16px 22px;
+    margin-bottom: 40px;
+    font-size: 12px;
+    color: #7a6010;
+    line-height: 1.8;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .caution-banner .caution-icon { font-size: 18px; flex-shrink: 0; }
+
+  /* 治療セクション */
+  .dept-section { margin-bottom: 48px; }
+  .dept-header {
+    display: flex; align-items: center; gap: 14px;
+    background: white; border: 1px solid var(--border);
+    border-radius: 16px; padding: 20px 24px; margin-bottom: 16px;
+    border-left: 4px solid var(--sakura-deep);
+  }
   .dept-icon-lg { font-size: 28px; }
   .dept-title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; }
   .dept-title-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
-  .dept-body { background: white; border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; }
-  .dept-body p { font-size: 13px; color: var(--text); line-height: 1.9; margin-bottom: 12px; }
-  .dept-body p:last-child { margin-bottom: 0; }
-  .symptom-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+  .dept-body {
+    background: white; border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px 28px;
+  }
+  .dept-body p { font-size: 13px; color: var(--text); line-height: 2; margin-bottom: 14px; }
+  .dept-body p:last-of-type { margin-bottom: 0; }
+
+  /* ポイントリスト */
+  .point-list { margin: 20px 0; display: flex; flex-direction: column; gap: 10px; }
+  .point-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; color: var(--text); line-height: 1.8;
+  }
+  .point-icon {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--green-light); color: var(--green);
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* 対象タグ */
+  .symptom-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--border); }
+  .symptom-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; width: 100%; }
   .symptom-tag { background: var(--sakura-light); color: var(--sakura-deep); font-size: 12px; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--sakura); }
-  .clinic-photo { border-radius: 16px; overflow: hidden; margin-bottom: 40px; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
-  .clinic-photo img { width: 100%; height: 280px; object-fit: cover; display: block; }
-  .clinic-photo-caption { background: white; border: 1px solid var(--border); border-top: none; border-radius: 0 0 16px 16px; padding: 12px 20px; font-size: 12px; color: var(--text-muted); text-align: center; }
-  .info-box { background: var(--green-light); border: 1px solid #c5dece; border-radius: 12px; padding: 20px 24px; margin-top: 32px; }
-  .info-box-title { font-size: 14px; font-weight: 500; color: var(--green); margin-bottom: 8px; }
-  .info-box p { font-size: 13px; color: var(--text-muted); }
-    </style>
+
+  /* 区切り */
+  .section-divider { border: none; border-top: 1px dashed var(--border); margin: 48px 0; }
+
+  /* 受診の流れ */
+  .info-box { background: var(--green-light); border: 1px solid #c5dece; border-radius: 16px; padding: 28px 32px; margin-top: 16px; }
+  .info-box-title { font-size: 15px; font-weight: 500; color: var(--green); margin-bottom: 14px; font-family: 'Noto Serif JP', serif; }
+  .info-box p { font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 10px; }
+  .info-box p:last-child { margin-bottom: 0; }
+
+  /* 相談ボタン */
+  .consult-cta {
+    text-align: center;
+    margin-top: 40px;
+    padding: 32px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+  }
+  .consult-cta p { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.8; }
+  .consult-tel {
+    display: inline-block;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--sakura-deep);
+    text-decoration: none;
+    margin-bottom: 6px;
+  }
+  .consult-hours { font-size: 12px; color: var(--text-muted); }
+
+  @media (max-width: 540px) {
+    .container { padding: 32px 20px; }
+    .lead-box { padding: 22px 20px; }
+    .dept-body { padding: 20px 18px; }
+    .info-box { padding: 22px 20px; }
+  }
+</style>
 </head>
 <body>
 
 <div id="header-placeholder"></div>
 
 <div class="page-hero">
-  <span class="page-label">Cancer</span>
-  <div class="page-title">がん治療</div>
-  <div class="page-sub">がん治療について</div>
+  <span class="page-label">Cancer Immunotherapy</span>
+  <div class="page-title">がん免疫細胞療法</div>
+  <div class="page-sub">自費診療｜自家がんワクチン療法・活性化リンパ球療法</div>
 </div>
 
 <div class="container">
 
+  <!-- リード文 -->
+  <div class="lead-box">
+    私たちの体には、本来<strong>がん細胞を認識して攻撃する免疫機能</strong>が備わっています。しかし、がんが進行するにつれて、免疫細胞の働きが低下したり、がん細胞が免疫の監視をすり抜けるようになることがあります。<br><br>
+    当クリニックでは、この免疫力を科学的に高めることでがんの制御を目指す<strong>免疫細胞療法</strong>を自費診療として提供しています。手術・抗がん剤・放射線といった標準治療との併用はもちろん、再発予防・転移抑制を目的とした維持療法としてもご相談いただけます。
+  </div>
 
+  <!-- 注意書き -->
+  <div class="caution-banner">
+    <span class="caution-icon">⚠️</span>
+    <span>当ページに記載の治療は<strong>自由診療（全額自己負担）</strong>です。効果には個人差があり、すべての方に同様の結果をお約束するものではありません。標準治療を否定するものではなく、主治医と連携しながら実施することを推奨します。ご不明な点はお気軽にご相談ください。</span>
+  </div>
+
+  <!-- 自家がんワクチン -->
   <div class="dept-section">
     <div class="dept-header">
-      <div class="dept-icon-lg"></div>
+      <div class="dept-icon-lg">🧬</div>
       <div>
         <div class="dept-title">自家がんワクチン療法</div>
-        <div class="dept-title-sub">Cancer Vaccine</div>
+        <div class="dept-title-sub">Autologous Cancer Vaccine Therapy</div>
       </div>
     </div>
     <div class="dept-body">
-      <p>自家がんワクチン療法とは、免疫療法の一つです。手術で摘出されたがん組織（約2g必要）から作成したがんワクチンにより、がんと闘うリンパ球を活性化してがん制御を試みる治療法です。</p>
-      <p>本療法は、理化学研究所・元細胞開発銀行室長の大野忠夫博士のホルマリン、パラフィン固定組織から作成したワクチンに誘導された、細胞障害性T細胞（CTL：cytotoxic T lymphocyte）というがんを攻撃するリンパ球の一種に関する基礎実験（Nature　Medicine　1995）から始まり、筑波大学脳神経外科、東京女子医科大学脳神経外科での臨床試験を経て現在に至っています。</p>
-      <p>ワクチン作成には、手術で摘出したがん組織（ホルマリン固定、またはパラフィンブロック）が約2グラム（小指第一関節大）必要です。</p>
-      <p>これから手術を受ける、あるいは今後手術を受けることになった場合、自分のがん組織がなんらかの形で治療に使えるかもしれませんので、主治医から標本の一部を譲り受けておくといいかもしれません。</p>
+      <p>自家がんワクチン療法は、<strong>患者さま自身のがん組織から作製したワクチン</strong>を用いて、がんに対する免疫応答を引き起こす治療法です。体外で作ったワクチンによってリンパ球を「教育」し、がん細胞を特異的に攻撃する細胞障害性T細胞（CTL）を体内で増やすことを目指します。</p>
+
+      <p>本療法は、理化学研究所・元細胞開発銀行室長の大野忠夫博士が、ホルマリン・パラフィン固定組織から作製したワクチンがCTLを誘導するという基礎実験（<em>Nature Medicine</em>, 1995）を発表したことに端を発します。その後、筑波大学脳神経外科・東京女子医科大学脳神経外科での臨床試験を経て、現在の治療プロトコルが確立されました。</p>
+
+      <div class="point-list">
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span>手術で摘出したがん組織（ホルマリン固定またはパラフィンブロック、約2g＝小指第一関節大）からワクチンを作製します。</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span>自分のがん組織に由来するため、そのがんの抗原に対して特異的な免疫反応が期待できます。</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span>これから手術を予定されている方は、摘出標本の一部を主治医に保存してもらえるよう事前にご相談されることをおすすめします。</span>
+        </div>
+      </div>
+
+      <p style="margin-top:16px;">すでに手術を終えた方でも、病理標本（パラフィンブロック）が保存されている場合はワクチン作製が可能なケースがあります。まずはご相談ください。</p>
+
       <div class="symptom-list">
-        <span class="symptom-tag">がん</span>
-        <span class="symptom-tag">転移予防</span>
-        <span class="symptom-tag">健康診断後のフォロー</span>
+        <span class="symptom-label">こんな方にご相談ください</span>
+        <span class="symptom-tag">手術後の再発予防</span>
+        <span class="symptom-tag">転移抑制</span>
+        <span class="symptom-tag">標準治療との併用</span>
+        <span class="symptom-tag">がん組織（標本）をお持ちの方</span>
       </div>
     </div>
   </div>
 
+  <hr class="section-divider">
+
+  <!-- 活性化リンパ球療法 -->
   <div class="dept-section">
     <div class="dept-header">
-      <div class="dept-icon-lg"></div>
+      <div class="dept-icon-lg">🔬</div>
       <div>
-        <div class="dept-title">活性化リンパ球療法</div>
-        <div class="dept-title-sub">Lymphokine-Activated Killer Cell Therapy</div>
+        <div class="dept-title">活性化リンパ球療法（ALT）</div>
+        <div class="dept-title-sub">Activated T-Lymphocyte Therapy</div>
       </div>
     </div>
     <div class="dept-body">
-      <p>活性化Tリンパ球療法は、血液から採取したリンパ球を体の外で増殖、活性化させ、主に静脈を通して体内に戻すことで、がんを攻撃することが期待される治療法です。</p>
-      <p>免疫細胞治療の草創期1970年代にすでに行われていた治療法であり、年数を経て、細胞培養技術の発展とともに進化してきた免疫細胞療法です。</p>
-      <p>活性化Tリンパ球療法の特徴は体内にあるTリンパ球は元来、がん細胞を発見し攻撃を仕掛ける能力を持っています。培養して活性化されたTリンパ球は数千倍に増殖し、強い攻撃力を発揮します。</p>
-            <p>一部、Tリンパ球は樹状細胞から情報を受け取ることで、活性化、増殖し、特に目印を持つがん細胞に対し、攻撃を仕掛ける能力を持ちます。</p>
-            <p>患者さま自身のTリンパ球を使用するため、副作用はほとんどありません。転移しているがんや再発予防におすすめの治療法と言えます。</p>
+      <p>活性化リンパ球療法（ALT：Activated T-Lymphocyte Therapy）は、<strong>患者さま自身の血液からTリンパ球を取り出し、体外で数千倍に増殖・活性化させてから体内に戻す</strong>免疫細胞療法です。1970年代から研究が始まり、細胞培養技術の進歩とともに安全性・有効性が高められてきた歴史ある治療法です。</p>
+
+      <p>Tリンパ球は体内でもがん細胞を発見・攻撃する役割を担っています。しかし、がんの進行や加齢・ストレスなどによりその数や活性が低下することがあります。体外で大量に増やした活性化Tリンパ球を点滴で戻すことで、<strong>がん細胞への攻撃力を集中的に高める</strong>ことが期待されます。</p>
+
+      <div class="point-list">
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>副作用がほとんどない</strong>：患者さまご自身の細胞を使うため、拒絶反応や重篤な副作用のリスクが極めて低い。</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>転移・再発予防に有効</strong>：全身に広がった微小ながん細胞にも免疫細胞が働きかけるため、転移のある方や再発予防を目的とした治療として特に適しています。</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>標準治療との相性がよい</strong>：手術・化学療法・放射線治療と並行して行うことで、治療効果を補完することが期待されます。</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>樹状細胞との連携</strong>：一部のTリンパ球は樹状細胞から情報を受け取ることで、特定のがん抗原を持つ細胞をより効率よく攻撃できるようになります。</span>
+        </div>
+      </div>
+
       <div class="symptom-list">
-        <span class="symptom-tag">がん</span>
-        <span class="symptom-tag">転移予防</span>
-        <span class="symptom-tag">健康診断後のフォロー</span>
+        <span class="symptom-label">こんな方にご相談ください</span>
+        <span class="symptom-tag">転移・再発予防</span>
+        <span class="symptom-tag">化学療法・放射線との併用</span>
+        <span class="symptom-tag">手術後の維持療法</span>
+        <span class="symptom-tag">副作用の少ない治療を希望される方</span>
       </div>
     </div>
   </div>
 
+  <hr class="section-divider">
 
-
+  <!-- 受診の流れ -->
   <div class="info-box">
-    <div class="info-box-title">🌿 受診の流れについて</div>
-    <p>初診の方は、保険証をお持ちの上ご来院ください。お電話（088-856-7511）でご予約いただくと待ち時間を減らせますので、お気軽にお電話ください。</p>
-    <p style="margin-top:10px;">初診時は、現在の症状・これまでの病歴・服用中のお薬・生活習慣などを丁寧にお伺いします。「うまく説明できるか不安」という方も、思いつくままお話しいただければ大丈夫です。医師が一緒に整理しながら進めます。お薬手帳や健康診断の結果票があればご持参ください。</p>
+    <div class="info-box-title">🌿 ご相談・受診の流れ</div>
+    <p>がん免疫細胞療法は、患者さまの状態・病歴・これまでの治療経過によって適応や方針が異なります。まずはお電話にてご相談ください。詳しくお話を伺ったうえで、適切な治療をご提案します。</p>
+    <p>初回相談時には、<strong>これまでの病歴・手術記録・病理報告書・現在の服用薬</strong>などをできる範囲でご持参いただくと、より具体的なご説明が可能です。現在主治医がいる方は、治療の経緯を簡単にまとめたメモをお持ちいただくと助かります。</p>
+    <p>「自分に適用できるか分からない」「費用について知りたい」という段階のご相談も歓迎します。</p>
+  </div>
+
+  <!-- 電話CTA -->
+  <div class="consult-cta">
+    <p>ご不明な点・ご不安なことは、まずはお電話でお気軽にご相談ください。</p>
+    <a href="tel:088-856-7511" class="consult-tel">📞 088-856-7511</a>
+    <div class="consult-hours">受付時間：診療時間内（木・日・祝除く）</div>
   </div>
 
 </div>
