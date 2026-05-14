@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>マグネシウムはすごい｜新本町クリニック コラム</title>
+  <meta name="description" content="マグネシウムは300以上の酵素反応・筋肉・神経・骨・睡眠・血糖・血圧すべてに関わる「沈黙のミネラル」。不足に気づきにくい理由と効率的な補い方を院長が解説します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header { margin-bottom: 36px; }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* アイキャッチバナー */
+    .article-eyecatch-banner {
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(135deg, #eaf2fb 0%, #d0e8f5 40%, #b8d8ee 100%);
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .article-eyecatch-banner .banner-icon { font-size: 64px; }
+    .article-eyecatch-banner .banner-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #1a4a6a;
+      letter-spacing: 0.06em;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p { margin-bottom: 1.6em; }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p { margin: 0; font-size: 14px; line-height: 1.9; }
+
+    /* 引用・コラムボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 摂取方法カード群 */
+    .intake-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .intake-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .intake-card-icon { font-size: 28px; margin-bottom: 8px; }
+    .intake-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .intake-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ページフッター（記事末） */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* 注意書き */
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>マグネシウムはすごい</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">栄養・ミネラル</span>
+      <h2 class="article-title">マグネシウムはすごい<br>―― 「沈黙のミネラル」が体の600反応を支える</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年5月</span>
+      </div>
+    </header>
+
+    <!-- アイキャッチバナー -->
+    <div class="article-eyecatch-banner">
+      <div class="banner-icon">💎</div>
+      <div class="banner-text">Magnesium — 見えないところで体を動かす縁の下の巨人</div>
+    </div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">「沈黙のミネラル」と呼ばれるワケ</h3>
+      <p>
+        マグネシウムは人体に存在する必須ミネラルのうち、カルシウム・リン・カリウム・ナトリウムに次いで
+        <strong>5番目に多い</strong>ミネラルであり、体内の酵素反応においては<strong>300〜600種類</strong>に関与するとされています。
+        ところが血液検査でなかなか異常値が出ないため、慢性的に不足していても気づきにくいという特性を持ちます。
+        この「症状は出るのに数値に現れにくい」という性質から、マグネシウムは「沈黙のミネラル」とも呼ばれます。
+      </p>
+      <p>
+        筋肉の収縮と弛緩・神経伝達・骨の形成・血糖値の調節・血圧の管理・タンパク質合成・DNAの修復・睡眠の質……
+        これだけ広い領域に同時に関わるミネラルは他になく、
+        不足すると体のあらゆるところで「なんとなくの不調」として現れるのが特徴です。
+        現代の日本人の多くが潜在的なマグネシウム不足状態にあるといわれており、
+        このコラムではその理由と対策を詳しく解説します。
+      </p>
+
+      <!-- 体内分布 -->
+      <h3 class="section-heading">マグネシウムは体のどこにある？</h3>
+      <p>
+        成人の体内には約20〜30gのマグネシウムが存在しています。
+        その約60%は骨・歯に蓄えられており、約27%が筋肉に、残りが脳・肝臓・腎臓・心臓などの臓器に分布しています。
+        血液中に存在するのは全体の約1%にすぎないため、血中マグネシウム値が正常でも
+        細胞内・骨のマグネシウムが枯渇している「潜在性マグネシウム欠乏」が起きやすいのです。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔬 「ATP」を動かすのはマグネシウム</div>
+        <p>
+          私たちの細胞がエネルギーを使うとき、必ず「ATP（アデノシン三リン酸）」という分子が介在します。
+          実はこのATPは単独では機能できず、マグネシウムと結合して「Mg-ATP」の形になって初めて活性化されます。
+          つまりマグネシウムがなければ、私たちは細胞レベルでエネルギーを使えないのです。
+          「常に疲れやすい」という慢性疲労の背景にマグネシウム不足が潜んでいることが多い理由はここにあります。
+        </p>
+      </div>
+
+      <!-- 筋肉 -->
+      <h3 class="section-heading">マグネシウムの働き① 筋肉の「リラックス」を担う</h3>
+      <p>
+        筋肉の収縮にはカルシウムが必要で、これはよく知られています。
+        一方、筋肉を<strong>弛緩（リラックス）させる</strong>のがマグネシウムの役割です。
+        カルシウムとマグネシウムは「拮抗ミネラル」として互いにバランスをとっており、
+        マグネシウムが不足するとカルシウムによる収縮作用が優位になり、筋肉が過緊張状態に陥ります。
+      </p>
+      <p>
+        これが「こむら返り（足がつる）」「肩こり・首こり」「目のまわりのピクピク（眼瞼けいれん）」として現れます。
+        特に就寝中や運動後に足がつりやすい方は、マグネシウム不足を疑う価値があります。
+        また、子宮筋もマグネシウム不足で過緊張しやすく、月経痛の悪化にも関係しています。
+      </p>
+
+      <div class="highlight-box">
+        スポーツ選手やアスリートは発汗によってマグネシウムを大量に失います。
+        激しい運動後の筋けいれんや疲労回復の遅さにマグネシウムが関与していることが複数の研究で示されており、
+        欧米のプロスポーツチームではマグネシウム補充が標準的なリカバリープロトコルに組み込まれています。
+      </div>
+
+      <!-- 神経・ストレス -->
+      <h3 class="section-heading">マグネシウムの働き② ストレスと神経の「緩衝材」</h3>
+      <p>
+        マグネシウムは神経系においても重要な役割を担います。
+        脳の主要な抑制性神経伝達物質であるGABAの受容体機能を調節し、
+        また興奮性の神経伝達物質であるグルタミン酸の受容体（NMDA受容体）を穏やかにブロックすることで、
+        神経の過剰な興奮を抑え、脳をリラックス状態に導きます。
+      </p>
+      <p>
+        ストレスがかかるとコルチゾール（ストレスホルモン）が分泌され、その影響でマグネシウムの尿への排泄が増加します。
+        さらにマグネシウムが不足すると神経が興奮しやすくなり、ストレスへの反応が過剰になる——という
+        「ストレス→マグネシウム消耗→さらにストレスに弱くなる」という悪循環が生じます。
+        現代人が慢性的にストレスを感じやすい背景に、マグネシウム不足が関与しているという見方は
+        世界中の研究者の間で支持されています。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">😰 「マグネシウムと不安障害」の研究</div>
+        <p>
+          複数のメタアナリシス（複数の研究をまとめた解析）で、
+          マグネシウムの補充が不安症状・抑うつ症状を有意に改善することが示されています。
+          特に「マグネシウム＋ビタミンB6」の組み合わせは、単独摂取よりも不安軽減効果が高いという報告があります（前回のB6コラムにも関連します）。
+          薬に頼る前に栄養状態の見直しから始めることの大切さを示す、重要なエビデンスのひとつです。
+        </p>
+      </div>
+
+      <!-- 睡眠 -->
+      <h3 class="section-heading">マグネシウムの働き③ 睡眠の質を左右する</h3>
+      <p>
+        「寝つきが悪い」「夜中に目が覚める」「朝スッキリ起きられない」という悩みを持つ方に、
+        マグネシウム不足が関与しているケースは少なくありません。
+        マグネシウムはメラトニン（睡眠ホルモン）の産生を調節し、
+        深い睡眠（ノンREM睡眠）の時間を延ばす効果があることが研究で示されています。
+      </p>
+      <p>
+        また、夜間の筋肉のリラックスにマグネシウムが必要であることも睡眠の質に直結します。
+        入浴後や就寝前のマグネシウム補充が「眠りの儀式」として効果的とされており、
+        「経皮吸収（マグネシウムオイルや入浴剤として皮膚から摂取する方法）」も注目されています。
+      </p>
+
+      <!-- 骨・歯 -->
+      <h3 class="section-heading">マグネシウムの働き④ 骨をカルシウムより支える？</h3>
+      <p>
+        骨の健康というとカルシウムが真っ先に思い浮かびますが、
+        マグネシウムなくしてカルシウムは骨に定着できません。
+        マグネシウムは骨にカルシウムを固定する酵素（アルカリフォスファターゼ）を活性化し、
+        また副甲状腺ホルモン（PTH）やビタミンDの代謝を調節することで、
+        骨へのカルシウム沈着を間接的に制御しています。
+      </p>
+      <p>
+        カルシウムばかり補充してマグネシウムが不足すると、
+        骨ではなく動脈・腎臓・関節などの軟組織にカルシウムが沈着する「石灰化」のリスクが高まります。
+        「カルシウムだけ摂っていれば骨は大丈夫」という考え方は、現代の栄養学的には不完全といえます。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🦴 カルシウムとマグネシウムの理想比率</div>
+        <p>
+          カルシウムとマグネシウムの摂取比率は「2：1」が理想とされています（カルシウム600mgならマグネシウム300mg）。
+          しかし現代の食生活では乳製品・小魚・豆腐などのカルシウム源は意識されやすい一方、
+          マグネシウム源は不足しがちで、実態は3：1〜4：1になっているケースも珍しくありません。
+          「骨のためにカルシウムを頑張っているのに骨密度が上がらない」という方は、
+          マグネシウム不足が足を引っ張っている可能性を考えてみてください。
+        </p>
+      </div>
+
+      <!-- 血糖・血圧 -->
+      <h3 class="section-heading">マグネシウムの働き⑤ 血糖値と血圧の調節</h3>
+      <p>
+        マグネシウムはインスリンの分泌と、インスリンが細胞に作用する「インスリン感受性」の両方に関与しています。
+        膵臓のβ細胞がインスリンを分泌する際にマグネシウムが必要であり、
+        また筋肉・脂肪細胞のインスリン受容体のシグナル伝達にもマグネシウムが補因子として働きます。
+        大規模な疫学研究では、マグネシウム摂取量が多い人ほど2型糖尿病の発症リスクが低いことが示されています。
+      </p>
+      <p>
+        血圧においては、マグネシウムが血管平滑筋をリラックスさせることで血管を拡張し、血圧を低下させます。
+        「天然のカルシウム拮抗薬」とも呼ばれるこのメカニズムは、
+        降圧薬の作用機序（カルシウム拮抗薬）と類似しており、高血圧の予防・補助療法として注目されています。
+      </p>
+
+      <!-- 歴史コラム -->
+      <h3 class="section-heading">歴史コラム｜マグネシア地方と「苦い塩」の発見</h3>
+      <p>
+        マグネシウム（Magnesium）という名称は、ギリシャのマケドニア地方にある「マグネシア（Magnesia）」という地名に由来します。
+        この地方で採れた白い鉱石（酸化マグネシウム）がヨーロッパに広まり、「マグネシア・アルバ（白いマグネシア）」と呼ばれました。
+      </p>
+      <div class="highlight-box">
+        イギリスのエプソム（Epsom）という町の湧き水に含まれる塩が、17世紀に「エプソム塩（硫酸マグネシウム）」として発見されました。
+        苦みが強いことから「苦塩」とも呼ばれ、当時は下剤・入浴剤として広く使われました。
+        現在もエプソムソルト（硫酸マグネシウム入浴剤）として人気があり、
+        欧米では「マグネシウム経皮吸収」のポピュラーな方法として定着しています。
+        元素として単離されたのは1808年、イギリスの化学者ハンフリー・デービーによるものです。
+      </div>
+
+      <!-- 不足の原因 -->
+      <h3 class="section-heading">なぜ現代人はマグネシウムが不足しやすいのか</h3>
+      <p>
+        マグネシウムはかつて、硬水（ミネラルウォーター）や未精製の穀物・豆類・海藻から十分に摂取できていました。
+        しかし現代の食生活と環境はマグネシウムを奪う要因に満ちています。
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>原因</th>
+            <th>詳細</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>精製食品・白米中心の食生活</td>
+            <td>精白・精製の過程でマグネシウムが大幅に失われる。玄米→白米で約80%減少</td>
+          </tr>
+          <tr>
+            <td>軟水の普及</td>
+            <td>日本の水道水は軟水でマグネシウム含有量が少ない。硬水が一般的な欧州と比べ摂取量で大きな差が出やすい</td>
+          </tr>
+          <tr>
+            <td>アルコール・カフェイン</td>
+            <td>どちらもマグネシウムの尿中排泄を増加させる。コーヒーを多く飲む方・飲酒習慣がある方は要注意</td>
+          </tr>
+          <tr>
+            <td>ストレス</td>
+            <td>コルチゾールの増加がマグネシウム排泄を促進。「ストレス→マグネシウム消耗→さらにストレスに弱くなる」という悪循環に</td>
+          </tr>
+          <tr>
+            <td>糖質の過剰摂取</td>
+            <td>糖質の代謝にマグネシウムが消費される。甘いものが多い食生活はマグネシウムを枯渇させやすい</td>
+          </tr>
+          <tr>
+            <td>胃薬（PPI）・利尿薬</td>
+            <td>プロトンポンプ阻害薬の長期使用は腸でのマグネシウム吸収を妨げ、低マグネシウム血症の原因になることがある</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 欠乏サイン -->
+      <h3 class="section-heading">マグネシウム不足のサインを見逃さないために</h3>
+      <p>
+        マグネシウムは血液検査で正常値を示していても細胞内が不足しているケースがあります。
+        以下の症状が複数重なっている場合、潜在性マグネシウム欠乏を疑う価値があります。
+      </p>
+      <ul class="point-list">
+        <li><strong>こむら返り・足がつる</strong>（特に夜間・運動後）</li>
+        <li><strong>肩こり・首こり・筋肉のこわばり</strong>が慢性的に続く</li>
+        <li><strong>目のまわりがピクピクする</strong>（眼瞼ミオキミア）</li>
+        <li><strong>寝つきが悪い・睡眠が浅い</strong>と感じる</li>
+        <li><strong>イライラしやすい・不安感</strong>が強い</li>
+        <li><strong>慢性的な疲労感</strong>・エネルギーが出ない</li>
+        <li><strong>頭痛・片頭痛</strong>を繰り返す</li>
+        <li><strong>月経痛・PMS</strong>が重い（子宮筋の過緊張）</li>
+        <li><strong>便秘</strong>が続く（腸の平滑筋の過緊張）</li>
+      </ul>
+
+      <!-- 食品源 -->
+      <h3 class="section-heading">マグネシウムを多く含む食品</h3>
+      <p>
+        マグネシウムは緑色の葉野菜・海藻・ナッツ・豆類・全粒穀物に豊富に含まれています。
+        植物の緑色色素「クロロフィル」の中心にマグネシウム原子が配置されており、
+        「緑が濃い食材＝マグネシウムが豊富」と覚えると食事の選択に役立ちます。
+      </p>
+
+      <div class="intake-cards">
+        <div class="intake-card">
+          <div class="intake-card-icon">🌿</div>
+          <div class="intake-card-title">海藻類（わかめ・昆布・のり）</div>
+          <div class="intake-card-desc">乾燥わかめ100gで約1100mg。少量でも効率よくマグネシウムを摂れる日本の食文化の宝。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🎋</div>
+          <div class="intake-card-title">大豆・豆腐・納豆</div>
+          <div class="intake-card-desc">納豆1パック（50g）で約50mg。毎日の習慣として最も手軽に続けられるマグネシウム源。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🥜</div>
+          <div class="intake-card-title">ナッツ類（アーモンド・カシュー）</div>
+          <div class="intake-card-desc">アーモンド28g（約23粒）で約80mg。間食をナッツに変えるだけで摂取量が大きく改善。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🍫</div>
+          <div class="intake-card-title">高カカオチョコレート</div>
+          <div class="intake-card-desc">カカオ70%以上のチョコ30gで約50mg。「チョコが食べたい」はマグネシウム不足のサインとも。</div>
+        </div>
+      </div>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🍫 「チョコが無性に食べたくなる」のはなぜ？</div>
+        <p>
+          チョコレート（特にダークチョコ）はマグネシウムの優れた供給源です。
+          ストレスや生理前（PMS時期）に無性にチョコが食べたくなる現象は、
+          体がマグネシウムを求めているシグナルである可能性があります。
+          甘いミルクチョコよりも、カカオ含有量が高いダークチョコレートを選ぶと
+          マグネシウム摂取量を大幅に増やしつつ、糖質の過剰摂取を抑えることができます。
+        </p>
+      </div>
+
+      <!-- サプリ -->
+      <h3 class="section-heading">サプリメントで補う場合の選び方</h3>
+      <p>
+        食事だけで十分な摂取が難しい場合は、サプリメントによる補充が有効です。
+        ただし一口にマグネシウムサプリといっても、結合する化合物によって吸収率・効果・副作用が異なります。
+        用途に合わせた選択が大切です。
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>種類</th>
+            <th>吸収率</th>
+            <th>特徴・向いている用途</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>グリシン酸マグネシウム</td>
+            <td>高い</td>
+            <td>消化器への刺激が少なく、睡眠改善・ストレス軽減に特におすすめ。下剤作用が出にくい</td>
+          </tr>
+          <tr>
+            <td>リンゴ酸マグネシウム</td>
+            <td>高い</td>
+            <td>クエン酸サイクル（エネルギー産生）をサポート。慢性疲労・筋肉痛に向く</td>
+          </tr>
+          <tr>
+            <td>クエン酸マグネシウム</td>
+            <td>中〜高</td>
+            <td>水溶性で吸収率が高め。便秘解消を兼ねたい方に。大量摂取で軟便になることがある</td>
+          </tr>
+          <tr>
+            <td>酸化マグネシウム</td>
+            <td>低い</td>
+            <td>吸収率は低いが便秘薬（酸化マグネシウム錠）として医薬品でも使用される。安価で手に入りやすい</td>
+          </tr>
+          <tr>
+            <td>塩化マグネシウム（エプソムソルト）</td>
+            <td>経皮吸収</td>
+            <td>入浴剤・マグネシウムオイルとして皮膚から吸収。消化器を通さないため胃腸への負担ゼロ</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        マグネシウムの耐容上限量は成人で350mg/日（サプリメントからの摂取として：日本人の食事摂取基準2020年版）とされています。
+        過剰摂取は下痢・軟便として現れることが多く、重篤な副作用は起きにくいミネラルですが、
+        腎機能が低下している方は代謝が追いつかずに高マグネシウム血症になる危険があるため、
+        必ず医師に相談の上で摂取してください。
+      </p>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            「なんとなく疲れる」「寝ても疲れが取れない」「肩こりが取れない」「イライラしやすい」——
+            こうした不定愁訴をお持ちの患者さんのうち、マグネシウムをはじめとするミネラルバランスを整えることで
+            症状が大きく改善したケースを多く経験しています。
+            当院では血液検査に加え、必要に応じて赤血球内マグネシウム測定など
+            より精度の高い評価を組み合わせることができます。
+            マグネシウムの点滴補充も行っており、即効性を求める方にも対応しています。
+            気になることがあればお気軽にご相談ください。
+          </p>
+        </div>
+      </div>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">まとめ：マグネシウムは「体の潤滑油」</h3>
+      <p>
+        ATP（エネルギー）・筋肉の弛緩・神経の鎮静・睡眠・骨形成・血糖・血圧——
+        マグネシウムはこれほど広大な領域に関わりながら、血液検査では不足が見えにくく、
+        長年にわたって密かに体を蝕む「沈黙のミネラル」です。
+        しかも現代の食生活・ストレス・アルコール・カフェインといった習慣はマグネシウムを奪う要因だらけです。
+      </p>
+      <p>
+        まずは毎日の食事に海藻・大豆製品・ナッツ・高カカオチョコレートを意識して取り入れることから始めてみてください。
+        そして慢性的な疲労・こむら返り・睡眠の悩み・ストレスの過敏さが続く方は、
+        ぜひ当院でご相談いただき、栄養状態を確認した上で最適なアプローチを一緒に考えましょう。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        腎機能障害のある方はマグネシウムの過剰摂取により高マグネシウム血症を引き起こす可能性があります。
+        持病や服用中のお薬がある方は、摂取前に必ず医師または薬剤師にご相談ください。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>マグネシウム・ミネラルバランスのご相談は当院へ</h3>
+        <p>血液検査でミネラル状態を確認し、食事・サプリ・点滴補充まで個別にご提案します。<br>まずはお気軽にご相談ください。</p>
+        <a href="section_shinryo_annai.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
