@@ -1,1 +1,303 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>コラム｜新本町クリニック</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="新本町クリニックの院長コラム。美容・栄養・漢方など、健康と美に関するテーマを医師の視点でわかりやすく解説します。" />
+  <style>
+    /* ===== コラム一覧ページ ===== */
+    .column-list-wrap {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 52px 24px 80px;
+    }
 
+    /* ===== カード一覧グリッド ===== */
+    .column-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 28px;
+      margin-top: 8px;
+    }
+
+    /* ===== 記事カード ===== */
+    .column-card {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.22s, transform 0.22s;
+    }
+    .column-card:hover {
+      box-shadow: 0 8px 32px rgba(58,53,48,0.10);
+      transform: translateY(-4px);
+    }
+
+    /* サムネイル */
+    .card-thumb {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      flex-shrink: 0;
+    }
+    .card-thumb-placeholder {
+      width: 100%;
+      height: 200px;
+      flex-shrink: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+    .card-thumb-placeholder.green {
+      background: linear-gradient(135deg, #e8f5ec 0%, #eef5f0 100%);
+    }
+    .card-thumb-placeholder.pink {
+      background: linear-gradient(135deg, #fdf0f0 0%, #fdf6f6 100%);
+    }
+    .thumb-icon { font-size: 52px; }
+    .thumb-label {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 13px;
+      letter-spacing: 0.06em;
+    }
+    .thumb-label.green { color: var(--green); }
+    .thumb-label.pink  { color: var(--sakura-deep); }
+
+    /* カード本文 */
+    .card-body {
+      padding: 22px 24px 26px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+    .card-category {
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      border-radius: 20px;
+      padding: 3px 12px;
+      border: 1px solid;
+      font-weight: 500;
+    }
+    .card-category.pink {
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border-color: var(--sakura);
+    }
+    .card-category.green {
+      color: var(--green);
+      background: var(--green-light);
+      border-color: #c8ddd0;
+    }
+    .card-date {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .card-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.55;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .card-excerpt {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.85;
+      flex: 1;
+      margin-bottom: 18px;
+    }
+    .card-readmore {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      font-size: 12px;
+      font-weight: 500;
+      text-decoration: none;
+      align-self: flex-start;
+      padding: 7px 18px;
+      border-radius: 20px;
+      border: 1px solid;
+      transition: background 0.18s, color 0.18s;
+    }
+    .card-readmore.pink {
+      color: var(--sakura-deep);
+      border-color: var(--sakura);
+    }
+    .card-readmore.pink:hover {
+      background: var(--sakura-light);
+    }
+    .card-readmore.green {
+      color: var(--green);
+      border-color: #c8ddd0;
+    }
+    .card-readmore.green:hover {
+      background: var(--green-light);
+    }
+
+    /* ===== 「近日公開」プレースホルダーカード ===== */
+    .column-card-soon {
+      background: #fafaf8;
+      border: 1px dashed var(--border);
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 200px;
+      padding: 36px 24px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    .soon-icon { font-size: 32px; }
+    .soon-text { font-size: 13px; line-height: 1.8; }
+
+    /* ===== CTA ===== */
+    .column-cta {
+      margin-top: 52px;
+      background: linear-gradient(135deg, var(--sakura-light) 0%, var(--green-light) 100%);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px 28px;
+      text-align: center;
+    }
+    .column-cta h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .column-cta p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.9;
+      margin-bottom: 20px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 11px 30px;
+      border-radius: 22px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    /* ===== レスポンシブ ===== */
+    @media (max-width: 600px) {
+      .column-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+      .card-thumb, .card-thumb-placeholder { height: 170px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- コラム一覧 -->
+  <div class="column-list-wrap">
+
+    <div class="column-grid" id="column">
+
+      <!-- ── 記事1：コラーゲン ── -->
+      <a class="column-card" href="column_1_collagen.html">
+        <img
+          src="pics/collagen.jpeg"
+          alt="コラーゲンのイメージ"
+          class="card-thumb"
+          loading="lazy"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <div class="card-thumb-placeholder pink" style="display:none;">
+          <span class="thumb-icon">✨</span>
+          <span class="thumb-label pink">コラーゲン</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category pink">美容・栄養</span>
+            <span class="card-date">2025年</span>
+          </div>
+          <div class="card-title">コラーゲンはすごい<br>―― 体の「接着剤」が担う美と健康の秘密</div>
+          <p class="card-excerpt">
+            体内タンパク質の約30％を占めるコラーゲン。加齢や紫外線で失われるメカニズムから、「食べても意味がない」説の真偽、効率よく補う栄養素まで、医学的に解説します。
+          </p>
+          <span class="card-readmore pink">続きを読む →</span>
+        </div>
+      </a>
+
+      <!-- ── 記事2：高麗人参 ── -->
+      <a class="column-card" href="column_2_ginseng.html">
+        <div class="card-thumb-placeholder green">
+          <span class="thumb-icon">🌿</span>
+          <span class="thumb-label green">高麗人参（朝鮮人参）</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-category green">漢方・和漢素材</span>
+            <span class="card-date">2025年</span>
+          </div>
+          <div class="card-title">高麗人参のすごい歴史と効能<br>―― 二千年の時を超えた「万能の薬草」</div>
+          <p class="card-excerpt">
+            古代中国の文献にも登場する高麗人参。徳川家康も愛用した歴史から、最新科学で解明されたジンセノサイドの働き、アダプトゲンとしての現代的な意義まで詳しく解説します。
+          </p>
+          <span class="card-readmore green">続きを読む →</span>
+        </div>
+      </a>
+
+      <!-- ── 近日公開プレースホルダー ── -->
+      <div class="column-card-soon">
+        <span class="soon-icon">📝</span>
+        <p class="soon-text">次回のコラムを<br>準備中です。お楽しみに！</p>
+      </div>
+
+    </div>
+    <!-- /column-grid -->
+
+    <!-- CTA -->
+    <div class="column-cta">
+      <h3>健康・美容のご相談は新本町クリニックへ</h3>
+      <p>内科・心療内科・漢方内科として、体の内側からのアプローチをご提案します。<br>コラムの内容についてもお気軽にご相談ください。</p>
+      <a href="section_shinryo_annai.html" class="cta-btn">診療案内を見る</a>
+    </div>
+
+  </div>
+  <!-- /column-list-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
