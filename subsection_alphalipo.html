@@ -137,12 +137,121 @@
   }
   .consult-hours { font-size: 12px; color: var(--text-muted); }
 
+  /* ===== 研究エビデンス セクション ===== */
+  .evidence-section {
+    margin-bottom: 48px;
+  }
+  .evidence-header {
+    display: flex; align-items: center; gap: 14px;
+    background: white; border: 1px solid var(--border);
+    border-radius: 16px; padding: 20px 24px; margin-bottom: 16px;
+    border-left: 4px solid var(--green);
+  }
+  .evidence-badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    background: var(--green); color: white;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+    padding: 4px 10px; border-radius: 20px; margin-bottom: 8px;
+  }
+  .evidence-journal {
+    font-size: 11px; color: var(--text-muted); margin-bottom: 4px;
+    font-style: italic;
+  }
+  .evidence-title-text {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px; font-weight: 600; color: var(--text);
+    line-height: 1.6;
+  }
+
+  .meta-summary {
+    background: linear-gradient(135deg, #eef5f0 0%, #f5f9f6 100%);
+    border: 1px solid #c5dece;
+    border-radius: 14px; padding: 22px 26px; margin-bottom: 14px;
+  }
+  .meta-summary-title {
+    font-size: 12px; font-weight: 700; color: var(--green);
+    letter-spacing: 0.08em; margin-bottom: 14px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .meta-summary-title::before {
+    content: ''; display: block;
+    width: 3px; height: 14px; border-radius: 2px;
+    background: var(--green);
+  }
+  .meta-rct-count {
+    display: flex; align-items: flex-end; gap: 6px; margin-bottom: 16px;
+  }
+  .meta-rct-num {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 48px; font-weight: 600; color: var(--green);
+    line-height: 1;
+  }
+  .meta-rct-unit {
+    font-size: 13px; color: var(--text-muted); padding-bottom: 8px;
+    line-height: 1.4;
+  }
+
+  .evidence-results-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; margin-top: 14px;
+  }
+  .evidence-result-card {
+    background: white; border: 1px solid #c5dece;
+    border-radius: 10px; padding: 14px 16px;
+  }
+  .evidence-result-card.positive { border-color: var(--green); }
+  .evidence-result-card.neutral { border-color: var(--border); }
+  .result-label {
+    font-size: 10px; color: var(--text-muted);
+    letter-spacing: 0.06em; margin-bottom: 6px;
+  }
+  .result-item {
+    display: flex; align-items: center; gap: 8px;
+    font-size: 12px; color: var(--text);
+    padding: 4px 0; border-bottom: 1px dashed var(--border);
+    line-height: 1.5;
+  }
+  .result-item:last-child { border-bottom: none; }
+  .result-icon-pos { color: var(--green); font-size: 13px; flex-shrink: 0; }
+  .result-icon-neu { color: #bbb; font-size: 13px; flex-shrink: 0; }
+
+  .evidence-conclusion {
+    background: white; border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 10px; padding: 14px 18px; margin-top: 14px;
+    font-size: 12px; color: var(--text-muted); line-height: 1.9;
+  }
+  .evidence-conclusion strong { color: var(--green); }
+
+  .evidence-ref {
+    margin-top: 10px;
+    font-size: 10px; color: var(--text-muted);
+    line-height: 1.7;
+  }
+  .evidence-ref a {
+    color: var(--green); text-decoration: none;
+    border-bottom: 1px dashed var(--green);
+  }
+  .evidence-ref a:hover { opacity: 0.7; }
+
+  .dose-highlight {
+    background: var(--sakura-light); border: 1px solid var(--sakura);
+    border-radius: 10px; padding: 14px 18px; margin-top: 14px;
+    font-size: 12px; color: var(--text); line-height: 1.9;
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .dose-highlight-icon { font-size: 18px; flex-shrink: 0; }
+  .dose-highlight strong { color: var(--sakura-deep); }
+
   @media (max-width: 540px) {
     .container { padding: 32px 20px; }
     .lead-box { padding: 22px 20px; }
     .dept-body { padding: 20px 18px; }
     .info-box { padding: 22px 20px; }
     .feature-grid { grid-template-columns: 1fr; }
+    .evidence-results-grid { grid-template-columns: 1fr; }
+    .meta-rct-num { font-size: 36px; }
   }
 </style>
 </head>
@@ -225,6 +334,98 @@
         <span class="symptom-tag">慢性疲労</span>
         <span class="symptom-tag">肌のくすみ・ハリ不足</span>
         <span class="symptom-tag">デトックス</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- 研究エビデンス -->
+  <div class="evidence-section">
+    <div class="evidence-header">
+      <div class="dept-icon-lg">📊</div>
+      <div>
+        <div class="dept-title">学術的根拠（エビデンス）</div>
+        <div class="dept-title-sub">Peer-reviewed Research · Systematic Review &amp; Meta-analysis</div>
+      </div>
+    </div>
+
+    <div class="dept-body">
+      <div class="meta-summary">
+        <div class="meta-summary-title">最新システマティックレビュー＆メタアナリシス（2025年）</div>
+        <div class="meta-rct-count">
+          <span class="meta-rct-num">63</span>
+          <span class="meta-rct-unit">件のランダム化比較試験<br>（RCT）を統合・解析</span>
+        </div>
+        <p style="font-size:12px; color:var(--text-muted); line-height:1.9;">
+          Mohammadi S, et al. が実施した大規模メタアナリシスでは、2025年5月までに発表された
+          <strong>63件のRCT</strong>を統合し、α-リポ酸（ALA）補給が心代謝リスク因子に与える影響を包括的に評価しました。
+        </p>
+
+        <div class="evidence-results-grid">
+          <div class="evidence-result-card positive">
+            <div class="result-label">✅ 有意な改善が認められた指標</div>
+            <div class="result-item">
+              <span class="result-icon-pos">↓</span>
+              <span><strong>BMI</strong>・体重・腹囲・体脂肪量</span>
+            </div>
+            <div class="result-item">
+              <span class="result-icon-pos">↓</span>
+              <span><strong>中性脂肪（TG）</strong>・総コレステロール（TC）</span>
+            </div>
+            <div class="result-item">
+              <span class="result-icon-pos">↓</span>
+              <span><strong>空腹時血糖（FBG）</strong></span>
+            </div>
+            <div class="result-item">
+              <span class="result-icon-pos">↓</span>
+              <span><strong>HbA1c</strong>（糖化ヘモグロビン）</span>
+            </div>
+            <div class="result-item">
+              <span class="result-icon-pos">↓</span>
+              <span><strong>空腹時インスリン</strong>・HOMA-IR</span>
+            </div>
+          </div>
+          <div class="evidence-result-card neutral">
+            <div class="result-label">ー 有意差が認められなかった指標</div>
+            <div class="result-item">
+              <span class="result-icon-neu">→</span>
+              <span>HDLコレステロール</span>
+            </div>
+            <div class="result-item">
+              <span class="result-icon-neu">→</span>
+              <span>LDLコレステロール</span>
+            </div>
+            <div class="result-item">
+              <span class="result-icon-neu">→</span>
+              <span>収縮期血圧（SBP）</span>
+            </div>
+            <div class="result-item">
+              <span class="result-icon-neu">→</span>
+              <span>拡張期血圧（DBP）</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="evidence-conclusion">
+          <strong>論文結論：</strong>ALA補給は、体型指標および血糖パラメータの改善、さらに脂質低下作用を通じて、特定の心代謝リスク因子を改善する可能性がある。
+        </div>
+      </div>
+
+      <div class="dose-highlight">
+        <span class="dose-highlight-icon">💉</span>
+        <span>
+          当院が採用する<strong>600mg投与</strong>は、ドーズレスポンス解析において
+          体重減少・血糖改善の観点から特に有効性が示された用量帯です。
+          点滴による静脈内投与により、経口摂取と比べて吸収効率が格段に高まります。
+        </span>
+      </div>
+
+      <div class="evidence-ref">
+        出典：Mohammadi S, Ashtary-Larky D, et al. "Effects of alpha-lipoic acid supplementation on cardiometabolic risk factors: A systematic review and dose-response meta-analysis."
+        <em>Nutrition, Metabolism and Cardiovascular Diseases.</em> 2026;36(2):104370.
+        <a href="https://www.sciencedirect.com/science/article/abs/pii/S0939475325005241" target="_blank" rel="noopener">doi: 10.1016/j.numecd.2025.104370 ↗</a>
+        ／ PubMed PMID: 41077538
       </div>
     </div>
   </div>
