@@ -165,11 +165,110 @@
   }
   .consult-hours { font-size: 12px; color: var(--text-muted); }
 
+  /* エビデンス帯 */
+  .evidence-band {
+    background: #f5f8ff;
+    border: 1px solid #c9d8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+    font-size: 13px;
+    color: var(--text);
+    line-height: 2;
+  }
+  .evidence-band .ev-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3a5a9a;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* 数値ハイライトカード */
+  .stat-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .stat-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 16px 18px;
+    text-align: center;
+  }
+  .stat-label {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    line-height: 1.5;
+  }
+  .stat-before-after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .stat-before {
+    font-size: 18px;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 600;
+    color: var(--text-muted);
+  }
+  .stat-arrow {
+    font-size: 14px;
+    color: var(--sakura-deep);
+  }
+  .stat-after {
+    font-size: 22px;
+    font-family: 'Noto Serif JP', serif;
+    font-weight: 600;
+    color: var(--sakura-deep);
+  }
+  .stat-unit {
+    font-size: 11px;
+    color: var(--text-muted);
+    margin-top: 4px;
+  }
+  .stat-badge {
+    display: inline-block;
+    background: var(--sakura-light);
+    color: var(--sakura-deep);
+    font-size: 11px;
+    font-weight: 600;
+    padding: 2px 10px;
+    border-radius: 20px;
+    border: 1px solid var(--sakura);
+    margin-top: 6px;
+  }
+
+  .source-note {
+    font-size: 11px;
+    color: var(--text-muted);
+    border-top: 1px dashed var(--border);
+    padding-top: 14px;
+    margin-top: 16px;
+    line-height: 1.8;
+  }
+  .source-note a {
+    color: #3a5a9a;
+    text-decoration: none;
+  }
+  .source-note a:hover { text-decoration: underline; }
+
   @media (max-width: 540px) {
     .container { padding: 32px 20px; }
     .lead-box { padding: 22px 20px; }
     .dept-body { padding: 20px 18px; }
     .info-box { padding: 22px 20px; }
+    .stat-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+    .stat-after { font-size: 18px; }
+    .stat-before { font-size: 15px; }
   }
 </style>
 </head>
@@ -305,6 +404,98 @@
         <span class="symptom-tag">アンチエイジング</span>
         <span class="symptom-tag">化学療法中のQOL改善</span>
         <span class="symptom-tag">帯状疱疹後神経痛</span>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- 線維筋痛症エビデンス -->
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">🔬</div>
+      <div>
+        <div class="dept-title">線維筋痛症への効果：臨床研究データ</div>
+        <div class="dept-title-sub">Clinical Evidence — Fibromyalgia &amp; MAH</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>線維筋痛症（FMS）は全身の広範な痛み・倦怠感・睡眠障害・認知機能低下を特徴とする慢性疾患です。従来の薬物療法で改善が乏しい患者さんに対して、オゾン大量自血療法（MAH）の有効性を検証した臨床研究が複数報告されています。</p>
+
+      <div class="evidence-band">
+        <div class="ev-title">📋 PeerJ掲載・後ろ向きコホート研究（2025年）</div>
+        <p style="margin:0 0 8px; font-size:13px; color:var(--text); line-height:2;">
+          Tertemiz らは線維筋痛症と診断された<strong>72名の患者（68名女性・4名男性、平均年齢54歳）</strong>を対象に、週2回・計10セッションのMAHを実施し、治療前後の変化を複数の標準化された指標で評価しました。
+        </p>
+        <p style="margin:0; font-size:12px; color:var(--text-muted); line-height:1.8;">
+          プロトコル：初回100ml（10mcg/ml）→ 毎回5mcg/mlずつ濃度を漸増 → 最大30mcg/ml・累積最大3,000mcg
+        </p>
+      </div>
+
+      <!-- 数値カード -->
+      <div class="stat-grid">
+        <div class="stat-card">
+          <div class="stat-label">疼痛スコア（VAS）</div>
+          <div class="stat-before-after">
+            <span class="stat-before">7.8</span>
+            <span class="stat-arrow">→</span>
+            <span class="stat-after">4.8</span>
+          </div>
+          <div class="stat-unit">/ 10点満点</div>
+          <div class="stat-badge">有意に改善 p&lt;0.001</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">線維筋痛症影響度（FIQ）</div>
+          <div class="stat-before-after">
+            <span class="stat-before">69.1</span>
+            <span class="stat-arrow">→</span>
+            <span class="stat-after">56.2</span>
+          </div>
+          <div class="stat-unit">点（低いほど良好）</div>
+          <div class="stat-badge">有意に改善</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">睡眠の質（PSQI）</div>
+          <div class="stat-before-after">
+            <span class="stat-before">10.3</span>
+            <span class="stat-arrow">→</span>
+            <span class="stat-after">改善</span>
+          </div>
+          <div class="stat-unit">ピッツバーグ睡眠質問票</div>
+          <div class="stat-badge">有意に改善</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">QOL（SF-36）</div>
+          <div class="stat-before-after">
+            <span class="stat-after">↑</span>
+          </div>
+          <div class="stat-unit">身体・精神両面</div>
+          <div class="stat-badge">有意に改善</div>
+        </div>
+      </div>
+
+      <div class="point-list">
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>痛みの軽減</strong>：VASスコアが平均7.8から4.8へと約38%低下し、統計的に有意な疼痛改善が確認されました。</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>日常機能の回復</strong>：FIQスコアの有意な改善により、仕事・家事・社会活動への支障が軽減したことが示されました。</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>睡眠の質の向上</strong>：慢性疼痛に伴う睡眠障害の改善も確認され、生活の質（QOL）全体の向上につながりました。</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>作用機序</strong>：MAHによる抗酸化・抗炎症・免疫調節作用、ならびにセロトニン・内因性オピオイドの放出促進による疼痛認知の調整が関与すると考えられています。</span>
+        </div>
+      </div>
+
+      <div class="source-note">
+        出典：Tertemiz OF, et al. "Effect of major ozone autohemotherapy in fibromyalgia syndrome: a retrospective study." <em>PeerJ</em> 13:e20475 (2025). DOI: <a href="https://doi.org/10.7717/peerj.20475" target="_blank" rel="noopener">10.7717/peerj.20475</a>（査読付き国際誌掲載）<br>
+        ※後ろ向き観察研究であり、無作為化比較試験（RCT）ではありません。効果には個人差があります。
       </div>
     </div>
   </div>
