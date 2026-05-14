@@ -1,1 +1,646 @@
-亜鉛はすごい
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>亜鉛はすごい｜新本町クリニック コラム</title>
+  <meta name="description" content="亜鉛は免疫・味覚・皮膚・男性機能・抗酸化など300以上の酵素反応に関わる「万能ミネラル」。不足しやすい理由から効率的な補い方まで院長が解説します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header {
+      margin-bottom: 36px;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* アイキャッチ：画像なしの場合はグラデーションバナー */
+    .article-eyecatch-banner {
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(135deg, #e8f4e8 0%, #d4ead0 40%, #c8e0c4 100%);
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .article-eyecatch-banner .banner-icon {
+      font-size: 64px;
+    }
+    .article-eyecatch-banner .banner-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #3a5c3a;
+      letter-spacing: 0.06em;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p {
+      margin-bottom: 1.6em;
+    }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* 引用・コラムボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .highlight-box cite {
+      display: block;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-body {}
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 摂取方法カード群 */
+    .intake-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .intake-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .intake-card-icon { font-size: 28px; margin-bottom: 8px; }
+    .intake-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .intake-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ページフッター（記事末） */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* 注意書き */
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>亜鉛はすごい</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">栄養・ミネラル</span>
+      <h2 class="article-title">亜鉛はすごい<br>―― 300超の酵素を動かす「万能ミネラル」の正体</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年5月</span>
+      </div>
+    </header>
+
+    <!-- アイキャッチバナー -->
+    <div class="article-eyecatch-banner">
+      <div class="banner-icon">⚡</div>
+      <div class="banner-text">Zinc — 体の司令塔ミネラル</div>
+    </div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">「地味なミネラル」と思っていませんか？</h3>
+      <p>
+        カルシウムや鉄に比べると、亜鉛（Zinc）はあまり注目されないミネラルという印象があるかもしれません。
+        しかし実際のところ、亜鉛は人体の中で鉄に次いで2番目に多く存在する必須微量元素であり、
+        体内に存在する酵素のうち<strong>300種類以上</strong>の触媒として働く「縁の下の力持ち」です。
+      </p>
+      <p>
+        免疫・皮膚・味覚・嗅覚・傷の治癒・DNA合成・ホルモン分泌・抗酸化……
+        これだけ多くの生命活動に関わるミネラルは他になく、
+        亜鉛が不足すると体のあちこちで同時に不具合が起きるのも当然のことといえます。
+        このコラムでは「亜鉛はなぜすごいのか」をわかりやすく解説します。
+      </p>
+
+      <!-- 亜鉛の体内分布 -->
+      <h3 class="section-heading">亜鉛は体のどこにある？</h3>
+      <p>
+        成人の体内には約2〜3gの亜鉛が蓄えられています。
+        その約60%は筋肉に、約30%は骨に存在しており、残りが皮膚・肝臓・膵臓・目の網膜・前立腺などに分布しています。
+        特に前立腺は体内で最も亜鉛濃度が高い臓器の一つとして知られており、男性ホルモンの代謝と深く関係しています。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔬 亜鉛は「貯蔵できない」</div>
+        <p>
+          鉄と異なり、亜鉛には体内に「専用の貯蔵庫」がありません。
+          筋肉や骨の亜鉛は緊急時に動員されにくく、実質的に毎日食事から補い続ける必要があります。
+          これが亜鉛不足が慢性的に起きやすい理由のひとつです。
+          成人の推奨摂取量は男性で11mg/日、女性で8mg/日（日本人の食事摂取基準2020年版）ですが、
+          現代の食生活では不足しがちです。
+        </p>
+      </div>
+
+      <!-- 亜鉛の主な働き -->
+      <h3 class="section-heading">亜鉛の主な働き① 免疫の最前線</h3>
+      <p>
+        亜鉛が最もドラマチックに力を発揮するのが「免疫」の領域です。
+        白血球の一種であるT細胞・B細胞・NK細胞（ナチュラルキラー細胞）はすべて亜鉛に依存して分化・増殖します。
+        亜鉛が不足すると免疫細胞の数と質が落ち、ウイルスや細菌への抵抗力が著しく低下します。
+      </p>
+      <p>
+        亜鉛の抗ウイルス効果は複数のメカニズムから説明されます。
+        まず、亜鉛イオンはウイルスが細胞膜に結合するのを阻害し、複製に必要な酵素（RNAポリメラーゼ）を不活化します。
+        また、炎症を調節するサイトカインのバランスを整え、過剰な炎症反応（サイトカインストーム）を抑える効果も示されています。
+        新型コロナウイルス感染症の流行以降、亜鉛と免疫の関係は世界中で改めて注目されています。
+      </p>
+
+      <div class="highlight-box">
+        亜鉛はまた、「胸腺（きょうせん）」という免疫器官を活性化するホルモン「チモシン」の産生を促します。
+        胸腺は加齢とともに萎縮しますが、亜鉛の十分な摂取が免疫の老化を緩やかにする可能性を示す研究が複数報告されています。
+        亜鉛は「免疫の若返りミネラル」とも呼べるかもしれません。
+      </div>
+
+      <!-- 味覚・嗅覚 -->
+      <h3 class="section-heading">亜鉛の主な働き② 味覚・嗅覚を守る</h3>
+      <p>
+        「最近、食事が美味しくない」「においがわかりにくい」という症状が続く場合、亜鉛不足が原因のひとつとして疑われます。
+        舌の表面には「味蕾（みらい）」と呼ばれる感覚器が約1万個存在しており、ここで甘・酸・塩・苦・旨みの5つの味を感知しています。
+        味蕾の細胞は非常に新陳代謝が速く、約10日周期で入れ替わりますが、この再生に亜鉛が不可欠です。
+      </p>
+      <p>
+        亜鉛が不足すると味蕾が正常に再生されず、「味がしない」「いつも苦く感じる」「何でも塩辛く感じる」といった
+        「味覚障害」が起きます。新型コロナウイルス感染症後に報告された後遺症としての味覚・嗅覚障害にも、
+        亜鉛の補充が治療の一手として用いられています。
+      </p>
+
+      <!-- 皮膚・傷の治癒 -->
+      <h3 class="section-heading">亜鉛の主な働き③ 皮膚と傷の修復</h3>
+      <p>
+        皮膚科領域では亜鉛は古くから注目されてきたミネラルです。
+        コラーゲンの合成・安定化に関わること（他のコラムでも触れましたが、亜鉛はコラーゲン合成酵素の補因子です）、
+        皮膚細胞（ケラチノサイト）の増殖と分化を促すこと、そして抗菌・消炎作用を持つことから、
+        亜鉛は皮膚の健康を多方面から支えています。
+      </p>
+      <ul class="point-list">
+        <li><strong>ニキビ（尋常性ざ瘡）</strong>：亜鉛の抗菌作用と抗炎症作用がアクネ菌の増殖を抑え、炎症を鎮めます。外用の亜鉛製剤（亜鉛華軟膏）は医療の場でも長年使用されています。</li>
+        <li><strong>褥瘡（床ずれ）・難治性潰瘍</strong>：慢性的な皮膚潰瘍の患者さんは亜鉛不足であることが多く、補充により傷の治癒が促進されます。</li>
+        <li><strong>アトピー性皮膚炎</strong>：皮膚バリア機能の修復と免疫調節の両面から、亜鉛が症状改善に貢献するという報告があります。</li>
+        <li><strong>脱毛・薄毛</strong>：毛包（毛根を包む組織）は亜鉛を高濃度に必要とします。亜鉛不足は脱毛の一因となることが知られています。</li>
+      </ul>
+
+      <!-- DNA合成・細胞分裂 -->
+      <h3 class="section-heading">亜鉛の主な働き④ DNAと細胞分裂</h3>
+      <p>
+        亜鉛は「ジンクフィンガータンパク質」と呼ばれる転写因子の構成成分です。
+        ジンクフィンガーは指のような構造でDNAに結合し、遺伝子の「読み出し」を制御します。
+        ヒトゲノムには約700種ものジンクフィンガータンパク質が存在するとされており、
+        細胞が正しく分裂・分化するために亜鉛は欠かせない存在です。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🧬 ジンクフィンガーと医療応用</div>
+        <p>
+          ジンクフィンガータンパク質の研究は、遺伝子編集ツール「ジンクフィンガーヌクレアーゼ（ZFN）」の開発へとつながりました。
+          CRISPR-Cas9が登場する以前は、標的のDNAを切断する主要な手段として活用されていた技術です。
+          亜鉛がなければ成り立たない仕組みが、現代の最先端医療にもつながっているのは驚くべきことです。
+        </p>
+      </div>
+
+      <!-- 男性機能・ホルモン -->
+      <h3 class="section-heading">亜鉛の主な働き⑤ 男性機能とホルモン</h3>
+      <p>
+        亜鉛は男性にとって特別に重要なミネラルです。
+        テストステロンの合成には亜鉛が必要であり、また亜鉛は「5α-還元酵素」を阻害することで、
+        テストステロンが強力な男性ホルモン・ジヒドロテストステロン（DHT）に変換されるのを抑えます。
+        DHTは前立腺の肥大化や男性型脱毛（AGA）に関わることが知られており、
+        亜鉛の十分な摂取がこれらのリスクを低減する可能性が指摘されています。
+      </p>
+      <p>
+        さらに、精子の形成・運動能力にも亜鉛は深く関与しています。
+        亜鉛不足は精子数の減少や運動率の低下をもたらすことがあり、
+        男性不妊の一因となりうることが研究で示されています。
+        妊活中の男性はとくに意識して摂取したい栄養素です。
+      </p>
+
+      <!-- 歴史コラム -->
+      <h3 class="section-heading">歴史コラム｜亜鉛研究の父・プラサドと「亜鉛欠乏症」の発見</h3>
+      <p>
+        亜鉛が人間の必須栄養素として科学的に認識されたのは、実は1960年代のことです。
+        イランの農村地帯で成長が著しく遅れた若い男性たちを調査したアニャンダ・プラサド博士は、
+        彼らの食生活が主に小麦と豆腐（豆製品）に偏っており、亜鉛の吸収を妨げる「フィチン酸」を大量に摂取していることに気づきました。
+      </p>
+      <div class="highlight-box">
+        プラサド博士が亜鉛を補充した結果、成長の遅延・性腺機能低下・皮膚炎・味覚障害・免疫低下が改善されました。
+        これが「ヒトの亜鉛欠乏症」として初めて報告された症例であり、プラサド博士はその後「亜鉛研究の父」として知られるようになります。
+        現代の亜鉛研究の礎は、ほんの60年前に中東の農村で始まったのです。
+      </div>
+
+      <!-- 欠乏の原因 -->
+      <h3 class="section-heading">なぜ現代人は亜鉛が不足しがちなのか</h3>
+      <p>
+        先進国に暮らしていても、亜鉛は意外と不足しやすいミネラルです。その理由はいくつかあります。
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>原因</th>
+            <th>詳細</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>食品中の含有量低下</td>
+            <td>農業の工業化により土壌の亜鉛濃度が低下。同じ野菜でも50年前より含有量が減っているというデータがある</td>
+          </tr>
+          <tr>
+            <td>フィチン酸の影響</td>
+            <td>玄米・全粒粉・豆類に含まれるフィチン酸は亜鉛と結合して吸収を阻害する。健康的な食事ほど注意が必要な逆説</td>
+          </tr>
+          <tr>
+            <td>アルコール摂取</td>
+            <td>アルコールは亜鉛の吸収を妨げ、尿への排泄を増加させる。飲酒習慣がある方は要注意</td>
+          </tr>
+          <tr>
+            <td>ストレス・発汗</td>
+            <td>ストレスホルモン（コルチゾール）の増加や、激しい運動による発汗で亜鉛が失われやすい</td>
+          </tr>
+          <tr>
+            <td>胃酸の低下</td>
+            <td>亜鉛の吸収には胃酸が必要。胃薬（PPI）の長期使用や加齢による胃酸分泌低下は亜鉛の吸収を妨げる</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 食品源 -->
+      <h3 class="section-heading">亜鉛を多く含む食品</h3>
+      <p>
+        亜鉛の代表的な食品といえば「牡蠣（かき）」です。
+        牡蠣100gあたりの亜鉛含有量は約13〜14mgと圧倒的で、他の食品を大きく引き離しています。
+        牡蠣が古くから「精力剤」「スタミナ食」として食べられてきた理由は、まさにここにあります。
+      </p>
+
+      <div class="intake-cards">
+        <div class="intake-card">
+          <div class="intake-card-icon">🦪</div>
+          <div class="intake-card-title">牡蠣（生）</div>
+          <div class="intake-card-desc">100gあたり約13〜14mg。ダントツの亜鉛含有量。焼き・蒸し・生いずれも効果的。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🥩</div>
+          <div class="intake-card-title">赤身肉・レバー</div>
+          <div class="intake-card-desc">牛赤身100gで約4〜5mg。豚・鶏レバーも豊富。動物性亜鉛は吸収率が高い。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🫘</div>
+          <div class="intake-card-title">豆類・ナッツ</div>
+          <div class="intake-card-desc">かぼちゃの種・麻の実・カシューナッツが特に多い。ビーガン・菜食の方の主要源。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🧀</div>
+          <div class="intake-card-title">チーズ・乳製品</div>
+          <div class="intake-card-desc">パルメザンチーズは100gあたり約4mg。カルシウムと一緒に手軽に摂れる。</div>
+        </div>
+      </div>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">💡 吸収率を上げるコツ</div>
+        <p>
+          動物性食品に含まれる亜鉛の吸収率は約40〜50%ですが、植物性食品は10〜15%程度にとどまります。
+          吸収を高めるには、クエン酸（レモン・酢）と一緒に摂ることが有効です。
+          クエン酸が亜鉛と結合してキレート複合体を形成し、腸壁からの吸収を助けます。
+          牡蠣にレモンを絞るのは理にかなった食べ方なのです。
+          また、動物性タンパク質と一緒に摂るとフィチン酸の阻害作用が軽減される効果もあります。
+        </p>
+      </div>
+
+      <!-- サプリメント -->
+      <h3 class="section-heading">サプリメントで補う場合の注意点</h3>
+      <p>
+        食事だけで十分な亜鉛を補うのが難しい場合や、味覚障害・免疫低下など特定の症状がある場合は、
+        サプリメントや医薬品による補充が選択肢に入ります。
+        ただし、亜鉛の過剰摂取は銅の吸収を阻害し、「銅欠乏症（貧血・神経障害）」を引き起こすことがあります。
+        長期・高用量の摂取は医師に相談した上で行ってください。
+      </p>
+      <ul class="point-list">
+        <li><strong>グルコン酸亜鉛・酢酸亜鉛</strong>：吸収率が高く消化器への刺激が少ない。サプリメントとして最もポピュラー。</li>
+        <li><strong>ピコリン酸亜鉛</strong>：キレート加工されており吸収率が高いとされる。</li>
+        <li><strong>酸化亜鉛</strong>：吸収率は低いが、外用（皮膚）には古くから使われる信頼ある形態。</li>
+        <li><strong>医薬品「ノベルジン」</strong>：ウィルソン病・低亜鉛血症の治療薬として保険適用あり。症状が重い場合は医療機関での評価が必要。</li>
+      </ul>
+      <p>
+        亜鉛の上限摂取量は成人男性で45mg/日、成人女性で35mg/日（日本人の食事摂取基準2020年版）とされています。
+        一般的なサプリメントで含まれる1日10〜30mg程度であれば多くの場合安全ですが、
+        複数のサプリを重ねて飲んでいると知らない間に過剰になる場合がありますので注意が必要です。
+      </p>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            亜鉛は「地味だけど実は最重要」なミネラルです。免疫力の低下・肌荒れ・味覚の変化・慢性的な疲労感・抜け毛……
+            これらの症状が重なっている場合、亜鉛不足が背景にある可能性があります。
+            当院では血液検査で亜鉛値を確認した上で、食事指導・サプリメント選定・必要に応じた点滴補充まで
+            トータルにサポートいたします。気になることがあればお気軽にご相談ください。
+          </p>
+        </div>
+      </div>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">まとめ：亜鉛は「縁の下の最高司令官」</h3>
+      <p>
+        改めて亜鉛の役割を振り返ると、免疫・皮膚・味覚・DNA・ホルモン・抗酸化と、
+        これほど多岐にわたる生命機能を支えるミネラルは他にありません。
+        それでいて毎日の食事から絶えず補い続けなければならず、
+        現代の食生活では慢性的に不足しやすいという「見えないリスク」を持っています。
+      </p>
+      <p>
+        まずは毎週1〜2回の牡蠣や赤身肉、かぼちゃの種などを意識して食事に取り入れることから始めてみてください。
+        それでも不足が心配な方は、ぜひ当院でご相談いただき、血液検査で現状を確認した上で最適な方法を一緒に考えましょう。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        体質や持病・お薬との相互作用などが気になる方は、摂取前に医師または薬剤師にご相談ください。
+        亜鉛の過剰摂取は銅欠乏などの健康被害を引き起こす可能性があります。上限量を超えた使用はお控えください。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>亜鉛・栄養状態のご相談は当院へ</h3>
+        <p>血液検査で亜鉛値を確認し、食事・サプリ・点滴補充まで個別にご提案します。<br>まずはお気軽にご相談ください。</p>
+        <a href="section_shinryo_annai.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>

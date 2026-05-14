@@ -1,1 +1,731 @@
-ビタミンB6はすごい
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ビタミンB6はすごい｜新本町クリニック コラム</title>
+  <meta name="description" content="ビタミンB6はタンパク質代謝・神経伝達物質・ホルモン・免疫・PMS改善まで100以上の酵素反応を担うビタミン。不足しやすい理由と効率的な補い方を院長が解説します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header {
+      margin-bottom: 36px;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* アイキャッチバナー */
+    .article-eyecatch-banner {
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(135deg, #fff8e8 0%, #fdefc8 40%, #fae0a8 100%);
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .article-eyecatch-banner .banner-icon {
+      font-size: 64px;
+    }
+    .article-eyecatch-banner .banner-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #7a5c1a;
+      letter-spacing: 0.06em;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p {
+      margin-bottom: 1.6em;
+    }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* 引用・コラムボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .highlight-box cite {
+      display: block;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-body {}
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 摂取方法カード群 */
+    .intake-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .intake-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .intake-card-icon { font-size: 28px; margin-bottom: 8px; }
+    .intake-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .intake-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ページフッター（記事末） */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* 注意書き */
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>ビタミンB6はすごい</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">栄養・ビタミン</span>
+      <h2 class="article-title">ビタミンB6はすごい<br>―― 心と体を結ぶ「100の鍵」を握るビタミン</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年5月</span>
+      </div>
+    </header>
+
+    <!-- アイキャッチバナー -->
+    <div class="article-eyecatch-banner">
+      <div class="banner-icon">🧠</div>
+      <div class="banner-text">Vitamin B6 — 心と体を支える縁の下の名指揮者</div>
+    </div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">ビタミンB6はどんなビタミン？</h3>
+      <p>
+        ビタミンB群は8種類ありますが、その中でも特に広い役割を担うのが<strong>ビタミンB6</strong>です。
+        化学名はピリドキシン（Pyridoxine）といい、体内では活性型の「ピリドキサール-5'-リン酸（PLP）」に変換されて働きます。
+        PLPは<strong>100種類以上の酵素反応</strong>の補酵素として機能し、タンパク質の代謝・神経伝達物質の合成・免疫・ホルモン調節・抗炎症と、
+        まるで縁の下の名指揮者のように体の隅々で活躍します。
+      </p>
+      <p>
+        亜鉛が「300の酵素を動かすミネラル」なら、ビタミンB6は「100の酵素を動かすビタミン」。
+        どちらも地味な存在ですが、欠かせない存在感という点では引けを取りません。
+        このコラムでは「なぜビタミンB6はすごいのか」を、体の仕組みから日常生活への応用まで丁寧に解説します。
+      </p>
+
+      <!-- B6の3つの形 -->
+      <h3 class="section-heading">豆知識① ビタミンB6は「3つの顔」を持つ</h3>
+      <p>
+        ビタミンB6は一つの化合物ではなく、関連する3種類の化合物の総称です。
+        食品や体内での役割の違いを知っておくと、サプリ選びにも役立ちます。
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>形態</th>
+            <th>主な存在場所</th>
+            <th>特徴</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ピリドキシン（PN）</td>
+            <td>植物性食品・サプリメント</td>
+            <td>最も安定した形。サプリに最もよく使われる。体内でPLPに変換される</td>
+          </tr>
+          <tr>
+            <td>ピリドキサール（PL）</td>
+            <td>動物性食品・血液中</td>
+            <td>変換の中間体。肉・魚に多い形で吸収されやすい</td>
+          </tr>
+          <tr>
+            <td>ピリドキサミン（PM）</td>
+            <td>動物性食品</td>
+            <td>糖化（AGEs）の抑制作用が特に注目されている形態</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔬 活性型PLP（ピリドキサール-5'-リン酸）とは</div>
+        <p>
+          食事やサプリから摂取したビタミンB6はいずれも、腸で吸収された後に肝臓で「PLP（ピリドキサール-5'-リン酸）」という活性型に変換されます。
+          PLPこそが実際に酵素反応の補酵素として働く本体です。
+          サプリメントの中には最初からPLP（活性型B6）の形で販売されているものもあり、
+          肝機能が低下している方や変換効率が落ちやすい高齢者には有利とされています。
+        </p>
+      </div>
+
+      <!-- タンパク質代謝 -->
+      <h3 class="section-heading">ビタミンB6の働き① タンパク質代謝の要</h3>
+      <p>
+        ビタミンB6が最も重要な役割を発揮するのが「タンパク質（アミノ酸）の代謝」です。
+        食べたタンパク質は消化によってアミノ酸に分解されますが、そのアミノ酸を体の各部位で必要なタンパク質へと再構築したり、
+        エネルギーに変換したりする反応のほぼすべてに、B6（PLP）が補酵素として関与しています。
+      </p>
+      <p>
+        具体的には「アミノ基転移反応（トランスアミナーゼ反応）」と呼ばれる、アミノ基をある分子から別の分子へ受け渡す反応が代表的です。
+        筋肉の合成・修復やエネルギー代謝に欠かせないこの反応を支えているのがPLPです。
+        筋トレやスポーツで積極的にタンパク質を摂っている方は、それに比例してB6の消費も増えます。
+        「プロテインだけ増やしてもなかなか筋肉がつかない」という場合、B6不足が見落とされていることがあります。
+      </p>
+
+      <div class="highlight-box">
+        ビタミンB6の推奨摂取量は成人男性で1.4mg/日、成人女性で1.2mg/日（日本人の食事摂取基準2020年版）ですが、
+        タンパク質を多く摂る人ほど必要量が増えます。
+        高タンパク食を実践しているアスリートや筋トレ愛好者は、意識的にB6の摂取も増やすことが推奨されています。
+      </div>
+
+      <!-- 神経伝達物質 -->
+      <h3 class="section-heading">ビタミンB6の働き② 「心」を作る神経伝達物質の材料</h3>
+      <p>
+        ビタミンB6が特に注目される理由のひとつが、<strong>脳の神経伝達物質の合成</strong>への関与です。
+        気分・睡眠・意欲・痛みの感覚など、私たちの「心」の状態を左右する化学物質のほとんどが、
+        B6を必要とする酵素反応によって作られます。
+      </p>
+
+      <ul class="point-list">
+        <li>
+          <strong>セロトニン（幸せホルモン）</strong>：
+          トリプトファン→5-HTP→セロトニンの変換にB6が必要。不足すると気分の落ち込み・不眠・過食傾向が現れやすくなります。
+        </li>
+        <li>
+          <strong>ドーパミン・ノルアドレナリン（意欲・集中のホルモン）</strong>：
+          チロシンからドーパミンを合成する脱炭酸反応にB6が必要。やる気の低下や注意力散漫はB6不足のサインのことがあります。
+        </li>
+        <li>
+          <strong>GABA（抑制性神経伝達物質）</strong>：
+          グルタミン酸からGABAへの変換にB6が不可欠。GABAは緊張・不安を和らげ、脳をリラックスさせる物質で、
+          不足すると過緊張・イライラ・痙攣のリスクが高まります。
+        </li>
+        <li>
+          <strong>ヒスタミン（アレルギー・覚醒に関与）</strong>：
+          ヒスタミン代謝にもB6が関与。アレルギー症状の慢性化にB6不足が絡んでいる場合があります。
+        </li>
+      </ul>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">😴 B6と「夢を見やすくなる」関係</div>
+        <p>
+          ビタミンB6を就寝前に摂ると夢を鮮明に見やすくなるという報告が複数あります。
+          これはB6がセロトニン合成を促進し、REM睡眠（夢を見る睡眠）の質を変化させるためと考えられています。
+          「夢の記憶サプリ」として一部の欧米研究者が試みたほど、B6と睡眠・夢の関係は興味深いテーマです。
+        </p>
+      </div>
+
+      <!-- ホルモン・PMS -->
+      <h3 class="section-heading">ビタミンB6の働き③ ホルモンバランスとPMS改善</h3>
+      <p>
+        ビタミンB6は女性ホルモン（エストロゲン・プロゲステロン）の代謝に深く関わっており、
+        婦人科領域で長年注目されてきたビタミンです。
+        特に<strong>PMS（月経前症候群）</strong>への効果は複数の臨床試験で示されており、
+        欧州では「PMS治療の第一選択のひとつ」として位置づけられています。
+      </p>
+      <p>
+        PMSの症状（イライラ・むくみ・頭痛・気分の落ち込み・乳房の張り）の多くは、
+        エストロゲン過剰とプロゲステロン不足によるホルモンバランスの乱れが背景にあります。
+        B6は肝臓でのエストロゲン代謝を助けてバランスを整え、
+        さらに前述のセロトニン・GABA合成を促すことで精神症状を和らげます。
+      </p>
+
+      <div class="highlight-box">
+        1970〜80年代に行われた複数の研究では、B6（50〜100mg/日）の補充がPMSの気分症状に有意な改善をもたらすことが示されました。
+        また、妊娠初期のつわり（悪心・嘔吐）に対してB6（ピリドキシン）が有効とする報告もあり、
+        一部の国では妊娠悪阻の治療薬として承認されています。
+        ただし高用量のB6長期摂取は末梢神経障害のリスクがあるため、必ず医師に相談の上で使用してください。
+      </div>
+
+      <!-- 心臓・血管 -->
+      <h3 class="section-heading">ビタミンB6の働き④ 血管を守る「ホモシステイン」の代謝</h3>
+      <p>
+        「ホモシステイン」という言葉を聞いたことがあるでしょうか。
+        メチオニンというアミノ酸が代謝される過程で生じる中間産物で、
+        血中のホモシステイン濃度が高くなると<strong>動脈硬化・心筋梗塞・脳卒中</strong>のリスクが上昇することがわかっています。
+      </p>
+      <p>
+        ビタミンB6（B12・葉酸と連携して）はホモシステインを無害なシステインやメチオニンへ変換する酵素の補酵素として働き、
+        血中ホモシステイン値を下げる役割を担います。
+        血管の健康が気になる方、生活習慣病リスクのある方にとって、
+        B6・B12・葉酸の「B族トリオ」を揃えることは心血管予防の重要な柱のひとつです。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🫀 ホモシステインと認知症リスク</div>
+        <p>
+          近年の研究では、高ホモシステイン血症はアルツハイマー型認知症のリスク因子でもあることが示されています。
+          B6・B12・葉酸の補充によってホモシステインを下げると、脳の萎縮スピードが緩やかになるという
+          オックスフォード大学の臨床試験（OPTIMA試験）は特に注目を集めました。
+          認知機能の維持という観点からも、B6はただの「代謝ビタミン」にとどまらない存在です。
+        </p>
+      </div>
+
+      <!-- 免疫 -->
+      <h3 class="section-heading">ビタミンB6の働き⑤ 免疫とタンパク質の設計図</h3>
+      <p>
+        免疫細胞（リンパ球・NK細胞・マクロファージ）の増殖・分化にはタンパク質の新規合成が不可欠であり、
+        そのタンパク質合成のベースとなるアミノ酸代謝を支えるのがB6です。
+        B6欠乏状態では抗体産生が低下し、ウイルスや細菌への抵抗力が著しく落ちることが動物実験・ヒト試験双方で確認されています。
+      </p>
+      <p>
+        また、B6はインターロイキン-2（IL-2）など免疫応答を調節するサイトカインの産生を制御しており、
+        過剰な炎症反応を抑える「免疫の調律師」としての役割も担っています。
+        慢性炎症の背景にB6不足が関与しているケースは、臨床の現場でも少なくありません。
+      </p>
+
+      <!-- 歴史コラム -->
+      <h3 class="section-heading">歴史コラム｜ビタミンB6発見の歴史と「ペラグラ」の謎</h3>
+      <p>
+        ビタミンB6が独立した栄養素として同定されたのは1934年のことです。
+        当時、ラットを用いた実験で皮膚炎（acrodynia）を引き起こす欠乏症が発見されたことがきっかけでした。
+        しかしその重要性が広く認識されるようになったのは、もう少し後のことです。
+      </p>
+      <div class="highlight-box">
+        20世紀初頭のアメリカ南部では「ペラグラ」という謎の病気が猛威を振るっていました。
+        皮膚炎・下痢・認知症・死亡（英語では"4つのD"：Dermatitis, Diarrhea, Dementia, Death）を来すこの病は、
+        当初は感染症と考えられていましたが、実はビタミンB3（ナイアシン）不足が原因でした。
+        ナイアシンはトリプトファンからも合成されますが、その合成にはビタミンB6が必要です。
+        つまり「ペラグラの謎」にも、陰でB6が深く絡んでいたのです。
+      </div>
+
+      <!-- 不足の原因 -->
+      <h3 class="section-heading">なぜ現代人にB6不足が多いのか</h3>
+      <p>
+        ビタミンB6は多くの食品に含まれていますが、現代の生活習慣にはB6を消耗しやすい要因が重なっています。
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>原因</th>
+            <th>詳細</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>高タンパク食</td>
+            <td>タンパク質代謝にB6が消費されるため、プロテイン摂取が多い人ほど必要量が増加する</td>
+          </tr>
+          <tr>
+            <td>アルコール摂取</td>
+            <td>アルコール代謝産物がPLPを分解・失活させる。飲酒習慣のある人はB6不足に陥りやすい</td>
+          </tr>
+          <tr>
+            <td>加熱調理による損失</td>
+            <td>B6は水溶性で熱に弱く、茹でる・炒める・煮るで20〜50%が失われることがある</td>
+          </tr>
+          <tr>
+            <td>経口避妊薬（ピル）の服用</td>
+            <td>エストロゲンがB6代謝を乱し、血中B6濃度を低下させることが報告されている</td>
+          </tr>
+          <tr>
+            <td>腸内環境の悪化</td>
+            <td>腸内細菌はB6を産生する能力を持つが、腸内環境が乱れると産生量が低下する</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 欠乏症状 -->
+      <h3 class="section-heading">B6不足のサインを見逃さないために</h3>
+      <p>
+        ビタミンB6の欠乏は複数の臓器・機能に同時に影響が出るため、症状がバラバラで気づきにくいのが特徴です。
+        以下に当てはまる項目が複数ある方は、B6不足を疑ってみてください。
+      </p>
+      <ul class="point-list">
+        <li><strong>口内炎・口角炎・舌炎</strong>が繰り返す（B6欠乏の典型的サイン）</li>
+        <li>理由なく<strong>気分が落ち込む・イライラする</strong>ことが多い</li>
+        <li><strong>寝つきが悪い・夢を覚えていない</strong>など睡眠の質が低い</li>
+        <li><strong>手足のしびれ・末梢のこわばり</strong>を感じる</li>
+        <li>月経前に<strong>むくみ・頭痛・情緒不安定</strong>が強く出る（PMS）</li>
+        <li><strong>皮脂過多・ニキビ・脂漏性皮膚炎</strong>が気になる</li>
+        <li>筋トレや運動をしているのに<strong>なかなか筋肉がつかない</strong></li>
+      </ul>
+
+      <!-- 食品源 -->
+      <h3 class="section-heading">ビタミンB6を多く含む食品</h3>
+      <p>
+        ビタミンB6は動物性・植物性を問わず幅広い食品に含まれますが、
+        動物性食品のほうが吸収率が高く（約70〜80%）、植物性食品は50〜60%程度です。
+        特に豊富な食品を覚えておきましょう。
+      </p>
+
+      <div class="intake-cards">
+        <div class="intake-card">
+          <div class="intake-card-icon">🐟</div>
+          <div class="intake-card-title">マグロ・カツオ</div>
+          <div class="intake-card-desc">100gあたり0.8〜0.9mg。赤身魚は特にB6が豊富。刺身で食べると加熱損失なし。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🍗</div>
+          <div class="intake-card-title">鶏むね肉・ささみ</div>
+          <div class="intake-card-desc">100gあたり約0.6〜0.9mg。高タンパク・低脂質で筋トレ食としても優秀。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🍌</div>
+          <div class="intake-card-title">バナナ</div>
+          <div class="intake-card-desc">1本あたり約0.3〜0.4mg。植物性では最もB6が豊富な部類。手軽さも◎。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🥜</div>
+          <div class="intake-card-title">ピスタチオ・ひまわりの種</div>
+          <div class="intake-card-desc">ナッツ類の中でトップクラスのB6含有量。おやつや間食に取り入れやすい。</div>
+        </div>
+      </div>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🍌 バナナが「元気の食べ物」といわれる理由</div>
+        <p>
+          バナナが疲労回復やスポーツ前後の補食として広く親しまれている理由は、
+          糖質（エネルギー補給）だけではありません。
+          B6によるセロトニン合成促進、カリウムによる電解質補給、マグネシウムによる筋肉のリラックス……
+          と複数の栄養素が相乗的に働いています。
+          「バナナを食べると気持ちが上がる」という感覚は、科学的にもある程度裏付けられているのです。
+        </p>
+      </div>
+
+      <!-- 協力ビタミン -->
+      <h3 class="section-heading">B6は「チームプレーヤー」―― 他のビタミンとの相乗効果</h3>
+      <p>
+        ビタミンB6は単独で働くよりも、他のB群や栄養素と組み合わさることで力を最大に発揮します。
+        特に重要なコンビを押さえておきましょう。
+      </p>
+      <ul class="point-list">
+        <li><strong>B6 × B12 × 葉酸</strong>：ホモシステイン代謝の「黄金トリオ」。3つ揃えることで心血管・脳神経保護効果が最大化。</li>
+        <li><strong>B6 × マグネシウム</strong>：B6はマグネシウムの細胞内への取り込みを促進する。PMSや片頭痛には「B6＋Mg」の組み合わせが特に有効とされる。</li>
+        <li><strong>B6 × 亜鉛</strong>：コラーゲンの架橋（クロスリンク）形成にB6が、コラーゲン合成酵素の活性に亜鉛が関わる。皮膚・関節の健康に相互補完。</li>
+        <li><strong>B6 × トリプトファン</strong>：B6がトリプトファン→セロトニンの変換率を高める。睡眠・気分改善を目指すなら、B6とトリプトファン豊富な食品（乳製品・ナッツ）の組み合わせが理想的。</li>
+      </ul>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            ビタミンB6は「心と体をつなぐビタミン」と私は表現しています。
+            気分の落ち込み・PMSの不調・繰り返す口内炎・なかなか筋肉がつかないといった悩みの裏に、
+            B6不足が隠れているケースは少なくありません。
+            当院では血液検査でビタミンB6値を含む微量栄養素の状態を確認した上で、
+            食事指導・サプリメント選定・点滴による補充（ビタミンB群点滴）まで個別にご提案しています。
+            「なんとなく不調」が続く方は、ぜひ一度ご相談ください。
+          </p>
+        </div>
+      </div>
+
+      <!-- サプリ -->
+      <h3 class="section-heading">サプリメントで補う場合の注意点</h3>
+      <p>
+        ビタミンB6はサプリメントとして手軽に補えますが、過剰摂取による副作用が知られている点で注意が必要です。
+        長期間にわたって高用量（100mg/日以上）を摂り続けると、<strong>末梢神経障害（感覚性末梢ニューロパチー）</strong>が生じることがあります。
+        手足のしびれ・灼熱感・感覚の異常として現れ、摂取を中止すれば多くの場合回復しますが、重篤化する前に気づくことが重要です。
+      </p>
+      <p>
+        日本の耐容上限量は成人で60mg/日（日本人の食事摂取基準2020年版）とされています。
+        一般的な体調管理・栄養補充を目的とするなら、10〜25mg/日程度のサプリを選ぶと安心です。
+        高用量での使用（PMSの治療的用途など）は医師の管理下で行ってください。
+      </p>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">まとめ：「B6を制する者は、代謝を制する」</h3>
+      <p>
+        タンパク質代謝・神経伝達物質の合成・ホルモン代謝・免疫調節・血管保護……
+        これだけ多くの生命機能に関わりながら、ビタミンB6は1日わずか1〜2mg（食事摂取基準の推奨量）で足りるとされています。
+        しかし現代の食生活・生活習慣では慢性的に不足しやすく、その欠乏は体と心の両方に影響を与えます。
+      </p>
+      <p>
+        まずは鮮魚・鶏むね肉・バナナ・ナッツを日々の食事に取り入れることから始めてみてください。
+        そして「なんとなく不調」「気分が落ちやすい」「PMSがつらい」と感じている方は、
+        ぜひ当院で血液検査を受け、ビタミンB6をはじめとする微量栄養素の状態を確認してみましょう。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        体質や持病・お薬との相互作用などが気になる方は、摂取前に医師または薬剤師にご相談ください。
+        ビタミンB6の高用量・長期摂取は末梢神経障害を引き起こす可能性があります。上限量を超えた使用はお控えください。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>ビタミンB群・微量栄養素のご相談は当院へ</h3>
+        <p>血液検査でビタミンB6を含む栄養状態を確認し、食事・サプリ・点滴補充まで個別にご提案します。<br>まずはお気軽にご相談ください。</p>
+        <a href="section_shinryo_annai.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
