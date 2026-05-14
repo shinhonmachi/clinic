@@ -1,35 +1,610 @@
-タイトル:高麗人参のすごい歴史と効能
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>高麗人参のすごい歴史と効能｜新本町クリニック コラム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
 
-〈導入〉高麗人参って？
-学名を「オタネニンジン」と言い、英語名「 ginseng （ジンセン）」漢字では「御種人参」とも表記されることがあります。
-コウギ科の植物で、「ウド」や「タラの芽」等と同じ科に属し、写真にもあるように放射状に花が開くのが特徴です。
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
 
-　
-〈豆知識〉
-普通の人参とは違うの？
+    /* 記事ヘッダー */
+    .article-header {
+      margin-bottom: 36px;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
 
+    /* アイキャッチ */
+    .article-eyecatch-placeholder {
+      width: 100%;
+      height: 280px;
+      background: linear-gradient(135deg, #e8f5ec 0%, #f0f9f3 50%, #eef5f0 100%);
+      border-radius: 12px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.07);
+      border: 1px solid #c8ddd0;
+    }
+    .article-eyecatch-placeholder .ei-icon { font-size: 64px; }
+    .article-eyecatch-placeholder .ei-label {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 15px;
+      color: var(--green);
+      letter-spacing: 0.08em;
+    }
 
-〈歴史〉
-古くは二千年前の中国の文献でも紹介されているほど長い歴史を持つ高麗人参(朝鮮人参)。数ある和漢素材の中でも、とりわけ希少価値が高く、時の皇帝たちは多くの人手を割いて山中を探させたといわれ、王侯貴族しか入手できない時代もあったほどです。
-大航海時代には、高麗人参は海を渡り、フランスの思想家ルソーや、ロシアの文豪ゴーリキーをはじめ、歴史上の様々な著名人が常用したといわれています。
-日本では、室町時代から輸入が始まりましたが、江戸時代には、健康マニアとしても知られている徳川家康が愛用したという話もあります。
-高麗人参は、とりわけ徳川家と縁が深く、時代劇でもお馴染みの8代将軍の徳川吉宗が国内での栽培を広く奨励したことで、国産の高麗人参が出回るようになったというものや、「水戸黄門」徳川光圀が栽培に失敗したというエピソードが広く知られています。
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p {
+      margin-bottom: 1.6em;
+    }
 
-〈豆知識2〉
-実は高麗人参を摂取してる。コンビニや薬局で販売されている栄養ドリンクやエナジードリンクに高確率で入っている。
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--green);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
 
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
 
+    /* 引用・ハイライトボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .highlight-box cite {
+      display: block;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
 
+    /* 歴史タイムライン */
+    .timeline {
+      list-style: none;
+      margin: 24px 0 32px;
+      padding: 0;
+      position: relative;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 20px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--green), var(--sakura));
+    }
+    .timeline li {
+      padding: 0 0 28px 52px;
+      position: relative;
+    }
+    .timeline li:last-child { padding-bottom: 0; }
+    .timeline li::before {
+      content: '';
+      position: absolute;
+      left: 13px;
+      top: 6px;
+      width: 16px;
+      height: 16px;
+      background: var(--green);
+      border: 3px solid #fff;
+      border-radius: 50%;
+      box-shadow: 0 0 0 2px var(--green);
+    }
+    .timeline-era {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--green);
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .timeline-text {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text);
+    }
 
-〈効能〉
-古来より疲労回復、滋養強壮、病中病後の体力回復、免疫機能の活性化、アンチエイジングなど幅広い効能とされている。
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--green);
+      font-weight: 700;
+    }
 
-〈豆知識3〉
-料理にも使われる高麗人参。有名なものでは、韓国料理の「参鶏湯（サムゲタン）」です。
-高麗人参と共に、鶏肉やコメ、その他漢方薬等を一緒に煮込んだ薬膳のスープ料理で、韓国では夏バテ防止の料理として食べられています。
+    /* ジンセノサイド種類テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--green);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--green-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
 
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
 
-〈最新の研究〉ジンセノサイド
-現代の科学ではジンセノサイドが効能を発揮していることが判明している。
-ジンセノサイドとは、高麗人参に含まれている特別なサポニンのことです。サポニンは、生薬の有効成分としても有名で、高麗人参以外でもマメ科などの植物にも含まれています。
-高麗高麗人参には、ジンセノサイドのほかにも人間が生きる上で必要な栄養素をバランスよく含有しているのが特徴です。
+    /* 注意書き */
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* 記事末フッター */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--green-light), var(--sakura-light));
+      border: 1px solid #c8ddd0;
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+      .timeline::before { left: 16px; }
+      .timeline li { padding-left: 44px; }
+      .timeline li::before { left: 9px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>高麗人参のすごい歴史と効能</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">漢方・和漢素材</span>
+      <h2 class="article-title">高麗人参のすごい歴史と効能<br>―― 二千年の時を超えた「万能の薬草」</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2025年</span>
+      </div>
+    </header>
+
+    <!-- アイキャッチ（画像がない場合のプレースホルダー） -->
+    <div class="article-eyecatch-placeholder" role="img" aria-label="高麗人参のイメージ">
+      <span class="ei-icon">🌿</span>
+      <span class="ei-label">高麗人参（朝鮮人参）</span>
+    </div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">高麗人参って？</h3>
+      <p>
+        「高麗人参」という名前は耳慣れていても、実際にどんな植物かご存知でしょうか。
+        学名は <em>Panax ginseng</em>（パナックス・ジンセン）、日本語では「オタネニンジン」とも呼ばれ、漢字では「御種人参」と書きます。
+        英語名の「ginseng（ジンセン）」は、中国語で「人の形をした根」を意味する「人蔘（rénshen）」が語源です。
+        確かに根の形が人の手足のように分かれており、その独特な外観から古代人が神秘的な力を感じたことも想像に難くありません。
+      </p>
+      <p>
+        植物としてはウコギ科に属し、「ウド」や「タラの芽」と同じ科の仲間です。
+        開花すると放射状に白い小花が集まって咲くのが特徴で、秋には鮮やかな赤い実をつけます。
+        生長がとてもゆっくりで、薬効が高まる6年根として収穫されるまでに6年もの歳月を要します。
+        この長い栽培期間こそが、高麗人参が希少で高価である大きな理由のひとつです。
+      </p>
+
+      <!-- 豆知識1：普通のニンジンとの違い -->
+      <h3 class="section-heading">豆知識① 普通のニンジン（人参）とは全然違う</h3>
+      <div class="trivia-box">
+        <div class="trivia-box-label">🥕 名前は似ているけれど……</div>
+        <p>
+          スーパーで売っているオレンジ色のニンジンはセリ科の植物で、高麗人参とは植物としての分類も全く異なります。
+          「人参」という漢字は、本来は高麗人参を指す言葉でした。のちにオランダから西洋のニンジン（キャロット）が伝わり、その形が高麗人参に似ていたことから同じ「人参」の字が当てられ、現在のような混乱が生まれたとされています。
+          薬効・成分・用途はまったく異なりますので、混同しないようにご注意ください。
+        </p>
+      </div>
+
+      <!-- 歴史 -->
+      <h3 class="section-heading">二千年を超える壮大な歴史</h3>
+      <p>
+        高麗人参（朝鮮人参）は、今から約二千年前の中国の薬学書『神農本草経（しんのうほんぞうきょう）』にすでに記載されているほど古い歴史を持ちます。
+        当時から「上品（じょうほん）」――つまり最上位の生薬として分類され、「長期に飲んでも毒にならず、体を軽くして寿命を延ばす」と記述されています。
+      </p>
+
+      <ul class="timeline">
+        <li>
+          <div class="timeline-era">紀元前〜古代中国</div>
+          <div class="timeline-text">
+            『神農本草経』に記載。皇帝たちは多くの人手を割いて深山で採集させ、王侯貴族だけが手にできる時代もあったとされます。入手困難なため、国家間の贈り物としても重宝されました。
+          </div>
+        </li>
+        <li>
+          <div class="timeline-era">大航海時代（15〜17世紀）</div>
+          <div class="timeline-text">
+            高麗人参は海を渡り西洋へ伝わります。フランスの思想家ルソーや、ロシアの文豪ゴーリキーをはじめ、歴史上の多くの著名人が愛用したと伝えられています。当時のヨーロッパでも「東洋の神秘の薬」として高い関心を集めました。
+          </div>
+        </li>
+        <li>
+          <div class="timeline-era">室町〜江戸時代（日本）</div>
+          <div class="timeline-text">
+            日本には室町時代から輸入が始まりました。江戸時代には、健康に非常にこだわったことで知られる徳川家康が愛用し、その長寿（75歳）の秘訣のひとつとも語られています。
+          </div>
+        </li>
+        <li>
+          <div class="timeline-era">江戸中期（徳川吉宗・光圀の時代）</div>
+          <div class="timeline-text">
+            8代将軍・徳川吉宗は高麗人参の国内栽培を広く奨励し、国産品が流通するきっかけをつくりました。一方で「水戸黄門」徳川光圀は自ら栽培を試みたものの失敗したというエピソードも伝わっており、それほど栽培が難しい植物であることがうかがえます。
+          </div>
+        </li>
+      </ul>
+
+      <!-- 豆知識2：実は摂ってる -->
+      <h3 class="section-heading">豆知識② 実はすでに飲んでいるかも？</h3>
+      <div class="trivia-box">
+        <div class="trivia-box-label">🥤 コンビニ・薬局で買えるあの飲み物に…</div>
+        <p>
+          高麗人参と聞くと「高価で手の届かないもの」と思いがちですが、実はコンビニや薬局で販売されている市販の栄養ドリンクやエナジードリンクの多くに、エキスが配合されています。
+          成分表示に「朝鮮人参エキス」「紅参エキス」「ジンセンエキス」などと記載があれば、それが高麗人参由来の成分です。
+          ただし、市販ドリンクに含まれる量はごく微量であることが多く、しっかりとした薬効を期待するなら高品質のサプリメントや漢方製剤が適しています。
+        </p>
+      </div>
+
+      <!-- 効能 -->
+      <h3 class="section-heading">古来から伝わる幅広い効能</h3>
+      <p>
+        漢方・東洋医学の世界で高麗人参は「大補元気（だいほげんき）」の生薬として知られます。
+        「元気（げんき）」とは、東洋医学で生命エネルギーそのものを指す概念。
+        そのエネルギーを根本から補う最上位の生薬、というわけです。
+        古来より認められてきた主な効能は以下のとおりです。
+      </p>
+      <ul class="point-list">
+        <li><strong>疲労回復・滋養強壮</strong>：慢性的な疲れや虚弱体質の改善。身体的・精神的なスタミナを底上げします。</li>
+        <li><strong>病中病後の体力回復</strong>：大病や手術後など、体力が著しく低下した状態からの回復を助けます。</li>
+        <li><strong>免疫機能の活性化</strong>：免疫細胞の働きを高め、感染症への抵抗力を強化します。</li>
+        <li><strong>アンチエイジング</strong>：細胞の酸化ストレスを軽減し、老化を遅らせる作用が研究されています。</li>
+        <li><strong>血糖値の調整</strong>：インスリン感受性の改善に関わるとされ、糖代謝のサポートが期待されます。</li>
+        <li><strong>ストレス緩和（アダプトゲン作用）</strong>：心身のストレスへの適応力を高め、精神的な安定をもたらします。</li>
+      </ul>
+
+      <!-- 豆知識3：参鶏湯 -->
+      <h3 class="section-heading">豆知識③ 料理にも使われる高麗人参</h3>
+      <p>
+        高麗人参は生薬・サプリメントとしてだけでなく、料理の食材としても広く親しまれています。
+        最も有名なのが韓国料理の「参鶏湯（サムゲタン）」です。
+      </p>
+      <div class="highlight-box">
+        参鶏湯とは、丸鶏の腹の中に高麗人参・もち米・にんにく・なつめ・松の実などを詰め、
+        長時間じっくりと煮込んだ薬膳スープです。
+        韓国では三伏（サンボク）と呼ばれる夏の最も暑い時期に食べる伝統料理で、
+        「熱いものを食べて体の熱を発散させ、夏バテを乗り越える」という発想から生まれた知恵の料理です。
+        コラーゲンたっぷりの鶏とアダプトゲンである高麗人参の組み合わせは、現代栄養学的にも理にかなっています。
+        <cite>―― 漢方の視点から見た参鶏湯</cite>
+      </div>
+      <p>
+        その他にも、韓国では高麗人参の天ぷら（인삼튀김）・蜂蜜漬け・お茶（인삼차）などさまざまな形で日常的に摂取されています。
+        日本でも薬膳料理として取り入れる方が増えており、手軽な高麗人参茶はドラッグストアでも手に入ります。
+      </p>
+
+      <!-- 最新の研究：ジンセノサイド -->
+      <h3 class="section-heading">最新の研究｜「ジンセノサイド」が謎を解く</h3>
+      <p>
+        古来から経験的に伝わってきた高麗人参の効能は、現代科学によって少しずつ解明されています。
+        その鍵を握るのが「ジンセノサイド（Ginsenoside）」という成分群です。
+      </p>
+      <p>
+        ジンセノサイドとは、高麗人参に特有のトリテルペン系サポニンの総称で、現在までに40種類以上が単離・同定されています。
+        高麗人参以外の植物には存在しない、いわば「高麗人参だけの特別な成分」です。
+        サポニン自体はマメ科の植物など広く存在しますが、高麗人参のジンセノサイドは構造が特殊で、体内での作用も独自のものを持ちます。
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>主なジンセノサイド</th>
+            <th>期待される作用</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Rb1・Rb2</td>
+            <td>中枢神経の保護、記憶力・認知機能のサポート、抗疲労</td>
+          </tr>
+          <tr>
+            <td>Rg1</td>
+            <td>免疫活性化、造血作用の補助、スタミナ向上</td>
+          </tr>
+          <tr>
+            <td>Rg3</td>
+            <td>抗腫瘍作用（がん細胞の増殖抑制）、血管新生の抑制に関する研究が進行中</td>
+          </tr>
+          <tr>
+            <td>Re</td>
+            <td>血糖値調整、インスリン感受性の改善</td>
+          </tr>
+          <tr>
+            <td>Rd</td>
+            <td>抗炎症作用、神経保護</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔬 紅参（ホンサム）とは？</div>
+        <p>
+          高麗人参を蒸してから乾燥させる「紅参（ホンサム）」加工を行うと、Rg3など生の人参にはほとんど含まれないジンセノサイドが新たに生成されます。
+          特にRg3は近年の研究で注目度が高く、がんや認知症との関連で多くの臨床研究が行われています。
+          紅参は一般の白参より薬効が高いとされ、漢方医療や高品質サプリメントでは紅参由来のエキスが好まれます。
+        </p>
+      </div>
+
+      <p>
+        またジンセノサイド以外にも、高麗人参はビタミン類・ミネラル・必須アミノ酸・多糖類（ポリサッカライド）・ポリフェノールなど、
+        人間が生きる上で必要な栄養素をバランスよく含有しているのが大きな特徴です。
+        これこそが「万能の薬草」と称される理由のひとつといえるでしょう。
+      </p>
+
+      <!-- アダプトゲンについて -->
+      <h3 class="section-heading">「アダプトゲン」としての高麗人参</h3>
+      <p>
+        高麗人参は現代的な視点からは「アダプトゲン（adaptogen）」として分類されます。
+        アダプトゲンとは、身体が物理的・化学的・心理的ストレスに適応する能力を高めてくれる天然物質の総称です。
+        ロシアの薬理学者ニコライ・ラザレフが1940年代に提唱した概念で、高麗人参はその代表的な植物とされています。
+      </p>
+      <p>
+        重要なのは、アダプトゲンは体の状態に応じて「必要な方向に」働く「双方向調整作用」を持つとされる点です。
+        血圧が高ければ下げる方向に、低ければ上げる方向に――身体を常に「ちょうどいい状態」に近づけようとする働きが特徴です。
+        現代社会のストレスフルな生活において、体のバランスを保つために注目されている理由はここにあります。
+      </p>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            当院では漢方内科として、高麗人参を含む和漢素材の活用についてもご相談を承っています。
+            特に慢性的なだるさ・免疫力の低下・更年期症状・ストレス性の不調などでお悩みの方には、
+            西洋医学的なアプローチに加えて漢方・アダプトゲンの活用が効果的なケースがあります。
+            気になることがあれば、ぜひ診察時にご相談ください。
+          </p>
+        </div>
+      </div>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        高麗人参は一部の医薬品（ワーファリンなどの抗凝固剤、糖尿病治療薬など）と相互作用する可能性が指摘されています。
+        持病をお持ちの方やお薬を服用中の方は、必ず医師・薬剤師にご相談のうえ摂取してください。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>漢方・和漢素材のご相談は当院へ</h3>
+        <p>高麗人参を含む漢方治療・サプリメント選びについて、<br>内科・漢方内科の観点からご提案いたします。</p>
+        <a href="section_shinryo_annai.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
