@@ -80,6 +80,12 @@
     display: flex; align-items: center; justify-content: center;
     flex-shrink: 0; margin-top: 1px;
   }
+  .point-icon.warn {
+    background: #fff3e0; color: #d07000;
+  }
+  .point-icon.stop {
+    background: #fdecea; color: #c62828;
+  }
 
   .symptom-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--border); }
   .symptom-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; width: 100%; }
@@ -128,6 +134,81 @@
     flex-shrink: 0;
   }
 
+  /* エビデンス帯 */
+  .evidence-band {
+    background: #f5f8ff;
+    border: 1px solid #c9d8f0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    font-size: 13px;
+    color: var(--text);
+    line-height: 2;
+  }
+  .evidence-band .ev-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #3a5a9a;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* 副作用ボックス */
+  .side-effect-box {
+    background: #fffbf0;
+    border: 1px solid #f0d080;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 0;
+  }
+
+  /* 禁忌ボックス */
+  .contraindication-box {
+    background: #fff5f5;
+    border: 1px solid #f5c0c0;
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin-top: 16px;
+  }
+  .contraindication-box .ci-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #b03030;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  /* 薬物相互作用テーブル */
+  .interaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+    margin-top: 16px;
+  }
+  .interaction-table th {
+    background: var(--sakura-light);
+    color: var(--sakura-deep);
+    font-weight: 600;
+    padding: 9px 14px;
+    text-align: left;
+    border-bottom: 2px solid var(--sakura);
+  }
+  .interaction-table td {
+    padding: 9px 14px;
+    border-bottom: 1px dashed var(--border);
+    vertical-align: top;
+    line-height: 1.75;
+    color: var(--text);
+  }
+  .interaction-table tr:last-child td { border-bottom: none; }
+  .interaction-table tr:hover td { background: #fdf6f6; }
+
   .info-box { background: var(--green-light); border: 1px solid #c5dece; border-radius: 16px; padding: 28px 32px; margin-top: 16px; }
   .info-box-title { font-size: 15px; font-weight: 500; color: var(--green); margin-bottom: 14px; font-family: 'Noto Serif JP', serif; }
   .info-box p { font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 10px; }
@@ -145,11 +226,24 @@
   }
   .consult-hours { font-size: 12px; color: var(--text-muted); }
 
+  /* 小見出し（セクション内） */
+  .sub-heading {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text);
+    margin: 22px 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
   @media (max-width: 540px) {
     .container { padding: 32px 20px; }
     .lead-box { padding: 22px 20px; }
     .dept-body { padding: 20px 18px; }
     .info-box { padding: 22px 20px; }
+    .interaction-table th,
+    .interaction-table td { padding: 8px 10px; font-size: 11px; }
   }
 </style>
 </head>
@@ -167,14 +261,14 @@
 
   <!-- リード文 -->
   <div class="lead-box">
-    マイヤーズカクテルは、1960年代にアメリカのジョン・マイヤーズ医師が考案した<strong>総合ビタミン・ミネラル点滴療法</strong>です。ビタミンC・ビタミンB群・マグネシウム・カルシウムなどを組み合わせた「カクテル」を点滴で直接補給し、慢性疲労・免疫低下・自律神経の乱れ・偏頭痛・線維筋痛症など、さまざまな不調の改善を目指します。<br><br>
-    経口サプリメントと異なり、<strong>消化管を介さず直接血中へ高濃度で補充</strong>できるため、速やかな効果が期待できます。
+    マイヤーズカクテルは、1970年代にアメリカのジョン・マイヤーズ医師がボルティモアで考案・実施した<strong>総合ビタミン・ミネラル点滴療法</strong>です。ビタミンC・ビタミンB群・マグネシウム・カルシウムなどを組み合わせた「カクテル」を点滴で直接補給し、慢性疲労・免疫低下・自律神経の乱れ・偏頭痛・線維筋痛症など、さまざまな不調の改善を目指します。<br><br>
+    経口サプリメントと異なり、<strong>消化管を介さず直接血中へ高濃度で補充</strong>できるため、速やかな効果が期待できます。当院では効果・安全性・エビデンスの現状を正直にお伝えしたうえで、ご希望の方に丁寧に実施しております。
   </div>
 
   <!-- 注意書き -->
   <div class="caution-banner">
     <span class="caution-icon">⚠️</span>
-    <span>当ページに記載の治療は<strong>自由診療（全額自己負担）</strong>です。腎不全・重篤な心疾患のある方は事前にご相談ください。効果には個人差があります。</span>
+    <span>当ページに記載の治療は<strong>自由診療（全額自己負担）</strong>です。腎不全・重篤な心疾患・低カリウム血症のある方は事前にご相談ください。効果には個人差があります。</span>
   </div>
 
   <!-- 成分と効果 -->
@@ -230,7 +324,164 @@
         <span class="symptom-tag">気力・集中力の低下</span>
         <span class="symptom-tag">季節の変わり目の不調</span>
         <span class="symptom-tag">スポーツ後の回復</span>
+        <span class="symptom-tag">過度の飲酒後の回復</span>
+        <span class="symptom-tag">喘息・アレルギー</span>
+        <span class="symptom-tag">ストレス・不安感</span>
+        <span class="symptom-tag">慢性副鼻腔炎</span>
       </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- エビデンスについて -->
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">🔬</div>
+      <div>
+        <div class="dept-title">エビデンス（科学的根拠）について</div>
+        <div class="dept-title-sub">Evidence &amp; Current Scientific Status</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>当院では治療の透明性を大切にし、現時点でのエビデンスの状況を正直にご案内しております。</p>
+
+      <div class="evidence-band">
+        <div class="ev-title">📋 現在のエビデンス状況</div>
+        <p style="margin:0; font-size:13px; color:var(--text); line-height:2;">
+          ビタミン・ミネラルの<strong>点滴補充療法</strong>は、欠乏症の治療や疲労・免疫低下の改善を目的として世界中の医療機関で広く実施されています。マイヤーズカクテルは1970年代の考案以来、多くの医師・患者に活用されてきた実績ある治療法であり、現在も継続して研究が進んでいます。
+        </p>
+      </div>
+
+      <p>個々のビタミン・ミネラルについては、欠乏症の治療を目的とした点滴・注射投与に関してエビデンスが存在します。当院では最新の知見を踏まえながら、患者さんのご状態・ご希望と丁寧にすり合わせたうえで実施しております。</p>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- 安全管理への取り組み -->
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">🛡️</div>
+      <div>
+        <div class="dept-title">当院の安全管理への取り組み</div>
+        <div class="dept-title-sub">Safety Management &amp; Medical Supervision</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>マイヤーズカクテルは医師の管理のもとで適切に実施することが大切です。当院では以下の取り組みにより、安心して治療を受けていただける環境を整えています。</p>
+
+      <div class="side-effect-box">
+        <div class="point-list" style="margin:0;">
+          <div class="point-item">
+            <div class="point-icon">✓</div>
+            <span><strong>投与速度の個別調整</strong>：マグネシウムによる温感・ほてりが出にくいよう、お一人おひとりの状態に合わせてゆっくり投与します。</span>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">✓</div>
+            <span><strong>事前問診の徹底</strong>：腎機能・心疾患・電解質バランス・服用中のお薬を初回に確認し、安全に実施できるかを医師が判断します。</span>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">✓</div>
+            <span><strong>投与中のモニタリング</strong>：点滴中は看護師が定期的に状態を確認し、気になる症状があればすぐに対応できる体制を整えています。</span>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">✓</div>
+            <span><strong>服用薬との相互確認</strong>：降圧薬・利尿薬・造血促進薬など、影響が生じやすいお薬との組み合わせを事前にチェックします。</span>
+          </div>
+          <div class="point-item">
+            <div class="point-icon">✓</div>
+            <span><strong>妊婦・授乳中の方への対応</strong>：安全データが限られるため、該当する方には代替の栄養補給方法をご提案しております。</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- 禁忌・受診前の確認事項 -->
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">🚫</div>
+      <div>
+        <div class="dept-title">受診前にご確認ください</div>
+        <div class="dept-title-sub">Contraindications &amp; Precautions</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>以下に該当する方は、必ず事前に医師へお申し出ください。症状・状態によっては実施をお断りする場合があります。</p>
+
+      <div class="contraindication-box">
+        <div class="ci-title">🔴 原則実施不可・要相談</div>
+        <div class="point-list" style="margin:0;">
+          <div class="point-item">
+            <div class="point-icon stop">✕</div>
+            <span>腎不全・透析中の方</span>
+          </div>
+          <div class="point-item">
+            <div class="point-icon stop">✕</div>
+            <span>重篤な心疾患・高血圧のある方</span>
+          </div>
+          <div class="point-item">
+            <div class="point-icon stop">✕</div>
+            <span>低カリウム血症・電解質異常のある方</span>
+          </div>
+          <div class="point-item">
+            <div class="point-icon stop">✕</div>
+            <span>妊娠中・授乳中の方</span>
+          </div>
+          <div class="point-item">
+            <div class="point-icon stop">✕</div>
+            <span>特定の薬剤（下記参照）を使用中の方</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- 薬物相互作用 -->
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">💊</div>
+      <div>
+        <div class="dept-title">薬物相互作用（お薬との関係）</div>
+        <div class="dept-title-sub">Drug Interactions</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>現在お薬を服用・使用中の方は、必ず受診時にお申し出ください。特に下記の薬剤との相互作用が報告されています。</p>
+
+      <table class="interaction-table">
+        <thead>
+          <tr>
+            <th>薬剤・成分</th>
+            <th>起こりうる相互作用</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>造血促進薬<br><small>（エポエチン・ダルベポエチンなど）</small></td>
+            <td>静脈内ビタミンB6との併用で、赤血球産生への反応が低下する可能性があります。慢性腎疾患・がん治療中の方は特にご注意ください。</td>
+          </tr>
+          <tr>
+            <td>降圧薬<br><small>（カルシウム拮抗薬・ARBなど）</small></td>
+            <td>マグネシウムとの相互作用により、血圧がさらに低下する可能性があります。</td>
+          </tr>
+          <tr>
+            <td>セフトリアキソン（注射用抗菌薬）</td>
+            <td>カルシウムとの配合により不溶性沈殿を形成し、腎臓・肺・胆嚢にダメージを与える可能性があります。当院では点滴中の同時投与は行いません。</td>
+          </tr>
+          <tr>
+            <td>利尿薬・アルコール（大量摂取）</td>
+            <td>電解質（マグネシウム・カリウム）バランスを崩す可能性があり、点滴の安全性に影響することがあります。</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="margin-top:14px;">上記以外のお薬を服用中の方も、受診時の問診で必ずお知らせください。医師が安全性を確認したうえで実施いたします。</p>
     </div>
   </div>
 
@@ -262,14 +513,14 @@
   <!-- 受診の流れ -->
   <div class="info-box">
     <div class="info-box-title">🌿 ご相談・受診の流れ</div>
-    <p>初回はご症状・目的・現在の服用薬をお伺いしたうえで点滴を実施します。所要時間は問診・処置合わせて約60〜90分を目安にお越しください。</p>
+    <p>初回はご症状・目的・現在の服用薬・既往歴をお伺いしたうえで実施の可否を判断し、点滴を実施します。所要時間は問診・処置合わせて約60〜90分を目安にお越しください。</p>
     <p>慢性疲労・免疫低下には週1回を3〜5回継続することで効果が定着しやすくなります。その後は月1〜2回のメンテナンスをおすすめしています。</p>
-    <p>腎不全・透析中・重篤な心疾患・低カリウム血症の方は事前にお申し出ください。</p>
+    <p>腎不全・透析中・重篤な心疾患・低カリウム血症・妊娠中・授乳中の方は事前にお申し出ください。現在服用中のお薬がある方は薬の名前がわかるもの（お薬手帳など）をご持参ください。</p>
   </div>
 
   <!-- 電話CTA -->
   <div class="consult-cta">
-    <p>「疲れが取れない」「体調を根本から整えたい」方はぜひご相談ください。</p>
+    <p>「疲れが取れない」「体調を根本から整えたい」方はぜひご相談ください。<br>医師が丁寧にカウンセリングを行い、お一人おひとりに合った点滴をご提案します。</p>
     <a href="tel:088-856-7511" class="consult-tel">📞 088-856-7511</a>
     <div class="consult-hours">受付時間：診療時間内（木・日・祝除く）</div>
   </div>
