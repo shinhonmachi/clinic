@@ -1,32 +1,571 @@
-タイトル:コラーゲンはすごい
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>コラーゲンはすごい｜新本町クリニック コラム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
 
-〈導入〉コラーゲンってなに
-コラーゲンは体内のタンパク質の約30%を占める繊維状のタンパク質で、皮膚、靭帯、骨、軟骨、血管などの組織を構成し、弾力や結合を担う「体の接着剤」です。
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
 
-〈お肌のコラーゲン〉
-加齢と紫外線でどんどん失われて、シワ、たるみにつながる。
+    /* 記事ヘッダー */
+    .article-header {
+      margin-bottom: 36px;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
 
-〈豆知識1〉コラーゲンの種類
-動物と魚のコラーゲンのちがい。
+    /* アイキャッチ画像 */
+    .article-eyecatch {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+    }
 
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p {
+      margin-bottom: 1.6em;
+    }
 
-〈歴史〉楊貴妃が美容のために摂取していた！？
-皇帝の妃ならではの美容食材がツバメの巣！
-「ツバメの巣は現代でも高級食材として有名ですが、コラーゲンやローヤルゼリー、シアル酸が豊富で美肌に効果的です。特にシアル酸は注目すべき成分。細胞伝達作用があり、アンチエイジングに有効です」
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
 
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
 
-〈豆知識2〉コラーゲンは食べても意味がない？
-タンパク質は一度アミノ酸に分解され、体内で再び作られるから意味がないとおっしゃる方がおられますがそれは違います。足場理論によりしっかりとお肌に効果があります。
+    /* 引用・コラムボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .highlight-box cite {
+      display: block;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
 
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
 
-〈効率的に〉
-鉄分はコラーゲンの合成に必須。
+    /* テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
 
-〈豆知識3〉
-コラーゲンとゼラチンの違い。
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-body {}
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
 
-〈効果〉お肌だけでなく爪や髪にも効果が！？
+    /* 摂取方法カード群 */
+    .intake-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .intake-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .intake-card-icon { font-size: 28px; margin-bottom: 8px; }
+    .intake-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .intake-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
 
-〈摂取方法〉
-コーヒーに溶かしてお飲みすることをおすすめしてます。またそのまま冷やしてゼリーにしても美味しいです。スープや料理に混ぜてもok。
+    /* ページフッター（記事末） */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
 
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* 注意書き */
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラーゲンはすごい</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">美容・栄養</span>
+      <h2 class="article-title">コラーゲンはすごい<br>―― 体の「接着剤」が担う美と健康の秘密</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2025年</span>
+      </div>
+    </header>
+
+    <!-- アイキャッチ画像 -->
+    <img
+      src="pics/collagen.jpeg"
+      alt="コラーゲンのイメージ"
+      class="article-eyecatch"
+      loading="lazy"
+    />
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">コラーゲンってなに？</h3>
+      <p>
+        「コラーゲン」という言葉は美容の世界でよく耳にしますが、そもそもどんな物質なのでしょうか。
+        コラーゲンは体内のタンパク質全体の約30％を占める繊維状のタンパク質で、皮膚・靭帯・骨・軟骨・血管など、あらゆる組織を構成しています。
+        細胞と細胞をつなぎとめ、弾力や結合を担うことから「体の接着剤」とも呼ばれます。
+      </p>
+      <p>
+        コラーゲンは三本のポリペプチド鎖が螺旋状に絡み合った「トリプルヘリックス構造」という非常に安定した形状を持ちます。
+        この構造のおかげで引っ張りへの強い耐性を持ち、骨の柔軟性や腱の強靭さを支えているのです。
+        体内でコラーゲンを合成するのは「線維芽細胞（せんいがさいぼう）」という細胞で、必要な原料はビタミンCと鉄分です。
+      </p>
+
+      <!-- お肌のコラーゲン -->
+      <h3 class="section-heading">加齢と紫外線でどんどん失われる</h3>
+      <p>
+        お肌の真皮層は約70％がコラーゲンで構成されており、ここが崩れると肌のハリや弾力が失われます。
+        コラーゲンの産生量は20代をピークに年々低下し、40代では20代の約半分になるといわれています。
+        さらに厄介なのが紫外線です。UV-A波は真皮深くまで届き、線維芽細胞を傷つけてコラーゲンの合成を妨げ、すでにあるコラーゲン繊維を変性させてしまいます。
+      </p>
+      <p>
+        こうして減り続けるコラーゲンがシワ・たるみ・くすみの主な原因となります。
+        日々のUVケアと生活習慣の見直しが、コラーゲンを守る第一歩です。
+      </p>
+
+      <!-- 豆知識1：コラーゲンの種類 -->
+      <h3 class="section-heading">豆知識① コラーゲンの種類</h3>
+      <p>
+        コラーゲンには現在30種類以上が確認されていますが、私たちの体に最も多く存在するのはⅠ型・Ⅱ型・Ⅲ型の3種類です。
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>種類</th>
+            <th>主な分布</th>
+            <th>特徴</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Ⅰ型</td>
+            <td>皮膚・骨・腱・歯</td>
+            <td>体内に最も多い。引っ張り強度が高く、美容サプリに最も多く使われる</td>
+          </tr>
+          <tr>
+            <td>Ⅱ型</td>
+            <td>関節軟骨</td>
+            <td>クッション性を担う。関節の健康維持に関わる</td>
+          </tr>
+          <tr>
+            <td>Ⅲ型</td>
+            <td>血管・内臓・皮膚</td>
+            <td>Ⅰ型とセットで存在することが多く、柔らかな組織を支える</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🐟 動物由来 vs 魚由来</div>
+        <p>
+          サプリメントや化粧品に使われるコラーゲンは主に「豚・牛由来（アニマルコラーゲン）」と「魚由来（マリンコラーゲン）」に分かれます。
+          魚由来のコラーゲンは分子量が比較的小さく体内への吸収が早いとされており、特に低分子加工された「コラーゲンペプチド」は消化・吸収の面で優れています。
+          宗教上の理由などで豚・牛を避けたい方には魚由来がおすすめです。
+        </p>
+      </div>
+
+      <!-- 歴史：楊貴妃 -->
+      <h3 class="section-heading">歴史コラム｜楊貴妃が美容のために摂取していた!?</h3>
+      <p>
+        美しい肌といえば、歴史上の美女として名高い唐代の楊貴妃（ようきひ）を思い浮かべる方も多いでしょう。
+        彼女が美を保つために欠かさなかった食材のひとつが、「ツバメの巣」です。
+        皇帝の妃ならではの贅沢な食材ですが、その美容効果は現代科学でも裏付けられています。
+      </p>
+      <div class="highlight-box">
+        ツバメの巣は現代でも高級食材として有名ですが、コラーゲン・ローヤルゼリー・シアル酸が豊富で美肌に効果的です。
+        特に注目すべきは「シアル酸（Sialic acid）」という成分。細胞間の情報伝達に関わり、アンチエイジングへの有効性が研究されています。
+        <cite>―― 当院院長より</cite>
+      </div>
+      <p>
+        現代では漢方や薬膳の観点から再評価されているツバメの巣ですが、コラーゲン補給という意味では、手軽なコラーゲンペプチドサプリメントでも同様のアプローチができます。
+        歴代の美人たちが追い求めた「体の内側からの美」は、今の時代にも通じる普遍的な真実です。
+      </p>
+
+      <!-- 豆知識2：食べても意味がない？ -->
+      <h3 class="section-heading">豆知識② 「コラーゲンを食べても意味がない」は本当？</h3>
+      <p>
+        「タンパク質はどうせ消化されてアミノ酸に分解されてしまうから、コラーゲンを食べても意味がない」
+        ――そう主張される方がいますが、これは正確ではありません。
+      </p>
+      <p>
+        確かに、経口摂取したコラーゲンはペプシンなどの消化酵素によって一度アミノ酸やペプチドに分解されます。
+        しかし現在では、「コラーゲンペプチド（特にプロリン-ヒドロキシプロリンなどのジペプチド）」がそのままの形で腸壁から吸収され、皮膚の線維芽細胞に届くことが明らかになっています。
+      </p>
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔬 足場理論（マトリックス理論）とは？</div>
+        <p>
+          コラーゲン摂取の効果を支える重要な考え方が「足場理論」です。
+          体内に届いたコラーゲンペプチドが線維芽細胞に作用し、新しいコラーゲン合成の"足場"となるシグナルを送る――という仕組みです。
+          ペプチドが直接コラーゲンになるわけではなく、体自身の合成を促すことで結果的にお肌のコラーゲン量が増えると考えられています。
+          複数の臨床試験でも、継続摂取により肌の水分量・弾力・ハリが有意に改善したという報告があります。
+        </p>
+      </div>
+
+      <!-- 効率的に -->
+      <h3 class="section-heading">効率よく補うために欠かせないもの</h3>
+      <p>
+        コラーゲンの合成にはいくつかの「補酵素」が必要です。特に重要なのが以下の栄養素です。
+      </p>
+      <ul class="point-list">
+        <li><strong>ビタミンC</strong>：コラーゲン合成の必須補因子。不足するとコラーゲン繊維が正常に形成されず、壊血病（かいけつびょう）の原因にもなります。</li>
+        <li><strong>鉄（Fe）</strong>：プロリンやリジンのヒドロキシル化反応に必要。コラーゲンの安定した三重らせん構造をつくるために欠かせません。</li>
+        <li><strong>亜鉛</strong>：コラーゲン合成酵素の活性化に関与し、皮膚の修復を助けます。</li>
+        <li><strong>ビタミンB6</strong>：コラーゲン繊維同士の架橋（クロスリンク）形成に必要で、組織の強度を高めます。</li>
+      </ul>
+      <p>
+        コラーゲンサプリを摂っていても鉄やビタミンCが不足していては合成効率が落ちてしまいます。
+        バランスよく組み合わせることが大切です。
+      </p>
+
+      <!-- 豆知識3：ゼラチンとの違い -->
+      <h3 class="section-heading">豆知識③ コラーゲンとゼラチンの違い</h3>
+      <div class="trivia-box">
+        <div class="trivia-box-label">🍮 意外と知らない関係</div>
+        <p>
+          コラーゲンとゼラチンは実は同じ材料からできています。
+          コラーゲンを高温で長時間加熱（変性）させると「ゼラチン」になります。
+          つまりゼラチンはコラーゲンが熱で変性したもの。
+          プリンやゼリーを固めるゼラチンは、動物の骨や皮から抽出したコラーゲンを加工したものです。
+          ゼラチンを食べることでもコラーゲンペプチドとして吸収され、美肌効果が期待できます。
+          手軽なゼリーデザートが意外と美容に役立っているかもしれません。
+        </p>
+      </div>
+
+      <!-- 効果：爪・髪 -->
+      <h3 class="section-heading">お肌だけじゃない！ 爪・髪・関節にも効果</h3>
+      <p>
+        コラーゲンというとお肌のイメージが強いですが、その恩恵は全身に及びます。
+      </p>
+      <ul class="point-list">
+        <li><strong>爪</strong>：爪の主成分はケラチンですが、爪床（そこ）の皮膚はコラーゲンで支えられており、割れやすい爪にはコラーゲン補給が有効とされています。</li>
+        <li><strong>髪</strong>：毛包（もうほう）を包む結合組織はコラーゲンを豊富に含み、毛根を支える構造を保つ役割があります。コラーゲン摂取が髪のツヤや強度に貢献するとの研究も報告されています。</li>
+        <li><strong>関節・軟骨</strong>：関節の軟骨を構成するⅡ型コラーゲンが失われると、関節痛や変形性関節症の原因に。スポーツ後のリカバリーにコラーゲン補給を取り入れるアスリートも増えています。</li>
+        <li><strong>血管・腸</strong>：血管壁を支えるコラーゲンの減少は動脈硬化のリスクと関連し、腸の粘膜コラーゲンが不足すると腸の透過性（リーキーガット）が高まるとも言われています。</li>
+      </ul>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            コラーゲンは単なる美容素材ではなく、全身の組織を維持するために不可欠な構造タンパク質です。
+            当院では、コラーゲンを含む点滴メニュー（ビタミンC・グルタチオン等との組み合わせ）や、
+            院内で取り扱うコラーゲンサプリメントについてもご相談いただけます。
+            気になることがあれば、ぜひ診察時にお声がけください。
+          </p>
+        </div>
+      </div>
+
+      <!-- 摂取方法 -->
+      <h3 class="section-heading">おすすめの摂取方法</h3>
+      <p>
+        コラーゲンペプチドは粉末タイプが多く、無味無臭のものが中心です。
+        毎日続けることが効果を引き出す最大のコツ。おすすめの取り入れ方をご紹介します。
+      </p>
+      <div class="intake-cards">
+        <div class="intake-card">
+          <div class="intake-card-icon">☕</div>
+          <div class="intake-card-title">コーヒーに溶かす</div>
+          <div class="intake-card-desc">無味なので風味を邪魔しません。毎朝のコーヒーに混ぜるだけで習慣化しやすい。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🍮</div>
+          <div class="intake-card-title">ゼリーにする</div>
+          <div class="intake-card-desc">多めに溶かして冷蔵庫で冷やすとゼリー状に固まります。おやつ感覚で美味しく摂取。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🍲</div>
+          <div class="intake-card-title">スープ・料理に混ぜる</div>
+          <div class="intake-card-desc">味噌汁やスープに溶かして OK。熱に強い低分子コラーゲンなら加熱してもほぼ変性しません。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🥤</div>
+          <div class="intake-card-title">プロテインと合わせる</div>
+          <div class="intake-card-desc">運動後のプロテインシェイクに追加すると、筋肉修復と美肌ケアを同時にサポート。</div>
+        </div>
+      </div>
+      <p>
+        摂取タイミングとしては、就寝前や食後がおすすめです。
+        成長ホルモンが分泌される睡眠中に合成が活発になるため、就寝1〜2時間前の摂取は理にかなっています。
+        1日の摂取量はペプチドの種類にもよりますが、5〜10g程度が一般的な目安です。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        体質や持病・お薬との相互作用などが気になる方は、摂取前に医師または薬剤師にご相談ください。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>コラーゲン・美容点滴のご相談は当院へ</h3>
+        <p>ビタミンCやグルタチオンとの組み合わせ点滴メニューもご用意しています。<br>お気軽にご相談ください。</p>
+        <a href="section_shinryo_annai.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
