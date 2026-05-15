@@ -215,6 +215,28 @@
       }
       .card-thumb, .card-thumb-placeholder { height: 170px; }
     }
+
+    /* ===== ヒーロー：deco1背景 ===== */
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 64px 32px 56px;
+    }
+    .page-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.22;
+      pointer-events: none;
+      user-select: none;
+    }
+    .page-hero > :not(.page-hero-bg) {
+      position: relative;
+      z-index: 1;
+    }
   </style>
 </head>
 <body>
@@ -224,6 +246,7 @@
 
   <!-- ページヒーロー -->
   <div class="page-hero">
+    <img src="pics/deco1.webp" alt="" class="page-hero-bg" aria-hidden="true" />
     <span class="page-label">Column</span>
     <h1 class="page-title">クリニックコラム</h1>
     <p class="page-sub">院長が綴る、健康と美容のヒント</p>
@@ -237,7 +260,7 @@
       <!-- ── 記事1：コラーゲン ── -->
       <a class="column-card" href="column_1_collagen.html">
         <img
-          src="pics/collagen.jpeg"
+          src="pics/collagen.webp"
           alt="コラーゲンのイメージ"
           class="card-thumb"
           loading="lazy"

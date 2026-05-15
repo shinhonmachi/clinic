@@ -65,28 +65,13 @@
     }
 
     /* アイキャッチ：画像なしの場合はグラデーションバナー */
-    .article-eyecatch-banner {
+    .article-eyecatch {
       width: 100%;
-      height: 220px;
-      background: linear-gradient(135deg, #e8f4e8 0%, #d4ead0 40%, #c8e0c4 100%);
+      max-height: 360px;
+      object-fit: cover;
       border-radius: 12px;
       margin-bottom: 40px;
       box-shadow: 0 4px 24px rgba(58,53,48,0.08);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 10px;
-    }
-    .article-eyecatch-banner .banner-icon {
-      font-size: 64px;
-    }
-    .article-eyecatch-banner .banner-text {
-      font-family: 'Noto Serif JP', serif;
-      font-size: 20px;
-      font-weight: 600;
-      color: #3a5c3a;
-      letter-spacing: 0.06em;
     }
 
     /* 記事本文 */
@@ -355,11 +340,15 @@
       </div>
     </header>
 
-    <!-- アイキャッチバナー -->
-    <div class="article-eyecatch-banner">
-      <div class="banner-icon">⚡</div>
-      <div class="banner-text">Zinc — 体の司令塔ミネラル</div>
-    </div>
+    <!-- アイキャッチ画像 -->
+    <img
+      src="pics/zinc.webp"
+      alt="亜鉛のイメージ"
+      class="article-eyecatch"
+      width="760"
+      height="507"
+      loading="lazy"
+    />
 
     <!-- 本文 -->
     <div class="article-body">
