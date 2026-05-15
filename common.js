@@ -28,7 +28,8 @@
       const res = await fetch("components/header.html");
       headerEl.innerHTML = await res.text();
 
-      const currentFile = location.pathname.split("/").pop() || "index.html";
+      const raw = location.pathname.split("/").pop();
+      const currentFile = (raw === "" || raw === "/") ? "index.html" : raw || "index.html";
       document.querySelectorAll(".nav-links a, .nav-drawer a").forEach((a) => {
         if (a.getAttribute("href") === currentFile) a.classList.add("active");
       });
