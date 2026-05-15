@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>更年期・PMSに対する加味逍遙散・半夏厚朴湯の有効例｜新本町クリニック コラム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="更年期・PMSに伴う不安・不眠・自律神経症状に対する加味逍遙散・半夏厚朴湯の臨床5症例を、当院院長が解説します。" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--sakura-deep); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header { margin-bottom: 36px; }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.55;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* アイキャッチ */
+    .article-eyecatch-placeholder {
+      width: 100%;
+      height: 260px;
+      background: linear-gradient(135deg, #fdf0f0 0%, #fdf6f6 50%, #f0f7f2 100%);
+      border-radius: 12px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.07);
+      border: 1px solid var(--border);
+    }
+    .article-eyecatch-placeholder .ei-icon { font-size: 60px; }
+    .article-eyecatch-placeholder .ei-label {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 15px;
+      color: var(--sakura-deep);
+      letter-spacing: 0.08em;
+    }
+
+    /* 本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p { margin-bottom: 1.6em; }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 院長の個人エピソードボックス */
+    .intro-box {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 0 0 36px;
+      font-size: 14px;
+      line-height: 2;
+    }
+    .intro-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--sakura-deep);
+      margin-bottom: 10px;
+    }
+
+    /* 症例カード */
+    .case-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      margin: 32px 0;
+    }
+    .case-card-header {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .case-number {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 13px;
+      font-weight: 600;
+      background: rgba(255,255,255,0.22);
+      border-radius: 20px;
+      padding: 3px 14px;
+      white-space: nowrap;
+    }
+    .case-title {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .case-body {
+      padding: 22px 24px;
+      background: #fff;
+    }
+
+    /* 症例内ラベル付きブロック */
+    .case-row {
+      margin-bottom: 16px;
+    }
+    .case-row:last-child { margin-bottom: 0; }
+    .case-row-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--sakura-deep);
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .case-row-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .case-row-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 考察ボックス */
+    .consideration-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 18px;
+    }
+    .consideration-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+    .consideration-box p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 処方薬タグ群 */
+    .rx-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 8px;
+    }
+    .rx-tag {
+      font-size: 12px;
+      background: var(--sakura-light);
+      color: var(--sakura-deep);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 3px 13px;
+      font-weight: 500;
+    }
+    .rx-tag.green {
+      background: var(--green-light);
+      color: var(--green);
+      border-color: #c8ddd0;
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* 引用・ハイライトボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 方剤まとめテーブル */
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .summary-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 11px 14px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .summary-table td {
+      padding: 11px 14px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      line-height: 1.7;
+    }
+    .summary-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .summary-table tr:last-child td { border-bottom: none; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 注意書き */
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* 記事末フッター */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      line-height: 1.9;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 20px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .case-card-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .summary-table { font-size: 12px; }
+      .summary-table th, .summary-table td { padding: 9px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="section_ column.html">コラム</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>更年期・PMSと漢方治療</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">漢方・症例報告</span>
+      <h2 class="article-title">
+        更年期・PMSに伴う不安・不眠・自律神経症状に対する<br>
+        加味逍遙散・半夏厚朴湯の有効例
+      </h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2025年</span>
+      </div>
+    </header>
+
+    <!-- アイキャッチ -->
+    <div class="article-eyecatch-placeholder" role="img" aria-label="漢方・加味逍遙散のイメージ">
+      <span class="ei-icon">🌸</span>
+      <span class="ei-label">加味逍遙散・半夏厚朴湯</span>
+    </div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- はじめに -->
+      <h3 class="section-heading">はじめに ―― 院長自身の経験から</h3>
+
+      <div class="intro-box">
+        <div class="intro-box-label">🩺 院長より</div>
+        私自身、かつて強い頭痛に悩まされた時期があり、加味逍遙散によって症状が驚くほど軽減した経験を持ちます。
+        この出来事は、漢方が「ただの補助ではなく、心身を整える有効な治療のひとつ」であることを実感するきっかけとなりました。
+        以来、漢方の奥深さに魅了され、日々の診療に積極的に取り入れています。
+      </div>
+
+      <p>
+        現代の女性が抱える不調は、更年期・PMSといったホルモンバランスの変化だけでなく、家庭環境や仕事の負荷、社会的役割など多様な要因が重なり合って生じます。
+        当院では、これらの心身の揺らぎに対して、漢方・栄養・生活指導・必要に応じた西洋医学を組み合わせた「統合的アプローチ」を行っています。
+      </p>
+      <p>
+        なかでも加味逍遙散は、情緒不安・イライラ・不眠・胸のざわつき・ほてり・頭痛など多岐にわたる症状の改善に寄与しやすい重要な処方です。
+        当院の日常診療でも使用頻度が高く、適切な症例に対して安定した有効性が認められています。
+        今回は、実際の臨床症例を通じてその有効性をご紹介します。
+      </p>
+
+      <!-- 加味逍遙散とは -->
+      <h3 class="section-heading">加味逍遙散とはどのような漢方か</h3>
+      <p>
+        加味逍遙散（かみしょうようさん）は、中国明代の医書『内科摘要』を起源とする漢方処方で、柴胡・芍薬・当帰・茯苓・白朮・甘草・生姜・薄荷・牡丹皮・山梔子の10種類の生薬から構成されます。
+        東洋医学的には「肝気鬱結（かんきうっけつ）」――気の流れが滞って情緒が乱れやすい状態――を改善する代表的な処方であり、現代医学的には自律神経系の調整、ホルモンバランスの安定、抗ストレス作用などが研究で示されています。
+      </p>
+      <div class="highlight-box">
+        加味逍遙散が特に適するとされる症状の目安として、「更年期・月経前後の情緒不安定」「イライラ・のぼせ・肩こりが重なる」「不眠が続く」「胸のざわつきや不安感がある」といった状態が挙げられます。
+        体力が中程度か、やや低下している方に向いた処方です。
+      </div>
+
+      <!-- 症例1 -->
+      <h3 class="section-heading">臨床症例</h3>
+
+      <div class="case-card">
+        <div class="case-card-header">
+          <span class="case-number">症例 1</span>
+          <span class="case-title">56歳 女性｜高血圧・更年期症候群（統合失調症の既往あり）</span>
+        </div>
+        <div class="case-body">
+          <div class="case-row">
+            <div class="case-row-label">主訴・現症</div>
+            <div class="case-row-text">
+              頭痛・イライラ・動悸が強く、顔面全体に赤みとほてりを呈していました。眼光がやや鋭く、幻聴による苦痛も訴えておられました。5年前に統合失調症と診断された既往があります。
+            </div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">処方</div>
+            <div class="rx-tags">
+              <span class="rx-tag">加味逍遙散</span>
+            </div>
+            <div class="case-row-text" style="margin-top:10px;">
+              更年期を背景とした「肝気鬱結」による自律神経の乱れが強いと判断し、加味逍遙散を処方しました。
+              あわせて刺激物の摂取を控えること・食事リズムを整えることなど、生活面の指導も行いました。
+            </div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">経過</div>
+            <div class="case-row-text">
+              服用後は徐々に情緒の安定が見られ、頭痛・ほてり・動悸が軽減。時間をかけて経過を追う中で幻聴も消失しました。
+              ご家族や職場の方からも「表情が明るくなった」と言われるほど改善し、現在は元気に日常生活を送られています。
+            </div>
+          </div>
+          <div class="consideration-box">
+            <div class="consideration-box-label">💡 考察</div>
+            <p>精神疾患の既往を持つ更年期女性において、加味逍遙散が心身両面のバランス改善に寄与した症例です。西洋薬との併用を避けたい場面でも、漢方が主体的な役割を果たせることを示しています。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 症例2 -->
+      <div class="case-card">
+        <div class="case-card-header">
+          <span class="case-number">症例 2</span>
+          <span class="case-title">47歳 女性｜PMS（落ち込み・不眠）</span>
+        </div>
+        <div class="case-body">
+          <div class="case-row">
+            <div class="case-row-label">主訴・現症</div>
+            <div class="case-row-text">
+              月経前に情緒の低下が著しく、頭のぼんやり感・意欲低下・肩こり・めまい・イライラなど多彩な自律神経症状を伴っていました。
+            </div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">処方</div>
+            <div class="rx-tags">
+              <span class="rx-tag">加味逍遙散（ジュンコウ）</span>
+              <span class="rx-tag">半夏厚朴湯（ジュンコウ）</span>
+            </div>
+            <div class="case-row-text" style="margin-top:10px;">
+              気滞と痰飲が同時に存在する状態と判断し、情緒の安定と気血の巡りを整える目的で加味逍遙散を、喉のつかえ感・不安感・気滞の改善を期待して半夏厚朴湯を併用しました。
+            </div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">経過</div>
+            <div class="case-row-text">
+              処方から2週間後の再診では、「よく眠れるようになった」「気力が戻り落ち込みが消えた」「日中の不調が明らかに軽減した」と、本人がはっきりと改善を実感されていました。
+            </div>
+          </div>
+          <div class="consideration-box">
+            <div class="consideration-box-label">💡 考察</div>
+            <p>PMSに伴う情緒不安・不眠・自律神経症状に対し、加味逍遙散と半夏厚朴湯の併用が相乗的に作用した好例です。添加物が少なく生薬の質が高いジュンコウ製品を使用したことも、短期間での効果発現に寄与した可能性があります。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 症例3 -->
+      <div class="case-card">
+        <div class="case-card-header">
+          <span class="case-number">症例 3</span>
+          <span class="case-title">51歳 女性｜空の巣症候群による虚無感・不眠・不安</span>
+        </div>
+        <div class="case-body">
+          <div class="case-row">
+            <div class="case-row-label">主訴・現症</div>
+            <div class="case-row-text">
+              子どもたちが自立して家を離れたことを契機に「空の巣症候群」の状態となり、心にぽっかり穴が空いたような虚無感を訴えて来院されました。不眠と強い不安が続き、日常生活に支障をきたしていました。
+            </div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">処方の推移</div>
+            <div class="rx-tags">
+              <span class="rx-tag">加味逍遙散（ジュンコウ）</span>
+              <span class="rx-tag">半夏厚朴湯（ジュンコウ） ※追加</span>
+            </div>
+            <div class="case-row-text" style="margin-top:10px;">
+              まず加味逍遙散を処方し、一時的に症状が落ち着きました。服用を中止すると再び不安定となったため再開。
+              その後、胸のざわつき・落ち着かない感じが再燃したため、気滞・喉のつかえ感・不安発作に有効な半夏厚朴湯を追加処方しました。
+            </div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">経過</div>
+            <div class="case-row-text">
+              併用により約1週間で心が落ち着き、夜間も眠れるようになりました。パニック様の不安発作が起きた際も、半夏厚朴湯の服用で速やかに気分が安定しました。
+            </div>
+          </div>
+          <div class="consideration-box">
+            <div class="consideration-box-label">💡 考察</div>
+            <p>喪失体験・空の巣症候群による情緒不安・不眠に対して、加味逍遙散で基礎的な自律神経と情緒のバランスを整えつつ、半夏厚朴湯を併用することで不安発作の軽減まで得られた良好な例です。「頓服的」な使い方にも半夏厚朴湯が有効であることが示されています。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 症例4 -->
+      <div class="case-card">
+        <div class="case-card-header">
+          <span class="case-number">症例 4</span>
+          <span class="case-title">43歳 女性｜月経周期に伴うむくみ・頭痛・情緒不安</span>
+        </div>
+        <div class="case-body">
+          <div class="case-row">
+            <div class="case-row-label">主訴・現症</div>
+            <div class="case-row-text">
+              月経周期に関連した水分代謝の乱れによるむくみが主訴でしたが、経過中にイライラしやすいという情緒面の訴えも出現しました。
+            </div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">処方の推移</div>
+            <div class="rx-tags">
+              <span class="rx-tag">当帰芍薬散（ジュンコウ）</span>
+              <span class="rx-tag">五苓散</span>
+              <span class="rx-tag">加味逍遙散 ※追加</span>
+            </div>
+            <div class="case-row-text" style="margin-top:10px;">
+              まず当帰芍薬散と五苓散を併用し、むくみの軽減を確認しました。その後、情緒面の乱れに対して自律神経の調整を目的に加味逍遙散を追加処方しました。
+            </div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">経過</div>
+            <div class="case-row-text">
+              加味逍遙散の追加から約2週間で心身ともに調子が安定しました。五苓散との併用により頭痛も改善し、「身体が軽くなった」と喜ばれていました。
+            </div>
+          </div>
+          <div class="consideration-box">
+            <div class="consideration-box-label">💡 考察</div>
+            <p>むくみ・頭痛などの水代謝異常と情緒不安が同時に見られるケースに対して、当帰芍薬散・五苓散に加味逍遙散を組み合わせることで、身体症状と精神症状の双方が改善した例です。段階的な処方の調整が奏効しました。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 症例5 -->
+      <div class="case-card">
+        <div class="case-card-header">
+          <span class="case-number">症例 5</span>
+          <span class="case-title">27歳 女性｜PMS（易怒性・腹痛・頭痛・口囲湿疹）</span>
+        </div>
+        <div class="case-body">
+          <div class="case-row">
+            <div class="case-row-label">主訴・現症</div>
+            <div class="case-row-text">
+              月経前になると強いイライラや情緒の不安定化が起こり、些細なことで涙が止まらなくなる状態が続いていました。腹痛・頭痛を伴い日常生活に支障をきたすほかに、口のまわりに反復する湿疹も認めました。
+            </div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">処方</div>
+            <div class="rx-tags">
+              <span class="rx-tag">加味逍遙散エキス錠</span>
+              <span class="rx-tag">桂枝茯苓丸加薏苡仁エキス錠</span>
+              <span class="rx-tag">黄連解毒湯エキス錠（オースギ）</span>
+            </div>
+            <div class="case-row-text" style="margin-top:10px;">
+              情緒不安定・頭痛・腹痛から「肝気鬱結」を主体とする証と判断し、加味逍遙散を中心に処方。
+              軽度の浮腫から水滞の関与も考慮して桂枝茯苓丸加薏苡仁を、口囲湿疹には熱証の併存が示唆されたため黄連解毒湯を追加しました。
+            </div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">経過</div>
+            <div class="case-row-text">
+              投与開始後約1週間で腹痛と易怒性は著明に改善し、月経前にも涙が出なくなりました。頭痛も軽減し、日常生活に支障なく過ごせるようになりました。口囲湿疹も黄連解毒湯の併用により改善しました。
+            </div>
+          </div>
+          <div class="consideration-box">
+            <div class="consideration-box-label">💡 考察</div>
+            <p>若年女性のPMSに対し、加味逍遙散を中心とした漢方治療が短期間で奏効した1例です。若年で体力が保持されていたことに加え、錠剤製剤による服薬負担の軽さが良好なアドヒアランスに寄与した可能性があります。証に応じた多角的アプローチが、情緒・身体・皮膚症状という複合的な愁訴に対して有効でした。</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">まとめ ―― 5症例から見えること</h3>
+      <p>
+        今回ご紹介した5例では、以下のような多様な背景を持つ女性患者に対して、加味逍遙散を軸とした漢方治療が有効でした。
+      </p>
+      <ul class="point-list">
+        <li>統合失調症の既往を持つ更年期患者における精神症状の安定</li>
+        <li>PMSに伴う落ち込み・不眠の改善</li>
+        <li>空の巣症候群による不安・不眠の軽減</li>
+        <li>むくみや頭痛と情緒不安が併存するケースの改善</li>
+        <li>PMSに伴う情緒不安定・腹痛・頭痛・皮膚症状の改善</li>
+      </ul>
+      <p>
+        加味逍遙散は単独でも明確な症状改善が得られますが、以下の方剤を組み合わせることで、気滞・痰飲・水滞など体質的要素まで包括的に整えることができ、より高い治療効果が引き出されます。
+      </p>
+
+      <table class="summary-table">
+        <thead>
+          <tr>
+            <th>併用した主な方剤</th>
+            <th>主な適応（東洋医学的）</th>
+            <th>主な対象症状</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>半夏厚朴湯</td>
+            <td>気滞・痰飲</td>
+            <td>喉のつかえ感・不安感・不眠・パニック様症状</td>
+          </tr>
+          <tr>
+            <td>当帰芍薬散</td>
+            <td>血虚・水滞</td>
+            <td>冷え・むくみ・月経不順</td>
+          </tr>
+          <tr>
+            <td>五苓散</td>
+            <td>水滞</td>
+            <td>むくみ・頭痛・めまい</td>
+          </tr>
+          <tr>
+            <td>黄連解毒湯</td>
+            <td>熱証・実証</td>
+            <td>のぼせ・湿疹・イライラ（熱が強い場合）</td>
+          </tr>
+          <tr>
+            <td>桂枝茯苓丸（加薏苡仁）</td>
+            <td>瘀血・水滞</td>
+            <td>月経痛・肌荒れ・下半身の冷え</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        臨床では上記のほか、抑肝散・桂枝加竜骨牡蛎湯・桂枝茯苓丸・半夏白朮天麻湯・甘麦大棗湯・帰脾湯なども状況に応じて組み合わせています。
+        患者一人ひとりの背景や体質に合わせながら加味逍遙散を軸に治療を組み立てることで、心身全体のバランスが整い、生活の質が大きく改善することが示唆されます。
+      </p>
+
+      <!-- 結論 -->
+      <h3 class="section-heading">漢方をおすすめする理由</h3>
+      <p>
+        更年期症候群に対して西洋医学ではホルモン補充療法（HRT）がよく用いられ、ほてりなどの症状には著効します。
+        一方で、エストロゲンが一因となる疾患（乳がん・血栓症など）の将来的なリスクを考慮する必要があります。
+        漢方はそのようなリスクなく、自然の生薬の力で心身のバランスを整えることができるため、長期的に安心して続けられる治療として当院でもお勧めしています。
+      </p>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            患者さまの体質や症状を丁寧に観察し、その方の生活背景も考慮した上で漢方を処方すると、短期間で症状が改善するケースを数多く経験してきました。
+            当院が大切にしている「優しく寄り添う医療」において、漢方はなくてはならない存在です。
+            更年期・PMS・不眠・不安など、日々の不調でお困りの方はどうぞ一度ご相談ください。
+          </p>
+        </div>
+      </div>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムは当院の実際の診療経験に基づく情報提供を目的としたものであり、特定の疾患の診断・治療を保証するものではありません。
+        漢方薬は一部の医薬品や持病との相互作用が生じる場合があります。
+        症状や体質・服用中のお薬によって処方内容は異なりますので、必ず医師・薬剤師にご相談のうえご使用ください。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>更年期・PMSのお悩みは当院へご相談ください</h3>
+        <p>
+          漢方内科として、体質や生活背景に合わせた処方をご提案します。<br>
+          西洋医学との組み合わせも含め、一人ひとりに寄り添った診療を行っています。
+        </p>
+        <a href="section_shinryo_annai.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="section_ column.html" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
