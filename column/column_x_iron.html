@@ -1,1 +1,606 @@
-鉄分は大事
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>鉄分は大事｜新本町クリニック コラム</title>
+  <meta name="description" content="鉄は酸素運搬・エネルギー産生・脳機能まで担う「生命の根幹ミネラル」。女性に多い隠れ貧血の見つけ方から、効率よく補う方法まで院長が解説します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header {
+      margin-bottom: 36px;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* アイキャッチ：画像なしの場合はグラデーションバナー */
+    .article-eyecatch-banner {
+      width: 100%;
+      height: 240px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+      background: linear-gradient(135deg, #f5e6e8 0%, #fdf0e0 50%, #e8f0ea 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p {
+      margin-bottom: 1.6em;
+    }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* 引用・コラムボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .highlight-box cite {
+      display: block;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-body {}
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 摂取方法カード群 */
+    .intake-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .intake-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .intake-card-icon { font-size: 28px; margin-bottom: 8px; }
+    .intake-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .intake-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ページフッター（記事末） */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* 注意書き */
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>鉄分は大事</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">栄養・ミネラル</span>
+      <h2 class="article-title">鉄分は大事<br>―― 疲れ・冷え・集中力低下……その不調、「隠れ貧血」かもしれません</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年5月</span>
+      </div>
+    </header>
+
+    <!-- アイキャッチ（画像なしのグラデーションバナー） -->
+    <div class="article-eyecatch-banner" aria-hidden="true">🩸</div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">「貧血ではない」と言われたのに、なぜこんなに疲れるのか</h3>
+      <p>
+        健康診断で「貧血なし」と言われたにもかかわらず、慢性的な疲労感・冷え・頭痛・集中力の低下・気分の落ち込みが続く——。
+        そのような訴えを持つ方が、当院には多く受診されます。
+        原因のひとつとして見逃せないのが、<strong>「潜在性鉄欠乏（隠れ貧血）」</strong>です。
+      </p>
+      <p>
+        一般的な健康診断では「ヘモグロビン値」のみで貧血を判定しますが、
+        体内の鉄の備蓄量を示す「フェリチン」が低下していても、ヘモグロビンが基準値内であれば「異常なし」と判定されてしまいます。
+        しかし実際には、フェリチンが低い段階からすでにさまざまな不調が現れることが分かっています。
+        このコラムでは「鉄がなぜ大切なのか」を、最新の知見を交えて分かりやすくお伝えします。
+      </p>
+
+      <!-- 体内の鉄 -->
+      <h3 class="section-heading">鉄は体のどこにある？</h3>
+      <p>
+        成人の体内には約3〜4gの鉄が存在します。
+        その約65%は赤血球の「ヘモグロビン」に、約10%は筋肉の「ミオグロビン」に組み込まれて酸素を運ぶ働きを担っています。
+        残りの約25%は「フェリチン」や「ヘモシデリン」という形で肝臓・脾臓・骨髄に蓄えられており、これが鉄の「貯蓄」です。
+      </p>
+      <p>
+        鉄はヘモグロビンの材料としてだけでなく、細胞のエネルギー産生（ミトコンドリアの電子伝達系）、
+        甲状腺ホルモンの合成、神経伝達物質（ドーパミン・セロトニン）の生成など、
+        生命活動の根幹に関わる多くの場面で不可欠な役割を果たしています。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔬 フェリチンとは？</div>
+        <p>
+          フェリチンは鉄を安全に貯蔵するタンパク質で、「体の鉄の倉庫」と言えます。
+          血液中のフェリチン値は体内の鉄の貯蓄量をよく反映しており、
+          一般的に12ng/mL以下が「鉄欠乏」とされますが、
+          症状が現れ始めるのは20〜30ng/mL以下であることも多く、
+          当院では30ng/mL以上を目安に評価しています。
+          疲れやすい・冷える・集中できないという方は、ぜひフェリチン値の確認をお勧めします。
+        </p>
+      </div>
+
+      <!-- 鉄の主な働き① -->
+      <h3 class="section-heading">鉄の主な働き① 酸素を全身に届ける</h3>
+      <p>
+        鉄の最もよく知られた役割が「酸素運搬」です。
+        赤血球の中のヘモグロビンは、肺で酸素を受け取り、全身の細胞へと届けます。
+        このヘモグロビンの中心部に鎮座しているのが「ヘム鉄」です。
+        鉄がなければヘモグロビンはつくれず、酸素が全身に届かなくなります。
+      </p>
+      <p>
+        鉄が不足すると、細胞は慢性的な「酸欠」状態に陥ります。
+        これが疲労感・息切れ・頭痛・めまいといった症状の根本原因です。
+        特に脳は全身の酸素消費量の約20%を占めることから、
+        鉄不足が集中力の低下・もの忘れ・気分の落ち込みといった精神症状として現れることも少なくありません。
+      </p>
+
+      <!-- 鉄の主な働き② -->
+      <h3 class="section-heading">鉄の主な働き② エネルギー産生の要</h3>
+      <p>
+        鉄はミトコンドリアの「電子伝達系」という仕組みにも欠かせません。
+        細胞がブドウ糖や脂肪からATP（エネルギー通貨）を効率よく生産するために、
+        電子伝達系の複合体タンパク質（シトクロムなど）は鉄を必要とします。
+        鉄が不足するとATPの産生が低下し、体が必要なエネルギーをつくれなくなります。
+      </p>
+
+      <div class="highlight-box">
+        「よく眠れているのに疲れが取れない」「運動していないのにだるい」という訴えは、
+        鉄欠乏によるエネルギー産生障害のサインである可能性があります。
+        特に月経のある女性・妊娠中・授乳中の方は、鉄の需要と消耗が大きいため注意が必要です。
+      </div>
+
+      <!-- 鉄の主な働き③ -->
+      <h3 class="section-heading">鉄の主な働き③ 脳・神経・こころへの影響</h3>
+      <p>
+        近年特に注目されているのが、鉄と精神・神経機能の関係です。
+        脳内の神経伝達物質であるドーパミン・セロトニンの合成には、酵素の補因子として鉄が必要です。
+        鉄が不足すると「やる気が出ない（ドーパミン低下）」「気分が沈む・不安が強い（セロトニン低下）」
+        といった精神症状が現れやすくなります。
+      </p>
+      <p>
+        また、鉄欠乏と「むずむず脚症候群（レストレスレッグス症候群）」との関連も明確に示されています。
+        脚に不快感があって眠れない・夜中に目が覚めるという症状がある方は、
+        脳内の鉄欠乏が原因のひとつとして疑われます。
+        鉄の補充によって症状が劇的に改善するケースもあるため、不眠・睡眠の質の低下がある方にもフェリチン確認をお勧めしています。
+      </p>
+
+      <ul class="point-list">
+        <li><strong>集中力・記憶力の低下</strong>：脳への酸素供給と神経伝達物質合成の両面から影響を受ける。学業・仕事のパフォーマンス低下につながる。</li>
+        <li><strong>気分の落ち込み・不安</strong>：セロトニン・ドーパミン産生が低下し、うつ状態に似た症状が現れることがある。</li>
+        <li><strong>むずむず脚症候群</strong>：脳内の鉄欠乏が夜間の脚の不快感を引き起こし、睡眠の質を著しく低下させる。</li>
+        <li><strong>過多月経・PMS増悪</strong>：鉄欠乏によるプロスタグランジン産生の変化が月経痛や出血量に影響するとの研究もある。</li>
+      </ul>
+
+      <!-- 鉄の主な働き④ -->
+      <h3 class="section-heading">鉄の主な働き④ 免疫・皮膚・甲状腺</h3>
+      <p>
+        鉄は免疫細胞（好中球・リンパ球・マクロファージ）の機能にも関与しており、
+        鉄欠乏は感染症への抵抗力を弱める一因となります。
+        また、甲状腺ホルモンの合成酵素「甲状腺ペルオキシダーゼ」は鉄を必要とするため、
+        鉄欠乏が甲状腺機能の低下（冷え・体重増加・むくみ）を引き起こすケースも存在します。
+        甲状腺の検査値が正常でも冷えやむくみが強い場合は、鉄欠乏の合併を疑う価値があります。
+      </p>
+      <p>
+        皮膚・爪・髪への影響も見逃せません。
+        鉄欠乏の典型的なサインとして、爪が「スプーン状」に反り返る「さじ状爪（匙状爪）」、
+        口角炎、舌炎、髪のパサつき・抜け毛が挙げられます。
+        美容の観点からも、鉄の充足は肌・髪の質に直結するミネラルです。
+      </p>
+
+      <!-- 女性と鉄 -->
+      <h3 class="section-heading">女性はなぜ特に鉄が不足しやすいのか</h3>
+      <p>
+        日本人女性の鉄欠乏率は非常に高く、月経のある成人女性の約20〜30%、
+        若い女性ではさらに高い割合で潜在性鉄欠乏が存在するとされています。
+        その背景には複数の要因があります。
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>要因</th>
+            <th>詳細</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>月経による出血</td>
+            <td>毎月の月経で鉄が失われる。過多月経（経血量が多い）では喪失量が大きく、補いきれないことが多い</td>
+          </tr>
+          <tr>
+            <td>妊娠・授乳</td>
+            <td>胎児の成長・胎盤形成・血液量増加により妊娠中の鉄需要は急増。授乳中も母乳に鉄が移行する</td>
+          </tr>
+          <tr>
+            <td>ダイエット・偏食</td>
+            <td>肉・魚を避ける食生活では鉄の摂取量が不足しやすい。特にヴィーガン・菜食の場合は意識的な補充が必要</td>
+          </tr>
+          <tr>
+            <td>胃酸の低下</td>
+            <td>非ヘム鉄の吸収には胃酸が必要。胃薬（PPI・H2ブロッカー）の使用や胃炎・萎縮性胃炎があると吸収が低下</td>
+          </tr>
+          <tr>
+            <td>腸管吸収の問題</td>
+            <td>過敏性腸症候群・セリアック病・クローン病などは腸での鉄吸収を妨げる</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 食品源 -->
+      <h3 class="section-heading">鉄を多く含む食品と吸収を上げるコツ</h3>
+      <p>
+        鉄には「ヘム鉄」と「非ヘム鉄」の2種類があります。
+        ヘム鉄は動物性食品（赤身肉・レバー・魚介類）に含まれ、吸収率は約15〜35%と高い。
+        非ヘム鉄は植物性食品（ほうれん草・小松菜・大豆製品・海藻）に含まれますが、吸収率は約2〜8%と低く、食べ方の工夫が大切です。
+      </p>
+
+      <div class="intake-cards">
+        <div class="intake-card">
+          <div class="intake-card-icon">🥩</div>
+          <div class="intake-card-title">赤身肉・レバー</div>
+          <div class="intake-card-desc">牛赤身100gで約2〜3mg（ヘム鉄）。鶏・豚レバーも豊富で吸収率が高い。週2〜3回を目標に。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🐟</div>
+          <div class="intake-card-title">魚介類・あさり</div>
+          <div class="intake-card-desc">あさり・牡蠣・いわし・さんまに多い。缶詰でも手軽に摂れる。DHAとの相乗効果も。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🥬</div>
+          <div class="intake-card-title">小松菜・ほうれん草</div>
+          <div class="intake-card-desc">非ヘム鉄の代表。ビタミンCと一緒に摂ることで吸収率が大幅にアップ。炒め物がおすすめ。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🫘</div>
+          <div class="intake-card-title">大豆・豆腐・納豆</div>
+          <div class="intake-card-desc">植物性タンパク質とともに鉄を補える。納豆はビタミンK2も豊富で骨の健康にも貢献。</div>
+        </div>
+      </div>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">💡 吸収率を上げる3つのコツ</div>
+        <p>
+          ①<strong>ビタミンCと一緒に摂る</strong>：非ヘム鉄はビタミンCと組み合わせると吸収率が2〜3倍高まります。ほうれん草炒めにレモン、納豆に刻みネギとポン酢など、実践しやすい組み合わせを意識しましょう。<br>
+          ②<strong>タンニン（お茶・コーヒー）は食後に</strong>：緑茶・紅茶・コーヒーに含まれるタンニンは鉄と結合して吸収を妨げます。食事中ではなく食後30分以降に飲むと影響を減らせます。<br>
+          ③<strong>動物性と植物性を組み合わせる</strong>：ヘム鉄は非ヘム鉄の吸収も助ける「肉因子（meat factor）」を持ちます。肉や魚と野菜を同じ食事に取り入れるだけで吸収効率が上がります。
+        </p>
+      </div>
+
+      <!-- サプリメント -->
+      <h3 class="section-heading">サプリメント・鉄剤で補う場合の注意点</h3>
+      <p>
+        食事だけでは補いきれない場合や、フェリチン値が著しく低い場合は、
+        鉄剤やサプリメントによる補充が有効です。
+        ただし、自己判断での大量摂取には注意が必要です。
+      </p>
+      <ul class="point-list">
+        <li><strong>ヘム鉄サプリメント</strong>：動物性由来で吸収率が高く、胃への刺激が少ない。副作用（吐き気・便秘）が出にくく、長期補充に向く。</li>
+        <li><strong>非ヘム鉄（フマル酸第一鉄・クエン酸鉄など）</strong>：吸収率はやや劣るが価格が安い。空腹時に飲むと吸収率が上がるが、胃への刺激が出やすいため食後服用が無難。</li>
+        <li><strong>処方薬（フェロミア・フェルムなど）</strong>：医師の処方による鉄剤。フェリチン値を確認した上で適切な量を処方する。当院では点滴（静注鉄剤）にも対応。</li>
+        <li><strong>鉄の過剰摂取に注意</strong>：鉄は抗酸化ミネラルとは異なり、フリーラジカルを生成する側面もあります。検査で必要性を確認せずに大量摂取することはお勧めしません。</li>
+      </ul>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            「疲れやすい」「冷える」「髪が細くなった」「気分が沈みがち」——こうした訴えを持つ方に、
+            まずフェリチン値を含む鉄の精密検査をお勧めすることがよくあります。
+            ヘモグロビンだけでは見えない「隠れ貧血」を見つけ、
+            食事指導・サプリ選定・鉄剤処方・必要に応じた点滴補充まで個別にサポートいたします。
+            「健康診断では異常なし」と言われていても、もし心当たりがある方はお気軽にご相談ください。
+          </p>
+        </div>
+      </div>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">まとめ：鉄は「生命のエンジンを回す火種」</h3>
+      <p>
+        鉄は酸素運搬・エネルギー産生・神経伝達物質の合成・免疫・甲状腺機能・美容と、
+        あらゆる生命活動の土台を支えるミネラルです。
+        特に月経のある女性にとっては、意識しなければ慢性的に不足し続ける栄養素でもあります。
+      </p>
+      <p>
+        まずは赤身肉・あさり・小松菜などをビタミンCと組み合わせた食事を心がけること、
+        そして「健診で異常なし」でも不調が続く場合は、フェリチン値の検査で隠れ貧血を確認することから始めてみてください。
+        体が「酸欠」から解放されると、日々の活力や気分が大きく変わることを、多くの患者さんが実感されています。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        鉄剤の服用は過剰摂取による健康被害（酸化ストレス・便秘・臓器への鉄沈着など）を引き起こす可能性があります。
+        自己判断での大量摂取はお控えいただき、血液検査で鉄の状態を確認した上で、医師または薬剤師にご相談ください。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>鉄・フェリチン値のご相談は当院へ</h3>
+        <p>フェリチンを含む鉄の精密検査を行い、食事・サプリ・点滴補充まで個別にご提案します。<br>まずはお気軽にご相談ください。</p>
+        <a href="../index.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>

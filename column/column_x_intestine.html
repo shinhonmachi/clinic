@@ -1,1 +1,600 @@
-腸活
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>腸活のすすめ｜新本町クリニック コラム</title>
+  <meta name="description" content="腸は「第二の脳」。免疫・メンタル・肌・代謝まで左右する腸内環境の整え方を、腸内フローラの最新知見とともに院長が解説します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header {
+      margin-bottom: 36px;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* アイキャッチ：画像なしの場合はグラデーションバナー */
+    .article-eyecatch-banner {
+      width: 100%;
+      height: 240px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+      background: linear-gradient(135deg, #e8f5e9 0%, #f1f8e9 50%, #e0f2f1 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p {
+      margin-bottom: 1.6em;
+    }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* 引用・コラムボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .highlight-box cite {
+      display: block;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-body {}
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 腸活実践カード群 */
+    .intake-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .intake-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .intake-card-icon { font-size: 28px; margin-bottom: 8px; }
+    .intake-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .intake-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ページフッター（記事末） */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* 注意書き */
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>腸活のすすめ</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">腸活・腸内環境</span>
+      <h2 class="article-title">腸活のすすめ<br>―― 免疫・メンタル・肌を左右する「第二の脳」の整え方</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年5月</span>
+      </div>
+    </header>
+
+    <!-- アイキャッチ（画像なしのグラデーションバナー） -->
+    <div class="article-eyecatch-banner" aria-hidden="true">🌿</div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">「腸活」はブームではなく、医学的な本流になりつつある</h3>
+      <p>
+        ヨーグルトや発酵食品を食べる「腸活」は、一時的な健康ブームと思われてきた時期もありました。
+        しかし近年の研究の蓄積により、腸内環境が全身の健康に与える影響の深さは医学界でも広く認められるようになり、
+        「腸活」はいまや予防医学・統合医療の中心的なテーマのひとつとなっています。
+      </p>
+      <p>
+        腸はただ食べ物を消化・吸収するだけの器官ではありません。
+        全身の免疫細胞の約70%が集まり、100種類以上・100兆個以上の細菌が共存する「腸内フローラ」が存在し、
+        脳とも双方向につながっている——これほど複雑な機能を持つ臓器は他にありません。
+        便秘・下痢・肌荒れ・免疫力の低下・気分の落ち込みなど、
+        一見バラバラに見える不調の根っこに腸内環境の乱れが潜んでいることは、外来でも非常によく経験します。
+      </p>
+
+      <!-- 腸内フローラとは -->
+      <h3 class="section-heading">腸内フローラとは何か</h3>
+      <p>
+        私たちの腸には約100兆個、重さにして約1.5〜2kgにもなる細菌が生息しています。
+        その種類は1,000種類以上ともいわれ、善玉菌・悪玉菌・日和見菌がバランスを保ちながら共存しています。
+        この細菌の集まりを「腸内フローラ（腸内細菌叢）」と呼びます。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔬 善玉菌・悪玉菌・日和見菌の理想的な比率</div>
+        <p>
+          腸内細菌は大きく3つに分類されます。腸内環境を整える<strong>善玉菌</strong>（乳酸菌・ビフィズス菌など、約20%）、
+          腸内を腐敗させ有害物質を産生する<strong>悪玉菌</strong>（ウェルシュ菌など、約10%）、
+          そして優勢な側に味方する<strong>日和見菌</strong>（約70%）です。
+          善玉菌が優勢なときは日和見菌も善玉的に働きますが、悪玉菌が増えると日和見菌もそちらに傾きます。
+          腸活の目的は、この比率を善玉菌優位に維持することにあります。
+        </p>
+      </div>
+
+      <p>
+        腸内フローラは人によって異なる「個人の指紋」のようなものです。
+        生まれた瞬間から形成が始まり、母乳・離乳食・生活環境・抗生物質の使用歴・食習慣・ストレスなど
+        さまざまな要因によって変化し続けます。
+        近年の研究では、腸内フローラの構成が肥満・糖尿病・うつ病・アレルギー・がん・認知症リスクとも関連することが明らかになってきており、
+        「腸内環境を整えること＝全身の健康を整えること」という認識が医学的にも確立されつつあります。
+      </p>
+
+      <!-- 腸と免疫 -->
+      <h3 class="section-heading">腸と免疫——全身の免疫の7割は腸にある</h3>
+      <p>
+        腸管には「腸管免疫」と呼ばれる独自の免疫システムが備わっており、
+        全身の免疫細胞の約70%が腸に集中しています。
+        口から入ってくる食べ物・水・細菌・ウイルスを「敵か味方か」判断し、
+        病原体から体を守りながら食物を安全に通過させるという高度な判別を、腸は毎日行っています。
+      </p>
+      <p>
+        腸内細菌はこの判別に深く関与しています。善玉菌が産生する短鎖脂肪酸（酢酸・酪酸・プロピオン酸）は、
+        腸管バリアを強化し、免疫細胞（制御性T細胞）を活性化して過剰な免疫反応を抑えます。
+        腸内環境が乱れて悪玉菌が増えると、バリア機能が低下して有害物質が血液中に漏れ出す
+        「リーキーガット（腸管透過性亢進）」が起こり、慢性的な炎症・アレルギー・自己免疫疾患のリスクが高まります。
+      </p>
+
+      <div class="highlight-box">
+        繰り返す風邪・花粉症・アトピー性皮膚炎・食物アレルギーなど、免疫に関わる不調を抱えている方の多くに、
+        腸内環境の乱れが背景として存在します。
+        「免疫を上げたい」と思ったとき、まず腸に目を向けることが近道かもしれません。
+      </div>
+
+      <!-- 腸と脳 -->
+      <h3 class="section-heading">腸と脳——「腸脳相関」という驚くべきつながり</h3>
+      <p>
+        腸には約1億個もの神経細胞が存在しており、脳からの指令がなくても独自に動くことができます。
+        これが「腸は第二の脳」と呼ばれる所以です。
+        さらに腸と脳は「腸脳軸（ガット・ブレイン・アクシス）」と呼ばれる双方向の神経・ホルモン・免疫ネットワークで常に情報を交換しています。
+      </p>
+      <p>
+        特に注目されているのが、幸福感や精神的安定に関わる神経伝達物質「セロトニン」の約90%が
+        腸で産生されているという事実です。
+        腸内細菌がセロトニンの前駆体（トリプトファン）の代謝に関与しており、
+        腸内環境が乱れるとセロトニンの産生が低下し、不安・気分の落ち込み・睡眠の乱れといった症状が現れやすくなります。
+      </p>
+      <ul class="point-list">
+        <li><strong>うつ・不安</strong>：腸内細菌の多様性の低下とうつ病・不安障害との関連が複数の大規模研究で報告されている。腸活によってメンタルの改善を実感される方は外来でも珍しくない。</li>
+        <li><strong>睡眠の質</strong>：セロトニンはメラトニン（睡眠ホルモン）の原料。腸内環境が整うとセロトニン産生が安定し、寝つきや睡眠の深さが改善することがある。</li>
+        <li><strong>ストレス耐性</strong>：腸内細菌はコルチゾール（ストレスホルモン）の代謝にも関与。善玉菌が多い腸はストレスへの回復力（レジリエンス）が高まるとされる。</li>
+        <li><strong>認知機能</strong>：腸内フローラと認知症（アルツハイマー病）の関連を示す研究が進んでおり、腸活が認知機能の維持に貢献する可能性が示唆されている。</li>
+      </ul>
+
+      <!-- 腸と肌 -->
+      <h3 class="section-heading">腸と肌——「腸肌相関」で美肌をつくる</h3>
+      <p>
+        「肌荒れは腸から」という言葉が示す通り、腸内環境と肌の状態には深い関連があります。
+        腸内の悪玉菌が増えると、インドールやアンモニアなどの有害物質が産生され、
+        これらが腸壁から血液中に入り、全身を巡って皮膚の炎症や酸化を引き起こします。
+        また、腸管バリアが低下（リーキーガット）すると、食物抗原が血中に漏れてアレルギー反応が皮膚に現れやすくなります。
+      </p>
+      <p>
+        逆に、善玉菌が産生する短鎖脂肪酸は抗炎症作用を持ち、皮膚のバリア機能を高めるセラミドの産生を助けます。
+        腸内環境が整うことで、ニキビ・乾燥・くすみ・アトピー性皮膚炎の改善を実感される方が多いのは、
+        このメカニズムが背景にあります。
+        スキンケアだけで解決しない肌の悩みには、腸からのアプローチが有効なことがあります。
+      </p>
+
+      <!-- 腸内環境が乱れる原因 -->
+      <h3 class="section-heading">腸内環境を乱す「現代生活の落とし穴」</h3>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>要因</th>
+            <th>腸内環境への影響</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>食物繊維の不足</td>
+            <td>善玉菌のエサとなる食物繊維が減ると菌の多様性が急速に低下。現代の日本人は推奨量（18〜21g/日）を大きく下回っているケースが多い</td>
+          </tr>
+          <tr>
+            <td>超加工食品・添加物</td>
+            <td>乳化剤・人工甘味料・保存料などが腸内細菌叢のバランスを崩すことが動物実験・疫学研究で示されている</td>
+          </tr>
+          <tr>
+            <td>抗生物質の使用</td>
+            <td>感染症治療に不可欠だが、善玉菌を含む腸内細菌を広範に減少させる。一度の抗生物質投与で多様性が回復するまで数ヶ月かかることも</td>
+          </tr>
+          <tr>
+            <td>慢性ストレス</td>
+            <td>ストレスにより腸の蠕動運動が乱れ、腸管バリアが低下。腸脳軸を通じてストレスと腸内環境は悪循環を形成しやすい</td>
+          </tr>
+          <tr>
+            <td>睡眠不足</td>
+            <td>腸内細菌にも概日リズム（体内時計）があり、睡眠不足や夜型生活が菌の多様性を低下させることが示されている</td>
+          </tr>
+          <tr>
+            <td>運動不足</td>
+            <td>適度な運動は腸の蠕動を促し、善玉菌（特にビフィズス菌）の割合を増やすことが複数の研究で確認されている</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 腸活の実践 -->
+      <h3 class="section-heading">今日からできる腸活の実践</h3>
+      <p>
+        腸内環境を整えるための鍵は「プロバイオティクス（善玉菌そのもの）」と「プレバイオティクス（善玉菌のエサ）」の両輪です。
+        加えて、生活習慣全体を見直すことが腸活の本質です。
+      </p>
+
+      <div class="intake-cards">
+        <div class="intake-card">
+          <div class="intake-card-icon">🥛</div>
+          <div class="intake-card-title">発酵食品を毎日</div>
+          <div class="intake-card-desc">ヨーグルト・納豆・味噌・ぬか漬け・キムチ・甘酒など。種類を変えて毎日取り入れるのが効果的。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🥦</div>
+          <div class="intake-card-title">食物繊維を増やす</div>
+          <div class="intake-card-desc">野菜・豆類・きのこ・海藻・全粒穀物を意識的に。不溶性と水溶性を両方摂るのが理想。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🚶</div>
+          <div class="intake-card-title">毎日少し動く</div>
+          <div class="intake-card-desc">1日20〜30分のウォーキングでも腸の蠕動運動が促進。激しい運動より継続が大切。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">😴</div>
+          <div class="intake-card-title">睡眠を整える</div>
+          <div class="intake-card-desc">毎日同じ時間に寝起きする習慣が腸内細菌の体内時計を安定させる。7時間を目安に。</div>
+        </div>
+      </div>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">💡 プロバイオティクスとプレバイオティクスの違い</div>
+        <p>
+          <strong>プロバイオティクス</strong>は善玉菌そのものを含む食品・サプリメントです（ヨーグルト・乳酸菌飲料・納豆など）。
+          摂取した菌が腸内に定着するかどうかは個人差があり、継続的な摂取が大切です。<br>
+          <strong>プレバイオティクス</strong>は腸内の善玉菌を増やす「エサ」となる成分で、
+          食物繊維・オリゴ糖がその代表です（玉ねぎ・ごぼう・バナナ・大豆に多く含まれます）。<br>
+          両方を組み合わせた「シンバイオティクス」アプローチが最も効果的とされており、
+          発酵食品＋食物繊維を同時に意識した食生活が腸活の基本です。
+        </p>
+      </div>
+
+      <!-- プロバイオティクスの選び方 -->
+      <h3 class="section-heading">プロバイオティクス（サプリメント）を選ぶ際のポイント</h3>
+      <p>
+        腸活サプリとして乳酸菌・ビフィズス菌のサプリメントが多数市販されていますが、
+        品質や有効性には大きな差があります。以下のポイントを参考に選んでください。
+      </p>
+      <ul class="point-list">
+        <li><strong>菌株が明記されているか</strong>：「乳酸菌」という記載だけでは不十分。「Lactobacillus rhamnosus GG」など属・種・株まで記載されているものが信頼性の目安。</li>
+        <li><strong>生菌数（CFU）の保証</strong>：製造時ではなく「賞味期限まで」の生菌数が保証されているものを選ぶ。一般的に10億〜100億CFU/日が有効とされる菌種が多い。</li>
+        <li><strong>腸まで届く設計か</strong>：胃酸に弱い菌は腸に到達する前に死滅することがある。耐酸性カプセルや胃酸耐性を持つ菌株を使用した製品が望ましい。</li>
+        <li><strong>複数菌種の組み合わせ</strong>：単一菌種より複数の乳酸菌・ビフィズス菌を組み合わせたものが腸内の多様性向上に有利なケースが多い。</li>
+        <li><strong>食物繊維（プレバイオティクス）配合</strong>：イヌリン・フラクトオリゴ糖などが配合されたシンバイオティクス製品は相乗効果が期待できる。</li>
+      </ul>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            外来では「便秘が長年の悩み」「肌荒れが治らない」「なんとなくだるい」「気分が上がらない」という方に、
+            腸内環境の整え方からお話しすることがよくあります。
+            腸活は特別なことではなく、毎日の発酵食品・食物繊維・十分な睡眠・適度な運動の積み重ねです。
+            それだけで体調が大きく変わる方を数多く見てきました。
+            「どこから始めればいいかわからない」「サプリを選ぶのが難しい」という場合は、
+            ぜひ当院でご相談ください。お一人おひとりの状態に合わせてアドバイスいたします。
+          </p>
+        </div>
+      </div>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">まとめ：腸を整えることは、全身を整えること</h3>
+      <p>
+        免疫・メンタル・肌・睡眠・代謝・慢性疾患リスク——腸内環境はこれほど多くの側面に影響を与えます。
+        100兆個の腸内細菌は、私たちが何を食べ、どう眠り、どう動き、どうストレスと向き合うかに
+        毎日反応しながら変化し続けています。
+      </p>
+      <p>
+        まずは「毎食に発酵食品を一品加える」「野菜・豆・きのこをもう一品」という小さな一歩から始めてみてください。
+        腸内フローラは食事の変化に比較的早く反応し、数週間で便通・肌・体調の変化を感じる方も多くいます。
+        全身の健康の出発点として、ぜひ腸を大切にしてみてください。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        過敏性腸症候群・炎症性腸疾患・小腸内細菌増殖症（SIBO）など、腸に関する疾患が疑われる場合は、
+        自己判断でプロバイオティクスを大量摂取せず、まず医師にご相談ください。
+        体質によっては発酵食品や食物繊維の急激な増加が症状を悪化させることがあります。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>腸内環境・腸活のご相談は当院へ</h3>
+        <p>便通・肌・免疫・メンタルの悩みを腸から整えるアプローチをご提案します。<br>まずはお気軽にご相談ください。</p>
+        <a href="../index.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
