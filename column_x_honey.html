@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ハチミツはすごい｜新本町クリニック コラム</title>
+  <meta name="description" content="ハチミツは抗菌・抗炎症・抗酸化・腸活・美肌まで、科学的に裏付けられた効能を持つ天然の機能性食品。砂糖との違いや正しい選び方を院長が解説します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header {
+      margin-bottom: 36px;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* アイキャッチ：画像なしの場合はグラデーションバナー */
+    .article-eyecatch-banner {
+      width: 100%;
+      height: 240px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+      background: linear-gradient(135deg, #fff8e1 0%, #fffde7 50%, #fff3cd 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p {
+      margin-bottom: 1.6em;
+    }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* 引用・コラムボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .highlight-box cite {
+      display: block;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-body {}
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* カード群 */
+    .intake-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .intake-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .intake-card-icon { font-size: 28px; margin-bottom: 8px; }
+    .intake-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .intake-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ページフッター（記事末） */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* 注意書き */
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>ハチミツはすごい</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">食品・栄養</span>
+      <h2 class="article-title">ハチミツはすごい<br>―― 抗菌・抗炎症・腸活・美肌まで、科学が証明する「液体の宝石」</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年5月</span>
+      </div>
+    </header>
+
+    <!-- アイキャッチ（画像なしのグラデーションバナー） -->
+    <div class="article-eyecatch-banner" aria-hidden="true">🍯</div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">ハチミツを「砂糖の代わり」だと思っていませんか？</h3>
+      <p>
+        甘味料として、またはのどの調子が悪いときに……そのくらいの認識でハチミツを使っている方が多いかもしれません。
+        しかし実際のところ、ハチミツは人類が数千年にわたって薬として使い続けてきた天然の機能性食品であり、
+        現代科学によってその多彩な効能が次々と解明されています。
+      </p>
+      <p>
+        抗菌・抗炎症・抗酸化・抗ウイルス・腸内環境の改善・肌のバリア強化・創傷治癒——
+        これだけの作用が科学的に裏付けられた食品は非常に稀です。
+        「ただ甘いもの」ではなく、「使い方を知れば体に働きかける食品」としてのハチミツを、このコラムで詳しく解説します。
+      </p>
+
+      <!-- ハチミツの成分 -->
+      <h3 class="section-heading">ハチミツの成分——なぜこれほど多機能なのか</h3>
+      <p>
+        ハチミツの主成分は約80%が糖質（果糖・ブドウ糖が中心）で、残りは水分です。
+        しかし「糖分の塊」と侮ってはいけません。
+        ハチミツにはその製造過程でミツバチが加える酵素、花蜜由来のポリフェノール、有機酸、ビタミン・ミネラル、
+        そして特有の抗菌物質「過酸化水素」と「メチルグリオキサール（MGO）」が含まれており、
+        これらが複合的に作用することで砂糖にはない豊かな機能を生み出しています。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔬 ハチミツが「腐らない」理由</div>
+        <p>
+          3,000年以上前のエジプトの墓から発掘されたハチミツが、今も食べられる状態だったという話は有名です。
+          その理由は3つあります。①<strong>水分活性が極めて低い</strong>（約0.6）ため細菌が繁殖できない、
+          ②<strong>pH が3.5〜4.5と強酸性</strong>で多くの菌が生育できない、
+          ③ミツバチの酵素が産生する<strong>過酸化水素</strong>が継続的に抗菌作用を発揮する——この三重の防御がハチミツを腐敗から守っています。
+          この特性こそが、ハチミツが傷の治療に使われてきた根拠でもあります。
+        </p>
+      </div>
+
+      <!-- 抗菌・創傷治癒 -->
+      <h3 class="section-heading">ハチミツの働き① 抗菌作用と創傷治癒</h3>
+      <p>
+        ハチミツの医療応用として最も歴史が深く、現代でも実際に使われているのが「傷の治療」です。
+        古代エジプト・ギリシャ・インドのアーユルヴェーダ医学においても、ハチミツは傷薬・軟膏として記録されています。
+        そして現代医学においても、特定のハチミツ（マヌカハニーなど）を用いた医療用創傷被覆材が
+        欧米の医療機関で実際に使用されており、その有効性が臨床試験で証明されています。
+      </p>
+      <p>
+        ハチミツの抗菌スペクトルは広く、黄色ブドウ球菌・大腸菌・緑膿菌・MRSAなどに対しても
+        抗菌作用が確認されています。
+        特に問題となっている「抗生物質耐性菌（薬剤耐性菌）」に対しても効果を示す報告があり、
+        抗生物質が効かない局面での代替・補完手段として世界的に研究が進んでいます。
+      </p>
+
+      <div class="highlight-box">
+        傷口に直接ハチミツを塗ると、高浸透圧・低pH・過酸化水素の三重作用で細菌の繁殖を抑えながら、
+        同時に湿潤環境を保って組織の再生を促します。
+        これは「モイストヒーリング（湿潤療法）」の原理に合致しており、
+        かさぶたをつくらずに傷を内側から修復する理にかなったアプローチです。
+        ただし、家庭での深い傷・感染した傷への使用は医師への相談が前提です。
+      </div>
+
+      <!-- のどへの効果 -->
+      <h3 class="section-heading">ハチミツの働き② のどの炎症・咳への効果</h3>
+      <p>
+        「のどが痛いときにハチミツ」という民間療法は、現代の医学的エビデンスによっても支持されています。
+        2021年にBMJ Evidence-Based Medicineに掲載された系統的レビューでは、
+        上気道感染症（風邪など）に対してハチミツは咳の頻度・重症度・症状の継続期間を有意に改善し、
+        一般的な市販の咳止め薬（デキストロメトルファン）と同等以上の効果を示すことが報告されました。
+      </p>
+      <p>
+        そのメカニズムは複数あります。まず、ハチミツの粘性が喉の粘膜をコーティングして物理的に保護します。
+        次に、抗炎症作用を持つポリフェノールが粘膜の炎症を鎮めます。
+        さらに、抗菌作用がウイルス・細菌による二次感染を抑制します。
+        特に子どもの咳に対しては、市販の咳止め薬よりハチミツの方が安全性が高いとして
+        WHO・米国小児科学会も推奨しています（ただし1歳未満は絶対に与えてはいけません）。
+      </p>
+
+      <!-- 抗酸化・抗炎症 -->
+      <h3 class="section-heading">ハチミツの働き③ 抗酸化・抗炎症作用</h3>
+      <p>
+        ハチミツには花蜜由来の多様なポリフェノール（フラボノイド・フェノール酸など）が含まれており、
+        強い抗酸化作用を発揮します。
+        一般的に色が濃いハチミツ（そば蜜・マヌカハニーなど）ほどポリフェノール含有量が高い傾向があります。
+      </p>
+      <p>
+        慢性炎症は生活習慣病・老化・がんの共通の根底にある病態ですが、
+        ハチミツのポリフェノールは炎症を引き起こすサイトカイン（TNF-α・IL-6など）の産生を抑制し、
+        酸化ストレスを軽減することが細胞実験・動物実験で示されています。
+        毎日少量のハチミツを継続的に摂ることで、体全体の慢性炎症を緩やかに抑える効果が期待できます。
+      </p>
+
+      <!-- 腸内環境 -->
+      <h3 class="section-heading">ハチミツの働き④ 腸内環境を整える</h3>
+      <p>
+        ハチミツにはオリゴ糖が含まれており、これがビフィズス菌・乳酸菌などの善玉菌の「エサ（プレバイオティクス）」となります。
+        また、ハチミツのポリフェノールは腸内の有害菌（病原性大腸菌・ヘリコバクター・ピロリ菌など）を選択的に抑制する一方、
+        善玉菌には影響を与えにくいという興味深い特性が研究で報告されています。
+      </p>
+      <p>
+        さらに、ハチミツは胃酸の分泌を調整し、胃粘膜を保護する作用も持ちます。
+        空腹時に大さじ1杯のハチミツを少量の水で溶かして飲む習慣は、
+        胃の調子を整え、腸内環境の改善に役立てる伝統的な方法として古くから行われており、
+        一定のエビデンスも蓄積されています。
+      </p>
+
+      <!-- 美肌・スキンケア -->
+      <h3 class="section-heading">ハチミツの働き⑤ 肌への効果</h3>
+      <p>
+        ハチミツは食べるだけでなく、肌に直接使うスキンケア素材としても優れた機能を持ちます。
+        保湿成分として働くグルコン酸・有機酸が肌の水分を引きつけ、
+        ポリフェノールが酸化ダメージから肌細胞を守り、
+        抗菌・抗炎症作用がニキビ菌（アクネ菌）を抑えながら赤みを鎮めます。
+      </p>
+      <ul class="point-list">
+        <li><strong>保湿・乾燥肌改善</strong>：天然のヒュメクタント（吸湿保持剤）として機能し、角層の水分量を高める。市販の保湿剤の成分としても広く採用されている。</li>
+        <li><strong>ニキビ・毛穴の炎症</strong>：マヌカハニーを薄く患部に塗布することで、抗菌・抗炎症の両作用からニキビの改善を期待できる。</li>
+        <li><strong>くすみ・美白</strong>：ポリフェノールのメラニン生成抑制作用と、グルコン酸の緩やかなピーリング効果がくすみを改善する可能性がある。</li>
+        <li><strong>リップケア・かかとのひびわれ</strong>：保湿と抗菌の相乗効果で、就寝前のケアに活用できる。ただし粘性が高いので少量を。</li>
+      </ul>
+
+      <!-- 種類の違い -->
+      <h3 class="section-heading">ハチミツの種類——何を選べばよいか</h3>
+      <p>
+        市販のハチミツは種類によって成分・機能に大きな差があります。
+        健康目的で選ぶ際は以下の比較を参考にしてください。
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>種類</th>
+            <th>特徴・主な効能</th>
+            <th>おすすめの用途</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>マヌカハニー</strong></td>
+            <td>ニュージーランド産。MGO（メチルグリオキサール）を高濃度に含み、他のハチミツを凌ぐ抗菌力。UMF・MGO表示で品質が担保される</td>
+            <td>のどの不調・胃の調子・創傷ケア・ニキビ</td>
+          </tr>
+          <tr>
+            <td><strong>生ハチミツ（非加熱）</strong></td>
+            <td>加熱処理をしていないため酵素・ポリフェノール・花粉が豊富に残存。加熱品より抗酸化力が高い</td>
+            <td>抗酸化・腸活・免疫サポート全般</td>
+          </tr>
+          <tr>
+            <td><strong>そば蜜（バックウィートハニー）</strong></td>
+            <td>色が濃く、ポリフェノール含有量がハチミツの中で最高クラス。風味が強め</td>
+            <td>抗酸化・抗炎症目的。咳への効果研究が特に多い</td>
+          </tr>
+          <tr>
+            <td><strong>アカシア蜜</strong></td>
+            <td>淡色で癖がなく果糖が多い。GI値が比較的低く固まりにくい。日常使いに向く</td>
+            <td>料理・飲み物への添加。血糖値が気になる方の代替甘味料として</td>
+          </tr>
+          <tr>
+            <td><strong>加糖・混合ハチミツ</strong></td>
+            <td>水飴や砂糖を混合した廉価品。抗菌・抗酸化などの機能性成分が大幅に少ない</td>
+            <td>健康目的には不向き。原材料欄を必ず確認</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- 上手な使い方 -->
+      <h3 class="section-heading">毎日の生活への取り入れ方</h3>
+
+      <div class="intake-cards">
+        <div class="intake-card">
+          <div class="intake-card-icon">🍵</div>
+          <div class="intake-card-title">白湯・ハーブティーに</div>
+          <div class="intake-card-desc">60℃以下に冷ました飲み物に溶かして。高温は酵素を破壊するので加熱後に加えるのが鉄則。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🥣</div>
+          <div class="intake-card-title">朝食のヨーグルトに</div>
+          <div class="intake-card-desc">プロバイオティクス（乳酸菌）＋プレバイオティクス（オリゴ糖）の組み合わせで腸活効果が相乗する。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🌙</div>
+          <div class="intake-card-title">寝る前にひとさじ</div>
+          <div class="intake-card-desc">就寝前の少量摂取が睡眠中の肝臓のグリコーゲン補充を助け、睡眠の質向上に寄与するという説がある。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🫙</div>
+          <div class="intake-card-title">のどケアパックとして</div>
+          <div class="intake-card-desc">マヌカハニーを少量スプーンでなめるだけでのどの粘膜をコーティング。外出前・帰宅後のケアに。</div>
+        </div>
+      </div>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">💡 砂糖とハチミツ、血糖値への影響の違い</div>
+        <p>
+          ハチミツは砂糖と同様に糖質を多く含むため「血糖値を上げない」わけではありません。
+          ただし、ハチミツのGI値（血糖上昇指数）は種類にもよりますが約50〜60程度で、
+          砂糖（GI約65〜70）よりやや低めです。
+          また果糖の割合が高いことで甘みを感じやすく、同じ甘さを得るために使う量を減らせる利点があります。
+          糖尿病・血糖値が気になる方は過剰摂取を避け、1日大さじ1〜2杯（15〜30g）程度を目安にしてください。
+        </p>
+      </div>
+
+      <!-- 注意点 -->
+      <h3 class="section-heading">ハチミツを使う際の注意点</h3>
+      <ul class="point-list">
+        <li><strong>1歳未満の乳児には絶対に与えない</strong>：ハチミツにはボツリヌス菌の芽胞が含まれることがあり、腸内環境が未熟な乳児では「乳児ボツリヌス症」を引き起こす危険がある。これは加熱しても防げない。</li>
+        <li><strong>花粉アレルギーのある方は注意</strong>：ハチミツには花粉が含まれており、特定の花粉アレルギーがある場合に反応することがある。初めて使う際は少量から試すこと。</li>
+        <li><strong>糖尿病・肥満の方は摂取量を管理</strong>：健康的な食品ではあるが糖質量は多い。1日の目安量（大さじ1〜2杯）を守り、他の糖質との兼ね合いで調整する。</li>
+        <li><strong>品質表示を確認する</strong>：「はちみつ」と表示されていても水飴・砂糖を混合した製品が存在する。原材料欄に「はちみつ」のみ記載されたものを選ぶこと。</li>
+        <li><strong>高温調理は機能性を損なう</strong>：酵素・ポリフェノールは熱に弱い。料理に使う場合は仕上げに加えるか、60℃以下の飲み物に溶かして使うのが望ましい。</li>
+      </ul>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            ハチミツは「甘いだけ」ではなく、使い方によって体に確かな恩恵をもたらす食品です。
+            のどの不調・腸の調子・肌荒れ・慢性的な炎症感……そういった悩みに対して、
+            食生活にハチミツをうまく取り入れることがひとつの助けになることがあります。
+            ただし、マヌカハニーをはじめ品質にこだわるほど価格も上がりますので、
+            目的に合った種類を選ぶことが大切です。
+            栄養・食事面でのご相談も当院で承っていますので、お気軽にお声がけください。
+          </p>
+        </div>
+      </div>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">まとめ：毎日のひとさじが、体を静かに整える</h3>
+      <p>
+        抗菌・抗炎症・抗酸化・腸活・美肌・のどのケア——これだけの機能を一つの食品に求めるのは難しいことですが、
+        ハチミツはその多くを兼ね備えた数少ない天然の機能性食品です。
+        数千年の人類の経験と、現代科学の両方が「ハチミツはすごい」と言っているのです。
+      </p>
+      <p>
+        まずは毎朝のヨーグルトにひとさじ加えることや、のどに違和感を感じたときにマヌカハニーをなめることから始めてみてください。
+        「食べる薬」としてのハチミツの力を、ぜひ日常の中で実感してみてください。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        1歳未満の乳児へのハチミツ摂取は乳児ボツリヌス症のリスクがあるため、絶対に与えないでください。
+        糖尿病・アレルギー・その他の疾患をお持ちの方は、摂取前に医師または薬剤師にご相談ください。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>食事・栄養のご相談は当院へ</h3>
+        <p>日々の食生活から体質改善までトータルにサポートします。<br>まずはお気軽にご相談ください。</p>
+        <a href="../index.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>

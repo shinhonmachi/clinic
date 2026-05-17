@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>睡眠の話｜新本町クリニック コラム</title>
+  <meta name="description" content="睡眠不足は免疫・代謝・メンタル・老化すべてに影響する「健康の土台」。睡眠の質を上げる科学的な方法を院長が解説します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--sakura-deep); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+    .article-header { margin-bottom: 36px; }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+    .article-eyecatch-banner {
+      width: 100%;
+      height: 240px;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+      background: linear-gradient(135deg, #e8eaf6 0%, #ede7f6 50%, #e3f2fd 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+    }
+    .article-body { font-size: 15px; line-height: 2; color: var(--text); }
+    .article-body p { margin-bottom: 1.6em; }
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p { margin: 0; font-size: 14px; line-height: 1.9; }
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .point-list { list-style: none; margin: 20px 0 28px; padding: 0; }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text { font-size: 14px; line-height: 1.9; color: var(--text); }
+    .intake-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .intake-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .intake-card-icon { font-size: 28px; margin-bottom: 8px; }
+    .intake-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .intake-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p { font-size: 13px; color: var(--text-muted); margin-bottom: 18px; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <div class="column-wrap">
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>睡眠の話</span>
+    </nav>
+
+    <header class="article-header">
+      <span class="article-category">生活習慣・睡眠</span>
+      <h2 class="article-title">睡眠の話<br>―― 免疫・代謝・老化・メンタル、すべての土台は「眠り」にある</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年5月</span>
+      </div>
+    </header>
+
+    <div class="article-eyecatch-banner" aria-hidden="true">🌙</div>
+
+    <div class="article-body">
+
+      <h3 class="section-heading">「睡眠を削れば時間が増える」——その代償は想像以上に大きい</h3>
+      <p>
+        仕事・育児・趣味……忙しい現代生活の中で、睡眠時間を削って「時間を作る」方は少なくありません。
+        しかし睡眠の科学が明確に示しているのは、睡眠不足によって私たちが失うものは、
+        得られる時間を大きく上回るということです。
+      </p>
+      <p>
+        免疫の低下・肥満・糖尿病・高血圧・うつ・認知症リスクの上昇、そして寿命の短縮——
+        これらはすべて慢性的な睡眠不足と強く関連することが、膨大な数の研究で証明されています。
+        睡眠は「何もしていない時間」ではなく、<strong>脳と体が全力でメンテナンスを行う、最も生産的な時間</strong>なのです。
+        このコラムでは、なぜ睡眠がこれほど重要なのか、そして質の高い睡眠を得るために今日から実践できることを解説します。
+      </p>
+
+      <h3 class="section-heading">睡眠中に体の中では何が起きているのか</h3>
+      <p>
+        目を閉じて眠っている間、体は「スリープモード」になるわけではありません。
+        むしろ昼間の活動中には行えない重要な作業が集中して行われています。
+      </p>
+      <ul class="point-list">
+        <li><strong>脳の老廃物除去（グリンパティック系）</strong>：睡眠中に脳の細胞は縮小し、脳脊髄液が脳内を流れてアルツハイマー病の原因物質（アミロイドβ・タウタンパク）を洗い流す。この清掃作業は睡眠中にしか十分に行われない。</li>
+        <li><strong>記憶の定着・整理</strong>：日中に学んだことや経験は睡眠中に海馬から大脳皮質へ転送・整理され、長期記憶として定着する。睡眠不足が続くと学習効率・記憶力が著しく低下する。</li>
+        <li><strong>成長ホルモンの分泌</strong>：入眠後最初の深いノンレム睡眠（徐波睡眠）に成長ホルモンの分泌がピークを迎える。成長ホルモンは筋肉修復・脂肪分解・皮膚再生・免疫強化に不可欠。</li>
+        <li><strong>免疫細胞の活性化</strong>：睡眠中にサイトカイン（免疫シグナル物質）が産生され、NK細胞・T細胞などの免疫細胞が活性化する。睡眠不足はワクチンの効果も低下させることが臨床研究で示されている。</li>
+        <li><strong>血糖・食欲ホルモンの調整</strong>：睡眠不足ではレプチン（満腹ホルモン）が低下し、グレリン（食欲増進ホルモン）が増加する。これが睡眠不足による肥満・過食の生物学的メカニズム。</li>
+      </ul>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔬 睡眠の構造——レム睡眠とノンレム睡眠</div>
+        <p>
+          睡眠は約90分サイクルで「ノンレム睡眠（深い眠り）」と「レム睡眠（浅い眠り・夢を見る）」を繰り返します。
+          ノンレム睡眠は特に就寝後前半に深く、成長ホルモン分泌・身体の修復・免疫活性化の中心です。
+          レム睡眠は就寝後半に長くなり、記憶の整理・感情処理・創造性の再構成が行われます。
+          7〜8時間の睡眠でこのサイクルを4〜5回繰り返すことが理想とされており、
+          途中で目が覚めたり睡眠時間が短いとレム睡眠が削られ、記憶力・感情調整力が損なわれます。
+        </p>
+      </div>
+
+      <h3 class="section-heading">睡眠不足が招く「見えないダメージ」</h3>
+      <p>
+        「6時間でも大丈夫、慣れた」という方は多いですが、
+        睡眠研究者が繰り返し警告するのは「睡眠不足への慣れは、能力低下への慣れであって、回復ではない」という点です。
+        自覚がなくても、客観的なパフォーマンス・健康指標は着実に低下しています。
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>影響する領域</th>
+            <th>具体的な変化・リスク</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>認知機能・仕事</strong></td>
+            <td>注意力・判断力・創造性・反応速度の低下。6時間睡眠を2週間続けると、2日間完全徹夜と同等の認知機能低下が生じるという研究がある</td>
+          </tr>
+          <tr>
+            <td><strong>メンタルヘルス</strong></td>
+            <td>不安・抑うつ・感情の不安定化。睡眠不足は扁桃体（感情の中枢）の反応性を60%増加させる。うつ病患者の90%以上に睡眠障害が認められる</td>
+          </tr>
+          <tr>
+            <td><strong>免疫・感染症</strong></td>
+            <td>6時間以下の睡眠では風邪にかかるリスクが約4倍になるという研究がある。インフルエンザワクチンの抗体産生量も低下</td>
+          </tr>
+          <tr>
+            <td><strong>代謝・体重</strong></td>
+            <td>食欲増進・甘いもの・高カロリー食への欲求増大。インスリン感受性の低下により血糖コントロールが悪化。肥満リスクが高まる</td>
+          </tr>
+          <tr>
+            <td><strong>肌・老化</strong></td>
+            <td>成長ホルモン低下により肌の再生・修復が滞る。コラーゲン産生の低下・肌荒れ・くすみ・目の下のクマが生じやすい。「美容睡眠」は医学的に根拠がある</td>
+          </tr>
+          <tr>
+            <td><strong>心血管疾患・寿命</strong></td>
+            <td>6時間以下の睡眠が続くと高血圧・心筋梗塞・脳卒中のリスクが有意に上昇。睡眠時間が7時間を下回ると死亡リスクが上昇するという大規模メタ解析がある</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 class="section-heading">睡眠の質を下げる「現代生活の落とし穴」</h3>
+      <p>
+        睡眠の問題を抱える方の多くに、生活習慣の中に睡眠を妨げる行動が複数組み込まれています。
+        心当たりがないか確認してみてください。
+      </p>
+
+      <div class="highlight-box">
+        最も影響が大きいのが<strong>就寝前のスマートフォン・PCのブルーライト</strong>です。
+        ブルーライトは睡眠ホルモン「メラトニン」の分泌を抑制し、脳を「昼間モード」に留めます。
+        就寝1〜2時間前のスクリーン使用が睡眠の質を大幅に低下させることは、
+        多くの研究で一貫して示されている事実です。
+        「見るのをやめるのが難しい」という方ほど、その依存性と刺激がメラトニン分泌を妨げています。
+      </div>
+
+      <ul class="point-list">
+        <li><strong>就寝直前の食事・飲酒</strong>：夕食から就寝まで2〜3時間空けるのが理想。アルコールは寝つきを良くするように感じるが、睡眠後半のレム睡眠を著しく妨げ、中途覚醒を増やす。</li>
+        <li><strong>カフェインの摂取時刻</strong>：カフェインの半減期は約5〜6時間。午後3時以降のコーヒー・緑茶・エナジードリンクが就寝時も脳を覚醒させ続ける。</li>
+        <li><strong>不規則な就寝・起床時刻</strong>：体内時計（概日リズム）は一定のリズムを好む。週末の「寝だめ」は体内時計を狂わせ「社会的時差ボケ」を招く。</li>
+        <li><strong>寝室の温度・光環境</strong>：深部体温の低下が入眠のシグナル。室温が高すぎると体温が下がらず寝つけない。理想の寝室温度は16〜19℃（夏は25℃以下を目安に）。</li>
+        <li><strong>日中の光不足と運動不足</strong>：朝の光が体内時計をリセットし、夜のメラトニン分泌タイミングを決める。日中に光を浴びず動かないと夜の眠気が弱くなる。</li>
+      </ul>
+
+      <h3 class="section-heading">今夜から実践できる「睡眠の質を上げる習慣」</h3>
+
+      <div class="intake-cards">
+        <div class="intake-card">
+          <div class="intake-card-icon">🌅</div>
+          <div class="intake-card-title">起きたら朝日を浴びる</div>
+          <div class="intake-card-desc">起床後30分以内に窓際か屋外で2,500ルクス以上の光を浴びる。体内時計がリセットされ、14〜16時間後に自然な眠気が訪れる。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">📵</div>
+          <div class="intake-card-title">就寝1時間前はスクリーンオフ</div>
+          <div class="intake-card-desc">スマホ・PC・テレビを消してメラトニン分泌を妨げない。読書・ストレッチ・入浴など非スクリーンの時間をつくる。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">🛁</div>
+          <div class="intake-card-title">就寝90分前に入浴</div>
+          <div class="intake-card-desc">40℃・15分程度の入浴で深部体温が上昇し、その後の体温低下が入眠を促進。シャワーより湯船が効果的。</div>
+        </div>
+        <div class="intake-card">
+          <div class="intake-card-icon">⏰</div>
+          <div class="intake-card-title">毎日同じ時刻に起きる</div>
+          <div class="intake-card-desc">就寝時刻より起床時刻を固定することが体内時計の安定に有効。休日も±1時間以内に収める。</div>
+        </div>
+      </div>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">💡 睡眠に役立つ栄養素</div>
+        <p>
+          <strong>トリプトファン</strong>（バナナ・牛乳・豆腐・卵）はセロトニン→メラトニンの原料。
+          夕食に意識して摂ると入眠の助けになる。<br>
+          <strong>マグネシウム</strong>（ナッツ・豆類・海藻・全粒穀物）は神経を鎮静化し、睡眠の深さを改善する。
+          マグネシウム不足の方では補充によって睡眠の質が向上するという報告がある。<br>
+          <strong>ビタミンB6</strong>（バナナ・鮭・鶏胸肉）はトリプトファンからセロトニンへの変換を助ける。<br>
+          <strong>グリシン</strong>（コラーゲン・豚足・鶏皮）は深部体温を下げる作用があり、入眠と睡眠の深さを改善することが臨床研究で示されている。
+        </p>
+      </div>
+
+      <h3 class="section-heading">「眠れない」と感じたら——受診のサインを見逃さない</h3>
+      <p>
+        生活習慣を整えても改善しない場合、背景に医学的な問題が潜んでいることがあります。
+        以下に当てはまる方は、一度専門家への相談をお勧めします。
+      </p>
+      <ul class="point-list">
+        <li><strong>入眠障害</strong>：布団に入っても30分以上眠れない状態が週3日以上・3ヶ月以上続く。不眠症の治療（認知行動療法・薬物療法）の対象となる。</li>
+        <li><strong>睡眠時無呼吸症候群（SAS）</strong>：いびき・日中の強い眠気・起床時の頭痛が特徴。肥満・高血圧の方に多く、未治療のまま放置すると心血管疾患リスクが著しく高まる。CPAPなどの治療が有効。</li>
+        <li><strong>むずむず脚症候群（RLS）</strong>：就寝時に脚の不快感で眠れない。鉄欠乏・腎臓病・妊娠などが背景にあることが多く、原因治療で改善する。</li>
+        <li><strong>概日リズム睡眠障害</strong>：極端な夜型（深夜3〜4時まで眠れない）や社会生活に支障をきたすほどのリズムの乱れ。光療法・メラトニン受容体作動薬などが有効。</li>
+      </ul>
+
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            「なんとなく疲れが取れない」「昼間に眠くなる」「肌の調子が悪い」「集中力が続かない」——
+            こうした訴えの背景に、睡眠の質・量の問題が隠れていることは非常に多いです。
+            睡眠は食事・運動と並ぶ健康の三本柱ですが、最も軽視されやすい柱でもあります。
+            生活習慣の見直しだけで改善できる場合も多いので、まず今日から「朝の光を浴びる」「就寝前のスマホをやめる」を試してみてください。
+            それでも改善しない睡眠の悩みは、ぜひ当院でご相談ください。
+          </p>
+        </div>
+      </div>
+
+      <h3 class="section-heading">まとめ：眠りを制する者が、健康を制する</h3>
+      <p>
+        睡眠は脳の掃除・記憶の定着・免疫の強化・ホルモンの調整・細胞の修復——
+        これだけの仕事を毎晩黙々と行っています。
+        睡眠時間を削ることは、これらすべての機能を少しずつ損なうことに等しいのです。
+      </p>
+      <p>
+        7〜8時間の睡眠を確保し、毎朝同じ時刻に起きて光を浴び、就寝前はスクリーンを手放す——
+        この3つだけで、多くの方が「体が軽くなった」「頭が冴えた」「肌の調子が良い」という変化を感じます。
+        「忙しいから眠れない」のではなく、「よく眠れるから忙しくても動ける」という発想の転換を、ぜひ試してみてください。
+      </p>
+
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        3ヶ月以上続く不眠・日中の過度な眠気・睡眠中の無呼吸などの症状がある場合は、
+        自己判断で睡眠薬を服用するのではなく、医師にご相談の上で適切な検査・治療を受けてください。
+      </p>
+
+    </div>
+
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>睡眠・生活習慣のご相談は当院へ</h3>
+        <p>睡眠の悩みから生活習慣の見直しまで、個別にアドバイスします。<br>まずはお気軽にご相談ください。</p>
+        <a href="../index.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+
+  <script src="common.js"></script>
+</body>
+</html>
