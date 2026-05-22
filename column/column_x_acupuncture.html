@@ -1,5 +1,603 @@
-鍼はなぜ効くのか
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>鍼はなぜ効くのか｜新本町クリニック コラム</title>
+  <meta name="description" content="なぜ鍼で痛みが和らぐのか。プラセボ以上の効果が科学的に証明されつつある鍼治療のメカニズムを、最新の研究知見をもとに院長が解説します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
 
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
 
-なぜ鍼で痛みが和らぐのか、プラセボ以上の効果が証明され始める
-https://www.nationalgeographic.com/health/article/acupuncture-evidence-pain-management
+    /* 記事ヘッダー */
+    .article-header {
+      margin-bottom: 36px;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* アイキャッチ画像 */
+    .article-eyecatch {
+      width: 100%;
+      max-height: 360px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p {
+      margin-bottom: 1.6em;
+    }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* 引用・コラムボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .highlight-box cite {
+      display: block;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-body {}
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* メカニズムカード群 */
+    .mechanism-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .mechanism-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .mechanism-card-icon { font-size: 28px; margin-bottom: 8px; }
+    .mechanism-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .mechanism-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* 出典リンク */
+    .source-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .source-note a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .source-note a:hover { text-decoration: underline; }
+
+    /* ページフッター（記事末） */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    /* 注意書き */
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>鍼はなぜ効くのか</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">鍼治療・東洋医学</span>
+      <h2 class="article-title">鍼はなぜ効くのか<br>―― プラセボを超えた「体内鎮痛システム」の科学</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年5月</span>
+      </div>
+    </header>
+
+    <!-- アイキャッチ画像 -->
+    <img
+      src="pics/acupuncture.webp"
+      alt="科学が解き明かす 鍼はなぜ効くのか"
+      class="article-eyecatch"
+      width="760"
+      height="506"
+      loading="lazy"
+    />
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">「気のせいでは？」と思っていませんか？</h3>
+      <p>
+        細い針を皮膚に刺すだけで、なぜ強い痛みが和らぐのか。
+        長年にわたり「プラセボ（思い込み）ではないか」と疑われ続けてきた鍼治療ですが、
+        近年の神経科学・免疫学・画像診断の進歩によって、そのメカニズムが急速に解明されつつあります。
+      </p>
+      <p>
+        2026年5月、ナショナルジオグラフィック誌が「Scientists are finally decoding how acupuncture eases pain」と題する記事を掲載し、
+        鍼が体内でどのような連鎖反応を起こすのかを最新の研究成果に基づいてまとめています。
+        このコラムでは、その内容を中心に紹介します。
+      </p>
+
+      <div class="highlight-box">
+        ある無作為比較試験では、救急外来において鍼が静脈内モルヒネと比較して副作用が少なく、
+        急性疼痛をより速やかに緩和したと報告されています。
+        また偏頭痛・慢性疼痛・分娩時の痛みへの効果も複数の研究で示されています。
+      </div>
+
+      <!-- 針が刺さった瞬間 -->
+      <h3 class="section-heading">針が刺さった瞬間、体の中で何が起きているか</h3>
+      <p>
+        反応はまず局所から始まります。針の微細な機械的刺激（「メカノトランスダクション」）が、
+        周囲の結合組織に生化学的シグナルの連鎖を引き起こします。
+        皮膚のマスト細胞（免疫の最前線細胞）が刺激を受け、ヒスタミン・セロトニン・アデノシンといった物質を周辺組織へ放出。
+        それらが神経末端を刺激し、痛みの処理・調節に関わる脳領域へとシグナルを伝えます。
+      </p>
+      <p>
+        さらに鍼は、「痛みが痛みを抑える」という広範な疼痛調節経路（びまん性侵害抑制調節：DNIC）にも関与すると考えられています。
+        ある刺激が別の痛みの知覚を和らげるこの仕組みは、鍼の鎮痛効果を説明するうえで重要な要素のひとつです。
+      </p>
+
+      <div class="mechanism-cards">
+        <div class="mechanism-card">
+          <div class="mechanism-card-icon">🔬</div>
+          <div class="mechanism-card-title">結合組織への機械刺激</div>
+          <div class="mechanism-card-desc">針の微細な圧力が生化学シグナルの連鎖を誘発。マスト細胞が活性化される。</div>
+        </div>
+        <div class="mechanism-card">
+          <div class="mechanism-card-icon">🧪</div>
+          <div class="mechanism-card-title">化学物質の放出</div>
+          <div class="mechanism-card-desc">ヒスタミン・セロトニン・アデノシンが放出され、神経末端を介して脳へ伝達。</div>
+        </div>
+        <div class="mechanism-card">
+          <div class="mechanism-card-icon">🧠</div>
+          <div class="mechanism-card-title">脳活動の変化</div>
+          <div class="mechanism-card-desc">高磁場fMRIで、鍼刺激が痛みの処理・感情調節に関わる脳領域に変化をもたらすことが確認されている。</div>
+        </div>
+        <div class="mechanism-card">
+          <div class="mechanism-card-icon">🛡️</div>
+          <div class="mechanism-card-title">免疫細胞の動員</div>
+          <div class="mechanism-card-desc">軟X線画像により、免疫細胞が鍼に向かって移動し疼痛メディエーターを放出する様子が観察されている。</div>
+        </div>
+      </div>
+
+      <!-- 画像診断が明かした世界 -->
+      <h3 class="section-heading">最新の画像診断が「見えない世界」を可視化した</h3>
+      <p>
+        近年の技術的進歩により、鍼の効果はかつてない精度で観察できるようになりました。
+        高磁場fMRI（機能的磁気共鳴画像法）では、特定のツボへの刺激が痛みの処理・感情調節に関わる脳領域の活動変化と関連することが示されています。
+        また超音波を使うと、針が引き起こす結合組織のさざ波が、その針の位置によって異なる形で広がっていく様子をリアルタイムで観察できます。
+      </p>
+      <p>
+        シンガポール・南洋理工大学の楊明暁助教授（統合医療研究室）は、
+        「局所的な刺激が末梢組織、免疫応答、脳の疼痛処理ネットワークをまたいで全身へ波及するパターンが、徐々に明らかになってきた」
+        と述べています。
+        さらに、「治療で回復するという期待や信念が、脳の報酬回路を介して鍼による鎮痛効果に貢献する可能性もある」とも指摘しており、
+        心理的要因も無視できない役割を担っていることがわかります。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🗺️ 経絡と解剖学の一致</div>
+        <p>
+          複数の研究により、伝統的な経絡のルートと結合組織ネットワークとの間に約80%の一致があると報告されています。
+          また鍼のツボは、周囲と比べて神経線維の密度が1.4倍高いという分析もあります。
+          シカゴ・イリノイ大学のユディット・シュレーガー教授は
+          「経絡の伝統的な地図は、身体の神経・筋膜ネットワークの古代の見取り図として再解釈されるべきだ」と述べています。
+        </p>
+      </div>
+
+      <!-- 二重盲検試験の突破 -->
+      <h3 class="section-heading">世界初の「二重盲検鍼治療試験」が示したこと</h3>
+      <p>
+        鍼治療の研究で長年の課題となってきたのが、「プラセボとの分離」です。
+        薬の臨床試験では患者も研究者も本物か偽薬かを知らない「二重盲検」が標準ですが、
+        鍼の場合は施術者が本物か偽物かを認識してしまうため、この手法を適用するのが困難でした。
+      </p>
+      <p>
+        この壁を突き破ったのが、東京有明医療大学の高倉伸有教授が開発した「プラセボ鍼」です。
+        針の刺入深度を隠す特殊な構造を持つこの器具により、
+        シカゴ・イリノイ大学のシュレーガー教授チームは慢性外陰部痛に悩む89人の女性を対象に
+        「世界初の二重盲検鍼治療試験」を実施しました（Journal of Pain 誌に掲載）。
+      </p>
+
+      <div class="highlight-box">
+        試験の結果、本物の鍼もプラセボ鍼もいずれも一定の効果を示しましたが、その持続期間に大きな差がありました。
+        本物の鍼では最大12週間にわたる持続的な疼痛緩和が確認された一方、
+        プラセボ効果は4週間で消退しました。
+        「本物の鍼は微細な損傷を生じさせ化学物質のバーストを引き起こすため、
+        中枢神経系が興奮し、身体の長期修復メカニズムが作動する」とシュレーガー教授は説明しています。
+        <cite>出典：Journal of Pain, 2025</cite>
+      </div>
+
+      <p>
+        高倉教授はこう述べています。
+        「ケアの儀式によるプラセボ的な緩和は存在するが、刺激が持続しないため効果はすぐに消える。
+        これが、プラセボのはかない性質と真の介入の持続的効果の明確な境界線だ」。
+        ただし、この知見をより広く確認するためにはさらなる大規模研究と再現が必要です。
+      </p>
+
+      <!-- 世界への広がり -->
+      <h3 class="section-heading">世界の医療システムへの統合が進む</h3>
+      <p>
+        鍼のメカニズム解明は、単なる科学的好奇心の充足にとどまりません。
+        低コストで非依存性という特徴を持つ鍼治療は、薬物依存の代替を模索する各国の医療システムにとって
+        魅力的な選択肢になりつつあります。
+      </p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>地域・機関</th>
+            <th>鍼治療の位置づけ</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>中国・アジア各国</td>
+            <td>伝統医療として医療システムに長く組み込まれている</td>
+          </tr>
+          <tr>
+            <td>ドイツ</td>
+            <td>2007年から特定の慢性疼痛疾患に対し公的保険が適用</td>
+          </tr>
+          <tr>
+            <td>米国</td>
+            <td>オピオイド危機を背景に非薬理学的疼痛管理への関心が高まっており、手術後の疼痛・オピオイド使用量の軽減効果を示す研究も</td>
+          </tr>
+          <tr>
+            <td>WHO（世界保健機関）</td>
+            <td>「世界伝統医学戦略 2025–2034」のもと、エビデンスに基づく伝統医療の現代医療への統合を推進中。鍼は現在、世界で最も広く使われている伝統・補完医療とされる</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>
+        WHOの伝統・補完・統合医療ユニット長であるキム・スンチョル氏は、
+        「2034年のビジョンは特定のシステムを他より優遇することではなく、人々が実際にケアを求める方法を反映した、より強固な医療システムを構築することだ」と述べています。
+      </p>
+
+      <!-- 当院の鍼治療 -->
+      <h3 class="section-heading">当院での鍼治療：YNSA（山元式新頭鍼療法）</h3>
+      <p>
+        当院では、宮崎県の医師・山元敏勝先生が考案した<strong>YNSA（山元式新頭鍼療法）</strong>を提供しています。
+        院長は山元先生に直々に指導を受け研鑽を積んでおり、日本ではまだ知名度が低い一方で
+        ドイツ・ブラジルなど世界数千人の医師が実践するこの治療法を正式に行える数少ないクリニックのひとつです。
+      </p>
+      <p>
+        YNSAは頭皮に0.25mmの極細鍼を刺すことで全身の症状に働きかけます。
+        頭皮には全身に対応する独自の反射区があり、
+        上記の研究が解明しつつある「局所刺激が神経系・免疫系を介して脳の疼痛処理を変える」という
+        メカニズムと深く重なります。
+      </p>
+      <ul class="point-list">
+        <li><strong>脳梗塞・麻痺などの中枢性疾患</strong>：後遺症としての麻痺・しびれ・パーキンソン症状に対して高い効果が報告されています</li>
+        <li><strong>難治性の慢性疼痛</strong>：腰痛・肩こり・頸部痛・膝の痛みなど「どこに行っても治らない」痛みへのアプローチ</li>
+        <li><strong>めまい・耳鳴り</strong>：感覚器症状にも対応する独自の反射区体系を持ちます</li>
+        <li><strong>ほぼ無痛・即効性</strong>：頭皮への施術のみで体幹・四肢への鍼は不要。施術中に改善を感じる方も多い</li>
+      </ul>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            「鍼は気のせいでは？」という声を長年耳にしてきましたが、今や科学は明確に「そうではない」と示しつつあります。
+            プラセボを超えた持続的な効果の存在、免疫細胞の動員、脳活動の変化——これらは画像診断によって可視化された
+            紛れもない生理学的事実です。
+            当院が提供するYNSA（山元式新頭鍼療法）は、この科学が解明しつつあるメカニズムと深く重なる治療体系です。
+            慢性的な痛みや麻痺・しびれに長年お悩みで、「もう諦めていた」という方にこそ、ぜひ受けていただきたい治療です。
+          </p>
+        </div>
+      </div>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">まとめ：2000年の経験則が、科学で裏打ちされ始めた</h3>
+      <p>
+        鍼治療は2000年以上の歴史を持ちながら、西洋医学からは長らく「証拠不十分」とみなされてきました。
+        しかし高磁場fMRI・軟X線・二重盲検試験といった最新のツールが、その効果の生物学的基盤を次々と明らかにしています。
+      </p>
+      <p>
+        経絡という概念が「神経・筋膜ネットワークの古代の地図」として再解釈されつつある今、
+        伝統と現代科学が交差する領域に、痛み治療の新しい可能性が広がっています。
+        なぜ効くのかがわかれば、誰にどのように使うべきかも、より精密に判断できるようになります。
+        鍼治療の未来は、まだ始まったばかりです。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムはナショナルジオグラフィック誌（2026年5月6日掲載）の記事をもとに、
+        当院院長が医療情報として解説・加筆したものです。
+        特定の疾患の診断・治療を目的とするものではありません。
+        症状が続く場合は医師にご相談ください。
+      </p>
+
+      <!-- 出典 -->
+      <p class="source-note">
+        📄 参考記事：National Geographic Health「Scientists are finally decoding how acupuncture eases pain」（2026年5月6日）<br>
+        <a href="https://www.nationalgeographic.com/health/article/acupuncture-evidence-pain-management" target="_blank" rel="noopener noreferrer">
+          https://www.nationalgeographic.com/health/article/acupuncture-evidence-pain-management
+        </a>
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>YNSAのご相談は当院へ</h3>
+        <p>「どこに行っても治らない」痛みや麻痺・しびれのある方、ぜひ一度ご相談ください。<br>院長が山元先生に直接師事したYNSAを提供しています。</p>
+        <a href="../subsection_hari.html" class="cta-btn">YNSA 診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
