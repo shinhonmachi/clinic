@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>瘀血（おけつ）とは何か｜新本町クリニック コラム</title>
+  <meta name="description" content="漢方3000年の言葉「瘀血」は、現代医学の動脈硬化・血流障害とほぼ同じ状態を指します。足の冷え・しびれ・傷が治りにくいと感じる方へ、院長が血管ケアの基本をわかりやすく解説します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--sakura-deep); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+    .article-header { margin-bottom: 36px; }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+    .article-eyecatch-banner {
+      width: 100%;
+      height: 200px;
+      background: linear-gradient(135deg, #e8d0c8 0%, #f5e8e8 45%, #d8cce8 100%);
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 58px;
+      letter-spacing: 10px;
+    }
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p { margin-bottom: 1.6em; }
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p { margin: 0; font-size: 14px; line-height: 1.9; }
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+    /* 症状チェックカード */
+    .symptom-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+      margin: 24px 0 32px;
+    }
+    .symptom-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 16px 14px;
+      text-align: center;
+    }
+    .symptom-card-icon { font-size: 26px; margin-bottom: 8px; }
+    .symptom-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .symptom-card-desc { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+    /* 検査ステップ */
+    .step-list {
+      counter-reset: step-counter;
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 32px;
+    }
+    .step-list li {
+      counter-increment: step-counter;
+      padding: 14px 16px 14px 56px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .step-list li:first-child { border-top: 1px solid var(--border); }
+    .step-list li::before {
+      content: counter(step-counter);
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 26px;
+      height: 26px;
+      background: var(--sakura-deep);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 26px;
+      text-align: center;
+    }
+    /* 比較ボックス */
+    .compare-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .compare-card {
+      border-radius: 10px;
+      padding: 18px 16px;
+      font-size: 13px;
+      line-height: 1.8;
+    }
+    .compare-card-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+    .compare-card.east {
+      background: #fdf3ee;
+      border: 1px solid #e8c8b8;
+    }
+    .compare-card.east .compare-card-label { color: #a05030; }
+    .compare-card.west {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+    }
+    .compare-card.west .compare-card-label { color: var(--green); }
+    /* 医師コメント */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text { font-size: 14px; line-height: 1.9; color: var(--text); }
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p { font-size: 13px; color: var(--text-muted); margin-bottom: 18px; }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+    /* 音声プレーヤー */
+    .audio-block {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 40px;
+    }
+    .audio-block-label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sakura-deep);
+      margin-bottom: 12px;
+    }
+    .audio-icon { font-size: 18px; }
+    .audio-player {
+      width: 100%;
+      height: 40px;
+      accent-color: var(--sakura-deep);
+    }
+    .audio-note {
+      font-size: 11px;
+      color: var(--text-muted);
+      margin: 8px 0 0;
+    }
+    /* 治療法カード */
+    .treatment-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 28px 0 32px;
+    }
+    .treatment-card {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 22px 22px 22px 0;
+      overflow: hidden;
+    }
+    .treatment-num {
+      flex-shrink: 0;
+      width: 64px;
+      align-self: stretch;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 22px;
+      font-weight: 700;
+      font-family: 'Noto Serif JP', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      letter-spacing: 0.02em;
+      border-radius: 0;
+    }
+    .treatment-body { flex: 1; padding-left: 4px; }
+    .treatment-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+    .treatment-tag {
+      display: inline-block;
+      font-size: 11px;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border-radius: 20px;
+      padding: 2px 10px;
+      margin-bottom: 10px;
+    }
+    .treatment-desc {
+      font-size: 13px;
+      line-height: 1.85;
+      color: var(--text-muted);
+      margin: 0;
+    }
+    @media (max-width: 480px) {
+      .treatment-num { width: 48px; font-size: 18px; }
+    }
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .compare-box { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <div class="column-wrap">
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>瘀血とは何か</span>
+    </nav>
+
+    <header class="article-header">
+      <span class="article-category">漢方・血管ケア</span>
+      <h2 class="article-title">「血が滞る」とはどういうこと？<br>―― 漢方の「瘀血」と現代医学が指すのは、同じ状態でした</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年5月</span>
+      </div>
+    </header>
+
+    <div class="article-eyecatch-banner" role="img" aria-label="瘀血・血管ケアのイメージ">
+      🩸 🫀 🌿
+    </div>
+
+    <!-- 音声プレーヤー -->
+    <div class="audio-block">
+      <div class="audio-block-label">
+        <span class="audio-icon">🎙️</span>
+        <span>院長が音声で解説 ／ 約18分</span>
+      </div>
+      <audio controls preload="none" class="audio-player">
+        <source src="audio_oketsu.mp3" type="audio/mpeg" />
+        <source src="audio_oketsu.m4a" type="audio/mp4" />
+        お使いのブラウザは音声再生に対応していません。
+      </audio>
+      <p class="audio-note">※ 移動中や家事のながら聴きにもどうぞ</p>
+    </div>
+
+    <div class="article-body">
+
+      <h3 class="section-heading">「瘀血（おけつ）」って何？</h3>
+      <p>
+        「瘀血」は、漢方医学で3000年以上前から使われてきた言葉です。
+        「瘀（お）」には「滞る・詰まる」という意味があり、
+        血の流れが悪くなった状態を指します。
+      </p>
+      <p>
+        ちょっと古い言葉のように聞こえるかもしれませんが、
+        実はこの「瘀血」の状態、現代医学で言う<strong>動脈硬化や末梢動脈疾患（足の血管が細くなる病気）</strong>と
+        ほぼ同じ病態です。
+        東洋と西洋、まったく別々に発展してきた医学が、
+        同じ体の問題を別の言葉で表現していたのです。
+      </p>
+
+      <div class="compare-box">
+        <div class="compare-card east">
+          <div class="compare-card-label">🌿 漢方医学（3000年前〜）</div>
+          血の流れが滞り、全身への栄養や温かさが行き渡らない状態。「瘀血」と呼び、冷え・しびれ・疲れやすさの根本原因のひとつとされてきた。
+        </div>
+        <div class="compare-card west">
+          <div class="compare-card-label">🔬 現代医学</div>
+          動脈硬化などで血管が細くなり、血液が末梢（手足の先など）まで届きにくくなった状態。「末梢動脈疾患」「血流障害」と呼ぶ。
+        </div>
+      </div>
+
+      <h3 class="section-heading">こんな症状、心当たりはありませんか？</h3>
+      <p>
+        瘀血の状態になると、血の流れが悪い場所を中心にさまざまなサインが現れます。
+        特に心臓から遠い「足」に症状が出やすいのが特徴です。
+      </p>
+
+      <div class="symptom-cards">
+        <div class="symptom-card">
+          <div class="symptom-card-icon">🥶</div>
+          <div class="symptom-card-title">足が冷たい・しびれる</div>
+          <div class="symptom-card-desc">血流が少なくなると、足先が冷えやすくなります</div>
+        </div>
+        <div class="symptom-card">
+          <div class="symptom-card-icon">🚶</div>
+          <div class="symptom-card-title">歩くと足が痛くなる</div>
+          <div class="symptom-card-desc">少し歩くと足がだるくなったり、痛くなって立ち止まりたくなる</div>
+        </div>
+        <div class="symptom-card">
+          <div class="symptom-card-icon">🩹</div>
+          <div class="symptom-card-title">足の傷が治りにくい</div>
+          <div class="symptom-card-desc">血液が届かないと、細胞の修復が遅れます</div>
+        </div>
+        <div class="symptom-card">
+          <div class="symptom-card-icon">🫸</div>
+          <div class="symptom-card-title">手足の血色が悪い</div>
+          <div class="symptom-card-desc">紫っぽい・青白い・むくんでいるなど</div>
+        </div>
+        <div class="symptom-card">
+          <div class="symptom-card-icon">😮‍💨</div>
+          <div class="symptom-card-title">疲れやすい・むくむ</div>
+          <div class="symptom-card-desc">全身の血行が悪いと、体全体がだるく感じることも</div>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        これらの症状は「年のせいかな」と見過ごされがちです。
+        でも実は、血管の中で静かに進んでいる変化のサインかもしれません。
+        特に動脈硬化・糖尿病・高血圧のある方は、足の変化に早めに気づくことがとても大切です。
+      </div>
+
+      <h3 class="section-heading">なぜ血は「滞る」のか</h3>
+      <p>
+        血管はもともと、しなやかで内側がつるりとした管です。
+        しかし年齢とともに、また食生活や運動不足・喫煙・血糖値の乱れなどが重なることで、
+        血管の内側に少しずつ汚れ（プラーク）がたまっていきます。
+      </p>
+      <p>
+        血管が細くなると、血液が流れにくくなる。
+        血液が届かなくなった組織は、じわじわと栄養や酸素が不足していきます。
+        これが「足が冷える」「傷が治りにくい」「歩くと痛い」という症状として現れてくるのです。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔥 血管の「炎症」という問題</div>
+        <p>
+          動脈硬化は単に「血管が固くなる」だけでなく、血管の内側で慢性的な「炎症」が
+          起き続けている状態でもあります。
+          この炎症が長く続くと、血管がもろくなったり、血のかたまり（血栓）ができやすくなります。
+          炎症を早めに知ることが、血管を守るための第一歩です。
+        </p>
+      </div>
+
+      <h3 class="section-heading">当院の「瘀血スクリーニング」で何がわかるか</h3>
+      <p>
+        「なんとなく足が冷える」「疲れやすい」という段階では、
+        普通の健康診断では異常が出ないことも多いです。
+        当院では、血管の状態をより早い段階でつかむための検査を行っています。
+      </p>
+
+      <ol class="step-list">
+        <li>
+          <strong>EPA/AA比（血液検査）</strong><br>
+          血管の「炎症を起こす力」と「炎症を抑える力」のバランスを数値で確認します。
+          この比率が低いほど、血管内の炎症が進んでいる可能性があります。
+          コレステロールや血糖の検査では見えない、血管の「内側の状態」を知ることができます。
+        </li>
+        <li>
+          <strong>hsCRP・HbA1c・脂質4項目（血液検査）</strong><br>
+          炎症のレベル（hsCRP）、過去2〜3か月の血糖の平均（HbA1c）、
+          善玉・悪玉コレステロールや中性脂肪（脂質4項目）を同時に測定します。
+          血管リスクを多角的に把握できます。
+        </li>
+        <li>
+          <strong>問診（足の症状を丁寧に確認）</strong><br>
+          足の冷え・しびれ・歩いたときの痛みや違和感など、
+          日常の小さな変化について時間をかけて伺います。
+          血液検査と合わせることで、より正確な状態の把握につながります。
+        </li>
+      </ol>
+
+      <p>
+        すでに動脈硬化・糖尿病・高血圧と診断されている方はもちろん、
+        「まだ何も言われていないけど心配」という方の予防的な血管チェックとしても受けていただけます。
+      </p>
+
+      <h3 class="section-heading">検査の後は？ ―― 4つのアプローチを組み合わせる</h3>
+      <p>
+        スクリーニングで血管の状態を確認したうえで、
+        当院では下記の4つの治療法を状態に合わせて組み合わせています。
+        どれか一つに頼るのではなく、体質・生活・症状の程度に応じて
+        「東洋と西洋の知恵を両方使う」というのが当院のスタンスです。
+      </p>
+
+      <div class="treatment-cards">
+
+        <div class="treatment-card">
+          <div class="treatment-num">01</div>
+          <div class="treatment-body">
+            <div class="treatment-title">漢方薬</div>
+            <div class="treatment-tag">体質から根本改善</div>
+            <p class="treatment-desc">
+              瘀血の改善に用いられる漢方薬には、血の流れをよくする「駆瘀血薬（くおけつやく）」と呼ばれる処方があります。
+              体を内側から整え、冷えやすい・疲れやすいといった体質そのものにアプローチします。
+              副作用が少なく、長期的に続けやすいのが特徴です。
+            </p>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div class="treatment-num">02</div>
+          <div class="treatment-body">
+            <div class="treatment-title">オゾン自家血療法</div>
+            <div class="treatment-tag">血管を内側から修復する点滴</div>
+            <p class="treatment-desc">
+              少量の血液を採取し、オゾンを加えて体内に戻します。
+              オゾンの働きで赤血球が柔らかくなり、細い血管の先まで血液が届きやすくなります。
+              また血管内の慢性的な炎症を抑え、自己修復力を引き出す効果も期待できます。
+              ヨーロッパでは広く行われている治療法です。
+            </p>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div class="treatment-num">03</div>
+          <div class="treatment-body">
+            <div class="treatment-title">RIC療法</div>
+            <div class="treatment-tag">腕に巻くだけの血管トレーニング</div>
+            <p class="treatment-desc">
+              腕に専用のカフ（帯）を巻いて、血流を一時的に止めてから解放することを数回繰り返します。
+              これだけで体が「血流が足りない」と感知し、血管を広げる物質を自然に出すようになります。
+              針も点滴も不要で、椅子に座ったまま受けられる、体への負担がとても少ない治療です。
+            </p>
+          </div>
+        </div>
+
+        <div class="treatment-card">
+          <div class="treatment-num">04</div>
+          <div class="treatment-body">
+            <div class="treatment-title">栄養点滴・サプリメント</div>
+            <div class="treatment-tag">細胞レベルの酸化ストレスを取り除く</div>
+            <p class="treatment-desc">
+              血管が傷む原因のひとつが「酸化ストレス」、つまり体のサビです。
+              α-リポ酸・グルタチオン・高用量ビタミンCを点滴や内服で補うことで、
+              細胞レベルのサビを除去し、血管の壁を守ります。
+              疲労回復・肌のくすみ改善を実感される方も多いです。
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="highlight-box">
+        これら4つを症状や体質に合わせて組み合わせることで、
+        薬で数値を下げるだけでは届かない「血管の質そのものを変える」ことを目指しています。
+        どの治療が向いているかは、スクリーニングの結果と問診をもとに、一緒に考えましょう。
+      </div>
+
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            「足が冷える」「なんか疲れやすい」。こういった訴えは、健康診断では引っかからないことが多く、
+            「気のせいでしょう」で終わってしまいがちです。
+            でも漢方が3000年かけて積み上げてきた「瘀血」という概念は、
+            まさにそういった「数値には出ない体のくすぶり」を捉えようとしていたのだと思います。
+            血管は痛みを感じにくい臓器です。気づいたときには相当進んでいた、ということが多い。
+            だからこそ早めの「見える化」が大切で、それが当院の瘀血スクリーニングの目的です。
+          </p>
+        </div>
+      </div>
+
+      <h3 class="section-heading">まとめ：3000年前の知恵が、現代の血管医療と重なっていた</h3>
+      <p>
+        「血が滞ると体が不調になる」という観察を、漢方は「瘀血」と名付けて3000年前から
+        治療の中心に置いてきました。
+        現代医学は画像や血液検査でそれを「動脈硬化」「血流障害」と呼び、
+        メカニズムを解明しています。
+      </p>
+      <p>
+        言葉は違っても、体に起きていることは同じ。
+        「なんか最近、足が冷えるな」「疲れが抜けないな」と感じたら、
+        それは血管からのサインかもしれません。早めにご相談ください。
+      </p>
+
+      <p class="disclaimer">
+        ※本コラムは健康情報の提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        症状が続く場合や気になる方は、医師にご相談ください。
+      </p>
+
+    </div>
+
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>瘀血スクリーニングのご予約・ご相談</h3>
+        <p>足の冷え・しびれ・血管ケアが気になる方、まずはお気軽にご相談ください。<br>血液検査と問診で、血管の状態を丁寧に確認します。</p>
+        <a href="../index.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+
+  <script src="common.js"></script>
+</body>
+</html>
