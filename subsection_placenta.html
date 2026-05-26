@@ -198,6 +198,65 @@
   .source-note a { color: #3a5a9a; text-decoration: none; }
   .source-note a:hover { text-decoration: underline; }
 
+  /* 保険適用セクション */
+  .insurance-section {
+    margin-bottom: 40px;
+    border: 1.5px solid #b8d4c8;
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .insurance-header {
+    background: linear-gradient(135deg, #e8f4ee 0%, #d4eade 100%);
+    padding: 14px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid #b8d4c8;
+  }
+  .insurance-header-icon { font-size: 18px; }
+  .insurance-header-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--green);
+    letter-spacing: 0.05em;
+  }
+  .insurance-body {
+    background: white;
+    padding: 20px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .insurance-card {
+    background: #f7fbf8;
+    border: 1px solid #c8e0d2;
+    border-radius: 12px;
+    padding: 14px 18px;
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+  }
+  .insurance-drug {
+    flex-shrink: 0;
+    background: var(--green);
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 20px;
+    margin-top: 2px;
+    white-space: nowrap;
+  }
+  .insurance-detail { font-size: 13px; color: var(--text); line-height: 1.9; }
+  .insurance-detail strong { color: var(--green); }
+  .insurance-note {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    line-height: 1.9;
+    padding-top: 4px;
+    border-top: 1px dashed var(--border);
+  }
+
   @media (max-width: 540px) {
     .container { padding: 32px 20px; }
     .lead-box { padding: 22px 20px; }
@@ -226,10 +285,27 @@
   </div>
 
 
-  <div class="lead-box">
-    日本国内保険適用<br>
-    当院で使用するヒト胎盤エキス製剤ラエンネックは、日本国内において<strong>慢性肝疾患における肝機能の改善</strong>を適応症として承認されており、長年にわたり保険診療でも使用されてきた実績ある製剤です。肝細胞の修復・再生促進、抗炎症作用などが臨床的に確認されています。
-      また、更年期障害と診断された45〜59歳の女性にはメルスモンを保険適用として利用できます。
+  <!-- 保険適用 -->
+  <div class="insurance-section">
+    <div class="insurance-header">
+      <span class="insurance-header-icon">🏥</span>
+      <span class="insurance-header-title">日本国内 保険適用について</span>
+    </div>
+    <div class="insurance-body">
+      <div class="insurance-card">
+        <span class="insurance-drug">ラエンネック</span>
+        <div class="insurance-detail">
+          <strong>慢性肝疾患における肝機能の改善</strong>を適応症として承認。肝細胞の修復・再生促進、抗炎症作用が臨床的に確認された実績ある製剤です。
+        </div>
+      </div>
+      <div class="insurance-card">
+        <span class="insurance-drug">メルスモン</span>
+        <div class="insurance-detail">
+          <strong>更年期障害と診断された 45〜59 歳の女性</strong>に保険適用。ほてり・発汗・イライラなどの更年期症状に対して処方されます。
+        </div>
+      </div>
+      <p class="insurance-note">※保険診療として処方するには診断・適応の確認が必要です。美容目的・疲労回復目的での使用は自由診療となります。詳しくはお気軽にご相談ください。</p>
+    </div>
   </div>
 
   <!-- タイプA -->
