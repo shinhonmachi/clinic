@@ -1,7 +1,7 @@
 /* ===== 共通リセット・変数 ===== */
 * { margin: 0; padding: 0; box-sizing: border-box; }
 :root {
-  --sakura: #f7c5c5; --sakura-deep: #e8918e; --sakura-light: #fdf0f0;
+  --sakura: #f7c5c5; --sakura-deep: #b84d4a; --sakura-light: #fdf0f0;
   --green: #7aab8a; --green-light: #eef5f0; --cream: #fdfaf6;
   --text: #3a3530; --text-muted: #8a807a; --white: #ffffff; --border: #ecdfd9;
 }
