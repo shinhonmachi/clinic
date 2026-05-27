@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>免疫学者が自らの命で証明したコラーゲン仮説｜新本町クリニック コラム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="免疫学の専門医・榎木義博士が自らの喉頭がん治療に用いたコラーゲン仮説。高分子コラーゲンが持つ免疫賦活メカニズムと、統合医療における活用について院長が解説します。" />
+  <style>
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: #c0514d; text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header { margin-bottom: 36px; }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: #c0514d;
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 26px;
+      font-weight: 600;
+      line-height: 1.55;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* アイキャッチ */
+    .article-eyecatch-placeholder {
+      width: 100%;
+      height: 260px;
+      background: linear-gradient(135deg, #fdf0f0 0%, #fdf6f6 50%, #f0f7f2 100%);
+      border-radius: 12px;
+      margin-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.07);
+      border: 1px solid var(--border);
+    }
+    .article-eyecatch-placeholder .ei-icon { font-size: 60px; }
+    .article-eyecatch-placeholder .ei-label {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 15px;
+      color: #c0514d;
+      letter-spacing: 0.08em;
+    }
+
+    /* 本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p { margin-bottom: 1.6em; }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid #c0514d;
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 院長コメントボックス */
+    .intro-box {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 0 0 36px;
+      font-size: 14px;
+      line-height: 2;
+    }
+    .intro-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #c0514d;
+      margin-bottom: 10px;
+    }
+
+    /* ハイライトボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid #c0514d;
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 症例カード */
+    .case-card {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      margin: 32px 0;
+    }
+    .case-card-header {
+      background: #c0514d;
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .case-number {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 13px;
+      font-weight: 600;
+      background: rgba(255,255,255,0.22);
+      border-radius: 20px;
+      padding: 3px 14px;
+      white-space: nowrap;
+    }
+    .case-title {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 1.5;
+    }
+    .case-body {
+      padding: 22px 24px;
+      background: #fff;
+    }
+    .case-row { margin-bottom: 16px; }
+    .case-row:last-child { margin-bottom: 0; }
+    .case-row-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #c0514d;
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .case-row-label::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: var(--border);
+    }
+    .case-row-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 考察ボックス */
+    .consideration-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin-top: 18px;
+    }
+    .consideration-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 6px;
+    }
+    .consideration-box p {
+      margin: 0;
+      font-size: 13px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* メカニズム解説 */
+    .mechanism-box {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin: 28px 0;
+    }
+    .mechanism-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: #c0514d;
+      margin-bottom: 16px;
+    }
+    .mechanism-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .mstep {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--text);
+    }
+    .mstep-num {
+      width: 24px; height: 24px;
+      background: #c0514d;
+      color: #fff;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px;
+      font-weight: 700;
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: #c0514d;
+      font-weight: 700;
+    }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px; height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-name {
+      font-size: 12px;
+      color: #c0514d;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 注意書き */
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* 記事末フッター */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+      line-height: 1.9;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: #c0514d;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: #c0514d;
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .article-title { font-size: 20px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .case-card-header { flex-direction: column; align-items: flex-start; gap: 6px; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="header-placeholder"></div>
+
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <div class="column-wrap">
+
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="../index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <a href="index.html">コラム</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>免疫学者が証明したコラーゲン仮説</span>
+    </nav>
+
+    <header class="article-header">
+      <span class="article-category">栄養・統合医療</span>
+      <h2 class="article-title">
+        免疫学者が自らの命で証明したコラーゲン仮説<br>
+        ―― 体の「作る力」を呼び覚ますアプローチとは
+      </h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年 5月</span>
+      </div>
+    </header>
+
+    <div class="article-eyecatch-placeholder">
+      <div class="ei-icon">🧬</div>
+      <div class="ei-label">コラーゲンと免疫のはなし</div>
+    </div>
+
+    <div class="article-body">
+
+      <div style="margin-bottom: 40px;">
+        <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 24px rgba(58,53,48,0.08);">
+          <iframe
+            src="https://www.youtube.com/embed/sphFX5LfFq8"
+            title="コラーゲン仮説 解説動画"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+          ></iframe>
+        </div>
+      </div>
+
+      <h3 class="section-heading">はじめに ―― ある免疫学者の決断</h3>
+
+      <div class="intro-box">
+        <div class="intro-box-label">🩺 院長より</div>
+        毎日「病気に打ち勝つ方法」を研究している医師が、ある日突然、自分自身が重篤な患者になってしまったとしたら——。
+        これは冷たいデータの話ではなく、絶望的な状況に立たされた一人の免疫学者が、自らの研究を信じ抜いて道を切り拓いた物語です。
+        統合医療に関心を持つ者として、この仮説はとても興味深く、ご紹介したいと思いました。
+      </div>
+
+      <p>
+        この物語の主人公は、大阪医科大学出身のアレルギー・免疫学の専門家、榎木義博士です。
+        1970年代から長年にわたり、マウスを使ったコラーゲンの抗腫瘍効果——がんに対する効果——を地道に研究し続けていました。
+      </p>
+      <p>
+        その運命が急転したのは1988年のこと。博士はなんと重度の喉頭がんと診断され、声を失うほどの状況に陥ります。
+        1か月間の放射線治療を受けたのち、博士は驚くべき決断をしました。抗がん剤治療を断り、長年自身がマウスで積み重ねてきた実験結果を信じて、
+        豚の皮から作られたゼラチン粉末を毎日10g飲み続けることにしたのです。
+      </p>
+
+      <div class="highlight-box">
+        結果、約4か月後にはほぼ回復。さらに15年が経過しても再発することなく、健やかな状態を維持し続けました。
+        この体験こそが、のちに「コラーゲン仮説」と呼ばれる科学的アプローチの原点となりました。
+      </div>
+
+      <h3 class="section-heading">コラーゲン仮説とは ―― 体本来の力を引き出す考え方</h3>
+
+      <p>
+        お店でよく見かける「吸収されやすい低分子コラーゲン（ペプチド加工）」は、実は体の中で完全にアミノ酸にバラバラに分解されてしまいます。
+        榎木博士のアプローチはそれとは異なり、あえて高分子コラーゲンを使います。
+      </p>
+
+      <div class="mechanism-box">
+        <div class="mechanism-box-label">🔬 高分子コラーゲンが体内で働くしくみ</div>
+        <div class="mechanism-steps">
+          <div class="mstep">
+            <div class="mstep-num">1</div>
+            <div>高分子コラーゲンを口から摂取すると、その一部が消化管をすり抜け、アミノ酸に分解されることなく大きな分子のまま体内に取り込まれます。</div>
+          </div>
+          <div class="mstep">
+            <div class="mstep-num">2</div>
+            <div>分解されなかった高分子コラーゲンには、特定のアミノ酸配列（独自の分子チェーン）がしっかり残っています。</div>
+          </div>
+          <div class="mstep">
+            <div class="mstep-num">3</div>
+            <div>この分子チェーンが体に特別な刺激を与え、「自分自身のコラーゲンを作りなさい」というシグナルを体に送ります。</div>
+          </div>
+          <div class="mstep">
+            <div class="mstep-num">4</div>
+            <div>外から成分を補うのではなく、体本来の「作り出す力」を呼び覚ます——これがコラーゲン仮説の最大のポイントです。</div>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        一般的な栄養補給の発想を超えた、体の修復力・再生力に直接働きかけるアプローチと言えます。
+        ビタミンCはコラーゲン合成を助ける補助役として機能することが知られており、高分子コラーゲンとの組み合わせは生化学的にも理にかなっています。
+      </p>
+
+      <h3 class="section-heading">患者さんたちの体験報告</h3>
+
+      <p>
+        このアプローチを実践した方々から、いくつかの体験報告が寄せられています。
+        いずれも個人の経験であり、同様の効果を保証するものではありません。ただ、それぞれの物語は「諦めない姿勢」と「統合的なケア」の可能性を伝えています。
+      </p>
+
+      <div class="case-card">
+        <div class="case-card-header">
+          <span class="case-number">症例 1</span>
+          <span class="case-title">70代 男性｜前立腺がん</span>
+        </div>
+        <div class="case-body">
+          <div class="case-row">
+            <div class="case-row-label">経緯</div>
+            <div class="case-row-text">腫瘍マーカーの上昇と組織検査でがん細胞が確認された後、毎日コラーゲンの摂取を継続されました。</div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">経過</div>
+            <div class="case-row-text">4か月後には腫瘍マーカーが低下し、再検査ではがん細胞が確認されなかったと報告されています。</div>
+          </div>
+          <div class="consideration-box">
+            <div class="consideration-box-label">💡 院長コメント</div>
+            <p>「治りたい」という強い気持ちと、継続する力がもたらした記録です。腫瘍マーカーの変化は複合的な要因によるものと考えられますが、コラーゲンが何らかの形で関与した可能性として興味深い事例です。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-card-header">
+          <span class="case-number">症例 2</span>
+          <span class="case-title">70代 女性｜悪性リンパ腫・余命宣告後</span>
+        </div>
+        <div class="case-body">
+          <div class="case-row">
+            <div class="case-row-label">経緯</div>
+            <div class="case-row-text">手術後に「余命半年」という宣告を受けられた方。医療機関での治療と並行して、コラーゲンを多めに摂取するようにされました。</div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">経過</div>
+            <div class="case-row-text">1年後にはがんの消退が報告されています。治療と並行したことが大きな鍵とされています。</div>
+          </div>
+          <div class="consideration-box">
+            <div class="consideration-box-label">💡 院長コメント</div>
+            <p>「治療との並行」という点が重要です。コラーゲンを標準治療の代替としてではなく、補完的なサポートとして位置づけたことが、統合医療として理にかなったアプローチでした。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-card-header">
+          <span class="case-number">症例 3</span>
+          <span class="case-title">70代 男性｜肺がん・腫瘍がゴルフボール大</span>
+        </div>
+        <div class="case-body">
+          <div class="case-row">
+            <div class="case-row-label">経緯</div>
+            <div class="case-row-text">手術困難と診断され、胸にゴルフボールほどの大きさの腫瘍があった方。抗がん剤治療とコラーゲン摂取を併用されました。</div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">経過</div>
+            <div class="case-row-text">4か月後には腫瘍がお米の粒ほどの大きさにまで縮小したと報告されています。</div>
+          </div>
+          <div class="consideration-box">
+            <div class="consideration-box-label">💡 院長コメント</div>
+            <p>現代医療の力と、体をサポートする補完的なケアが融合した事例です。抗がん剤の効果が中心であることは間違いありませんが、体の内側からサポートする意義を改めて感じます。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-card">
+        <div class="case-card-header">
+          <span class="case-number">症例 4</span>
+          <span class="case-title">50代 男性｜転移性肺がん・余命3か月から退院へ</span>
+        </div>
+        <div class="case-body">
+          <div class="case-row">
+            <div class="case-row-label">経緯</div>
+            <div class="case-row-text">肝臓・脳への転移が確認され「余命3か月」と宣告された方。治療とコラーゲン摂取の併用を粘り強く続けられました。</div>
+          </div>
+          <div class="case-row">
+            <div class="case-row-label">経過</div>
+            <div class="case-row-text">1年後に退院を果たされたと報告されています。</div>
+          </div>
+          <div class="consideration-box">
+            <div class="consideration-box-label">💡 院長コメント</div>
+            <p>転移があり余命宣告を受けた状況からの回復は、医療的にも驚くべき経過です。補完的なケアが体の回復力を引き出す一助となった可能性を考えさせられます。</p>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="section-heading">統合医療としての現実的な位置づけ</h3>
+
+      <p>
+        ここで冷静に整理しておきたいことがあります。コラーゲン仮説の科学的エビデンスは現時点では、主にマウス実験や個別の症例報告のレベルにとどまっています。
+        大規模な臨床試験によって確立された「標準治療」とは異なります。
+      </p>
+      <p>
+        ただ同時に、ビタミンCとコラーゲンが体内で果たす役割は生化学的に見て十分に理にかなっており、体をサポートする補完的なケアとしての可能性は否定できません。
+        多くの患者さんがこれを「標準治療の代わり」としてではなく、「標準治療の補完」として活用しています。
+      </p>
+
+      <div class="highlight-box">
+        もしこのアプローチを取り入れるなら、大切なことが一つあります。<br>
+        「標準治療の補完として使用し、過剰な期待を持たず、常に医療チームと相談すること」——これが統合医療における基本の姿勢です。
+      </div>
+
+      <h3 class="section-heading">まとめ</h3>
+
+      <p>当院でも、標準治療と並行したケアに関心をお持ちの患者さんから、コラーゲンやビタミンCについてのご質問をいただくことがあります。以下のポイントを念頭に置いて、ご一緒に考えていきたいと思っています。</p>
+
+      <ul class="point-list">
+        <li>高分子コラーゲンは、低分子（ペプチド型）とは体内での働き方が異なる</li>
+        <li>体外から補充するのではなく、体本来の合成力を刺激するという考え方</li>
+        <li>ビタミンCはコラーゲン合成の補助役として、組み合わせる意義がある</li>
+        <li>あくまで標準治療の「補完」として位置づけ、主治医への相談が必須</li>
+        <li>個人差があり、全員に同様の効果が保証されるものではない</li>
+      </ul>
+
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            一人の免疫学者が自らの命をかけて向き合った仮説が、時を超えて多くの方の希望を支えているという事実は、医師として深く心に響くものがあります。
+            現代医療の力と、体が本来持つ回復力——この二つを上手に組み合わせることが、これからの医療の大切な方向性のひとつだと感じています。
+            新しいケアを始める前には、ぜひ一度ご相談ください。
+          </p>
+        </div>
+      </div>
+
+      <p class="disclaimer">
+        ※本コラムは情報提供を目的としたものであり、特定の製品・治療法の効果を保証するものではありません。
+        本文中の症例はあくまで個人の体験報告であり、同様の結果を約束するものではありません。
+        がんをはじめとする疾患の治療については、必ず専門の医療機関・主治医の指示に従ってください。
+        何か新しいケアを始める前には、必ず主治医にご相談ください。
+      </p>
+
+    </div>
+
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>栄養・統合医療のお悩みはご相談ください</h3>
+        <p>
+          標準治療と並行した補完的なケアについて、一人ひとりの状況に合わせてご一緒に考えます。<br>
+          どうぞお気軽にご相談ください。
+        </p>
+        <a href="../index.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+
+  <script src="common.js"></script>
+</body>
+</html>
