@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>オゾン療法とは｜新本町クリニック コラム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header {
+      margin-bottom: 36px;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* 動画埋め込み */
+    .article-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+    }
+    .article-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p {
+      margin-bottom: 1.6em;
+    }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* 引用・コラムボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .highlight-box cite {
+      display: block;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-body {}
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* ステップカード群 */
+    .step-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .step-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .step-card-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sakura-deep);
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+    .step-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .step-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ページフッター（記事末） */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .disclaimer {
+      font-size: 12px;
+      color: var(--text-muted);
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>オゾン療法とは</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">治療・回復力</span>
+      <h2 class="article-title">オゾン療法とは<br>―― 体に眠る回復力を呼び覚ます、100年の歴史を持つ治療法</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年6月</span>
+      </div>
+    </header>
+
+    <!-- 動画 -->
+    <div class="article-video">
+      <iframe
+        src="https://www.youtube.com/embed/5n8w_8RiTKQ"
+        title="オゾン療法とは"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">最近、疲れが抜けないと感じていませんか？</h3>
+      <p>
+        最近どうも疲れが抜けない、夕方になると目がかすむ――そんなことはありませんか？
+        今日は皆さんの体に元々眠っている回復力を呼び覚ます、ある画期的なアプローチについて分かりやすく解説していきます。
+      </p>
+
+      <!-- 医師の体験談 -->
+      <h3 class="section-heading">担当医師のリアルな体験談</h3>
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👨‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">担当医師より</div>
+          <p class="doctor-comment-text">
+            「実は私自身も年を取って、自分の書いたカルテの字すら読めなくなっていたんです。
+            でもある治療を受けたら、今では眼鏡なしで小さな字もすらすら読めるようになりました。」
+          </p>
+        </div>
+      </div>
+      <p>
+        お医者さん自身が体を張って効果を実感されているということは、非常に説得力がありますよね。
+        いったいどんな治療なのか、気になってきませんか？
+      </p>
+
+      <!-- オゾンの歴史 -->
+      <h3 class="section-heading">オゾン療法とは？ 実は100年以上の歴史がある</h3>
+      <p>
+        オゾン療法と聞くと最近の美容トレンドのように思うかもしれませんが、実は全然違います。
+        なんとオゾンが発見されたのは1840年のこと。
+        1900年代にはドイツで実際の治療に使われており、驚くことに日本でも大正時代にはすでに大学の医学部で研究が始まっていました。
+      </p>
+      <div class="trivia-box">
+        <div class="trivia-box-label">📅 オゾン療法の歴史</div>
+        <p>
+          一時的なブームではなく、100年以上のどっしりとした信頼の歴史があります。
+          ドイツを中心にヨーロッパで普及し、現在では世界中のクリニックで実践されています。
+        </p>
+      </div>
+
+      <!-- 自血療法の説明 -->
+      <h3 class="section-heading">最もポピュラーな方法「自血療法」とは？</h3>
+      <p>
+        オゾン療法の中で最もポピュラーなのが「自血療法」というアプローチです。
+        字の通り、患者さん自身の血液を少しだけ取り出し、そこに医療用のクリーンなオゾンガスを混ぜて、また体に戻します。
+        自分の血液とオゾンだけを使う、非常に理にかなった自然な方法です。
+      </p>
+
+      <div class="step-cards">
+        <div class="step-card">
+          <div class="step-card-num">STEP 01</div>
+          <div class="step-card-title">少量の血液を採取</div>
+          <div class="step-card-desc">腕から少量の血液をすっと取り出します。</div>
+        </div>
+        <div class="step-card">
+          <div class="step-card-num">STEP 02</div>
+          <div class="step-card-title">オゾンガスを混合</div>
+          <div class="step-card-desc">医療用オゾンをじわっと混ぜ合わせて活性化させます。</div>
+        </div>
+        <div class="step-card">
+          <div class="step-card-num">STEP 03</div>
+          <div class="step-card-title">体に点滴で戻す</div>
+          <div class="step-card-desc">オゾンをたっぷり含んで元気になった血液を点滴で体に戻します。</div>
+        </div>
+      </div>
+
+      <p>
+        メスで体を切るような痛みは一切ありません。非常にシンプルな手順で安心して受けられる治療法です。
+      </p>
+
+      <!-- メカニズム -->
+      <h3 class="section-heading">なぜ視力が回復したり、若返ったりするの？</h3>
+      <p>
+        「血液にオゾンを少し混ぜて戻しただけで、なぜそんな効果があるの？」と疑問に思う方も多いでしょう。
+        実はここに、とても面白い生物学的なからくりがあります。
+      </p>
+      <div class="highlight-box">
+        最大のポイントは、オゾンが体の中で「着火剤」のような役割をしてくれることです。
+        オゾンで活性化された血液が体に入ると、毛細血管の血流が一気に良くなり、全身の細胞に酸素と栄養が行き渡ります。
+        長年疲弊した状態だった細胞たちが、はっと目を覚ますイメージです。
+      </div>
+      <p>
+        担当医師の視力が回復したのもまさにこのメカニズムによるものです。
+        目の奥の細かい毛細血管まで酸素と栄養がしっかり届いたことが、視力回復につながりました。
+      </p>
+
+      <!-- 免疫への効果 -->
+      <h3 class="section-heading">免疫システムへのアプローチ</h3>
+      <p>
+        さらに注目すべきは、免疫システムへの働きかけです。
+        オゾンの適度な刺激が、疲れ気味だったT細胞やマクロファージといった免疫細胞たちを活性化してくれます。
+        結果的に、私たちの体が本来持っているバリア機能全体が底上げされるわけです。
+      </p>
+
+      <!-- 適用症状 -->
+      <h3 class="section-heading">どんな症状に活用されているの？</h3>
+      <p>
+        オゾン療法が適用される症状は非常に幅広いです。
+      </p>
+      <ul class="point-list">
+        <li><strong>目の霞み・視力低下</strong>：眼底の毛細血管への血流改善が期待できます。</li>
+        <li><strong>ブレインフォグ</strong>：頭にモヤがかかったような感覚の改善に。</li>
+        <li><strong>慢性的な疲労感</strong>：細胞レベルのエネルギー産生を底上げします。</li>
+        <li><strong>免疫系のトラブル</strong>：風邪をひきやすい方、アレルギー体質の方にも。</li>
+        <li><strong>糖尿病・がんの補助的なケア</strong>：主治医と相談のうえ、補助療法として活用されるケースもあります。</li>
+      </ul>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔬 科学的データも裏付け</div>
+        <p>
+          マウスを使った研究では、オゾン療法の単独投与で腫瘍の増殖を抑えたり、がん細胞を死滅へと向かわせる効果が確認されています。
+          正常な細胞をしっかり守りながら免疫の力で戦う、心強いデータです。
+        </p>
+      </div>
+
+      <!-- 安全性 -->
+      <h3 class="section-heading">副作用は？ 安全性について</h3>
+      <p>
+        体に入れるものですから、安全性は絶対に妥協できません。
+        一般的な強いお薬は病気を強力に叩く代わりに、体へのダメージや重い副作用がついてくることがあります。
+        しかしオゾン療法はアプローチが全く逆です。
+      </p>
+      <div class="highlight-box">
+        患者さんのその日の状態に合わせて、極めて薄い濃度のオゾンを完全にオーダーメイドで調整します。
+        無理やり攻撃するのではなく、自分の地力を安全に引き出す――これが最大の強みです。
+      </div>
+      <ul class="point-list">
+        <li><strong>副作用が非常に少ない</strong>：お子さんからお年寄りまで無理なく受けられます。</li>
+        <li><strong>他の薬との併用可</strong>：抗がん剤など現在服用中のお薬と一緒に使っても問題ありません。</li>
+        <li><strong>専門家による厳格な管理</strong>：使用量や濃度は専門の医師が付ききりでコントロールします。</li>
+      </ul>
+
+      <!-- 実績 -->
+      <h3 class="section-heading">圧倒的な実績</h3>
+      <p>
+        論より証拠ということで、このクリニックの実績をお伝えします。
+        なんと過去30年間で1万人以上の患者さんを治療してきて、改善率は驚異の98%。
+        しかも重大な医療事故は0件です。
+      </p>
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            1万人で事故ゼロというのは、並大抵の数字ではありません。
+            オゾン療法は正しく行えば非常に安全性の高い治療法です。
+            気になることがあれば、ぜひカウンセリングにいらしてください。
+          </p>
+        </div>
+      </div>
+
+      <!-- 受診方法 -->
+      <h3 class="section-heading">まず何をすればいい？</h3>
+      <p>
+        「一度試してみたい」と思った方、具体的な最初のステップをお伝えします。
+      </p>
+      <p>
+        オゾン療法は保険適用外（自由診療）となるため、全額自己負担になります。
+        ただ、いきなり治療スタートではなく、まずはクリニックに足を運んで医師のカウンセリングを受けることが最初のステップです。
+        「私のこの症状でも行けますか？」と気軽に相談するだけで全然OKです。
+      </p>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">あきらめないでください</h3>
+      <p>
+        「もう年だから」と長引く不調を諦めていませんか？
+        皆さんの体の中には、回復に向けて立ち上がる力がまだまだたっぷり眠っています。
+        オゾン療法はそのスイッチをポンと押してくれる、頼もしい味方です。
+        あなたの細胞は活力に満ちた明日を待っているはずです。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        体質や持病・お薬との相互作用などが気になる方は、受診前に医師または薬剤師にご相談ください。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>オゾン療法のご相談は当院へ</h3>
+        <p>カウンセリングは予約制です。まずはお気軽にお問い合わせください。</p>
+        <a href="../index.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
