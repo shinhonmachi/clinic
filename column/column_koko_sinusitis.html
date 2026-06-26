@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>咳・鼻づまり・不眠の意外な共通原因｜新本町クリニック コラム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    :root {
+      --sakura: #e8b4b8;
+      --sakura-light: #fdf3f4;
+      --sakura-deep: #b5686e;
+      --green: #6a9e80;
+      --green-light: #f0f7f3;
+      --cream: #faf8f5;
+      --text: #3a3530;
+      --text-muted: #857e78;
+      --border: #e8e3de;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .page-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--sakura-deep);
+      text-transform: uppercase;
+    }
+    .page-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 26px;
+      font-weight: 600;
+      margin: 8px 0 6px;
+    }
+    .page-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--sakura-deep); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header { margin-bottom: 36px; }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* YouTube埋め込み */
+    .article-eyecatch-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+    }
+    .article-eyecatch-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p { margin-bottom: 1.6em; }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p { margin: 0; font-size: 14px; line-height: 1.9; }
+
+    /* 引用ボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* ステップカード */
+    .step-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 24px 0 32px;
+    }
+    .step-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .step-number {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--sakura-deep);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .step-body {}
+    .step-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+    .step-desc { font-size: 13px; line-height: 1.8; color: var(--text-muted); }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* 3つの働きカード */
+    .effect-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .effect-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .effect-card-icon { font-size: 30px; margin-bottom: 10px; }
+    .effect-card-title { font-size: 13px; font-weight: 700; color: var(--sakura-deep); margin-bottom: 6px; }
+    .effect-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 記事末フッター */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .effect-cards { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>咳・鼻づまり・不眠の意外な共通原因</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">鼻・睡眠・自律神経</span>
+      <h2 class="article-title">その咳・鼻づまり・不眠、実は全部つながっていた<br>―― 「後鼻漏」という隠れた引き金</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年6月</span>
+      </div>
+    </header>
+
+    <!-- アイキャッチ動画（YouTube埋め込み） -->
+    <div class="article-eyecatch-video">
+      <iframe
+        src="https://www.youtube.com/embed/dxL_sWejFXw"
+        title="咳・鼻づまり・不眠の意外な共通原因"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">一見バラバラな症状が、実は全部つながっている?</h3>
+      <p>
+        「咳がなかなか止まらない」「鼻がいつもすっきりしない」「夜中に何度も目が覚めてしまう」——
+        こうした悩みを別々の問題として捉えていませんか？
+        咳が出れば耳鼻科、眠れなければ心療内科と、それぞれの科に行くのが普通のように思えますよね。
+      </p>
+      <p>
+        ところが実は、この3つの症状の裏にはたった<strong>ひとつの隠れた引き金</strong>が潜んでいることが非常に多いのです。
+        その正体がわかれば、これまでとは全く違うアプローチで根本から解決できるかもしれません。
+      </p>
+
+      <!-- 後鼻漏とは -->
+      <h3 class="section-heading">「後鼻漏（こうびろう）」とは何か</h3>
+      <p>
+        その隠れた引き金、それが<strong>後鼻漏（こうびろう）</strong>という症状です。
+        聞き慣れない言葉かもしれませんが、難しく考える必要はまったくありません。
+      </p>
+
+      <div class="highlight-box">
+        鼻の奥で「水漏れしている蛇口」をイメージしてみてください。
+        過剰に作られた鼻水が鼻の前ではなく、<strong>喉の奥へ絶えまなく流れ落ちている状態</strong>——
+        それが後鼻漏です。
+      </div>
+
+      <p>
+        花粉症・風邪・慢性副鼻腔炎などをきっかけに鼻の粘膜が炎症を起こすと、鼻水の分泌量が増加します。
+        そのうちの一部が喉の後ろ側へと垂れ込んでしまうのが後鼻漏です。
+        本人は気づいていないことも多く、「ただの鼻水」と見過ごされがちな、まさに"隠れた"症状です。
+      </p>
+
+      <!-- 悪循環の連鎖 -->
+      <h3 class="section-heading">鼻・喉・睡眠を巻き込む「最悪の連鎖」</h3>
+      <p>
+        後鼻漏がただの不快感で終わらないのは、<strong>連鎖的な悪循環</strong>を引き起こすからです。
+        そのメカニズムをステップで見ていきましょう。
+      </p>
+
+      <div class="step-cards">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-body">
+            <div class="step-title">鼻が詰まり、正常な呼吸ができなくなる</div>
+            <div class="step-desc">炎症を起こした鼻粘膜が腫れ、鼻腔が塞がれます。口呼吸が増え、のどや気道が乾燥しやすくなります。</div>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-body">
+            <div class="step-title">行き場を失った鼻水が喉の奥へ落ちる</div>
+            <div class="step-desc">鼻腔内の鼻水は前ではなく後方（喉側）へと流れ込み、常に喉を刺激し続けます。</div>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-body">
+            <div class="step-title">体が「異物が入った」と勘違いして激しい咳が出る</div>
+            <div class="step-desc">特に横になる夜間は重力で鼻水が喉へ直接垂れてきます。体がこれを気道への異物と判断し、咳反射を引き起こします。</div>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">4</div>
+          <div class="step-body">
+            <div class="step-title">咳が睡眠を妨げ、深刻な睡眠障害へ</div>
+            <div class="step-desc">夜中に繰り返す咳で目が覚め、熟睡できない状態が続きます。慢性的な疲労・免疫低下・自律神経の乱れへとつながっていきます。</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">💡 なぜ咳止め薬が効かないのか？</div>
+        <p>
+          市販の咳止め薬は咳の反射そのものを抑えるだけで、後鼻漏が原因の場合は<strong>根本の鼻水を止めなければ意味がありません</strong>。
+          「咳止めを飲んでも咳が続く」という方には、後鼻漏が原因である可能性が高く、鼻炎や副鼻腔炎の治療をすることで劇的に改善するケースが多くあります。
+        </p>
+      </div>
+
+      <!-- 顔の壺という秘密のパネル -->
+      <h3 class="section-heading">顔に隠された「秘密のアクセスパネル」</h3>
+      <p>
+        ここで疑問が生じます。「鼻と喉の問題なら、普通に耳鼻科で治療すればいいのでは？」というものです。
+        もちろんそれも大切です。しかし当院が注目しているのは、顔には体の深部システムへ直接アクセスできる
+        <strong>驚くべき経路</strong>が存在するという点です。
+      </p>
+      <p>
+        美容目的の施術でご存知の方も多い「顔のツボ（経穴）」——眉間のシワ改善に使うポイントやリフトアップに使うポイントが
+        実は鼻の粘膜や脳、そして<strong>自律神経につながる重要な神経の通り道</strong>の真上に位置しているのです。
+      </p>
+      <p>
+        つまり、顔の表面へのアプローチが皮膚の見た目だけでなく、体の内側の神経システムそのものへの働きかけになり得る。
+        それが、私たちが「顔の壺へのプラセンタ注射」という治療に注目する理由です。
+      </p>
+
+      <!-- プラセンタの3つの働き -->
+      <h3 class="section-heading">プラセンタが持つ「3位一体の修復力」</h3>
+      <p>
+        プラセンタというと美容のイメージが先行しがちですが、実は細胞レベルでの根本的な治療において
+        きわめてパワフルな働きを発揮してくれます。特に重要な3つの作用をご紹介します。
+      </p>
+
+      <div class="effect-cards">
+        <div class="effect-card">
+          <div class="effect-card-icon">🔬</div>
+          <div class="effect-card-title">① 細胞の修復</div>
+          <div class="effect-card-desc">ダメージを受けてボロボロになった鼻の粘膜細胞を、新しく元気な状態へと再生させます。</div>
+        </div>
+        <div class="effect-card">
+          <div class="effect-card-icon">🌿</div>
+          <div class="effect-card-title">② 炎症の抑制</div>
+          <div class="effect-card-desc">長引く後鼻漏で腫れ上がった鼻や喉の炎症を鎮め、粘膜の正常な状態を取り戻します。</div>
+        </div>
+        <div class="effect-card">
+          <div class="effect-card-icon">⚖️</div>
+          <div class="effect-card-title">③ 自律神経の調整</div>
+          <div class="effect-card-desc">顔の壺を経由して直接アプローチし、過敏になりすぎた神経をすーっと落ち着かせ、質の高い睡眠へと導きます。</div>
+        </div>
+      </div>
+
+      <p>
+        細胞を修復し、炎症を抑え、さらに自律神経まで整える。先ほどの「最悪の連鎖」をすべてまとめて断ち切るような、
+        ホリスティックなアプローチが顔の壺へのプラセンタ注射の最大の特長です。
+      </p>
+
+      <!-- 対症療法vs根本治療 -->
+      <h3 class="section-heading">対症療法から根本治療へ</h3>
+      <p>
+        これまでの多くの方のケアを振り返ってみると、咳が出れば咳止め、鼻が詰まれば点鼻薬——
+        まるで「絆創膏を貼るだけ」の対症療法が繰り返されてきました。
+        もちろん症状を和らげることは大切ですが、薬が切れると元の辛い状態に戻ってしまうのが現実です。
+      </p>
+
+      <div class="highlight-box">
+        顔の壺へのプラセンタ注射は、自律神経の乱れや細胞の炎症といった<strong>まさに根本原因</strong>に直接働きかけます。
+        ただ症状をごまかすのではなく、体そのものが本来持っている力を引き出して根っこから整え直す。
+        そういったパワフルで画期的なアプローチです。
+      </div>
+
+      <!-- 患者の声 -->
+      <h3 class="section-heading">患者さんからの声</h3>
+      <p>
+        実際にこのアプローチを受けた患者さんたちから、多くの喜びの声が寄せられています。
+      </p>
+
+      <ul class="point-list">
+        <li>「長年悩んでいた咳がピタッと止まって、鼻がすっと通るようになりました」</li>
+        <li>「何ヶ月ぶりかに朝までぐっすり眠れました。こんなに違うものかと驚いています」</li>
+        <li>「咳止めを毎日飲んでいたのに、こんなシンプルな原因だったとは思いませんでした」</li>
+      </ul>
+
+      <p>
+        もちろん効果には個人差がありますが、こうした実感のこもった声を聞くと、
+        根本原因へのアプローチが人生の質をどれほど変え得るかが伝わってきます。
+      </p>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            「咳・鼻・眠れない」という一見バラバラの悩みが実はひとつの根っこでつながっているというのは、
+            多くの患者さんにとって目から鱗のお話です。
+            解剖学的なレベルでしっかり原因を把握し、根本から整えることで初めて本当の改善が実現します。
+            長引く不調でお悩みの方は、ぜひ一度ご相談ください。
+          </p>
+        </div>
+      </div>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">あなたの体のパズルを、根本から解こう</h3>
+      <p>
+        咳・鼻・睡眠という一見バラバラの悩みが実はつながっていて、しかも「顔の壺」という意外な場所から根本解決できる——
+        人体の仕組みは本当に奥深い巨大なパズルのようです。
+        美容目的だと思っていたツボやプラセンタが、これほど深い医療的アプローチに繋がるとは驚きですよね。
+      </p>
+      <p>
+        あなたはいつまでその辛い症状を薬でごまかし続けますか？
+        今こそ、慢性的な不調のケアを根本から見直してみませんか。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        体質や持病・お薬との相互作用などが気になる方は、受診前に医師にご相談ください。
+        効果には個人差があります。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>後鼻漏・慢性的な咳・睡眠障害のご相談は当院へ</h3>
+        <p>顔の壺へのプラセンタ注射による根本治療を行っています。<br>長引く不調でお悩みの方は、お気軽にご相談ください。</p>
+        <a href="index.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
