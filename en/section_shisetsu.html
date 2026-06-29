@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Facility | A Clean and Calm Clinic Environment | Shinhonmachi Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="../common.css">
+  <meta name="description" content="Facility photos for Shinhonmachi Clinic — view our clean and calm reception, waiting area, and consultation rooms. Sophia Bldg. 5F, Kitakanata, Kochi City.">
+  <link rel="canonical" href="https://shinhonmachi.jp/section_shisetsu.html">
+
+  <!-- OGP -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Facility | A Clean and Calm Clinic Environment | Shinhonmachi Clinic">
+  <meta property="og:description" content="Facility photos for Shinhonmachi Clinic — view our clean and calm reception, waiting area, and consultation rooms. Sophia Bldg. 5F, Kitakanata, Kochi City.">
+  <meta property="og:url" content="https://shinhonmachi.jp/section_shisetsu.html">
+  <meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+  <meta property="og:site_name" content="Shinhonmachi Clinic">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Facility | A Clean and Calm Clinic Environment | Shinhonmachi Clinic">
+  <meta name="twitter:description" content="Facility photos for Shinhonmachi Clinic — view our clean and calm reception, waiting area, and consultation rooms. Sophia Bldg. 5F, Kitakanata, Kochi City.">
+  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+    
+              
+        
+  /* Main Visual */
+  .hero-photo {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .hero-photo:hover { opacity: 0.95; }
+
+  .container { max-width: 800px; margin: 0 auto; padding: 48px 32px; }
+
+  /* Section Title */
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background: var(--sakura-deep);
+    border-radius: 2px;
+  }
+
+  /* Photo Grid */
+  .photo-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .photo-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--border);
+    cursor: pointer;
+  }
+  .photo-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .photo-grid-2 .photo-item img { height: 340px; }
+  .photo-item:hover img { transform: scale(1.04); }
+  .photo-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(58,53,48,0.7) 0%, transparent 100%);
+    color: white;
+    font-size: 12px;
+    padding: 28px 14px 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .photo-item:hover .photo-caption { opacity: 1; }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(30,25,22,0.92);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  }
+  .lightbox-caption { color: rgba(255,255,255,0.7); font-size: 13px; }
+  .lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .lightbox-close:hover { opacity: 1; }
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    padding: 12px;
+  }
+  .lightbox-nav:hover { opacity: 1; }
+  .lightbox-prev { left: 12px; }
+  .lightbox-next { right: 12px; }
+
+    
+  @media (max-width: 600px) {
+    .photo-grid-3 { grid-template-columns: 1fr 1fr; }
+    .hero-photo { height: 260px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <span class="page-label">Facility</span>
+  <div class="page-title">Facility</div>
+  <div class="page-sub">We welcome you in a clean and calm environment</div>
+</div>
+
+<!-- Exterior Main Visual -->
+<picture>
+  <source srcset="pics/gaikan.webp" type="image/webp">
+  <img src="../pics/gaikan.JPG" class="hero-photo" alt="Clinic exterior" onclick="openLightbox(0)" loading="eager" decoding="async" width="1440" height="1080">
+</picture>
+
+<div class="container">
+
+  <!-- Reception -->
+  <div class="section-title">Reception</div>
+  <div class="photo-grid-2">
+    <div class="photo-item" onclick="openLightbox(1)">
+      <picture>
+      <source srcset="pics/shisetsu_machiai.webp" type="image/webp">
+      <img src="../pics/shisetsu_machiai.webp" alt="Waiting area" loading="lazy" decoding="async" width="1200" height="1600">
+    </picture>
+      <div class="photo-caption">Waiting Area</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(2)">
+      <picture>
+      <source srcset="pics/shisetsu_uketsuke.webp" type="image/webp">
+      <img src="../pics/shisetsu_uketsuke.webp" alt="Reception desk" loading="lazy" decoding="async" width="1200" height="1600">
+    </picture>
+      <div class="photo-caption">Reception Counter</div>
+    </div>
+  </div>
+
+  <!-- Consultation Room -->
+  <div class="section-title">Consultation Room</div>
+  <div class="photo-grid-3">
+    <div class="photo-item" onclick="openLightbox(3)">
+      <picture>
+      <source srcset="pics/sinsatsu1.webp" type="image/webp">
+      <img src="../pics/sinsatsu1.JPG" alt="Examination table 1" loading="lazy" decoding="async" width="1000" height="1333">
+    </picture>
+      <div class="photo-caption">Examination Table</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(4)">
+      <picture>
+      <source srcset="pics/sinsatsu2.webp" type="image/webp">
+      <img src="../pics/sinsatsu2.JPG" alt="Examination table 2" loading="lazy" decoding="async" width="1000" height="1333">
+    </picture>
+      <div class="photo-caption">Examination Table</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(5)">
+      <picture>
+      <source srcset="pics/sinsatsu4.jpeg" type="image/webp">
+      <img src="../pics/sinsatsu4.jpeg" alt="Examination table 4" loading="lazy" decoding="async" width="1000" height="1333">
+    </picture>
+      <div class="photo-caption">Examination Table</div>
+    </div>
+  </div>
+
+  <!-- Medical Equipment -->
+  <div class="section-title">Medical Equipment</div>
+  <div class="photo-grid-2" style="grid-template-columns: 1fr 1fr;">
+    <div class="photo-item" onclick="openLightbox(6)">
+      <picture>
+      <source srcset="pics/shisetsu_kigu1.webp" type="image/webp">
+      <img src="../pics/shisetsu_kigu1.webp" alt="Ozone generator" loading="lazy" decoding="async" width="800" height="1067" style="height:200px;">
+    </picture>
+      <div class="photo-caption">Ozone Generator</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(7)">
+      <picture>
+      <source srcset="pics/shisetsu_kigu2.webp" type="image/webp">
+      <img src="../pics/shisetsu_kigu2.webp" alt="Super Lizer" loading="lazy" decoding="async" width="800" height="1067" style="height:200px;">
+    </picture>
+      <div class="photo-caption">Super Lizer</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightboxBtn()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">‹</button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">›</button>
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script>
+  const photos = [
+    { src: 'pics/gaikan.webp', caption: 'Clinic Exterior' },
+    { src: 'pics/shisetsu_uketsuke.webp', caption: 'Reception Counter' },
+    { src: 'pics/shisetsu_machiai.webp', caption: 'Waiting Area' },
+    { src: 'pics/sinsatsu1.webp', caption: 'Examination Table' },
+    { src: 'pics/sinsatsu2.webp', caption: 'Examination Table' },
+    { src: 'pics/sinsatsu4.jpeg', caption: 'Examination Table' },
+    { src: 'pics/shisetsu_kigu1.webp', caption: 'Ozone Generator' },
+        { src: 'pics/shisetsu_kigu2.webp', caption: 'Super Lizer' }
+  ];
+  let current = 0;
+
+  function openLightbox(index) {
+    current = index;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightboxBtn() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeLightbox(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightboxBtn();
+  }
+  function navLightbox(dir) {
+    current = (current + dir + photos.length) % photos.length;
+    updateLightbox();
+  }
+  function updateLightbox() {
+    document.getElementById('lightbox-img').src = photos[current].src;
+    document.getElementById('lightbox-caption').textContent = photos[current].caption;
+  }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') navLightbox(-1);
+    if (e.key === 'ArrowRight') navLightbox(1);
+    if (e.key === 'Escape') closeLightboxBtn();
+  });
+</script>
+
+<script src="../common.js"></script>
+<script>
+(function(){
+  fetch("header_en.html").then(function(r){return r.text();}).then(function(html){
+    var ph=document.getElementById("header-placeholder");
+    if(ph){ph.innerHTML=html;}
+  });
+})();
+</script>
+<script>
+(function(){
+  fetch("footer_en.html").then(function(r){return r.text();}).then(function(html){
+    var pf=document.getElementById("footer-placeholder");
+    if(pf){pf.innerHTML=html;}
+  });
+})();
+</script>
+</body>
+</html>

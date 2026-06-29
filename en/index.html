@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shinhonmachi Clinic | Internal Medicine · Psychosomatic Medicine · Kampo | Kochi City</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<meta name="description" content="Shinhonmachi Clinic in Kitakanata, Kochi City. Internal medicine, psychosomatic medicine, and Kampo (traditional Chinese medicine). We treat lifestyle diseases, mental health concerns, and constitution improvement. Open Mon–Sat (closed Thu & Sat afternoons). Call 088-856-7511.">
+<link rel="canonical" href="https://shinhonmachi.jp/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shinhonmachi Clinic | Kampo · Psychosomatic Medicine · Internal Medicine | Kochi City">
+<meta property="og:description" content="Shinhonmachi Clinic in Kitakanata, Kochi City. Internal medicine, psychosomatic medicine, and Kampo (traditional Chinese medicine). We treat lifestyle diseases, mental health concerns, and constitution improvement. Open Mon–Sat (closed Thu & Sat afternoons). Call 088-856-7511.">
+<meta property="og:url" content="https://shinhonmachi.jp/">
+<meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.webp">
+<meta property="og:site_name" content="Shinhonmachi Clinic">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shinhonmachi Clinic | Kampo · Psychosomatic Medicine · Internal Medicine | Kochi City">
+<meta name="twitter:description" content="Shinhonmachi Clinic in Kitakanata, Kochi City. Internal medicine, psychosomatic medicine, and Kampo (traditional Chinese medicine). We treat lifestyle diseases, mental health concerns, and constitution improvement. Open Mon–Sat (closed Thu & Sat afternoons). Call 088-856-7511.">
+<meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.webp">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Shinhonmachi Clinic",
+  "url": "https://shinhonmachi.jp",
+  "image": "https://shinhonmachi.jp/pics/gaikan.webp",
+  "description": "A Kampo, psychosomatic medicine, and internal medicine clinic in Kitakanata, Kochi City. We are committed to providing attentive, personalized care to each and every patient.",
+  "telephone": "088-856-7511",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "11-22 Kitakanata, Sophia Bldg. 5F",
+    "addressLocality": "Kochi City",
+    "addressRegion": "Kochi Prefecture",
+    "postalCode": "781-0073",
+    "addressCountry": "JP"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.5588, "longitude": 133.5514 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Friday"], "opens": "09:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Friday"], "opens": "14:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "12:00" }
+  ],
+  "medicalSpecialty": ["InternalMedicine","MentalHealth"],
+  "priceRange": "¥"
+}
+</script>
+<style>
+/* ===== Hero Slider ===== */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+  background: #2a1f1c;
+}
+.hero-slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+.hero-slide img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.hero-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(30,20,18,0.62) 0%,
+    rgba(30,20,18,0.28) 55%,
+    rgba(30,20,18,0.10) 100%
+  );
+}
+.hero-caption {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 400px;
+}
+.hero-tag {
+  display: inline-block;
+  background: rgba(247,197,197,0.22);
+  border: 1px solid rgba(247,197,197,0.5);
+  color: #f9d8d8;
+  font-size: 11px;
+  padding: 4px 16px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(4px);
+}
+.hero-caption h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  margin-bottom: 16px;
+}
+.hero-caption p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  line-height: 2;
+  margin-bottom: 28px;
+}
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary { background: var(--sakura-deep); color: white; border: none; padding: 12px 28px; border-radius: 30px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.2s; font-weight: 500; text-decoration: none; display: inline-block; }
+.btn-primary:hover { background: #d97a77; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(232,145,142,0.4); }
+.btn-outline { background: rgba(255,255,255,0.12); color: white; border: 1.5px solid rgba(255,255,255,0.55); padding: 12px 28px; border-radius: 30px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.2s; font-weight: 500; text-decoration: none; display: inline-block; backdrop-filter: blur(4px); }
+.btn-outline:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
+
+/* Slider Controls */
+.slider-prev, .slider-next {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255,255,255,0.18);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  color: white;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.slider-prev { left: 16px; }
+.slider-next { right: 16px; }
+.slider-prev:hover, .slider-next:hover { background: rgba(255,255,255,0.32); }
+
+/* Dots */
+.slider-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%; transform: translateX(-50%);
+  display: flex; gap: 8px;
+  z-index: 10;
+}
+.slider-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  border: none; cursor: pointer;
+  padding: 0;
+  transition: background 0.3s, transform 0.3s;
+}
+.slider-dot.active {
+  background: white;
+  transform: scale(1.3);
+}
+
+@media (max-width: 600px) {
+  .hero-slider { height: 280px; }
+  .hero-caption { left: 24px; right: 24px; max-width: none; }
+  .hero-caption h1 { font-size: 22px; }
+  .hero-caption p { display: none; }
+  .slider-prev, .slider-next { width: 34px; height: 34px; font-size: 14px; }
+}
+
+/* ===== Common Section Styles ===== */
+section { padding: 56px 32px; }
+.section-header { text-align: center; margin-bottom: 36px; }
+.section-label { display: inline-block; font-size: 11px; color: #c0514d; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
+.section-title { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 600; color: var(--text); }
+.section-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; line-height: 1.8; }
+
+/* ===== Departments ===== */
+.departments { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 660px; margin: 0 auto 28px; }
+.dept-card { background: white; border: 1px solid var(--border); border-radius: 20px; padding: 28px 20px 22px; text-align: center; transition: all 0.25s; text-decoration: none; display: block; }
+.dept-card:hover { border-color: var(--sakura); box-shadow: 0 6px 24px rgba(232,145,142,0.14); transform: translateY(-3px); }
+.dept-icon { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px; }
+.dept-name { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px; font-family: 'Noto Serif JP', serif; }
+.dept-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px; }
+.dept-symptoms { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
+.dept-symptom { font-size: 10px; background: var(--sakura-light); color: #c0514d; border-radius: 10px; padding: 2px 9px; }
+.dept-symptom.green { background: var(--green-light); color: var(--green); }
+.dept-cta { text-align: center; }
+.dept-cta a { font-size: 13px; color: #c0514d; text-decoration: none; border-bottom: 1px solid var(--sakura); padding-bottom: 1px; }
+.dept-cta a:hover { opacity: 0.7; }
+
+/* ===== First-Time Visitors ===== */
+.first-visit-section { background: linear-gradient(135deg, #fdf6f6 0%, #f0f7f2 100%); }
+.first-visit-inner { max-width: 640px; margin: 0 auto; }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.step { position: relative; text-align: center; padding: 20px 12px; }
+.step::after { content: '›'; position: absolute; right: -4px; top: 38px; font-size: 18px; color: var(--sakura); line-height: 1; }
+.step:last-child::after { display: none; }
+.step-num { width: 36px; height: 36px; background: var(--sakura-deep); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; margin: 0 auto 10px; }
+.step-icon { font-size: 22px; margin-bottom: 6px; }
+.step-title { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+.step-desc { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+.first-visit-note { margin-top: 24px; background: white; border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; display: flex; align-items: flex-start; gap: 12px; font-size: 13px; color: var(--text-muted); line-height: 1.85; }
+.first-visit-note .note-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+/* ===== Self-Pay Services ===== */
+.selfpay-section { background: white; }
+.selfpay-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; max-width: 660px; margin: 0 auto 24px; }
+.selfpay-card { border: 1px solid var(--border); border-radius: 16px; padding: 20px 14px 16px; text-align: center; transition: all 0.2s; background: var(--cream); }
+.selfpay-card:hover { border-color: var(--sakura); box-shadow: 0 4px 16px rgba(232,145,142,0.1); transform: translateY(-2px); }
+.selfpay-icon { font-size: 26px; margin-bottom: 10px; }
+.selfpay-name { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 5px; }
+.selfpay-desc { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+.selfpay-cta { text-align: center; }
+.selfpay-cta a { display: inline-block; font-size: 13px; color: #c0514d; text-decoration: none; border: 1px solid var(--sakura); padding: 8px 24px; border-radius: 20px; transition: all 0.2s; }
+.selfpay-cta a:hover { background: var(--sakura-light); }
+
+/* ===== News ===== */
+.news-section { background: var(--cream); }
+.news-list { max-width: 580px; margin: 0 auto 20px; }
+.news-item { display: flex; align-items: flex-start; gap: 14px; padding: 15px 0; border-bottom: 1px solid var(--border); }
+.news-item:last-child { border-bottom: none; }
+.news-date { font-size: 12px; color: var(--text-muted); min-width: 80px; padding-top: 2px; }
+.news-badge { font-size: 10px; padding: 2px 8px; border-radius: 10px; min-width: 54px; text-align: center; font-weight: 500; flex-shrink: 0; }
+.badge-info { background: #e8f4fd; color: #3b85c0; }
+.badge-new { background: var(--sakura-light); color: #c0514d; }
+.badge-holiday { background: var(--green-light); color: var(--green); }
+.news-text { font-size: 13px; color: var(--text); flex: 1; line-height: 1.7; }
+.news-more { text-align: center; }
+.news-more a { font-size: 13px; color: #c0514d; text-decoration: none; border-bottom: 1px solid var(--sakura); padding-bottom: 1px; }
+
+/* ===== Director's Message ===== */
+.doctor-section { background: white; }
+.doctor-inner { max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, #fdf6f6 0%, #f0f7f2 100%); border: 1px solid var(--border); border-radius: 24px; padding: 32px; display: flex; gap: 28px; align-items: flex-start; }
+.doctor-avatar { width: 88px; height: 88px; border-radius: 50%; background: var(--sakura-light); border: 3px solid var(--sakura); display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; }
+.doctor-role { font-size: 11px; color: #c0514d; letter-spacing: 0.1em; margin-bottom: 4px; }
+.doctor-name { font-family: 'Noto Serif JP', serif; font-size: 20px; font-weight: 600; margin-bottom: 14px; color: var(--text); }
+.doctor-msg { font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 16px; }
+.doctor-link a { font-size: 13px; color: #c0514d; text-decoration: none; border-bottom: 1px solid var(--sakura); padding-bottom: 1px; }
+
+/* ===== Office Hours ===== */
+.hours-section { background: var(--sakura-light); }
+.hours-card { background: white; border-radius: 20px; padding: 28px; max-width: 560px; margin: 0 auto; border: 1px solid var(--border); }
+.hours-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.hours-table th { text-align: center; padding: 8px 6px; font-size: 12px; color: var(--text); font-weight: 600; border-bottom: 1px solid var(--border); }
+.hours-table td { text-align: center; padding: 10px 6px; border-bottom: 1px dashed var(--border); }
+.hours-table tr:last-child td { border-bottom: none; }
+.hours-table td:first-child { text-align: left; font-weight: 500; padding-left: 0; color: var(--text); }
+.check { color: #c0514d; font-size: 16px; }
+.dash  { color: #a89890; }
+.note  { display: flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 12px; color: #5a504a; background: var(--green-light); padding: 10px 14px; border-radius: 10px; }
+
+/* ===== Access ===== */
+.access-section { background: white; }
+.access-inner { max-width: 560px; margin: 0 auto; display: grid; gap: 14px; }
+.access-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.access-card { background: var(--cream); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; display: flex; align-items: flex-start; gap: 14px; }
+.access-icon { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 17px; }
+.access-icon.pink  { background: var(--sakura-light); }
+.access-icon.green { background: var(--green-light); }
+.access-label { font-size: 11px; color: var(--text-muted); margin-bottom: 3px; }
+.access-value { font-size: 13px; color: var(--text); font-weight: 500; line-height: 1.6; }
+.access-value a { color: #c0514d; text-decoration: none; }
+.map-embed { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.map-embed iframe { display: block; width: 100%; height: 220px; border: none; }
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 26px; }
+  .hero-content { padding: 56px 24px 48px; }
+  section { padding: 44px 20px; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .step::after { display: none; }
+  .access-cards { grid-template-columns: 1fr; }
+  .doctor-inner { flex-direction: column; align-items: center; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<!-- ① Hero Slider -->
+<div class="hero-slider" id="heroSlider">
+  <div class="hero-slider-track" id="heroTrack">
+    <div class="hero-slide">
+      <img src="../pics/gaikan.webp" alt="Clinic exterior">
+      <div class="hero-slide-overlay"></div>
+    </div>
+    <div class="hero-slide">
+      <img src="../pics/shinsatsu_fukei.webp" alt="Consultation room">
+      <div class="hero-slide-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Caption (shared across all slides) -->
+  <div class="hero-caption">
+    <div class="hero-tag">Your Local Neighborhood Clinic</div>
+    <h1>Your health,<br>always our priority.</h1>
+    <p>We listen carefully to each and every patient,<br>striving to be a clinic where you feel safe and welcome.</p>
+    <div class="hero-btns">
+      <a href="tel:088-856-7511" class="btn-primary">📞 088-856-7511</a>
+      <a href="section_shinryo_annai.html" class="btn-outline">View Medical Services</a>
+    </div>
+  </div>
+
+  <!-- Prev/Next Buttons -->
+  <button class="slider-prev" id="sliderPrev" aria-label="Previous">&#8249;</button>
+  <button class="slider-next" id="sliderNext" aria-label="Next">&#8250;</button>
+
+  <!-- Dots -->
+  <div class="slider-dots" id="sliderDots"></div>
+</div>
+
+<!-- ① News (latest 3 items) -->
+<section class="news-section">
+  <div class="section-header">
+    <div class="section-label">News</div>
+    <div class="section-title">News &amp; Updates</div>
+  </div>
+  <div class="news-list" id="news-placeholder"></div>
+  <div class="news-more" id="news-more" style="display:none;">
+    <a href="#">View All News →</a>
+  </div>
+</section>
+
+<!-- ② Director's Message -->
+<section class="doctor-section">
+  <div class="section-header">
+    <div class="section-label">Doctor</div>
+    <div class="section-title">Message from the Director</div>
+  </div>
+  <div class="doctor-inner">
+    <div class="doctor-avatar">👩‍⚕️</div>
+    <div>
+      <div class="doctor-role">Director, M.D.</div>
+      <div class="doctor-name">Naoko Yoshimura</div>
+      <div class="doctor-msg">I want this clinic to be a place where anyone in the community can casually share their health concerns. Whether it's your body, your mind, or your lifestyle — let's think through it together.</div>
+      <div class="doctor-link"><a href="section_staff.html">Read Director's Profile &amp; Message →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ③ Departments -->
+<section>
+  <div class="section-header">
+    <div class="section-label">Departments</div>
+    <div class="section-title">Departments</div>
+    <div class="section-sub">From internal medicine and mental health to Kampo — we cover a wide range of conditions</div>
+  </div>
+  <div class="departments">
+    <a href="section_shinryo_annai.html" class="dept-card">
+      <div class="dept-icon" style="background:#eef5f0;">🌿</div>
+      <div class="dept-name">Kampo Medicine</div>
+      <div class="dept-desc">We prescribe Kampo herbal medicines to address your constitution at its root.</div>
+      <div class="dept-symptoms">
+        <span class="dept-symptom green">Menopause</span>
+        <span class="dept-symptom green">Cold limbs / Edema</span>
+        <span class="dept-symptom green">Digestive issues</span>
+        <span class="dept-symptom green">Constitution improvement</span>
+      </div>
+    </a>
+    
+    <a href="section_shinryo_annai.html" class="dept-card">
+      <div class="dept-icon" style="background:#edf3fb;">🧠</div>
+      <div class="dept-name">Psychosomatic Medicine</div>
+      <div class="dept-desc">We take time to address stress and mental health concerns with care.</div>
+      <div class="dept-symptoms">
+        <span class="dept-symptom">Insomnia</span>
+        <span class="dept-symptom">Depression / Anxiety</span>
+        <span class="dept-symptom">Autonomic disorders</span>
+        <span class="dept-symptom">Panic disorder</span>
+      </div>
+    </a>
+
+
+        <a href="section_shinryo_annai.html" class="dept-card">
+      <div class="dept-icon" style="background:#fdf0f0;">🩺</div>
+      <div class="dept-name">Internal Medicine</div>
+      <div class="dept-desc">We diagnose everyday ailments through to lifestyle diseases.</div>
+      <div class="dept-symptoms">
+        <span class="dept-symptom">Hypertension</span>
+        <span class="dept-symptom">Diabetes</span>
+        <span class="dept-symptom">Post-checkup consultation</span>
+      </div>
+    </a>
+  </div>
+  <div class="dept-cta">
+    <a href="section_shinryo_annai.html">View Detailed Medical Services →</a>
+  </div>
+</section>
+
+<!-- ④ Self-Pay Services -->
+<section class="selfpay-section">
+  <div class="section-header">
+    <div class="section-label">Self-pay Treatment</div>
+    <div class="section-title">Self-Pay Treatment Menu</div>
+    <div class="section-sub">In addition to covered treatments, we offer a variety of self-pay services</div>
+  </div>
+  <div class="selfpay-grid">
+    <div class="selfpay-card">
+      <div class="selfpay-icon">🌸</div>
+      <div class="selfpay-name">Placenta Injections</div>
+      <div class="selfpay-desc">Menopause relief · fatigue recovery · skin improvement</div>
+    </div>
+    <div class="selfpay-card">
+      <div class="selfpay-icon">🌀</div>
+      <div class="selfpay-name">Ozone Drip</div>
+      <div class="selfpay-desc">Immune boost · antioxidant · chronic fatigue</div>
+    </div>
+    <div class="selfpay-card">
+      <div class="selfpay-icon">✨</div>
+      <div class="selfpay-name">Glutathione &amp; Vitamin C Drip</div>
+      <div class="selfpay-desc">Skin brightening · blemish · dullness improvement</div>
+    </div>
+    <div class="selfpay-card">
+      <div class="selfpay-icon">🌿</div>
+      <div class="selfpay-name">Kampo &amp; Acupuncture</div>
+      <div class="selfpay-desc">Constitution improvement · cold limbs · autonomic nervous system</div>
+    </div>
+  </div>
+  <div class="selfpay-cta">
+    <a href="section_ryokin.html">View Details →</a>
+  </div>
+</section>
+
+  
+<!-- ⑤ First-Time Visitors -->
+<section class="first-visit-section">
+  <div class="section-header">
+    <div class="section-label">First Visit</div>
+    <div class="section-title">First-Time Visitors</div>
+    <div class="section-sub">First-time patients are always welcome. We will guide you through every step, from reception to payment.</div>
+  </div>
+  <div class="first-visit-inner">
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon">📞</div>
+        <div class="step-title">Call or Walk In</div>
+        <div class="step-desc">Walk-ins welcome. Calling ahead helps ensure a smoother visit.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon">📋</div>
+        <div class="step-title">Fill Out Intake Form</div>
+        <div class="step-desc">We will provide a form at reception. Please fill in your symptoms and current medications.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon">🩺</div>
+        <div class="step-title">Consultation</div>
+        <div class="step-desc">The doctor will conduct a thorough interview and examination. Feel free to share any concerns.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-icon">💊</div>
+        <div class="step-title">Payment &amp; Prescription</div>
+        <div class="step-desc">Most prescriptions (including Kampo) are dispensed on-site.</div>
+      </div>
+    </div>
+    <div class="first-visit-note">
+      <span class="note-icon">🎒</span>
+      <span>Please bring your <strong>My Number Card or eligibility confirmation document</strong>, any medical certificates, and your medication notebook. Having information about your current medications will help the consultation go smoothly.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ Office Hours -->
+<section class="hours-section">
+  <div class="section-header">
+    <div class="section-label">Hours</div>
+    <div class="section-title">Office Hours</div>
+  </div>
+  <div class="hours-card">
+    <table class="hours-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun/Hol</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Morning<br><small style="color:var(--text-muted);font-weight:400;">9:00–12:00</small></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="dash">Closed</span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="dash">Closed</span></td>
+        </tr>
+        <tr>
+          <td>Afternoon<br><small style="color:var(--text-muted);font-weight:400;">14:00–17:30</small></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="dash">Closed</span></td>
+          <td><span class="check"><b><font size="-2">14:00〜<br>18:30</font></b></span></td>
+          <td><span class="dash">Closed</span></td>
+          <td><span class="dash">Closed</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">🌿 Closed on Thursdays, Saturday afternoons, Sundays, and public holidays. Friday reception until 18:30. Saturday morning only (9:00–12:00).</div>
+  </div>
+</section>
+
+<!-- ⑦ Access -->
+<section class="access-section">
+  <div class="section-header">
+    <div class="section-label">Access</div>
+    <div class="section-title">Access</div>
+  </div>
+  <div class="access-inner">
+    <div class="access-cards">
+      <div class="access-card">
+        <div class="access-icon pink">📍</div>
+        <div>
+          <div class="access-label">Address</div>
+          <div class="access-value">Sophia Bldg. 5F, 11-22 Kitakanata, Kochi City, Kochi 781-0073</div>
+        </div>
+      </div>
+    </div>
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.523028083669!2d133.5585686!3d33.5657669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354e1ea99f25a341%3A0x5e28a60ba852b561!2z44CSNzgxLTAwNzMg6auY55-l55yM6auY55-l5biC5YyX6YeR55Sw77yR77yR4oiS77yS77ySIOOCveODleOCo-OCouODk-ODqyA1Zg!5e0!3m2!1sja!2sjp!4v1777948753661!5m2!1sja!2sjp"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Shinhonmachi Clinic Map">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="../common.js"></script>
+<script>
+(function(){
+  fetch("header_en.html").then(function(r){return r.text();}).then(function(html){
+    var ph=document.getElementById("header-placeholder");
+    if(ph){ph.innerHTML=html;}
+  });
+})();
+</script>
+<script>
+/* Show only the latest 3 news items; show "View All" link if there are more */
+(function () {
+  const MAX = 3;
+  const target = document.getElementById('news-placeholder');
+  if (!target) return;
+  new MutationObserver(function () {
+    const items = target.querySelectorAll('.news-item');
+    if (items.length > MAX) {
+      for (let i = MAX; i < items.length; i++) items[i].style.display = 'none';
+      const more = document.getElementById('news-more');
+      if (more) more.style.display = 'block';
+    }
+  }).observe(target, { childList: true });
+})();
+
+/* Hero Slider */
+(function () {
+  const track  = document.getElementById('heroTrack');
+  const slides = track ? track.querySelectorAll('.hero-slide') : [];
+  const dotsEl = document.getElementById('sliderDots');
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer;
+
+  // Generate dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i + 1));
+    d.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n) {
+    current = (n + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotsEl.querySelectorAll('.slider-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current)
+    );
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function startAuto() { timer = setInterval(next, 4500); }
+  function resetAuto() { clearInterval(timer); startAuto(); }
+
+  document.getElementById('sliderNext').addEventListener('click', () => { next(); resetAuto(); });
+  document.getElementById('sliderPrev').addEventListener('click', () => { prev(); resetAuto(); });
+
+  // Touch swipe
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); resetAuto(); }
+  });
+
+  startAuto();
+})();
+</script>
+<script>
+(function(){
+  fetch("footer_en.html").then(function(r){return r.text();}).then(function(html){
+    var pf=document.getElementById("footer-placeholder");
+    if(pf){pf.innerHTML=html;}
+  });
+})();
+</script>
+</body>
+</html>
