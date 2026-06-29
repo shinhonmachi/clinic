@@ -180,11 +180,11 @@
       <a href="section_shisetsu.html" class="nav-link">Facilities</a>
       <a href="section_shop.html" class="nav-link">Shop</a>
       <a href="section_access.html" class="nav-link">Access</a>
-      <a href="../index.html" class="nav-link lang-switch" title="日本語サイトへ">🇯🇵 日本語</a>
+      <a href="../index.html" class="nav-link lang-switch">🇯🇵 日本語</a>
     </nav>
     <div class="header-actions">
       <a href="tel:088-856-7511" class="header-tel">088-856-7511</a>
-      <a href="../index.html" class="btn-lang" title="Switch to Japanese">🇯🇵 JP</a>
+      <a href="../index.html" class="btn-lang">🇯🇵 JP</a>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -208,14 +208,14 @@
 .site-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
 .logo-mark{width:36px;height:36px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:600;}
 .logo-name{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);line-height:1.2;}
-.logo-sub{font-size:9px;color:#8a7a72;line-height:1.3;letter-spacing:.01em;}
+.logo-sub{font-size:9px;color:#8a7a72;line-height:1.3;}
 .header-nav{display:flex;align-items:center;gap:2px;margin-left:auto;}
-.nav-link{font-size:12px;color:var(--text,#2a2220);text-decoration:none;padding:6px 9px;border-radius:8px;transition:all .18s;white-space:nowrap;font-weight:400;}
+.nav-link{font-size:12px;color:var(--text,#2a2220);text-decoration:none;padding:6px 9px;border-radius:8px;transition:all .18s;white-space:nowrap;}
 .nav-link:hover{background:var(--sakura-light,#fdf0ef);color:var(--sakura-deep,#c0514d);}
 .nav-link.lang-switch{border:1px solid var(--border,#ede8e3);margin-left:4px;font-size:11px;}
 .header-actions{display:none;align-items:center;gap:10px;flex-shrink:0;}
-.header-tel{font-size:13px;font-weight:600;color:var(--sakura-deep,#c0514d);text-decoration:none;font-family:'Noto Serif JP',serif;}
-.btn-lang{font-size:11px;color:var(--text,#2a2220);text-decoration:none;border:1px solid var(--border,#ede8e3);padding:4px 8px;border-radius:8px;white-space:nowrap;}
+.header-tel{font-size:13px;font-weight:600;color:var(--sakura-deep,#c0514d);text-decoration:none;}
+.btn-lang{font-size:11px;color:var(--text,#2a2220);text-decoration:none;border:1px solid var(--border,#ede8e3);padding:4px 8px;border-radius:8px;}
 .hamburger{background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:5px;}
 .hamburger span{display:block;width:22px;height:2px;background:var(--text,#2a2220);border-radius:2px;transition:all .25s;}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
@@ -230,5 +230,175 @@
 @media(max-width:700px){.header-nav{display:none;}.header-actions{display:flex;}}
 @media(min-width:701px){.mobile-nav{display:none!important;}}
 </style>
+<script>
+(function(){
+  var hb=document.getElementById('hamburger');
+  var mn=document.getElementById('mobileNav');
+  if(!hb||!mn)return;
+  hb.addEventListener('click',function(){var o=mn.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',o);mn.setAttribute('aria-hidden',!o);});
+  document.addEventListener('click',function(e){var sh=document.getElementById('siteHeader');if(sh&&!sh.contains(e.target)){mn.classList.remove('open');hb.classList.remove('open');hb.setAttribute('aria-expanded',false);mn.setAttribute('aria-hidden',true);}});
+  var cur=location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.nav-link,.mobile-nav-link').forEach(function(a){var h=a.getAttribute('href')||'';if(h.split('/').pop()===cur){a.style.color='var(--sakura-deep,#c0514d)';a.style.fontWeight='500';}});
+})();
+</script>
+
+<div class="page-hero">
+  <span class="page-label">Director's Message</span>
+  <div class="page-title">Director's Message</div>
+  <div class="page-sub">Shinhonmachi Clinic — Director: Naoko Yoshimura, M.D., Ph.D.</div>
+</div>
+
+<div class="outer">
+
+  <!-- Profile -->
+  <div class="profile-block fade-in">
+    <div class="profile-photo">👩‍⚕️</div>
+    <div class="profile-info">
+      <div class="profile-role">Director / M.D., Ph.D.</div>
+      <div class="profile-name">Naoko Yoshimura</div>
+      <div class="profile-name-en">Naoko Yoshimura</div>
+      <div class="profile-tags">        
+        <span class="profile-tag">Kampo Medicine</span>
+        <span class="profile-tag">Psychosomatic Medicine</span>
+        <span class="profile-tag">Internal Medicine</span>
+        <span class="profile-tag green">Diagnostic Imaging</span>
+        <span class="profile-tag green">Nutritional Therapy</span>
+        <span class="profile-tag green">IV Therapy</span>
+      </div>
+
+      <!-- Career & Certifications -->
+      <div class="profile-career">
+        <div class="career-grid">
+          <div>
+            <div class="career-section-title">Education &amp; Specialty</div>
+            <table class="career-table">
+              <tr>
+                <td>Education</td>
+                <td>Kochi Gakugei High School<br>Kochi Medical School<br>(now: Kochi University School of Medicine)</td>
+              </tr>
+              <tr>
+                <td>Specialties</td>
+                <td>Kampo medicine, psychosomatic medicine, internal medicine<br>Diagnostic imaging, nutritional therapy, IV therapy</td>
+              </tr>
+              <tr>
+                <td>Degree</td>
+                <td>Doctor of Medicine (M.D., Ph.D.)</td>
+              </tr>
+            </table>
+          </div>
+          <div>
+            <div class="career-section-title">Certifications</div>
+            <ul class="cert-list">
+              <li class="cert-item">
+                <div class="cert-icon">✓</div>
+                Japan Medical Association Certified Health and Sports Physician
+              </li>
+              <li class="cert-item">
+                <div class="cert-icon">✓</div>
+                Completed Ozone Therapy Training<br>
+                <span style="font-size:11px;color:var(--text-muted);">(Japan Society for Ozone Therapy in Medicine and the Environment)</span>
+              </li>
+              <li class="cert-item">
+                <div class="cert-icon">✓</div>
+                Completed Activated Self-Lymphocyte Therapy (ALT) Training
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Main Text -->
+  <div class="greeting-wrap fade-in">
+
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <div class="chapter-label">Origin &mdash; My Starting Point</div>
+      <div class="chapter-line"></div>
+    </div>
+    <div class="greeting-body">
+      <p>Hello, I am Naoko Yoshimura, Director of Shinhonmachi Clinic. Thank you for visiting this page.</p>
+      <p>As a child, I repeatedly suffered from bronchial asthma and pneumonia, spending much of my early years in and out of hospital — always dependent on medical care. Throughout those days of inhalers and antibiotics, even as a young child I found myself wondering: "Why, even with the same treatment, don't things ever seem to get truly better at their root?"</p>
+      <p>It was during that time that I encountered Eastern medicine — Kampo and acupuncture. When I first came across the concept of "not just treating symptoms, but restoring balance to the whole body," I had the experience of gradually improving through a completely different approach from what I had known before. Feeling the distinct power of both Western and Eastern medicine firsthand became a major turning point that led me to pursue a career as a physician.</p>
+      <div class="highlight-quote">"There are patients who cannot be helped by a single approach.<br>That is precisely why medicine needs to examine the body from a broader perspective."</div>
+      <p>These words remain at the core of my practice to this day. With the belief that "it is not the physician but the patient's own body that chooses the treatment," I strive to always remain flexible and sincere in my approach.</p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <div class="chapter-label">Philosophy &mdash; My Approach to Medicine</div>
+      <div class="chapter-line"></div>
+    </div>
+    <div class="greeting-body">
+      <p>After becoming a doctor, I first set myself the goal of "never missing a diagnosis," and dedicated myself to training in diagnostic imaging. No matter how excellent a treatment may be, it is meaningless without an accurate diagnosis. I continue to firmly believe that establishing a safe and reliable foundation for care is my primary responsibility to each patient.</p>
+      <p>Building on that foundation, I now combine diverse approaches — Kampo, nutritional therapy, IV therapy, and acupuncture — to provide care tailored to each patient's individual condition. To carefully unravel "why this discomfort is happening right now," I make it a point to look at the whole of a patient's life: their constitution, diet, sleep, hormonal balance, and stress levels.</p>
+      <p>For example, symptoms such as chronic fatigue, cold limbs, or low mood often do not show up clearly in test results. It is precisely these "invisible ailments" that I want to listen to with care. I aspire to create a consultation room where patients leave feeling, "I finally feel heard."</p>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-line"></div>
+      <div class="chapter-label">Values &mdash; What I Hold Dear</div>
+      <div class="chapter-line"></div>
+    </div>
+    <div class="greeting-body">
+      <p>What I have consistently held dear is "drawing out the body's innate capacity to heal." Rather than forcibly suppressing symptoms, I aim to guide the body toward natural recovery through the least burdensome means possible. The body is very honest. I believe that when you engage with it through the right approach, it will always respond.</p>
+      <p>Another priority in my practice is communicating test results and your physical condition in plain language, avoiding medical jargon as much as possible. When patients themselves understand "what state my body is in right now" and can proceed with treatment with genuine conviction — I believe that is the true shortcut to recovery. I see medicine not as something to "leave in the doctor's hands," but something that doctor and patient build together.</p>
+      <p>For those who have long struggled with symptoms of unknown cause, those who have not felt sufficient improvement from previous treatments, and those who have been too busy to prioritize their own health — I strive every day to make Shinhonmachi Clinic a place where you leave thinking, "I'm glad I came here."</p>
+    </div>
+
+  </div><!-- /.greeting-wrap -->
+
+  <!-- Closing Message -->
+  <div class="closing-card fade-in">
+    <div class="closing-icon">🌸</div>
+    <div class="closing-text">
+      I hope Shinhonmachi Clinic can be a place of comfort for you,<br>
+      and a starting point for moving forward positively on your path to recovery.<br><br>
+      We are dedicated, with heartfelt care, to supporting the health of everyone in the Kochi community.<br>
+      No concern is too small — please feel free to come and talk with us.
+    </div>
+    <div class="closing-from">— Shinhonmachi Clinic, Director: Naoko Yoshimura</div>
+  </div>
+
+</div>
+
+<footer class="site-footer-en">
+  <div class="footer-inner-en">
+    <div class="footer-logo-en">
+      <span style="width:30px;height:30px;font-size:14px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-weight:600;">新</span>
+      <span style="font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);margin-left:8px;">Shinhonmachi Clinic</span>
+    </div>
+    <div class="footer-info-en">
+      <p>Sophia Bldg. 5F, 11-22 Kitakanata, Kochi City, Kochi 781-0073</p>
+      <p>Tel: <a href="tel:088-856-7511">088-856-7511</a>&nbsp;|&nbsp;Hours: Mon–Wed, Fri 9:00–12:00 / 14:00–18:00&nbsp;|&nbsp;Sat 9:00–12:00</p>
+      <p>Closed: Thursday, Saturday afternoons, Sundays &amp; public holidays</p>
+    </div>
+    <div class="footer-nav-en">
+      <a href="index.html">Home</a>
+      <a href="section_shinryo_annai.html">Medical Services</a>
+      <a href="section_staff.html">Staff</a>
+      <a href="section_ryokin.html">Fees</a>
+      <a href="section_shisetsu.html">Facilities</a>
+      <a href="section_shop.html">Shop</a>
+      <a href="section_access.html">Access</a>
+      <a href="../index.html" style="color:#8a7a72;">🇯🇵 日本語</a>
+    </div>
+    <div class="footer-copy-en">© Shinhonmachi Clinic. All rights reserved.</div>
+  </div>
+</footer>
+<style>
+.site-footer-en{background:var(--cream,#faf7f4);border-top:1px solid var(--border,#ede8e3);padding:36px 20px 24px;margin-top:60px;}
+.footer-inner-en{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
+.footer-logo-en{display:flex;align-items:center;}
+.footer-info-en{font-size:12px;color:#5a504a;line-height:1.9;}
+.footer-info-en a{color:var(--sakura-deep,#c0514d);text-decoration:none;}
+.footer-nav-en{display:flex;flex-wrap:wrap;gap:6px 16px;}
+.footer-nav-en a{font-size:12px;color:var(--text,#2a2220);text-decoration:none;}
+.footer-nav-en a:hover{color:var(--sakura-deep,#c0514d);}
+.footer-copy-en{font-size:11px;color:#8a7a72;margin-top:4px;}
+</style>
+<script src="../common.js"></script>
 </body>
 </html>
