@@ -9,7 +9,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../common.css">
 <meta name="description" content="고치시 기타카나타에 위치한 신혼마치 클리닉. 내과, 심신의학과, 한방(전통 한의학) 진료를 제공합니다. 생활습관병, 정신건강 문제, 체질 개선을 치료합니다. 월~토 진료(목요일·토요일 오후 휴진). 전화 088-856-7511.">
-<link rel="canonical" href="https://shinhonmachi.jp/">
+<link rel="canonical" href="https://shinhonmachi.jp/kr/index.html">
+<link rel="alternate" hreflang="ja" href="https://shinhonmachi.jp/">
+<link rel="alternate" hreflang="ko" href="https://shinhonmachi.jp/kr/index.html">
+<link rel="alternate" hreflang="en" href="https://shinhonmachi.jp/en/index.html">
+<link rel="alternate" hreflang="zh-CN" href="https://shinhonmachi.jp/cn/index.html">
 <meta property="og:type" content="website">
 <meta property="og:title" content="신혼마치 클리닉 | 한방 · 심신의학과 · 내과 | 고치시">
 <meta property="og:description" content="고치시 기타카나타에 위치한 신혼마치 클리닉. 내과, 심신의학과, 한방(전통 한의학) 진료를 제공합니다. 생활습관병, 정신건강 문제, 체질 개선을 치료합니다. 월~토 진료(목요일·토요일 오후 휴진). 전화 088-856-7511.">
@@ -42,7 +46,8 @@
   "geo": { "@type": "GeoCoordinates", "latitude": 33.5588, "longitude": 133.5514 },
   "openingHoursSpecification": [
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Friday"], "opens": "09:00", "closes": "12:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Friday"], "opens": "14:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "14:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "14:00", "closes": "18:30" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "12:00" }
   ],
   "medicalSpecialty": ["InternalMedicine","MentalHealth"],
@@ -290,7 +295,7 @@ section { padding: 56px 32px; }
     <a href="index.html" class="site-logo">
       <span class="logo-mark">新</span>
       <div class="logo-text">
-        <div class="logo-name">Shinhonmachi Clinic</div>
+        <div class="logo-name">신혼마치 클리닉</div>
         <div class="logo-sub">내과 · 심신의학과 · 한방</div>
       </div>
     </a>
@@ -399,7 +404,7 @@ section { padding: 56px 32px; }
 <!-- ① News (latest 3 items) -->
 <section class="news-section">
   <div class="section-header">
-    <div class="section-label">News</div>
+    <div class="section-label">공지사항</div>
     <div class="section-title">공지사항</div>
   </div>
   <div class="news-list" id="news-placeholder"></div>
@@ -411,7 +416,7 @@ section { padding: 56px 32px; }
 <!-- ② Director's Message -->
 <section class="doctor-section">
   <div class="section-header">
-    <div class="section-label">Doctor</div>
+    <div class="section-label">원장 소개</div>
     <div class="section-title">원장 인사말</div>
   </div>
   <div class="doctor-inner">
@@ -428,7 +433,7 @@ section { padding: 56px 32px; }
 <!-- ③ Departments -->
 <section>
   <div class="section-header">
-    <div class="section-label">Departments</div>
+    <div class="section-label">진료 과목</div>
     <div class="section-title">진료 과목</div>
     <div class="section-sub">내과·정신건강부터 한방까지 — 폭넓은 증상을 진료합니다</div>
   </div>
@@ -477,7 +482,7 @@ section { padding: 56px 32px; }
 <!-- ④ Self-Pay Services -->
 <section class="selfpay-section">
   <div class="section-header">
-    <div class="section-label">Self-pay Treatment</div>
+    <div class="section-label">비보험 진료</div>
     <div class="section-title">자유진료 메뉴</div>
     <div class="section-sub">보험 적용 진료 외에도 다양한 자유진료(비보험) 서비스를 제공합니다</div>
   </div>
@@ -512,7 +517,7 @@ section { padding: 56px 32px; }
 <!-- ⑤ First-Time Visitors -->
 <section class="first-visit-section">
   <div class="section-header">
-    <div class="section-label">First Visit</div>
+    <div class="section-label">처음 방문하시는 분</div>
     <div class="section-title">처음 방문하시는 분</div>
     <div class="section-sub">처음 방문하시는 분도 언제든 환영합니다. 접수부터 수납까지 차근차근 안내해 드립니다.</div>
   </div>
@@ -553,7 +558,7 @@ section { padding: 56px 32px; }
 <!-- ⑥ Office Hours -->
 <section class="hours-section">
   <div class="section-header">
-    <div class="section-label">Hours</div>
+    <div class="section-label">진료 시간</div>
     <div class="section-title">진료 시간</div>
   </div>
   <div class="hours-card">
@@ -594,7 +599,7 @@ section { padding: 56px 32px; }
 <!-- ⑦ Access -->
 <section class="access-section">
   <div class="section-header">
-    <div class="section-label">Access</div>
+    <div class="section-label">오시는 길</div>
     <div class="section-title">오시는 길</div>
   </div>
   <div class="access-inner">
@@ -623,11 +628,11 @@ section { padding: 56px 32px; }
   <div class="footer-inner-en">
     <div class="footer-logo-en">
       <span style="width:30px;height:30px;font-size:14px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-weight:600;">新</span>
-      <span style="font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);margin-left:8px;">Shinhonmachi Clinic</span>
+      <span style="font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);margin-left:8px;">신혼마치 클리닉</span>
     </div>
     <div class="footer-info-en">
       <p>〒781-0073 고치현 고치시 기타카나타 11-22 소피아빌딩 5층</p>
-      <p>전화: <a href="tel:088-856-7511">088-856-7511</a>&nbsp;|&nbsp;진료시간: 월~수, 금 9:00–12:00 / 14:00–18:00&nbsp;|&nbsp;토 9:00–12:00</p>
+      <p>전화: <a href="tel:088-856-7511">088-856-7511</a>&nbsp;|&nbsp;진료시간: 월~수 9:00–12:00 / 14:00–18:00, 금 9:00–12:00 / 14:00–18:30&nbsp;|&nbsp;토 9:00–12:00</p>
       <p>휴진: 목요일, 토요일 오후, 일요일 및 공휴일</p>
     </div>
     <div class="footer-nav-en">
