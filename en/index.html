@@ -285,274 +285,73 @@ section { padding: 56px 32px; }
 </head>
 <body>
 
-<div id="header-placeholder"></div>
-
-<!-- ① Hero Slider -->
-<div class="hero-slider" id="heroSlider">
-  <div class="hero-slider-track" id="heroTrack">
-    <div class="hero-slide">
-      <img src="../pics/gaikan.webp" alt="Clinic exterior">
-      <div class="hero-slide-overlay"></div>
-    </div>
-    <div class="hero-slide">
-      <img src="../pics/shinsatsu_fukei.webp" alt="Consultation room">
-      <div class="hero-slide-overlay"></div>
-    </div>
-  </div>
-
-  <!-- Caption (shared across all slides) -->
-  <div class="hero-caption">
-    <div class="hero-tag">Your Local Neighborhood Clinic</div>
-    <h1>Your health,<br>always our priority.</h1>
-    <p>We listen carefully to each and every patient,<br>striving to be a clinic where you feel safe and welcome.</p>
-    <div class="hero-btns">
-      <a href="tel:088-856-7511" class="btn-primary">📞 088-856-7511</a>
-      <a href="section_shinryo_annai.html" class="btn-outline">View Medical Services</a>
-    </div>
-  </div>
-
-  <!-- Prev/Next Buttons -->
-  <button class="slider-prev" id="sliderPrev" aria-label="Previous">&#8249;</button>
-  <button class="slider-next" id="sliderNext" aria-label="Next">&#8250;</button>
-
-  <!-- Dots -->
-  <div class="slider-dots" id="sliderDots"></div>
-</div>
-
-<!-- ① News (latest 3 items) -->
-<section class="news-section">
-  <div class="section-header">
-    <div class="section-label">News</div>
-    <div class="section-title">News &amp; Updates</div>
-  </div>
-  <div class="news-list" id="news-placeholder"></div>
-  <div class="news-more" id="news-more" style="display:none;">
-    <a href="#">View All News →</a>
-  </div>
-</section>
-
-<!-- ② Director's Message -->
-<section class="doctor-section">
-  <div class="section-header">
-    <div class="section-label">Doctor</div>
-    <div class="section-title">Message from the Director</div>
-  </div>
-  <div class="doctor-inner">
-    <div class="doctor-avatar">👩‍⚕️</div>
-    <div>
-      <div class="doctor-role">Director, M.D.</div>
-      <div class="doctor-name">Naoko Yoshimura</div>
-      <div class="doctor-msg">I want this clinic to be a place where anyone in the community can casually share their health concerns. Whether it's your body, your mind, or your lifestyle — let's think through it together.</div>
-      <div class="doctor-link"><a href="section_staff.html">Read Director's Profile &amp; Message →</a></div>
-    </div>
-  </div>
-</section>
-
-<!-- ③ Departments -->
-<section>
-  <div class="section-header">
-    <div class="section-label">Departments</div>
-    <div class="section-title">Departments</div>
-    <div class="section-sub">From internal medicine and mental health to Kampo — we cover a wide range of conditions</div>
-  </div>
-  <div class="departments">
-    <a href="section_shinryo_annai.html" class="dept-card">
-      <div class="dept-icon" style="background:#eef5f0;">🌿</div>
-      <div class="dept-name">Kampo Medicine</div>
-      <div class="dept-desc">We prescribe Kampo herbal medicines to address your constitution at its root.</div>
-      <div class="dept-symptoms">
-        <span class="dept-symptom green">Menopause</span>
-        <span class="dept-symptom green">Cold limbs / Edema</span>
-        <span class="dept-symptom green">Digestive issues</span>
-        <span class="dept-symptom green">Constitution improvement</span>
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <span class="logo-mark">新</span>
+      <div class="logo-text">
+        <div class="logo-name">Shinhonmachi Clinic</div>
+        <div class="logo-sub">Internal Medicine · Psychosomatic Medicine · Kampo</div>
       </div>
     </a>
-    
-    <a href="section_shinryo_annai.html" class="dept-card">
-      <div class="dept-icon" style="background:#edf3fb;">🧠</div>
-      <div class="dept-name">Psychosomatic Medicine</div>
-      <div class="dept-desc">We take time to address stress and mental health concerns with care.</div>
-      <div class="dept-symptoms">
-        <span class="dept-symptom">Insomnia</span>
-        <span class="dept-symptom">Depression / Anxiety</span>
-        <span class="dept-symptom">Autonomic disorders</span>
-        <span class="dept-symptom">Panic disorder</span>
-      </div>
-    </a>
-
-
-        <a href="section_shinryo_annai.html" class="dept-card">
-      <div class="dept-icon" style="background:#fdf0f0;">🩺</div>
-      <div class="dept-name">Internal Medicine</div>
-      <div class="dept-desc">We diagnose everyday ailments through to lifestyle diseases.</div>
-      <div class="dept-symptoms">
-        <span class="dept-symptom">Hypertension</span>
-        <span class="dept-symptom">Diabetes</span>
-        <span class="dept-symptom">Post-checkup consultation</span>
-      </div>
-    </a>
-  </div>
-  <div class="dept-cta">
-    <a href="section_shinryo_annai.html">View Detailed Medical Services →</a>
-  </div>
-</section>
-
-<!-- ④ Self-Pay Services -->
-<section class="selfpay-section">
-  <div class="section-header">
-    <div class="section-label">Self-pay Treatment</div>
-    <div class="section-title">Self-Pay Treatment Menu</div>
-    <div class="section-sub">In addition to covered treatments, we offer a variety of self-pay services</div>
-  </div>
-  <div class="selfpay-grid">
-    <div class="selfpay-card">
-      <div class="selfpay-icon">🌸</div>
-      <div class="selfpay-name">Placenta Injections</div>
-      <div class="selfpay-desc">Menopause relief · fatigue recovery · skin improvement</div>
-    </div>
-    <div class="selfpay-card">
-      <div class="selfpay-icon">🌀</div>
-      <div class="selfpay-name">Ozone Drip</div>
-      <div class="selfpay-desc">Immune boost · antioxidant · chronic fatigue</div>
-    </div>
-    <div class="selfpay-card">
-      <div class="selfpay-icon">✨</div>
-      <div class="selfpay-name">Glutathione &amp; Vitamin C Drip</div>
-      <div class="selfpay-desc">Skin brightening · blemish · dullness improvement</div>
-    </div>
-    <div class="selfpay-card">
-      <div class="selfpay-icon">🌿</div>
-      <div class="selfpay-name">Kampo &amp; Acupuncture</div>
-      <div class="selfpay-desc">Constitution improvement · cold limbs · autonomic nervous system</div>
+    <nav class="header-nav" id="headerNav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="section_shinryo_annai.html" class="nav-link">Medical Services</a>
+      <a href="section_staff.html" class="nav-link">Staff</a>
+      <a href="section_ryokin.html" class="nav-link">Fees</a>
+      <a href="section_shisetsu.html" class="nav-link">Facilities</a>
+      <a href="section_shop.html" class="nav-link">Shop</a>
+      <a href="section_access.html" class="nav-link">Access</a>
+      <a href="../index.html" class="nav-link lang-switch" title="日本語サイトへ">🇯🇵 日本語</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:088-856-7511" class="header-tel">088-856-7511</a>
+      <a href="../index.html" class="btn-lang" title="Switch to Japanese">🇯🇵 JP</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </div>
-  <div class="selfpay-cta">
-    <a href="section_ryokin.html">View Details →</a>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="index.html" class="mobile-nav-link">Home</a>
+    <a href="section_shinryo_annai.html" class="mobile-nav-link">Medical Services</a>
+    <a href="section_staff.html" class="mobile-nav-link">Staff</a>
+    <a href="section_ryokin.html" class="mobile-nav-link">Fees</a>
+    <a href="section_shisetsu.html" class="mobile-nav-link">Facilities</a>
+    <a href="section_shop.html" class="mobile-nav-link">Shop</a>
+    <a href="section_access.html" class="mobile-nav-link">Access</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="../index.html" class="mobile-nav-link lang-link">🇯🇵 日本語サイトへ</a>
   </div>
-</section>
-
-  
-<!-- ⑤ First-Time Visitors -->
-<section class="first-visit-section">
-  <div class="section-header">
-    <div class="section-label">First Visit</div>
-    <div class="section-title">First-Time Visitors</div>
-    <div class="section-sub">First-time patients are always welcome. We will guide you through every step, from reception to payment.</div>
-  </div>
-  <div class="first-visit-inner">
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-icon">📞</div>
-        <div class="step-title">Call or Walk In</div>
-        <div class="step-desc">Walk-ins welcome. Calling ahead helps ensure a smoother visit.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-icon">📋</div>
-        <div class="step-title">Fill Out Intake Form</div>
-        <div class="step-desc">We will provide a form at reception. Please fill in your symptoms and current medications.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-icon">🩺</div>
-        <div class="step-title">Consultation</div>
-        <div class="step-desc">The doctor will conduct a thorough interview and examination. Feel free to share any concerns.</div>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-icon">💊</div>
-        <div class="step-title">Payment &amp; Prescription</div>
-        <div class="step-desc">Most prescriptions (including Kampo) are dispensed on-site.</div>
-      </div>
-    </div>
-    <div class="first-visit-note">
-      <span class="note-icon">🎒</span>
-      <span>Please bring your <strong>My Number Card or eligibility confirmation document</strong>, any medical certificates, and your medication notebook. Having information about your current medications will help the consultation go smoothly.</span>
-    </div>
-  </div>
-</section>
-
-<!-- ⑥ Office Hours -->
-<section class="hours-section">
-  <div class="section-header">
-    <div class="section-label">Hours</div>
-    <div class="section-title">Office Hours</div>
-  </div>
-  <div class="hours-card">
-    <table class="hours-table">
-      <thead>
-        <tr>
-          <th></th>
-          <th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th><th>Sun/Hol</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Morning<br><small style="color:var(--text-muted);font-weight:400;">9:00–12:00</small></td>
-          <td><span class="check"><b>◯</b></span></td>
-          <td><span class="check"><b>◯</b></span></td>
-          <td><span class="check"><b>◯</b></span></td>
-          <td><span class="dash">Closed</span></td>
-          <td><span class="check"><b>◯</b></span></td>
-          <td><span class="check"><b>◯</b></span></td>
-          <td><span class="dash">Closed</span></td>
-        </tr>
-        <tr>
-          <td>Afternoon<br><small style="color:var(--text-muted);font-weight:400;">14:00–17:30</small></td>
-          <td><span class="check"><b>◯</b></span></td>
-          <td><span class="check"><b>◯</b></span></td>
-          <td><span class="check"><b>◯</b></span></td>
-          <td><span class="dash">Closed</span></td>
-          <td><span class="check"><b><font size="-2">14:00〜<br>18:30</font></b></span></td>
-          <td><span class="dash">Closed</span></td>
-          <td><span class="dash">Closed</span></td>
-        </tr>
-      </tbody>
-    </table>
-    <div class="note">🌿 Closed on Thursdays, Saturday afternoons, Sundays, and public holidays. Friday reception until 18:30. Saturday morning only (9:00–12:00).</div>
-  </div>
-</section>
-
-<!-- ⑦ Access -->
-<section class="access-section">
-  <div class="section-header">
-    <div class="section-label">Access</div>
-    <div class="section-title">Access</div>
-  </div>
-  <div class="access-inner">
-    <div class="access-cards">
-      <div class="access-card">
-        <div class="access-icon pink">📍</div>
-        <div>
-          <div class="access-label">Address</div>
-          <div class="access-value">Sophia Bldg. 5F, 11-22 Kitakanata, Kochi City, Kochi 781-0073</div>
-        </div>
-      </div>
-    </div>
-    <div class="map-embed">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.523028083669!2d133.5585686!3d33.5657669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354e1ea99f25a341%3A0x5e28a60ba852b561!2z44CSNzgxLTAwNzMg6auY55-l55yM6auY55-l5biC5YyX6YeR55Sw77yR77yR4oiS77yS77ySIOOCveODleOCo-OCouODk-ODqyA1Zg!5e0!3m2!1sja!2sjp!4v1777948753661!5m2!1sja!2sjp"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-        title="Shinhonmachi Clinic Map">
-      </iframe>
-    </div>
-  </div>
-</section>
-
-<div id="footer-placeholder"></div>
-
-<script src="../common.js"></script>
-<script>
-(function(){
-  fetch("header_en.html").then(function(r){return r.text();}).then(function(html){
-    var ph=document.getElementById("header-placeholder");
-    if(ph){ph.innerHTML=html;}
-  });
-})();
-</script>
+</header>
+<style>
+.site-header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#ede8e3);box-shadow:0 1px 8px rgba(0,0,0,.05);}
+.header-inner{max-width:860px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:16px;}
+.site-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.logo-mark{width:36px;height:36px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:600;}
+.logo-name{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);line-height:1.2;}
+.logo-sub{font-size:9px;color:#8a7a72;line-height:1.3;letter-spacing:.01em;}
+.header-nav{display:flex;align-items:center;gap:2px;margin-left:auto;}
+.nav-link{font-size:12px;color:var(--text,#2a2220);text-decoration:none;padding:6px 9px;border-radius:8px;transition:all .18s;white-space:nowrap;font-weight:400;}
+.nav-link:hover{background:var(--sakura-light,#fdf0ef);color:var(--sakura-deep,#c0514d);}
+.nav-link.lang-switch{border:1px solid var(--border,#ede8e3);margin-left:4px;font-size:11px;}
+.header-actions{display:none;align-items:center;gap:10px;flex-shrink:0;}
+.header-tel{font-size:13px;font-weight:600;color:var(--sakura-deep,#c0514d);text-decoration:none;font-family:'Noto Serif JP',serif;}
+.btn-lang{font-size:11px;color:var(--text,#2a2220);text-decoration:none;border:1px solid var(--border,#ede8e3);padding:4px 8px;border-radius:8px;white-space:nowrap;}
+.hamburger{background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text,#2a2220);border-radius:2px;transition:all .25s;}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.mobile-nav{display:none;flex-direction:column;background:white;border-top:1px solid var(--border,#ede8e3);padding:8px 0 16px;}
+.mobile-nav.open{display:flex;}
+.mobile-nav-link{font-size:14px;color:var(--text,#2a2220);text-decoration:none;padding:12px 24px;transition:background .15s;}
+.mobile-nav-link:hover{background:var(--cream,#faf7f4);}
+.mobile-nav-divider{height:1px;background:var(--border,#ede8e3);margin:8px 24px;}
+.lang-link{color:#8a7a72;font-size:13px;}
+@media(max-width:700px){.header-nav{display:none;}.header-actions{display:flex;}}
+@media(min-width:701px){.mobile-nav{display:none!important;}}
+</style>
 <script>
 /* Show only the latest 3 news items; show "View All" link if there are more */
 (function () {
@@ -614,14 +413,6 @@ section { padding: 56px 32px; }
   });
 
   startAuto();
-})();
-</script>
-<script>
-(function(){
-  fetch("footer_en.html").then(function(r){return r.text();}).then(function(html){
-    var pf=document.getElementById("footer-placeholder");
-    if(pf){pf.innerHTML=html;}
-  });
 })();
 </script>
 </body>
