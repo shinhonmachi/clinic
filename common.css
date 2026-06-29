@@ -184,6 +184,52 @@ footer { background: #3a3530; color: rgba(255,255,255,0.6); text-align: center; 
   font-weight: 500;
 }
 
+/* ===== 言語切り替え ===== */
+.lang-switch-group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  padding-left: 12px;
+  border-left: 1px solid var(--border);
+}
+.lang-btn {
+  font-size: 11px;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 4px 7px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  transition: all 0.18s;
+  white-space: nowrap;
+  line-height: 1;
+}
+.lang-btn:hover {
+  background: var(--sakura-light);
+  color: var(--sakura-deep);
+  border-color: var(--sakura);
+}
+.nav-drawer-lang {
+  display: flex;
+  gap: 8px;
+  padding: 12px 28px;
+  border-top: 1px solid var(--border);
+  margin-top: 8px;
+}
+.nav-drawer-lang a {
+  font-size: 13px;
+  color: var(--text-muted);
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  transition: background 0.15s;
+}
+.nav-drawer-lang a:hover {
+  background: var(--sakura-light);
+  color: var(--sakura-deep);
+}
+
 /* ===== オーバーレイ ===== */
 .nav-overlay {
   display: none;
