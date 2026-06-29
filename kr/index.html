@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>신혼마치 클리닉 | 내과 · 심신의학과 · 한방 | 고치시</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<meta name="description" content="고치시 기타카나타에 위치한 신혼마치 클리닉. 내과, 심신의학과, 한방(전통 한의학) 진료를 제공합니다. 생활습관병, 정신건강 문제, 체질 개선을 치료합니다. 월~토 진료(목요일·토요일 오후 휴진). 전화 088-856-7511.">
+<link rel="canonical" href="https://shinhonmachi.jp/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="신혼마치 클리닉 | 한방 · 심신의학과 · 내과 | 고치시">
+<meta property="og:description" content="고치시 기타카나타에 위치한 신혼마치 클리닉. 내과, 심신의학과, 한방(전통 한의학) 진료를 제공합니다. 생활습관병, 정신건강 문제, 체질 개선을 치료합니다. 월~토 진료(목요일·토요일 오후 휴진). 전화 088-856-7511.">
+<meta property="og:url" content="https://shinhonmachi.jp/">
+<meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.webp">
+<meta property="og:site_name" content="Shinhonmachi Clinic">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="신혼마치 클리닉 | 한방 · 심신의학과 · 내과 | 고치시">
+<meta name="twitter:description" content="고치시 기타카나타에 위치한 신혼마치 클리닉. 내과, 심신의학과, 한방(전통 한의학) 진료를 제공합니다. 생활습관병, 정신건강 문제, 체질 개선을 치료합니다. 월~토 진료(목요일·토요일 오후 휴진). 전화 088-856-7511.">
+<meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.webp">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Shinhonmachi Clinic",
+  "url": "https://shinhonmachi.jp",
+  "image": "https://shinhonmachi.jp/pics/gaikan.webp",
+  "description": "고치시 기타카나타에 위치한 한방·심신의학과·내과 클리닉입니다. 한 분 한 분에게 정성을 다해 맞춤 진료를 제공하고자 합니다.",
+  "telephone": "088-856-7511",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "11-22 Kitakanata, Sophia Bldg. 5F",
+    "addressLocality": "Kochi City",
+    "addressRegion": "Kochi Prefecture",
+    "postalCode": "781-0073",
+    "addressCountry": "JP"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.5588, "longitude": 133.5514 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Friday"], "opens": "09:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Friday"], "opens": "14:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "12:00" }
+  ],
+  "medicalSpecialty": ["InternalMedicine","MentalHealth"],
+  "priceRange": "¥"
+}
+</script>
+<style>
+/* ===== Hero Slider ===== */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+  background: #2a1f1c;
+}
+.hero-slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+.hero-slide img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.hero-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(30,20,18,0.62) 0%,
+    rgba(30,20,18,0.28) 55%,
+    rgba(30,20,18,0.10) 100%
+  );
+}
+.hero-caption {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 400px;
+}
+.hero-tag {
+  display: inline-block;
+  background: rgba(247,197,197,0.22);
+  border: 1px solid rgba(247,197,197,0.5);
+  color: #f9d8d8;
+  font-size: 11px;
+  padding: 4px 16px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(4px);
+}
+.hero-caption h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  margin-bottom: 16px;
+}
+.hero-caption p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  line-height: 2;
+  margin-bottom: 28px;
+}
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary { background: var(--sakura-deep); color: white; border: none; padding: 12px 28px; border-radius: 30px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.2s; font-weight: 500; text-decoration: none; display: inline-block; }
+.btn-primary:hover { background: #d97a77; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(232,145,142,0.4); }
+.btn-outline { background: rgba(255,255,255,0.12); color: white; border: 1.5px solid rgba(255,255,255,0.55); padding: 12px 28px; border-radius: 30px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.2s; font-weight: 500; text-decoration: none; display: inline-block; backdrop-filter: blur(4px); }
+.btn-outline:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
+
+/* Slider Controls */
+.slider-prev, .slider-next {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255,255,255,0.18);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  color: white;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.slider-prev { left: 16px; }
+.slider-next { right: 16px; }
+.slider-prev:hover, .slider-next:hover { background: rgba(255,255,255,0.32); }
+
+/* Dots */
+.slider-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%; transform: translateX(-50%);
+  display: flex; gap: 8px;
+  z-index: 10;
+}
+.slider-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  border: none; cursor: pointer;
+  padding: 0;
+  transition: background 0.3s, transform 0.3s;
+}
+.slider-dot.active {
+  background: white;
+  transform: scale(1.3);
+}
+
+@media (max-width: 600px) {
+  .hero-slider { height: 280px; }
+  .hero-caption { left: 24px; right: 24px; max-width: none; }
+  .hero-caption h1 { font-size: 22px; }
+  .hero-caption p { display: none; }
+  .slider-prev, .slider-next { width: 34px; height: 34px; font-size: 14px; }
+}
+
+/* ===== Common Section Styles ===== */
+section { padding: 56px 32px; }
+.section-header { text-align: center; margin-bottom: 36px; }
+.section-label { display: inline-block; font-size: 11px; color: #c0514d; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
+.section-title { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 600; color: var(--text); }
+.section-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; line-height: 1.8; }
+
+/* ===== Departments ===== */
+.departments { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 660px; margin: 0 auto 28px; }
+.dept-card { background: white; border: 1px solid var(--border); border-radius: 20px; padding: 28px 20px 22px; text-align: center; transition: all 0.25s; text-decoration: none; display: block; }
+.dept-card:hover { border-color: var(--sakura); box-shadow: 0 6px 24px rgba(232,145,142,0.14); transform: translateY(-3px); }
+.dept-icon { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px; }
+.dept-name { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px; font-family: 'Noto Serif JP', serif; }
+.dept-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px; }
+.dept-symptoms { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
+.dept-symptom { font-size: 10px; background: var(--sakura-light); color: #c0514d; border-radius: 10px; padding: 2px 9px; }
+.dept-symptom.green { background: var(--green-light); color: var(--green); }
+.dept-cta { text-align: center; }
+.dept-cta a { font-size: 13px; color: #c0514d; text-decoration: none; border-bottom: 1px solid var(--sakura); padding-bottom: 1px; }
+.dept-cta a:hover { opacity: 0.7; }
+
+/* ===== First-Time Visitors ===== */
+.first-visit-section { background: linear-gradient(135deg, #fdf6f6 0%, #f0f7f2 100%); }
+.first-visit-inner { max-width: 640px; margin: 0 auto; }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.step { position: relative; text-align: center; padding: 20px 12px; }
+.step::after { content: '›'; position: absolute; right: -4px; top: 38px; font-size: 18px; color: var(--sakura); line-height: 1; }
+.step:last-child::after { display: none; }
+.step-num { width: 36px; height: 36px; background: var(--sakura-deep); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; margin: 0 auto 10px; }
+.step-icon { font-size: 22px; margin-bottom: 6px; }
+.step-title { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+.step-desc { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+.first-visit-note { margin-top: 24px; background: white; border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; display: flex; align-items: flex-start; gap: 12px; font-size: 13px; color: var(--text-muted); line-height: 1.85; }
+.first-visit-note .note-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+/* ===== Self-Pay Services ===== */
+.selfpay-section { background: white; }
+.selfpay-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; max-width: 660px; margin: 0 auto 24px; }
+.selfpay-card { border: 1px solid var(--border); border-radius: 16px; padding: 20px 14px 16px; text-align: center; transition: all 0.2s; background: var(--cream); }
+.selfpay-card:hover { border-color: var(--sakura); box-shadow: 0 4px 16px rgba(232,145,142,0.1); transform: translateY(-2px); }
+.selfpay-icon { font-size: 26px; margin-bottom: 10px; }
+.selfpay-name { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 5px; }
+.selfpay-desc { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+.selfpay-cta { text-align: center; }
+.selfpay-cta a { display: inline-block; font-size: 13px; color: #c0514d; text-decoration: none; border: 1px solid var(--sakura); padding: 8px 24px; border-radius: 20px; transition: all 0.2s; }
+.selfpay-cta a:hover { background: var(--sakura-light); }
+
+/* ===== News ===== */
+.news-section { background: var(--cream); }
+.news-list { max-width: 580px; margin: 0 auto 20px; }
+.news-item { display: flex; align-items: flex-start; gap: 14px; padding: 15px 0; border-bottom: 1px solid var(--border); }
+.news-item:last-child { border-bottom: none; }
+.news-date { font-size: 12px; color: var(--text-muted); min-width: 80px; padding-top: 2px; }
+.news-badge { font-size: 10px; padding: 2px 8px; border-radius: 10px; min-width: 54px; text-align: center; font-weight: 500; flex-shrink: 0; }
+.badge-info { background: #e8f4fd; color: #3b85c0; }
+.badge-new { background: var(--sakura-light); color: #c0514d; }
+.badge-holiday { background: var(--green-light); color: var(--green); }
+.news-text { font-size: 13px; color: var(--text); flex: 1; line-height: 1.7; }
+.news-more { text-align: center; }
+.news-more a { font-size: 13px; color: #c0514d; text-decoration: none; border-bottom: 1px solid var(--sakura); padding-bottom: 1px; }
+
+/* ===== Director's Message ===== */
+.doctor-section { background: white; }
+.doctor-inner { max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, #fdf6f6 0%, #f0f7f2 100%); border: 1px solid var(--border); border-radius: 24px; padding: 32px; display: flex; gap: 28px; align-items: flex-start; }
+.doctor-avatar { width: 88px; height: 88px; border-radius: 50%; background: var(--sakura-light); border: 3px solid var(--sakura); display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; }
+.doctor-role { font-size: 11px; color: #c0514d; letter-spacing: 0.1em; margin-bottom: 4px; }
+.doctor-name { font-family: 'Noto Serif JP', serif; font-size: 20px; font-weight: 600; margin-bottom: 14px; color: var(--text); }
+.doctor-msg { font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 16px; }
+.doctor-link a { font-size: 13px; color: #c0514d; text-decoration: none; border-bottom: 1px solid var(--sakura); padding-bottom: 1px; }
+
+/* ===== Office Hours ===== */
+.hours-section { background: var(--sakura-light); }
+.hours-card { background: white; border-radius: 20px; padding: 28px; max-width: 560px; margin: 0 auto; border: 1px solid var(--border); }
+.hours-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.hours-table th { text-align: center; padding: 8px 6px; font-size: 12px; color: var(--text); font-weight: 600; border-bottom: 1px solid var(--border); }
+.hours-table td { text-align: center; padding: 10px 6px; border-bottom: 1px dashed var(--border); }
+.hours-table tr:last-child td { border-bottom: none; }
+.hours-table td:first-child { text-align: left; font-weight: 500; padding-left: 0; color: var(--text); }
+.check { color: #c0514d; font-size: 16px; }
+.dash  { color: #a89890; }
+.note  { display: flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 12px; color: #5a504a; background: var(--green-light); padding: 10px 14px; border-radius: 10px; }
+
+/* ===== Access ===== */
+.access-section { background: white; }
+.access-inner { max-width: 560px; margin: 0 auto; display: grid; gap: 14px; }
+.access-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.access-card { background: var(--cream); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; display: flex; align-items: flex-start; gap: 14px; }
+.access-icon { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 17px; }
+.access-icon.pink  { background: var(--sakura-light); }
+.access-icon.green { background: var(--green-light); }
+.access-label { font-size: 11px; color: var(--text-muted); margin-bottom: 3px; }
+.access-value { font-size: 13px; color: var(--text); font-weight: 500; line-height: 1.6; }
+.access-value a { color: #c0514d; text-decoration: none; }
+.map-embed { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.map-embed iframe { display: block; width: 100%; height: 220px; border: none; }
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 26px; }
+  .hero-content { padding: 56px 24px 48px; }
+  section { padding: 44px 20px; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .step::after { display: none; }
+  .access-cards { grid-template-columns: 1fr; }
+  .doctor-inner { flex-direction: column; align-items: center; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <span class="logo-mark">新</span>
+      <div class="logo-text">
+        <div class="logo-name">Shinhonmachi Clinic</div>
+        <div class="logo-sub">내과 · 심신의학과 · 한방</div>
+      </div>
+    </a>
+    <nav class="header-nav" id="headerNav">
+      <a href="index.html" class="nav-link">홈</a>
+      <a href="section_shinryo_annai.html" class="nav-link">진료 안내</a>
+      <a href="section_staff.html" class="nav-link">스태프</a>
+      <a href="section_ryokin.html" class="nav-link">진료비</a>
+      <a href="section_shisetsu.html" class="nav-link">시설 안내</a>
+      <a href="section_shop.html" class="nav-link">샵</a>
+      <a href="section_access.html" class="nav-link">오시는 길</a>
+      <a href="../index.html" class="nav-link lang-switch">🇯🇵 日本語</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:088-856-7511" class="header-tel">088-856-7511</a>
+      <a href="../index.html" class="btn-lang">🇯🇵 JP</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="index.html" class="mobile-nav-link">홈</a>
+    <a href="section_shinryo_annai.html" class="mobile-nav-link">진료 안내</a>
+    <a href="section_staff.html" class="mobile-nav-link">스태프</a>
+    <a href="section_ryokin.html" class="mobile-nav-link">진료비</a>
+    <a href="section_shisetsu.html" class="mobile-nav-link">시설 안내</a>
+    <a href="section_shop.html" class="mobile-nav-link">샵</a>
+    <a href="section_access.html" class="mobile-nav-link">오시는 길</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="../index.html" class="mobile-nav-link lang-link">🇯🇵 日本語サイトへ</a>
+  </div>
+</header>
+<style>
+.site-header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#ede8e3);box-shadow:0 1px 8px rgba(0,0,0,.05);}
+.header-inner{max-width:860px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:16px;}
+.site-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.logo-mark{width:36px;height:36px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:600;}
+.logo-name{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);line-height:1.2;}
+.logo-sub{font-size:9px;color:#8a7a72;line-height:1.3;}
+.header-nav{display:flex;align-items:center;gap:2px;margin-left:auto;}
+.nav-link{font-size:12px;color:var(--text,#2a2220);text-decoration:none;padding:6px 9px;border-radius:8px;transition:all .18s;white-space:nowrap;}
+.nav-link:hover{background:var(--sakura-light,#fdf0ef);color:var(--sakura-deep,#c0514d);}
+.nav-link.lang-switch{border:1px solid var(--border,#ede8e3);margin-left:4px;font-size:11px;}
+.header-actions{display:none;align-items:center;gap:10px;flex-shrink:0;}
+.header-tel{font-size:13px;font-weight:600;color:var(--sakura-deep,#c0514d);text-decoration:none;}
+.btn-lang{font-size:11px;color:var(--text,#2a2220);text-decoration:none;border:1px solid var(--border,#ede8e3);padding:4px 8px;border-radius:8px;}
+.hamburger{background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text,#2a2220);border-radius:2px;transition:all .25s;}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.mobile-nav{display:none;flex-direction:column;background:white;border-top:1px solid var(--border,#ede8e3);padding:8px 0 16px;}
+.mobile-nav.open{display:flex;}
+.mobile-nav-link{font-size:14px;color:var(--text,#2a2220);text-decoration:none;padding:12px 24px;transition:background .15s;}
+.mobile-nav-link:hover{background:var(--cream,#faf7f4);}
+.mobile-nav-divider{height:1px;background:var(--border,#ede8e3);margin:8px 24px;}
+.lang-link{color:#8a7a72;font-size:13px;}
+@media(max-width:700px){.header-nav{display:none;}.header-actions{display:flex;}}
+@media(min-width:701px){.mobile-nav{display:none!important;}}
+</style>
+<script>
+(function(){
+  var hb=document.getElementById('hamburger');
+  var mn=document.getElementById('mobileNav');
+  if(!hb||!mn)return;
+  hb.addEventListener('click',function(){var o=mn.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',o);mn.setAttribute('aria-hidden',!o);});
+  document.addEventListener('click',function(e){var sh=document.getElementById('siteHeader');if(sh&&!sh.contains(e.target)){mn.classList.remove('open');hb.classList.remove('open');hb.setAttribute('aria-expanded',false);mn.setAttribute('aria-hidden',true);}});
+  var cur=location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.nav-link,.mobile-nav-link').forEach(function(a){var h=a.getAttribute('href')||'';if(h.split('/').pop()===cur){a.style.color='var(--sakura-deep,#c0514d)';a.style.fontWeight='500';}});
+})();
+</script>
+
+<!-- ① Hero Slider -->
+<div class="hero-slider" id="heroSlider">
+  <div class="hero-slider-track" id="heroTrack">
+    <div class="hero-slide">
+      <img src="../pics/gaikan.webp" alt="클리닉 외관">
+      <div class="hero-slide-overlay"></div>
+    </div>
+    <div class="hero-slide">
+      <img src="../pics/shinsatsu_fukei.webp" alt="진료실">
+      <div class="hero-slide-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Caption (shared across all slides) -->
+  <div class="hero-caption">
+    <div class="hero-tag">지역과 함께하는 동네 병원</div>
+    <h1>당신의 건강을,<br>언제나 최우선으로.</h1>
+    <p>한 분 한 분의 이야기에 귀 기울이며,<br>안심하고 찾아오실 수 있는 클리닉을 만들어 갑니다.</p>
+    <div class="hero-btns">
+      <a href="tel:088-856-7511" class="btn-primary">📞 088-856-7511</a>
+      <a href="section_shinryo_annai.html" class="btn-outline">진료 안내 보기</a>
+    </div>
+  </div>
+
+  <!-- Prev/Next Buttons -->
+  <button class="slider-prev" id="sliderPrev" aria-label="Previous">&#8249;</button>
+  <button class="slider-next" id="sliderNext" aria-label="Next">&#8250;</button>
+
+  <!-- Dots -->
+  <div class="slider-dots" id="sliderDots"></div>
+</div>
+
+<!-- ① News (latest 3 items) -->
+<section class="news-section">
+  <div class="section-header">
+    <div class="section-label">News</div>
+    <div class="section-title">공지사항</div>
+  </div>
+  <div class="news-list" id="news-placeholder"></div>
+  <div class="news-more" id="news-more" style="display:none;">
+    <a href="#">전체 공지사항 보기 →</a>
+  </div>
+</section>
+
+<!-- ② Director's Message -->
+<section class="doctor-section">
+  <div class="section-header">
+    <div class="section-label">Doctor</div>
+    <div class="section-title">원장 인사말</div>
+  </div>
+  <div class="doctor-inner">
+    <div class="doctor-avatar">👩‍⚕️</div>
+    <div>
+      <div class="doctor-role">원장 · 의학박사</div>
+      <div class="doctor-name">요시무라 나오코</div>
+      <div class="doctor-msg">지역 주민 여러분이 몸과 마음, 생활 전반의 건강 고민을 편하게 상담할 수 있는 클리닉이 되고자 합니다. 함께 차근차근 생각해 나가겠습니다.</div>
+      <div class="doctor-link"><a href="section_staff.html">원장 프로필 및 인사말 자세히 보기 →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ③ Departments -->
+<section>
+  <div class="section-header">
+    <div class="section-label">Departments</div>
+    <div class="section-title">진료 과목</div>
+    <div class="section-sub">내과·정신건강부터 한방까지 — 폭넓은 증상을 진료합니다</div>
+  </div>
+  <div class="departments">
+    <a href="section_shinryo_annai.html" class="dept-card">
+      <div class="dept-icon" style="background:#eef5f0;">🌿</div>
+      <div class="dept-name">한방 진료</div>
+      <div class="dept-desc">체질의 근본 원인에 맞춰 한약을 처방합니다.</div>
+      <div class="dept-symptoms">
+        <span class="dept-symptom green">갱년기 증상</span>
+        <span class="dept-symptom green">수족냉증 · 부종</span>
+        <span class="dept-symptom green">소화기 질환</span>
+        <span class="dept-symptom green">체질 개선</span>
+      </div>
+    </a>
+    
+    <a href="section_shinryo_annai.html" class="dept-card">
+      <div class="dept-icon" style="background:#edf3fb;">🧠</div>
+      <div class="dept-name">심신의학과</div>
+      <div class="dept-desc">스트레스와 정신건강 문제를 시간을 들여 꼼꼼하게 돌봅니다.</div>
+      <div class="dept-symptoms">
+        <span class="dept-symptom">불면증</span>
+        <span class="dept-symptom">우울증 · 불안장애</span>
+        <span class="dept-symptom">자율신경 질환</span>
+        <span class="dept-symptom">공황장애</span>
+      </div>
+    </a>
+
+
+        <a href="section_shinryo_annai.html" class="dept-card">
+      <div class="dept-icon" style="background:#fdf0f0;">🩺</div>
+      <div class="dept-name">내과</div>
+      <div class="dept-desc">일반적인 질환부터 생활습관병까지 진단합니다.</div>
+      <div class="dept-symptoms">
+        <span class="dept-symptom">고혈압</span>
+        <span class="dept-symptom">당뇨병</span>
+        <span class="dept-symptom">건강검진 후 상담</span>
+      </div>
+    </a>
+  </div>
+  <div class="dept-cta">
+    <a href="section_shinryo_annai.html">진료 안내 자세히 보기 →</a>
+  </div>
+</section>
+
+<!-- ④ Self-Pay Services -->
+<section class="selfpay-section">
+  <div class="section-header">
+    <div class="section-label">Self-pay Treatment</div>
+    <div class="section-title">자유진료 메뉴</div>
+    <div class="section-sub">보험 적용 진료 외에도 다양한 자유진료(비보험) 서비스를 제공합니다</div>
+  </div>
+  <div class="selfpay-grid">
+    <div class="selfpay-card">
+      <div class="selfpay-icon">🌸</div>
+      <div class="selfpay-name">태반주사</div>
+      <div class="selfpay-desc">갱년기 증상 완화 · 피로 회복 · 피부 개선</div>
+    </div>
+    <div class="selfpay-card">
+      <div class="selfpay-icon">🌀</div>
+      <div class="selfpay-name">오존 점적</div>
+      <div class="selfpay-desc">면역력 강화 · 항산화 · 만성 피로</div>
+    </div>
+    <div class="selfpay-card">
+      <div class="selfpay-icon">✨</div>
+      <div class="selfpay-name">글루타티온 &amp; 비타민C 점적</div>
+      <div class="selfpay-desc">피부 미백 · 기미 · 칙칙함 개선</div>
+    </div>
+    <div class="selfpay-card">
+      <div class="selfpay-icon">🌿</div>
+      <div class="selfpay-name">한방 &amp; 침 치료</div>
+      <div class="selfpay-desc">체질 개선 · 수족냉증 · 자율신경 조절</div>
+    </div>
+  </div>
+  <div class="selfpay-cta">
+    <a href="section_ryokin.html">자세히 보기 →</a>
+  </div>
+</section>
+
+  
+<!-- ⑤ First-Time Visitors -->
+<section class="first-visit-section">
+  <div class="section-header">
+    <div class="section-label">First Visit</div>
+    <div class="section-title">처음 방문하시는 분</div>
+    <div class="section-sub">처음 방문하시는 분도 언제든 환영합니다. 접수부터 수납까지 차근차근 안내해 드립니다.</div>
+  </div>
+  <div class="first-visit-inner">
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon">📞</div>
+        <div class="step-title">전화 또는 방문</div>
+        <div class="step-desc">예약 없이 방문 가능합니다. 미리 전화 주시면 더 원활하게 진료받으실 수 있습니다.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon">📋</div>
+        <div class="step-title">문진표 작성</div>
+        <div class="step-desc">접수처에서 문진표를 드립니다. 증상과 현재 복용 중인 약을 기재해 주세요.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon">🩺</div>
+        <div class="step-title">진료</div>
+        <div class="step-desc">의사가 충분한 문진과 진찰을 진행합니다. 궁금하신 점은 편하게 말씀해 주세요.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-icon">💊</div>
+        <div class="step-title">수납 &amp; 처방</div>
+        <div class="step-desc">대부분의 처방약(한약 포함)은 원내에서 바로 받으실 수 있습니다.</div>
+      </div>
+    </div>
+    <div class="first-visit-note">
+      <span class="note-icon">🎒</span>
+      <span><strong>마이넘버카드 또는 자격확인서</strong>, 진료의뢰서(있는 경우), 복약수첩을 지참해 주세요. 현재 복용 중인 약 정보가 있으면 진료가 더 원활하게 진행됩니다.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ Office Hours -->
+<section class="hours-section">
+  <div class="section-header">
+    <div class="section-label">Hours</div>
+    <div class="section-title">진료 시간</div>
+  </div>
+  <div class="hours-card">
+    <table class="hours-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th><th>일/공휴일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>오전<br><small style="color:var(--text-muted);font-weight:400;">9:00–12:00</small></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="dash">휴진</span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="dash">휴진</span></td>
+        </tr>
+        <tr>
+          <td>오후<br><small style="color:var(--text-muted);font-weight:400;">14:00–17:30</small></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="dash">휴진</span></td>
+          <td><span class="check"><b><font size="-2">14:00〜<br>18:30</font></b></span></td>
+          <td><span class="dash">휴진</span></td>
+          <td><span class="dash">휴진</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">🌿 목요일, 토요일 오후, 일요일, 공휴일은 휴진합니다. 금요일은 18:30까지 접수 가능합니다. 토요일은 오전(9:00–12:00)만 진료합니다.</div>
+  </div>
+</section>
+
+<!-- ⑦ Access -->
+<section class="access-section">
+  <div class="section-header">
+    <div class="section-label">Access</div>
+    <div class="section-title">오시는 길</div>
+  </div>
+  <div class="access-inner">
+    <div class="access-cards">
+      <div class="access-card">
+        <div class="access-icon pink">📍</div>
+        <div>
+          <div class="access-label">주소</div>
+          <div class="access-value">고치현 고치시 기타카나타 11-22 소피아빌딩 5층 (781-0073)</div>
+        </div>
+      </div>
+    </div>
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.523028083669!2d133.5585686!3d33.5657669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354e1ea99f25a341%3A0x5e28a60ba852b561!2z44CSNzgxLTAwNzMg6auY55-l55yM6auY55-l5biC5YyX6YeR55Sw77yR77yR4oiS77yS77ySIOOCveODleOCo-OCouODk-ODqyA1Zg!5e0!3m2!1sja!2sjp!4v1777948753661!5m2!1sja!2sjp"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="신혼마치 클리닉 지도">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer-en">
+  <div class="footer-inner-en">
+    <div class="footer-logo-en">
+      <span style="width:30px;height:30px;font-size:14px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-weight:600;">新</span>
+      <span style="font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);margin-left:8px;">Shinhonmachi Clinic</span>
+    </div>
+    <div class="footer-info-en">
+      <p>〒781-0073 고치현 고치시 기타카나타 11-22 소피아빌딩 5층</p>
+      <p>전화: <a href="tel:088-856-7511">088-856-7511</a>&nbsp;|&nbsp;진료시간: 월~수, 금 9:00–12:00 / 14:00–18:00&nbsp;|&nbsp;토 9:00–12:00</p>
+      <p>휴진: 목요일, 토요일 오후, 일요일 및 공휴일</p>
+    </div>
+    <div class="footer-nav-en">
+      <a href="index.html">홈</a>
+      <a href="section_shinryo_annai.html">진료 안내</a>
+      <a href="section_staff.html">스태프</a>
+      <a href="section_ryokin.html">진료비</a>
+      <a href="section_shisetsu.html">시설 안내</a>
+      <a href="section_shop.html">샵</a>
+      <a href="section_access.html">오시는 길</a>
+      <a href="../index.html" style="color:#8a7a72;">🇯🇵 日本語</a>
+    </div>
+    <div class="footer-copy-en">© Shinhonmachi Clinic. All rights reserved.</div>
+  </div>
+</footer>
+<style>
+.site-footer-en{background:var(--cream,#faf7f4);border-top:1px solid var(--border,#ede8e3);padding:36px 20px 24px;margin-top:60px;}
+.footer-inner-en{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
+.footer-logo-en{display:flex;align-items:center;}
+.footer-info-en{font-size:12px;color:#5a504a;line-height:1.9;}
+.footer-info-en a{color:var(--sakura-deep,#c0514d);text-decoration:none;}
+.footer-nav-en{display:flex;flex-wrap:wrap;gap:6px 16px;}
+.footer-nav-en a{font-size:12px;color:var(--text,#2a2220);text-decoration:none;}
+.footer-nav-en a:hover{color:var(--sakura-deep,#c0514d);}
+.footer-copy-en{font-size:11px;color:#8a7a72;margin-top:4px;}
+</style>
+
+<script src="../common.js"></script>
+<script>
+/* Show only the latest 3 news items; show "View All" link if there are more */
+(function () {
+  const MAX = 3;
+  const target = document.getElementById('news-placeholder');
+  if (!target) return;
+  new MutationObserver(function () {
+    const items = target.querySelectorAll('.news-item');
+    if (items.length > MAX) {
+      for (let i = MAX; i < items.length; i++) items[i].style.display = 'none';
+      const more = document.getElementById('news-more');
+      if (more) more.style.display = 'block';
+    }
+  }).observe(target, { childList: true });
+})();
+
+/* Hero Slider */
+(function () {
+  const track  = document.getElementById('heroTrack');
+  const slides = track ? track.querySelectorAll('.hero-slide') : [];
+  const dotsEl = document.getElementById('sliderDots');
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer;
+
+  // Generate dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i + 1));
+    d.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n) {
+    current = (n + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotsEl.querySelectorAll('.slider-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current)
+    );
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function startAuto() { timer = setInterval(next, 4500); }
+  function resetAuto() { clearInterval(timer); startAuto(); }
+
+  document.getElementById('sliderNext').addEventListener('click', () => { next(); resetAuto(); });
+  document.getElementById('sliderPrev').addEventListener('click', () => { prev(); resetAuto(); });
+
+  // Touch swipe
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); resetAuto(); }
+  });
+
+  startAuto();
+})();
+</script>
+</body>
+</html>

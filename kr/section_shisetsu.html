@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>시설 안내 | 깨끗하고 편안한 클리닉 환경 | 신혼마치 클리닉</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="../common.css">
+  <meta name="description" content="신혼마치 클리닉의 시설 사진 — 깨끗하고 편안한 접수처, 대기실, 진료실을 소개합니다. 고치현 고치시 기타카나타 소피아빌딩 5층.">
+  <link rel="canonical" href="https://shinhonmachi.jp/section_shisetsu.html">
+
+  <!-- OGP -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="시설 안내 | 깨끗하고 편안한 클리닉 환경 | 신혼마치 클리닉">
+  <meta property="og:description" content="신혼마치 클리닉의 시설 사진 — 깨끗하고 편안한 접수처, 대기실, 진료실을 소개합니다. 고치현 고치시 기타카나타 소피아빌딩 5층.">
+  <meta property="og:url" content="https://shinhonmachi.jp/section_shisetsu.html">
+  <meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+  <meta property="og:site_name" content="Shinhonmachi Clinic">
+  <meta property="og:locale" content="ko_KR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="시설 안내 | 깨끗하고 편안한 클리닉 환경 | 신혼마치 클리닉">
+  <meta name="twitter:description" content="신혼마치 클리닉의 시설 사진 — 깨끗하고 편안한 접수처, 대기실, 진료실을 소개합니다. 고치현 고치시 기타카나타 소피아빌딩 5층.">
+  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+    
+              
+        
+  /* Main Visual */
+  .hero-photo {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .hero-photo:hover { opacity: 0.95; }
+
+  .container { max-width: 800px; margin: 0 auto; padding: 48px 32px; }
+
+  /* Section Title */
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background: var(--sakura-deep);
+    border-radius: 2px;
+  }
+
+  /* Photo Grid */
+  .photo-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .photo-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--border);
+    cursor: pointer;
+  }
+  .photo-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .photo-grid-2 .photo-item img { height: 340px; }
+  .photo-item:hover img { transform: scale(1.04); }
+  .photo-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(58,53,48,0.7) 0%, transparent 100%);
+    color: white;
+    font-size: 12px;
+    padding: 28px 14px 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .photo-item:hover .photo-caption { opacity: 1; }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(30,25,22,0.92);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  }
+  .lightbox-caption { color: rgba(255,255,255,0.7); font-size: 13px; }
+  .lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .lightbox-close:hover { opacity: 1; }
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    padding: 12px;
+  }
+  .lightbox-nav:hover { opacity: 1; }
+  .lightbox-prev { left: 12px; }
+  .lightbox-next { right: 12px; }
+
+    
+  @media (max-width: 600px) {
+    .photo-grid-3 { grid-template-columns: 1fr 1fr; }
+    .hero-photo { height: 260px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <span class="logo-mark">新</span>
+      <div class="logo-text">
+        <div class="logo-name">Shinhonmachi Clinic</div>
+        <div class="logo-sub">내과 · 심신의학과 · 한방</div>
+      </div>
+    </a>
+    <nav class="header-nav" id="headerNav">
+      <a href="index.html" class="nav-link">홈</a>
+      <a href="section_shinryo_annai.html" class="nav-link">진료 안내</a>
+      <a href="section_staff.html" class="nav-link">스태프</a>
+      <a href="section_ryokin.html" class="nav-link">진료비</a>
+      <a href="section_shisetsu.html" class="nav-link">시설 안내</a>
+      <a href="section_shop.html" class="nav-link">샵</a>
+      <a href="section_access.html" class="nav-link">오시는 길</a>
+      <a href="../index.html" class="nav-link lang-switch">🇯🇵 日本語</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:088-856-7511" class="header-tel">088-856-7511</a>
+      <a href="../index.html" class="btn-lang">🇯🇵 JP</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="index.html" class="mobile-nav-link">홈</a>
+    <a href="section_shinryo_annai.html" class="mobile-nav-link">진료 안내</a>
+    <a href="section_staff.html" class="mobile-nav-link">스태프</a>
+    <a href="section_ryokin.html" class="mobile-nav-link">진료비</a>
+    <a href="section_shisetsu.html" class="mobile-nav-link">시설 안내</a>
+    <a href="section_shop.html" class="mobile-nav-link">샵</a>
+    <a href="section_access.html" class="mobile-nav-link">오시는 길</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="../index.html" class="mobile-nav-link lang-link">🇯🇵 日本語サイトへ</a>
+  </div>
+</header>
+<style>
+.site-header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#ede8e3);box-shadow:0 1px 8px rgba(0,0,0,.05);}
+.header-inner{max-width:860px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:16px;}
+.site-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.logo-mark{width:36px;height:36px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:600;}
+.logo-name{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);line-height:1.2;}
+.logo-sub{font-size:9px;color:#8a7a72;line-height:1.3;}
+.header-nav{display:flex;align-items:center;gap:2px;margin-left:auto;}
+.nav-link{font-size:12px;color:var(--text,#2a2220);text-decoration:none;padding:6px 9px;border-radius:8px;transition:all .18s;white-space:nowrap;}
+.nav-link:hover{background:var(--sakura-light,#fdf0ef);color:var(--sakura-deep,#c0514d);}
+.nav-link.lang-switch{border:1px solid var(--border,#ede8e3);margin-left:4px;font-size:11px;}
+.header-actions{display:none;align-items:center;gap:10px;flex-shrink:0;}
+.header-tel{font-size:13px;font-weight:600;color:var(--sakura-deep,#c0514d);text-decoration:none;}
+.btn-lang{font-size:11px;color:var(--text,#2a2220);text-decoration:none;border:1px solid var(--border,#ede8e3);padding:4px 8px;border-radius:8px;}
+.hamburger{background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text,#2a2220);border-radius:2px;transition:all .25s;}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.mobile-nav{display:none;flex-direction:column;background:white;border-top:1px solid var(--border,#ede8e3);padding:8px 0 16px;}
+.mobile-nav.open{display:flex;}
+.mobile-nav-link{font-size:14px;color:var(--text,#2a2220);text-decoration:none;padding:12px 24px;transition:background .15s;}
+.mobile-nav-link:hover{background:var(--cream,#faf7f4);}
+.mobile-nav-divider{height:1px;background:var(--border,#ede8e3);margin:8px 24px;}
+.lang-link{color:#8a7a72;font-size:13px;}
+@media(max-width:700px){.header-nav{display:none;}.header-actions{display:flex;}}
+@media(min-width:701px){.mobile-nav{display:none!important;}}
+</style>
+<script>
+(function(){
+  var hb=document.getElementById('hamburger');
+  var mn=document.getElementById('mobileNav');
+  if(!hb||!mn)return;
+  hb.addEventListener('click',function(){var o=mn.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',o);mn.setAttribute('aria-hidden',!o);});
+  document.addEventListener('click',function(e){var sh=document.getElementById('siteHeader');if(sh&&!sh.contains(e.target)){mn.classList.remove('open');hb.classList.remove('open');hb.setAttribute('aria-expanded',false);mn.setAttribute('aria-hidden',true);}});
+  var cur=location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.nav-link,.mobile-nav-link').forEach(function(a){var h=a.getAttribute('href')||'';if(h.split('/').pop()===cur){a.style.color='var(--sakura-deep,#c0514d)';a.style.fontWeight='500';}});
+})();
+</script>
+
+<div class="page-hero">
+  <span class="page-label">Facility</span>
+  <div class="page-title">시설 안내</div>
+  <div class="page-sub">깨끗하고 편안한 환경에서 맞이하겠습니다</div>
+</div>
+
+<!-- Exterior Main Visual -->
+<picture>
+  <source srcset="../pics/gaikan.webp" type="image/webp">
+  <img src="../pics/gaikan.JPG" class="hero-photo" alt="클리닉 외관" onclick="openLightbox(0)" loading="eager" decoding="async" width="1440" height="1080">
+</picture>
+
+<div class="container">
+
+  <!-- Reception -->
+  <div class="section-title">접수처</div>
+  <div class="photo-grid-2">
+    <div class="photo-item" onclick="openLightbox(1)">
+      <picture>
+      <source srcset="../pics/shisetsu_machiai.webp" type="image/webp">
+      <img src="../pics/shisetsu_machiai.webp" alt="대기실" loading="lazy" decoding="async" width="1200" height="1600">
+    </picture>
+      <div class="photo-caption">대기실</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(2)">
+      <picture>
+      <source srcset="../pics/shisetsu_uketsuke.webp" type="image/webp">
+      <img src="../pics/shisetsu_uketsuke.webp" alt="접수 카운터" loading="lazy" decoding="async" width="1200" height="1600">
+    </picture>
+      <div class="photo-caption">접수 카운터</div>
+    </div>
+  </div>
+
+  <!-- Consultation Room -->
+  <div class="section-title">진료실</div>
+  <div class="photo-grid-3">
+    <div class="photo-item" onclick="openLightbox(3)">
+      <picture>
+      <source srcset="../pics/sinsatsu1.webp" type="image/webp">
+      <img src="../pics/sinsatsu1.JPG" alt="진찰대 1" loading="lazy" decoding="async" width="1000" height="1333">
+    </picture>
+      <div class="photo-caption">진찰대</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(4)">
+      <picture>
+      <source srcset="../pics/sinsatsu2.webp" type="image/webp">
+      <img src="../pics/sinsatsu2.JPG" alt="진찰대 2" loading="lazy" decoding="async" width="1000" height="1333">
+    </picture>
+      <div class="photo-caption">진찰대</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(5)">
+      <picture>
+      <source srcset="../pics/sinsatsu4.jpeg" type="image/webp">
+      <img src="../pics/sinsatsu4.jpeg" alt="진찰대 4" loading="lazy" decoding="async" width="1000" height="1333">
+    </picture>
+      <div class="photo-caption">진찰대</div>
+    </div>
+  </div>
+
+  <!-- Medical Equipment -->
+  <div class="section-title">의료 장비</div>
+  <div class="photo-grid-2" style="grid-template-columns: 1fr 1fr;">
+    <div class="photo-item" onclick="openLightbox(6)">
+      <picture>
+      <source srcset="../pics/shisetsu_kigu1.webp" type="image/webp">
+      <img src="../pics/shisetsu_kigu1.webp" alt="오존 발생기" loading="lazy" decoding="async" width="800" height="1067" style="height:200px;">
+    </picture>
+      <div class="photo-caption">오존 발생기</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(7)">
+      <picture>
+      <source srcset="../pics/shisetsu_kigu2.webp" type="image/webp">
+      <img src="../pics/shisetsu_kigu2.webp" alt="슈퍼라이저" loading="lazy" decoding="async" width="800" height="1067" style="height:200px;">
+    </picture>
+      <div class="photo-caption">슈퍼라이저</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightboxBtn()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">‹</button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">›</button>
+</div>
+
+<footer class="site-footer-en">
+  <div class="footer-inner-en">
+    <div class="footer-logo-en">
+      <span style="width:30px;height:30px;font-size:14px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-weight:600;">新</span>
+      <span style="font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);margin-left:8px;">Shinhonmachi Clinic</span>
+    </div>
+    <div class="footer-info-en">
+      <p>〒781-0073 고치현 고치시 기타카나타 11-22 소피아빌딩 5층</p>
+      <p>전화: <a href="tel:088-856-7511">088-856-7511</a>&nbsp;|&nbsp;진료시간: 월~수, 금 9:00–12:00 / 14:00–18:00&nbsp;|&nbsp;토 9:00–12:00</p>
+      <p>휴진: 목요일, 토요일 오후, 일요일 및 공휴일</p>
+    </div>
+    <div class="footer-nav-en">
+      <a href="index.html">홈</a>
+      <a href="section_shinryo_annai.html">진료 안내</a>
+      <a href="section_staff.html">스태프</a>
+      <a href="section_ryokin.html">진료비</a>
+      <a href="section_shisetsu.html">시설 안내</a>
+      <a href="section_shop.html">샵</a>
+      <a href="section_access.html">오시는 길</a>
+      <a href="../index.html" style="color:#8a7a72;">🇯🇵 日本語</a>
+    </div>
+    <div class="footer-copy-en">© Shinhonmachi Clinic. All rights reserved.</div>
+  </div>
+</footer>
+<style>
+.site-footer-en{background:var(--cream,#faf7f4);border-top:1px solid var(--border,#ede8e3);padding:36px 20px 24px;margin-top:60px;}
+.footer-inner-en{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
+.footer-logo-en{display:flex;align-items:center;}
+.footer-info-en{font-size:12px;color:#5a504a;line-height:1.9;}
+.footer-info-en a{color:var(--sakura-deep,#c0514d);text-decoration:none;}
+.footer-nav-en{display:flex;flex-wrap:wrap;gap:6px 16px;}
+.footer-nav-en a{font-size:12px;color:var(--text,#2a2220);text-decoration:none;}
+.footer-nav-en a:hover{color:var(--sakura-deep,#c0514d);}
+.footer-copy-en{font-size:11px;color:#8a7a72;margin-top:4px;}
+</style>
+
+<script>
+  const photos = [
+    { src: 'pics/gaikan.webp', caption: '클리닉 외관' },
+    { src: 'pics/shisetsu_uketsuke.webp', caption: '접수 카운터' },
+    { src: 'pics/shisetsu_machiai.webp', caption: '대기실' },
+    { src: 'pics/sinsatsu1.webp', caption: '진찰대' },
+    { src: 'pics/sinsatsu2.webp', caption: '진찰대' },
+    { src: 'pics/sinsatsu4.jpeg', caption: '진찰대' },
+    { src: 'pics/shisetsu_kigu1.webp', caption: '오존 발생기' },
+        { src: 'pics/shisetsu_kigu2.webp', caption: '슈퍼라이저' }
+  ];
+  let current = 0;
+
+  function openLightbox(index) {
+    current = index;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightboxBtn() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeLightbox(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightboxBtn();
+  }
+  function navLightbox(dir) {
+    current = (current + dir + photos.length) % photos.length;
+    updateLightbox();
+  }
+  function updateLightbox() {
+    document.getElementById('lightbox-img').src = photos[current].src;
+    document.getElementById('lightbox-caption').textContent = photos[current].caption;
+  }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') navLightbox(-1);
+    if (e.key === 'ArrowRight') navLightbox(1);
+    if (e.key === 'Escape') closeLightboxBtn();
+  });
+</script>
+
+<script src="../common.js"></script>
+</body>
+</html>

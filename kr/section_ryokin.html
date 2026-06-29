@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>진료비 안내 | 보험진료 &amp; 자유진료 | 신혼마치 클리닉</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="../common.css">
+  <meta name="description" content="신혼마치 클리닉의 진료비 안내. 보험진료(초진료, 재진료 등) 및 자유진료(태반주사, 오존 점적, 비타민C 등)의 예상 비용을 안내합니다. 현금 및 신용카드 결제 가능합니다.">
+  <link rel="canonical" href="https://shinhonmachi.jp/section_ryokin.html">
+
+  <!-- OGP -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="진료비 안내 | 보험진료 &amp; 자유진료 | 신혼마치 클리닉">
+  <meta property="og:description" content="신혼마치 클리닉의 진료비 안내. 보험진료(초진료, 재진료 등) 및 자유진료(태반주사, 오존 점적, 비타민C 등)의 예상 비용을 안내합니다. 현금 및 신용카드 결제 가능합니다.">
+  <meta property="og:url" content="https://shinhonmachi.jp/section_ryokin.html">
+  <meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+  <meta property="og:site_name" content="Shinhonmachi Clinic">
+  <meta property="og:locale" content="ko_KR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="진료비 안내 | 보험진료 &amp; 자유진료 | 신혼마치 클리닉">
+  <meta name="twitter:description" content="신혼마치 클리닉의 진료비 안내. 보험진료(초진료, 재진료 등) 및 자유진료(태반주사, 오존 점적, 비타민C 등)의 예상 비용을 안내합니다. 현금 및 신용카드 결제 가능합니다.">
+  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+                  
+        
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
+
+  /* Insurance/Card Section */
+  .insurance-banner { display: flex; align-items: center; gap: 14px; background: white; border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px; margin-bottom: 36px; border-left: 4px solid var(--sakura-deep); }
+  .insurance-icon { font-size: 28px; flex-shrink: 0; }
+  .insurance-text { font-size: 13px; color: var(--text); line-height: 1.8; }
+  .insurance-text strong { font-size: 15px; font-family: 'Noto Serif JP', serif; display: block; margin-bottom: 4px; }
+
+  /* Fee Section */
+  .fee-section { margin-bottom: 36px; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .section-icon { font-size: 22px; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; }
+  .fee-table-wrap { background: white; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .fee-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .fee-table thead tr { background: var(--sakura-light); }
+  .fee-table th { padding: 12px 18px; text-align: left; font-size: 12px; font-weight: 500; color: var(--sakura-deep); }
+  .fee-table th:last-child { text-align: right; }
+  .fee-table td { padding: 13px 18px; border-top: 1px dashed var(--border); color: var(--text); }
+  .fee-table td:last-child { text-align: right; font-weight: 500; color: var(--sakura-deep); white-space: nowrap; }
+  .fee-table tr:hover td { background: #fdfaf8; }
+  .fee-note { font-size: 11px; color: var(--text-muted); margin-top: 8px; padding: 0 4px; }
+
+  /* Self-Pay Services */
+  .self-pay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .self-pay-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+  .self-pay-name { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .self-pay-desc { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; line-height: 1.6; }
+  .self-pay-price { font-family: 'Noto Serif JP', serif; font-size: 18px; color: var(--sakura-deep); font-weight: 600; }
+  .self-pay-price small { font-size: 11px; font-weight: 400; color: var(--text-muted); font-family: 'Noto Sans JP', sans-serif; }
+
+  /* Payment Methods */
+  .payment-list { display: flex; flex-wrap: wrap; gap: 10px; }
+  .payment-tag { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 8px 16px; font-size: 13px; display: flex; align-items: center; gap: 6px; }
+
+  /* Important Notes */
+  .info-box { background: var(--green-light); border: 1px solid #c5dece; border-radius: 12px; padding: 20px 24px; margin-top: 8px; }
+  .info-box-title { font-size: 14px; font-weight: 500; color: var(--green); margin-bottom: 10px; }
+  .info-box ul { padding-left: 16px; }
+  .info-box li { font-size: 13px; color: var(--text-muted); line-height: 1.9; }
+
+    
+  @media (max-width: 540px) {
+    .container { padding: 32px 16px; }
+    .self-pay-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <span class="logo-mark">新</span>
+      <div class="logo-text">
+        <div class="logo-name">Shinhonmachi Clinic</div>
+        <div class="logo-sub">내과 · 심신의학과 · 한방</div>
+      </div>
+    </a>
+    <nav class="header-nav" id="headerNav">
+      <a href="index.html" class="nav-link">홈</a>
+      <a href="section_shinryo_annai.html" class="nav-link">진료 안내</a>
+      <a href="section_staff.html" class="nav-link">스태프</a>
+      <a href="section_ryokin.html" class="nav-link">진료비</a>
+      <a href="section_shisetsu.html" class="nav-link">시설 안내</a>
+      <a href="section_shop.html" class="nav-link">샵</a>
+      <a href="section_access.html" class="nav-link">오시는 길</a>
+      <a href="../index.html" class="nav-link lang-switch">🇯🇵 日本語</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:088-856-7511" class="header-tel">088-856-7511</a>
+      <a href="../index.html" class="btn-lang">🇯🇵 JP</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="index.html" class="mobile-nav-link">홈</a>
+    <a href="section_shinryo_annai.html" class="mobile-nav-link">진료 안내</a>
+    <a href="section_staff.html" class="mobile-nav-link">스태프</a>
+    <a href="section_ryokin.html" class="mobile-nav-link">진료비</a>
+    <a href="section_shisetsu.html" class="mobile-nav-link">시설 안내</a>
+    <a href="section_shop.html" class="mobile-nav-link">샵</a>
+    <a href="section_access.html" class="mobile-nav-link">오시는 길</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="../index.html" class="mobile-nav-link lang-link">🇯🇵 日本語サイトへ</a>
+  </div>
+</header>
+<style>
+.site-header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#ede8e3);box-shadow:0 1px 8px rgba(0,0,0,.05);}
+.header-inner{max-width:860px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:16px;}
+.site-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.logo-mark{width:36px;height:36px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:600;}
+.logo-name{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);line-height:1.2;}
+.logo-sub{font-size:9px;color:#8a7a72;line-height:1.3;}
+.header-nav{display:flex;align-items:center;gap:2px;margin-left:auto;}
+.nav-link{font-size:12px;color:var(--text,#2a2220);text-decoration:none;padding:6px 9px;border-radius:8px;transition:all .18s;white-space:nowrap;}
+.nav-link:hover{background:var(--sakura-light,#fdf0ef);color:var(--sakura-deep,#c0514d);}
+.nav-link.lang-switch{border:1px solid var(--border,#ede8e3);margin-left:4px;font-size:11px;}
+.header-actions{display:none;align-items:center;gap:10px;flex-shrink:0;}
+.header-tel{font-size:13px;font-weight:600;color:var(--sakura-deep,#c0514d);text-decoration:none;}
+.btn-lang{font-size:11px;color:var(--text,#2a2220);text-decoration:none;border:1px solid var(--border,#ede8e3);padding:4px 8px;border-radius:8px;}
+.hamburger{background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text,#2a2220);border-radius:2px;transition:all .25s;}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.mobile-nav{display:none;flex-direction:column;background:white;border-top:1px solid var(--border,#ede8e3);padding:8px 0 16px;}
+.mobile-nav.open{display:flex;}
+.mobile-nav-link{font-size:14px;color:var(--text,#2a2220);text-decoration:none;padding:12px 24px;transition:background .15s;}
+.mobile-nav-link:hover{background:var(--cream,#faf7f4);}
+.mobile-nav-divider{height:1px;background:var(--border,#ede8e3);margin:8px 24px;}
+.lang-link{color:#8a7a72;font-size:13px;}
+@media(max-width:700px){.header-nav{display:none;}.header-actions{display:flex;}}
+@media(min-width:701px){.mobile-nav{display:none!important;}}
+</style>
+<script>
+(function(){
+  var hb=document.getElementById('hamburger');
+  var mn=document.getElementById('mobileNav');
+  if(!hb||!mn)return;
+  hb.addEventListener('click',function(){var o=mn.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',o);mn.setAttribute('aria-hidden',!o);});
+  document.addEventListener('click',function(e){var sh=document.getElementById('siteHeader');if(sh&&!sh.contains(e.target)){mn.classList.remove('open');hb.classList.remove('open');hb.setAttribute('aria-expanded',false);mn.setAttribute('aria-hidden',true);}});
+  var cur=location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.nav-link,.mobile-nav-link').forEach(function(a){var h=a.getAttribute('href')||'';if(h.split('/').pop()===cur){a.style.color='var(--sakura-deep,#c0514d)';a.style.fontWeight='500';}});
+})();
+</script>
+
+<div class="page-hero">
+  <span class="page-label">Fee Guide</span>
+  <div class="page-title">진료비 안내</div>
+  <div class="page-sub"></div>
+</div>
+
+<div class="container">
+
+  <div class="insurance-banner">
+    <div class="insurance-icon">🪪</div>
+    <div class="insurance-text">
+      <strong>마이넘버카드 또는 자격확인서를 지참해 주세요</strong>
+      본 클리닉은 건강보험이 적용됩니다. 방문 시에는 반드시 마이넘버카드 또는 자격확인서를 지참해 주세요.
+    </div>
+  </div>
+
+
+  <!-- Self-Pay Services -->
+  <div class="fee-section">
+    <div class="section-header">
+      <span class="section-icon">📋</span>
+      <div class="section-title">자유진료 안내</div>
+    </div>
+    <div class="self-pay-grid">
+      <div class="self-pay-card">
+        <div class="self-pay-name">태반주사</div>
+        <div class="self-pay-desc">1–5 앰플 | 태반 유래 성장인자가 풍부한 주사입니다. 갱년기 증상 완화, 피로 회복, 피부 개선에 사용됩니다.</div>
+        <div class="self-pay-price"><small></small></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">페이셜 태반주사</div>
+        <div class="self-pay-desc">태반을 얼굴에 직접 주입하는 미용 시술입니다. 기미, 칙칙함, 잔주름 개선과 피부 탄력 및 윤기 향상에 효과가 있습니다.</div>
+        <div class="self-pay-price"><small></small></div>
+      </div>
+        <div class="self-pay-card">
+        <div class="self-pay-name">태반 경혈 주사</div>
+        <div class="self-pay-desc">경혈에 태반을 주입하여 국소적인 세포 재생, 혈류 개선, 항염 효과를 촉진합니다. 어깨결림, 미용 목적 등에 사용됩니다.</div>
+        <div class="self-pay-price"></div>
+      </div>
+       <div class="self-pay-card">
+        <div class="self-pay-name">소량 오존 자가혈요법</div>
+        <div class="self-pay-desc">약 100cc의 혈액을 채취하여 오존 가스와 혼합한 후, 오존화된 혈액을 다시 체내로 되돌리는 요법입니다.</div>
+        <div class="self-pay-price"></div>
+      </div>
+       <div class="self-pay-card">
+        <div class="self-pay-name">오존 경혈 주사</div>
+        <div class="self-pay-desc">경혈에 오존을 주입하여 국소 혈액순환을 촉진하고 염증을 억제합니다. 어깨결림, 허리통증, 관절통 등에 사용됩니다.</div>
+        <div class="self-pay-price"></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">오존 점적</div>
+        <div class="self-pay-desc">오존과 혈액을 혼합하여 체내로 되돌리는 요법입니다. 면역력 강화, 항산화 효과, 만성 피로, 바이러스 방어에 널리 사용됩니다.</div>
+        <div class="self-pay-price"><small></small></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">고용량 비타민C 점적</div>
+        <div class="self-pay-desc">25g부터 | 경구 섭취로는 도달하기 어려운 고농도의 비타민C를 정맥주사로 공급합니다. 강력한 항산화, 면역 활성화, 피부 미백 효과가 있습니다.</div>
+        <div class="self-pay-price"><small></small></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">알파리포산 점적</div>
+        <div class="self-pay-desc">600mg | 강력한 항산화 물질을 정맥주사로 공급합니다. 피로 회복, 체중 관리 보조, 혈당 개선, 항노화에 사용됩니다.</div>
+        <div class="self-pay-price"></div>
+      </div>
+       <div class="self-pay-card">
+        <div class="self-pay-name">마이어스 칵테일 점적</div>
+        <div class="self-pay-desc">비타민과 미네랄이 함유된 영양 점적 주사입니다. 피로, 편두통, 섬유근육통에 효과가 있다고 보고됩니다.</div>
+        <div class="self-pay-price"></div>
+      </div>
+
+           <div class="self-pay-card">
+        <div class="self-pay-name">바디 체커</div>
+        <div class="self-pay-desc">혈관 경직도(혈관 나이)를 측정하고 자율신경(교감/부교감) 균형을 통해 스트레스 수준을 평가합니다. 손끝에 센서를 부착하며, 측정에는 약 3분이 걸립니다.</div>
+        <div class="self-pay-price"></div>
+      </div>
+       <div class="self-pay-card">
+        <div class="self-pay-name">슈퍼라이저(근적외선 요법)</div>
+        <div class="self-pay-desc">슈퍼라이저(근적외선 치료기)는 별모양 신경절에 근적외선을 조사하여 신경절 차단과 유사한 치료 효과를 제공합니다.</div>
+        <div class="self-pay-price"></div>
+      </div>
+        <div class="self-pay-card">
+        <div class="self-pay-name">침 치료</div>
+        <div class="self-pay-desc">동양의학 원리에 기반한 침 치료입니다. 통증, 결림, 자율신경 불균형, 갱년기 증상 등 다양한 증상에 대응합니다. 자세한 내용은 문의해 주세요.</div>
+        <div class="self-pay-price"></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">한방 상담</div>
+        <div class="self-pay-desc">의사가 체질과 증상에 맞춘 한약을 처방합니다. 양약에 잘 반응하지 않거나 만성적인 고민이 있는 분을 꼼꼼히 돌봐드립니다.</div>
+        <div class="self-pay-price"></div>
+      </div>
+    </div>
+    <p class="fee-note">* 자유진료 비용은 변경될 수 있습니다. 최신 가격은 전화로 문의해 주세요.</p>
+  </div>
+
+  <!-- Payment Methods -->
+  <div class="fee-section">
+    <div class="section-header">
+      <span class="section-icon">💳</span>
+      <div class="section-title">결제 방법</div>
+    </div>
+    <div class="payment-list">
+      <div class="payment-tag">💴 현금</div>
+      <div class="payment-tag">💳 신용카드</div>
+    </div>
+    <p class="fee-note" style="margin-top:10px;">* 사용 가능 카드: Visa, Mastercard, JCB, American Express</p>
+  </div>
+
+  <!-- Important Notes -->
+  <div class="info-box">
+    <div class="info-box-title">🌿 안내 사항</div>
+    <ul>
+      <li>마이넘버카드 또는 자격확인서를 지참하지 않으신 경우, 진료비 전액을 본인 부담으로 청구드립니다.</li>
+      <li>진료비는 치료, 검사, 처방 내용에 따라 달라집니다. 자세한 내용은 접수처에 편하게 문의해 주세요.</li>
+      <li>영수증은 결제 시 발행됩니다. 영수증은 재발행이 불가능하니 주의해 주세요.</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer class="site-footer-en">
+  <div class="footer-inner-en">
+    <div class="footer-logo-en">
+      <span style="width:30px;height:30px;font-size:14px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-weight:600;">新</span>
+      <span style="font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);margin-left:8px;">Shinhonmachi Clinic</span>
+    </div>
+    <div class="footer-info-en">
+      <p>〒781-0073 고치현 고치시 기타카나타 11-22 소피아빌딩 5층</p>
+      <p>전화: <a href="tel:088-856-7511">088-856-7511</a>&nbsp;|&nbsp;진료시간: 월~수, 금 9:00–12:00 / 14:00–18:00&nbsp;|&nbsp;토 9:00–12:00</p>
+      <p>휴진: 목요일, 토요일 오후, 일요일 및 공휴일</p>
+    </div>
+    <div class="footer-nav-en">
+      <a href="index.html">홈</a>
+      <a href="section_shinryo_annai.html">진료 안내</a>
+      <a href="section_staff.html">스태프</a>
+      <a href="section_ryokin.html">진료비</a>
+      <a href="section_shisetsu.html">시설 안내</a>
+      <a href="section_shop.html">샵</a>
+      <a href="section_access.html">오시는 길</a>
+      <a href="../index.html" style="color:#8a7a72;">🇯🇵 日本語</a>
+    </div>
+    <div class="footer-copy-en">© Shinhonmachi Clinic. All rights reserved.</div>
+  </div>
+</footer>
+<style>
+.site-footer-en{background:var(--cream,#faf7f4);border-top:1px solid var(--border,#ede8e3);padding:36px 20px 24px;margin-top:60px;}
+.footer-inner-en{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
+.footer-logo-en{display:flex;align-items:center;}
+.footer-info-en{font-size:12px;color:#5a504a;line-height:1.9;}
+.footer-info-en a{color:var(--sakura-deep,#c0514d);text-decoration:none;}
+.footer-nav-en{display:flex;flex-wrap:wrap;gap:6px 16px;}
+.footer-nav-en a{font-size:12px;color:var(--text,#2a2220);text-decoration:none;}
+.footer-nav-en a:hover{color:var(--sakura-deep,#c0514d);}
+.footer-copy-en{font-size:11px;color:#8a7a72;margin-top:4px;}
+</style>
+
+
+<script src="../common.js"></script>
+</body>
+</html>
