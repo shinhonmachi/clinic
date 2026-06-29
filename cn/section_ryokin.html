@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>费用说明 | 保险·自费诊疗 | 新本町诊所</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="../common.css">
+  <meta name="description" content="Fee guide for 新本町诊所. Estimated costs for insured treatments (first visit, follow-up fees) and self-pay services (placenta, ozone drip, vitamin C, and more). Cash and credit card accepted.">
+  <link rel="canonical" href="https://shinhonmachi.jp/section_ryokin.html">
+
+  <!-- OGP -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="费用说明 | 保险·自费诊疗 | 新本町诊所">
+  <meta property="og:description" content="Fee guide for 新本町诊所. Estimated costs for insured treatments (first visit, follow-up fees) and self-pay services (placenta, ozone drip, vitamin C, and more). Cash and credit card accepted.">
+  <meta property="og:url" content="https://shinhonmachi.jp/section_ryokin.html">
+  <meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+  <meta property="og:site_name" content="新本町诊所">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="费用说明 | 保险·自费诊疗 | 新本町诊所">
+  <meta name="twitter:description" content="Fee guide for 新本町诊所. Estimated costs for insured treatments (first visit, follow-up fees) and self-pay services (placenta, ozone drip, vitamin C, and more). Cash and credit card accepted.">
+  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+                  
+        
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
+
+  /* Insurance/Card Section */
+  .insurance-banner { display: flex; align-items: center; gap: 14px; background: white; border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px; margin-bottom: 36px; border-left: 4px solid var(--sakura-deep); }
+  .insurance-icon { font-size: 28px; flex-shrink: 0; }
+  .insurance-text { font-size: 13px; color: var(--text); line-height: 1.8; }
+  .insurance-text strong { font-size: 15px; font-family: 'Noto Serif JP', serif; display: block; margin-bottom: 4px; }
+
+  /* Fee Section */
+  .fee-section { margin-bottom: 36px; }
+  .section-header { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+  .section-icon { font-size: 22px; }
+  .section-title { font-family: 'Noto Serif JP', serif; font-size: 17px; font-weight: 600; }
+  .fee-table-wrap { background: white; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .fee-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .fee-table thead tr { background: var(--sakura-light); }
+  .fee-table th { padding: 12px 18px; text-align: left; font-size: 12px; font-weight: 500; color: var(--sakura-deep); }
+  .fee-table th:last-child { text-align: right; }
+  .fee-table td { padding: 13px 18px; border-top: 1px dashed var(--border); color: var(--text); }
+  .fee-table td:last-child { text-align: right; font-weight: 500; color: var(--sakura-deep); white-space: nowrap; }
+  .fee-table tr:hover td { background: #fdfaf8; }
+  .fee-note { font-size: 11px; color: var(--text-muted); margin-top: 8px; padding: 0 4px; }
+
+  /* 自费诊疗项目 */
+  .self-pay-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .self-pay-card { background: white; border: 1px solid var(--border); border-radius: 14px; padding: 18px 20px; }
+  .self-pay-name { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
+  .self-pay-desc { font-size: 11px; color: var(--text-muted); margin-bottom: 10px; line-height: 1.6; }
+  .self-pay-price { font-family: 'Noto Serif JP', serif; font-size: 18px; color: var(--sakura-deep); font-weight: 600; }
+  .self-pay-price small { font-size: 11px; font-weight: 400; color: var(--text-muted); font-family: 'Noto Sans JP', sans-serif; }
+
+  /* 支付方式 */
+  .payment-list { display: flex; flex-wrap: wrap; gap: 10px; }
+  .payment-tag { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 8px 16px; font-size: 13px; display: flex; align-items: center; gap: 6px; }
+
+  /* Important Notes */
+  .info-box { background: var(--green-light); border: 1px solid #c5dece; border-radius: 12px; padding: 20px 24px; margin-top: 8px; }
+  .info-box-title { font-size: 14px; font-weight: 500; color: var(--green); margin-bottom: 10px; }
+  .info-box ul { padding-left: 16px; }
+  .info-box li { font-size: 13px; color: var(--text-muted); line-height: 1.9; }
+
+    
+  @media (max-width: 540px) {
+    .container { padding: 32px 16px; }
+    .self-pay-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <span class="logo-mark">新</span>
+      <div class="logo-text">
+        <div class="logo-name">新本町诊所</div>
+        <div class="logo-sub">内科 · 心身医学科 · 汉方</div>
+      </div>
+    </a>
+    <nav class="header-nav" id="headerNav">
+      <a href="index.html" class="nav-link">首页</a>
+      <a href="section_shinryo_annai.html" class="nav-link">诊疗科目</a>
+      <a href="section_staff.html" class="nav-link">医师介绍</a>
+      <a href="section_ryokin.html" class="nav-link">费用说明</a>
+      <a href="section_shisetsu.html" class="nav-link">设施介绍</a>
+      <a href="section_shop.html" class="nav-link">院内商店</a>
+      <a href="section_access.html" class="nav-link">交通·时间</a>
+      <a href="../index.html" class="nav-link lang-switch">🇯🇵 日本語</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:088-856-7511" class="header-tel">088-856-7511</a>
+      <a href="../index.html" class="btn-lang">🇯🇵 JP</a>
+      <button class="hamburger" id="hamburger" aria-label="菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="index.html" class="mobile-nav-link">首页</a>
+    <a href="section_shinryo_annai.html" class="mobile-nav-link">诊疗科目</a>
+    <a href="section_staff.html" class="mobile-nav-link">医师介绍</a>
+    <a href="section_ryokin.html" class="mobile-nav-link">费用说明</a>
+    <a href="section_shisetsu.html" class="mobile-nav-link">设施介绍</a>
+    <a href="section_shop.html" class="mobile-nav-link">院内商店</a>
+    <a href="section_access.html" class="mobile-nav-link">交通·时间</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="../index.html" class="mobile-nav-link lang-link">🇯🇵 切换至日语网站</a>
+  </div>
+</header>
+<style>
+.site-header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#ede8e3);box-shadow:0 1px 8px rgba(0,0,0,.05);}
+.header-inner{max-width:860px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:16px;}
+.site-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.logo-mark{width:36px;height:36px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:600;}
+.logo-name{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);line-height:1.2;}
+.logo-sub{font-size:9px;color:#8a7a72;line-height:1.3;}
+.header-nav{display:flex;align-items:center;gap:2px;margin-left:auto;}
+.nav-link{font-size:12px;color:var(--text,#2a2220);text-decoration:none;padding:6px 9px;border-radius:8px;transition:all .18s;white-space:nowrap;}
+.nav-link:hover{background:var(--sakura-light,#fdf0ef);color:var(--sakura-deep,#c0514d);}
+.nav-link.lang-switch{border:1px solid var(--border,#ede8e3);margin-left:4px;font-size:11px;}
+.header-actions{display:none;align-items:center;gap:10px;flex-shrink:0;}
+.header-tel{font-size:13px;font-weight:600;color:var(--sakura-deep,#c0514d);text-decoration:none;}
+.btn-lang{font-size:11px;color:var(--text,#2a2220);text-decoration:none;border:1px solid var(--border,#ede8e3);padding:4px 8px;border-radius:8px;}
+.hamburger{background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text,#2a2220);border-radius:2px;transition:all .25s;}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.mobile-nav{display:none;flex-direction:column;background:white;border-top:1px solid var(--border,#ede8e3);padding:8px 0 16px;}
+.mobile-nav.open{display:flex;}
+.mobile-nav-link{font-size:14px;color:var(--text,#2a2220);text-decoration:none;padding:12px 24px;transition:background .15s;}
+.mobile-nav-link:hover{background:var(--cream,#faf7f4);}
+.mobile-nav-divider{height:1px;background:var(--border,#ede8e3);margin:8px 24px;}
+.lang-link{color:#8a7a72;font-size:13px;}
+@media(max-width:700px){.header-nav{display:none;}.header-actions{display:flex;}}
+@media(min-width:701px){.mobile-nav{display:none!important;}}
+</style>
+<script>
+(function(){
+  var hb=document.getElementById('hamburger');
+  var mn=document.getElementById('mobileNav');
+  if(!hb||!mn)return;
+  hb.addEventListener('click',function(){var o=mn.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',o);mn.setAttribute('aria-hidden',!o);});
+  document.addEventListener('click',function(e){var sh=document.getElementById('siteHeader');if(sh&&!sh.contains(e.target)){mn.classList.remove('open');hb.classList.remove('open');hb.setAttribute('aria-expanded',false);mn.setAttribute('aria-hidden',true);}});
+  var cur=location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.nav-link,.mobile-nav-link').forEach(function(a){var h=a.getAttribute('href')||'';if(h.split('/').pop()===cur){a.style.color='var(--sakura-deep,#c0514d)';a.style.fontWeight='500';}});
+})();
+</script>
+
+<div class="page-hero">
+  <span class="page-label">费用说明</span>
+  <div class="page-title">费用说明</div>
+  <div class="page-sub"></div>
+</div>
+
+<div class="container">
+
+  <div class="insurance-banner">
+    <div class="insurance-icon">🪪</div>
+    <div class="insurance-text">
+      <strong>请携带个人编号卡或医疗保险证</strong>
+      本诊所接受国民健康保险。就诊时请务必携带个人编号卡或医疗保险证。
+    </div>
+  </div>
+
+
+  <!-- 自费诊疗项目 -->
+  <div class="fee-section">
+    <div class="section-header">
+      <span class="section-icon">📋</span>
+      <div class="section-title">自费诊疗项目</div>
+    </div>
+    <div class="self-pay-grid">
+      <div class="self-pay-card">
+        <div class="self-pay-name">胎盘素注射</div>
+        <div class="self-pay-desc">1～5支 | 富含胎盘源性生长因子的注射制剂，用于改善更年期症状、消除疲劳及皮肤美容。</div>
+        <div class="self-pay-price"><small></small></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">面部胎盘素注射</div>
+        <div class="self-pay-desc">将胎盘素直接注射于面部的美容疗法，有助于改善色斑、暗沉、细纹，提升肌肤紧致度与光泽。</div>
+        <div class="self-pay-price"><small></small></div>
+      </div>
+        <div class="self-pay-card">
+        <div class="self-pay-name">胎盘素穴位注射</div>
+        <div class="self-pay-desc">将胎盘素注射于穴位，促进局部细胞再生、改善血流及消炎，可用于肩颈酸痛、美容等多种目的。</div>
+        <div class="self-pay-price"></div>
+      </div>
+       <div class="self-pay-card">
+        <div class="self-pay-name">臭氧小剂量自血疗法</div>
+        <div class="self-pay-desc">抽取约100cc血液，与臭氧气体混合后回输体内。</div>
+        <div class="self-pay-price"></div>
+      </div>
+       <div class="self-pay-card">
+        <div class="self-pay-name">臭氧穴位注射</div>
+        <div class="self-pay-desc">将臭氧注射于穴位，促进局部血液循环、抑制炎症，可用于肩颈酸痛、腰痛、关节疼痛等。</div>
+        <div class="self-pay-price"></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">臭氧点滴</div>
+        <div class="self-pay-desc">将血液与臭氧混合后回输体内的疗法，广泛用于免疫增强、抗氧化、慢性疲劳及病毒防御。</div>
+        <div class="self-pay-price"><small></small></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">高剂量维生素C点滴</div>
+        <div class="self-pay-desc">从25g起 | 通过静脉点滴摄入口服难以达到的高浓度维生素C，具有强效抗氧化、激活免疫及美白效果。</div>
+        <div class="self-pay-price"><small></small></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">硫辛酸点滴</div>
+        <div class="self-pay-desc">600mg | 静脉注射强效抗氧化剂，用于消除疲劳、辅助减重、改善血糖及抗衰老。</div>
+        <div class="self-pay-price"></div>
+      </div>
+       <div class="self-pay-card">
+        <div class="self-pay-name">迈尔斯鸡尾酒点滴</div>
+        <div class="self-pay-desc">含维生素和矿物质的营养点滴，据报道对疲劳、偏头痛及纤维肌痛有效。</div>
+        <div class="self-pay-price"></div>
+      </div>
+
+           <div class="self-pay-card">
+        <div class="self-pay-name">体质检测仪</div>
+        <div class="self-pay-desc">通过自律神经（交感/副交感）平衡评估血管硬化度（血管年龄）及压力水平，将传感器附于指尖，测量约3分钟。</div>
+        <div class="self-pay-price"></div>
+      </div>
+       <div class="self-pay-card">
+        <div class="self-pay-name">超级激光（近红外线疗法）</div>
+        <div class="self-pay-desc">超级激光（近红外线治疗仪）对星状神经节照射近红外线，产生类似星状神经节阻滞的治疗效果。</div>
+        <div class="self-pay-price"></div>
+      </div>
+        <div class="self-pay-card">
+        <div class="self-pay-name">针灸</div>
+        <div class="self-pay-desc">针灸 based on Eastern medicine principles. 地址es a wide range of conditions including pain, stiffness, autonomic imbalance, and menopausal symptoms. Please inquire for details.</div>
+        <div class="self-pay-price"></div>
+      </div>
+      <div class="self-pay-card">
+        <div class="self-pay-name">汉方诊疗</div>
+        <div class="self-pay-desc">医生根据体质和症状开具汉方中药处方，尤其关注西医效果不佳或有慢性烦恼的患者。</div>
+        <div class="self-pay-price"></div>
+      </div>
+    </div>
+    <p class="fee-note">* 自费项目费用如有变动，请致电确认最新价格。</p>
+  </div>
+
+  <!-- 支付方式 -->
+  <div class="fee-section">
+    <div class="section-header">
+      <span class="section-icon">💳</span>
+      <div class="section-title">支付方式</div>
+    </div>
+    <div class="payment-list">
+      <div class="payment-tag">💴 现金</div>
+      <div class="payment-tag">💳 信用卡</div>
+    </div>
+    <p class="fee-note" style="margin-top:10px;">* 接受卡种：Visa、Mastercard、JCB、美国运通</p>
+  </div>
+
+  <!-- Important Notes -->
+  <div class="info-box">
+    <div class="info-box-title">🌿 注意事项</div>
+    <ul>
+      <li>未携带个人编号卡或医疗保险证时，将全额自费结算。</li>
+      <li>费用因诊疗内容、检查及处方不同而有所差异，详情请向前台咨询。</li>
+      <li>付款时开具收据，恕不补开。</li>
+    </ul>
+  </div>
+
+</div>
+
+<footer class="site-footer-en">
+  <div class="footer-inner-en">
+    <div class="footer-logo-en">
+      <span style="width:30px;height:30px;font-size:14px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-weight:600;">新</span>
+      <span style="font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);margin-left:8px;">新本町诊所</span>
+    </div>
+    <div class="footer-info-en">
+      <p>高知县高知市北金田11-22 索菲亚大厦5楼 〒781-0073</p>
+      <p>电话: <a href="tel:088-856-7511">088-856-7511</a>&nbsp;|&nbsp;Hours: Mon–Wed, Fri 9:00–12:00 / 14:00–18:00&nbsp;|&nbsp;Sat 9:00–12:00</p>
+      <p>休诊日: 周四、周六下午、周日及法定节假日</p>
+    </div>
+    <div class="footer-nav-en">
+      <a href="index.html">首页</a>
+      <a href="section_shinryo_annai.html">诊疗科目</a>
+      <a href="section_staff.html">医师介绍</a>
+      <a href="section_ryokin.html">费用说明</a>
+      <a href="section_shisetsu.html">设施介绍</a>
+      <a href="section_shop.html">院内商店</a>
+      <a href="section_access.html">交通·时间</a>
+      <a href="../index.html" style="color:#8a7a72;">🇯🇵 日本語</a>
+    </div>
+    <div class="footer-copy-en">© 新本町诊所. All rights reserved.</div>
+  </div>
+</footer>
+<style>
+.site-footer-en{background:var(--cream,#faf7f4);border-top:1px solid var(--border,#ede8e3);padding:36px 20px 24px;margin-top:60px;}
+.footer-inner-en{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
+.footer-logo-en{display:flex;align-items:center;}
+.footer-info-en{font-size:12px;color:#5a504a;line-height:1.9;}
+.footer-info-en a{color:var(--sakura-deep,#c0514d);text-decoration:none;}
+.footer-nav-en{display:flex;flex-wrap:wrap;gap:6px 16px;}
+.footer-nav-en a{font-size:12px;color:var(--text,#2a2220);text-decoration:none;}
+.footer-nav-en a:hover{color:var(--sakura-deep,#c0514d);}
+.footer-copy-en{font-size:11px;color:#8a7a72;margin-top:4px;}
+</style>
+
+
+<script src="../common.js"></script>
+</body>
+</html>

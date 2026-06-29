@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>设施介绍 | 整洁宁静的诊疗环境 | 新本町诊所</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="../common.css">
+  <meta name="description" content="设施介绍 photos for 新本町诊所 — view our clean and calm reception, waiting area, and consultation rooms. Sophia Bldg. 5F, Kitakanata, Kochi City.">
+  <link rel="canonical" href="https://shinhonmachi.jp/section_shisetsu.html">
+
+  <!-- OGP -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="设施介绍 | 整洁宁静的诊疗环境 | 新本町诊所">
+  <meta property="og:description" content="设施介绍 photos for 新本町诊所 — view our clean and calm reception, waiting area, and consultation rooms. Sophia Bldg. 5F, Kitakanata, Kochi City.">
+  <meta property="og:url" content="https://shinhonmachi.jp/section_shisetsu.html">
+  <meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+  <meta property="og:site_name" content="新本町诊所">
+  <meta property="og:locale" content="ja_JP">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="设施介绍 | 整洁宁静的诊疗环境 | 新本町诊所">
+  <meta name="twitter:description" content="设施介绍 photos for 新本町诊所 — view our clean and calm reception, waiting area, and consultation rooms. Sophia Bldg. 5F, Kitakanata, Kochi City.">
+  <meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+
+  <!-- Favicon -->
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<style>
+    
+              
+        
+  /* Main Visual */
+  .hero-photo {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    cursor: pointer;
+    transition: opacity 0.2s;
+  }
+  .hero-photo:hover { opacity: 0.95; }
+
+  .container { max-width: 800px; margin: 0 auto; padding: 48px 32px; }
+
+  /* Section Title */
+  .section-title {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  .section-title::before {
+    content: '';
+    display: inline-block;
+    width: 4px;
+    height: 20px;
+    background: var(--sakura-deep);
+    border-radius: 2px;
+  }
+
+  /* Photo Grid */
+  .photo-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .photo-grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 48px;
+  }
+  .photo-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    background: var(--border);
+    cursor: pointer;
+  }
+  .photo-item img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  .photo-grid-2 .photo-item img { height: 340px; }
+  .photo-item:hover img { transform: scale(1.04); }
+  .photo-caption {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(58,53,48,0.7) 0%, transparent 100%);
+    color: white;
+    font-size: 12px;
+    padding: 28px 14px 12px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .photo-item:hover .photo-caption { opacity: 1; }
+
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(30,25,22,0.92);
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 16px;
+    padding: 24px;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 12px;
+    box-shadow: 0 24px 80px rgba(0,0,0,0.5);
+  }
+  .lightbox-caption { color: rgba(255,255,255,0.7); font-size: 13px; }
+  .lightbox-close {
+    position: absolute;
+    top: 20px; right: 24px;
+    font-size: 28px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .lightbox-close:hover { opacity: 1; }
+  .lightbox-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    padding: 12px;
+  }
+  .lightbox-nav:hover { opacity: 1; }
+  .lightbox-prev { left: 12px; }
+  .lightbox-next { right: 12px; }
+
+    
+  @media (max-width: 600px) {
+    .photo-grid-3 { grid-template-columns: 1fr 1fr; }
+    .hero-photo { height: 260px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="site-logo">
+      <span class="logo-mark">新</span>
+      <div class="logo-text">
+        <div class="logo-name">新本町诊所</div>
+        <div class="logo-sub">内科 · 心身医学科 · 汉方</div>
+      </div>
+    </a>
+    <nav class="header-nav" id="headerNav">
+      <a href="index.html" class="nav-link">首页</a>
+      <a href="section_shinryo_annai.html" class="nav-link">诊疗科目</a>
+      <a href="section_staff.html" class="nav-link">医师介绍</a>
+      <a href="section_ryokin.html" class="nav-link">费用说明</a>
+      <a href="section_shisetsu.html" class="nav-link">设施介绍</a>
+      <a href="section_shop.html" class="nav-link">院内商店</a>
+      <a href="section_access.html" class="nav-link">交通·时间</a>
+      <a href="../index.html" class="nav-link lang-switch">🇯🇵 日本語</a>
+    </nav>
+    <div class="header-actions">
+      <a href="tel:088-856-7511" class="header-tel">088-856-7511</a>
+      <a href="../index.html" class="btn-lang">🇯🇵 JP</a>
+      <button class="hamburger" id="hamburger" aria-label="菜单" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+    <a href="index.html" class="mobile-nav-link">首页</a>
+    <a href="section_shinryo_annai.html" class="mobile-nav-link">诊疗科目</a>
+    <a href="section_staff.html" class="mobile-nav-link">医师介绍</a>
+    <a href="section_ryokin.html" class="mobile-nav-link">费用说明</a>
+    <a href="section_shisetsu.html" class="mobile-nav-link">设施介绍</a>
+    <a href="section_shop.html" class="mobile-nav-link">院内商店</a>
+    <a href="section_access.html" class="mobile-nav-link">交通·时间</a>
+    <div class="mobile-nav-divider"></div>
+    <a href="../index.html" class="mobile-nav-link lang-link">🇯🇵 切换至日语网站</a>
+  </div>
+</header>
+<style>
+.site-header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#ede8e3);box-shadow:0 1px 8px rgba(0,0,0,.05);}
+.header-inner{max-width:860px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:16px;}
+.site-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
+.logo-mark{width:36px;height:36px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:600;}
+.logo-name{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);line-height:1.2;}
+.logo-sub{font-size:9px;color:#8a7a72;line-height:1.3;}
+.header-nav{display:flex;align-items:center;gap:2px;margin-left:auto;}
+.nav-link{font-size:12px;color:var(--text,#2a2220);text-decoration:none;padding:6px 9px;border-radius:8px;transition:all .18s;white-space:nowrap;}
+.nav-link:hover{background:var(--sakura-light,#fdf0ef);color:var(--sakura-deep,#c0514d);}
+.nav-link.lang-switch{border:1px solid var(--border,#ede8e3);margin-left:4px;font-size:11px;}
+.header-actions{display:none;align-items:center;gap:10px;flex-shrink:0;}
+.header-tel{font-size:13px;font-weight:600;color:var(--sakura-deep,#c0514d);text-decoration:none;}
+.btn-lang{font-size:11px;color:var(--text,#2a2220);text-decoration:none;border:1px solid var(--border,#ede8e3);padding:4px 8px;border-radius:8px;}
+.hamburger{background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:5px;}
+.hamburger span{display:block;width:22px;height:2px;background:var(--text,#2a2220);border-radius:2px;transition:all .25s;}
+.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
+.hamburger.open span:nth-child(2){opacity:0;}
+.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
+.mobile-nav{display:none;flex-direction:column;background:white;border-top:1px solid var(--border,#ede8e3);padding:8px 0 16px;}
+.mobile-nav.open{display:flex;}
+.mobile-nav-link{font-size:14px;color:var(--text,#2a2220);text-decoration:none;padding:12px 24px;transition:background .15s;}
+.mobile-nav-link:hover{background:var(--cream,#faf7f4);}
+.mobile-nav-divider{height:1px;background:var(--border,#ede8e3);margin:8px 24px;}
+.lang-link{color:#8a7a72;font-size:13px;}
+@media(max-width:700px){.header-nav{display:none;}.header-actions{display:flex;}}
+@media(min-width:701px){.mobile-nav{display:none!important;}}
+</style>
+<script>
+(function(){
+  var hb=document.getElementById('hamburger');
+  var mn=document.getElementById('mobileNav');
+  if(!hb||!mn)return;
+  hb.addEventListener('click',function(){var o=mn.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',o);mn.setAttribute('aria-hidden',!o);});
+  document.addEventListener('click',function(e){var sh=document.getElementById('siteHeader');if(sh&&!sh.contains(e.target)){mn.classList.remove('open');hb.classList.remove('open');hb.setAttribute('aria-expanded',false);mn.setAttribute('aria-hidden',true);}});
+  var cur=location.pathname.split('/').pop()||'index.html';
+  document.querySelectorAll('.nav-link,.mobile-nav-link').forEach(function(a){var h=a.getAttribute('href')||'';if(h.split('/').pop()===cur){a.style.color='var(--sakura-deep,#c0514d)';a.style.fontWeight='500';}});
+})();
+</script>
+
+<div class="page-hero">
+  <span class="page-label">设施介绍</span>
+  <div class="page-title">设施介绍</div>
+  <div class="page-sub">整洁宁静的诊疗环境，竭诚欢迎您的到来</div>
+</div>
+
+<!-- Exterior Main Visual -->
+<picture>
+  <source srcset="../pics/gaikan.webp" type="image/webp">
+  <img src="../pics/gaikan.JPG" class="hero-photo" alt="诊所外观" onclick="openLightbox(0)" loading="eager" decoding="async" width="1440" height="1080">
+</picture>
+
+<div class="container">
+
+  <!-- 前台・候诊区 -->
+  <div class="section-title">前台・候诊区</div>
+  <div class="photo-grid-2">
+    <div class="photo-item" onclick="openLightbox(1)">
+      <picture>
+      <source srcset="../pics/shisetsu_machiai.webp" type="image/webp">
+      <img src="../pics/shisetsu_machiai.webp" alt="候诊区" loading="lazy" decoding="async" width="1200" height="1600">
+    </picture>
+      <div class="photo-caption">候诊区</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(2)">
+      <picture>
+      <source srcset="../pics/shisetsu_uketsuke.webp" type="image/webp">
+      <img src="../pics/shisetsu_uketsuke.webp" alt="前台・候诊区 desk" loading="lazy" decoding="async" width="1200" height="1600">
+    </picture>
+      <div class="photo-caption">前台・候诊区 Counter</div>
+    </div>
+  </div>
+
+  <!-- 诊疗室 -->
+  <div class="section-title">诊疗室</div>
+  <div class="photo-grid-3">
+    <div class="photo-item" onclick="openLightbox(3)">
+      <picture>
+      <source srcset="../pics/sinsatsu1.webp" type="image/webp">
+      <img src="../pics/sinsatsu1.JPG" alt="诊察台1" loading="lazy" decoding="async" width="1000" height="1333">
+    </picture>
+      <div class="photo-caption">诊察台</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(4)">
+      <picture>
+      <source srcset="../pics/sinsatsu2.webp" type="image/webp">
+      <img src="../pics/sinsatsu2.JPG" alt="诊察台2" loading="lazy" decoding="async" width="1000" height="1333">
+    </picture>
+      <div class="photo-caption">诊察台</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(5)">
+      <picture>
+      <source srcset="../pics/sinsatsu4.jpeg" type="image/webp">
+      <img src="../pics/sinsatsu4.jpeg" alt="诊察台4" loading="lazy" decoding="async" width="1000" height="1333">
+    </picture>
+      <div class="photo-caption">诊察台</div>
+    </div>
+  </div>
+
+  <!-- 医疗设备 -->
+  <div class="section-title">医疗设备</div>
+  <div class="photo-grid-2" style="grid-template-columns: 1fr 1fr;">
+    <div class="photo-item" onclick="openLightbox(6)">
+      <picture>
+      <source srcset="../pics/shisetsu_kigu1.webp" type="image/webp">
+      <img src="../pics/shisetsu_kigu1.webp" alt="臭氧发生器" loading="lazy" decoding="async" width="800" height="1067" style="height:200px;">
+    </picture>
+      <div class="photo-caption">臭氧发生器</div>
+    </div>
+    <div class="photo-item" onclick="openLightbox(7)">
+      <picture>
+      <source srcset="../pics/shisetsu_kigu2.webp" type="image/webp">
+      <img src="../pics/shisetsu_kigu2.webp" alt="超级激光" loading="lazy" decoding="async" width="800" height="1067" style="height:200px;">
+    </picture>
+      <div class="photo-caption">超级激光</div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightboxBtn()">✕</button>
+  <button class="lightbox-nav lightbox-prev" onclick="navLightbox(-1)">‹</button>
+  <img id="lightbox-img" src="" alt="">
+  <div class="lightbox-caption" id="lightbox-caption"></div>
+  <button class="lightbox-nav lightbox-next" onclick="navLightbox(1)">›</button>
+</div>
+
+<footer class="site-footer-en">
+  <div class="footer-inner-en">
+    <div class="footer-logo-en">
+      <span style="width:30px;height:30px;font-size:14px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-weight:600;">新</span>
+      <span style="font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);margin-left:8px;">新本町诊所</span>
+    </div>
+    <div class="footer-info-en">
+      <p>高知县高知市北金田11-22 索菲亚大厦5楼 〒781-0073</p>
+      <p>电话: <a href="tel:088-856-7511">088-856-7511</a>&nbsp;|&nbsp;Hours: Mon–Wed, Fri 9:00–12:00 / 14:00–18:00&nbsp;|&nbsp;Sat 9:00–12:00</p>
+      <p>休诊日: 周四、周六下午、周日及法定节假日</p>
+    </div>
+    <div class="footer-nav-en">
+      <a href="index.html">首页</a>
+      <a href="section_shinryo_annai.html">诊疗科目</a>
+      <a href="section_staff.html">医师介绍</a>
+      <a href="section_ryokin.html">费用说明</a>
+      <a href="section_shisetsu.html">设施介绍</a>
+      <a href="section_shop.html">院内商店</a>
+      <a href="section_access.html">交通·时间</a>
+      <a href="../index.html" style="color:#8a7a72;">🇯🇵 日本語</a>
+    </div>
+    <div class="footer-copy-en">© 新本町诊所. All rights reserved.</div>
+  </div>
+</footer>
+<style>
+.site-footer-en{background:var(--cream,#faf7f4);border-top:1px solid var(--border,#ede8e3);padding:36px 20px 24px;margin-top:60px;}
+.footer-inner-en{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
+.footer-logo-en{display:flex;align-items:center;}
+.footer-info-en{font-size:12px;color:#5a504a;line-height:1.9;}
+.footer-info-en a{color:var(--sakura-deep,#c0514d);text-decoration:none;}
+.footer-nav-en{display:flex;flex-wrap:wrap;gap:6px 16px;}
+.footer-nav-en a{font-size:12px;color:var(--text,#2a2220);text-decoration:none;}
+.footer-nav-en a:hover{color:var(--sakura-deep,#c0514d);}
+.footer-copy-en{font-size:11px;color:#8a7a72;margin-top:4px;}
+</style>
+
+<script>
+  const photos = [
+    { src: 'pics/gaikan.webp', caption: '诊所外观' },
+    { src: 'pics/shisetsu_uketsuke.webp', caption: '前台・候诊区 Counter' },
+    { src: 'pics/shisetsu_machiai.webp', caption: '候诊区' },
+    { src: 'pics/sinsatsu1.webp', caption: '诊察台' },
+    { src: 'pics/sinsatsu2.webp', caption: '诊察台' },
+    { src: 'pics/sinsatsu4.jpeg', caption: '诊察台' },
+    { src: 'pics/shisetsu_kigu1.webp', caption: '臭氧发生器' },
+        { src: 'pics/shisetsu_kigu2.webp', caption: '超级激光' }
+  ];
+  let current = 0;
+
+  function openLightbox(index) {
+    current = index;
+    updateLightbox();
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightboxBtn() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function closeLightbox(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightboxBtn();
+  }
+  function navLightbox(dir) {
+    current = (current + dir + photos.length) % photos.length;
+    updateLightbox();
+  }
+  function updateLightbox() {
+    document.getElementById('lightbox-img').src = photos[current].src;
+    document.getElementById('lightbox-caption').textContent = photos[current].caption;
+  }
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') navLightbox(-1);
+    if (e.key === 'ArrowRight') navLightbox(1);
+    if (e.key === 'Escape') closeLightboxBtn();
+  });
+</script>
+
+<script src="../common.js"></script>
+</body>
+</html>
