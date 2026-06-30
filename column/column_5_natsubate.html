@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>科学的に正しい夏バテ・熱中症対策｜新本町クリニック コラム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    :root {
+      --sakura: #e8b4b8;
+      --sakura-light: #fdf3f4;
+      --sakura-deep: #b5686e;
+      --green: #6a9e80;
+      --green-light: #f0f7f3;
+      --cream: #faf8f5;
+      --text: #3a3530;
+      --text-muted: #857e78;
+      --border: #e8e3de;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .page-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--sakura-deep);
+      text-transform: uppercase;
+    }
+    .page-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 26px;
+      font-weight: 600;
+      margin: 8px 0 6px;
+    }
+    .page-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--sakura-deep); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header { margin-bottom: 36px; }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* YouTube埋め込み */
+    .article-eyecatch-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+    }
+    .article-eyecatch-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p { margin-bottom: 1.6em; }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p { margin: 0; font-size: 14px; line-height: 1.9; }
+
+    /* 引用ボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* ステップカード */
+    .step-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 24px 0 32px;
+    }
+    .step-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .step-number {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--sakura-deep);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .step-body {}
+    .step-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+    .step-desc { font-size: 13px; line-height: 1.8; color: var(--text-muted); }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* 3つの働きカード */
+    .effect-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .effect-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .effect-card-icon { font-size: 30px; margin-bottom: 10px; }
+    .effect-card-title { font-size: 13px; font-weight: 700; color: var(--sakura-deep); margin-bottom: 6px; }
+    .effect-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 記事末フッター */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border-radius: 14px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: var(--text);
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 11px 28px;
+      border-radius: 24px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .effect-cards { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>科学的に正しい夏バテ・熱中症対策</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">漢方・和漢素材</span>
+      <h2 class="article-title">今年の夏を健康に乗り切る最強アプローチ<br>―― 西洋医学と漢方のハイブリッド熱中症対策</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年6月</span>
+      </div>
+    </header>
+
+    <!-- アイキャッチ動画（YouTube埋め込み） -->
+    <div class="article-eyecatch-video">
+      <iframe
+        src="https://www.youtube.com/embed/5XsSjoldVk8"
+        title="今年の夏を健康に乗り切る最強アプローチ"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">「水さえ飲んでいれば大丈夫」という思い込み</h3>
+      <p>
+        猛暑が当たり前になった今、私たちの体は厳しい暑さからどんなダメージを受け、どうやってそれを防げばよいのでしょうか。
+        今回は、医学的なデータと最新の研究にもとづいて、今年の夏を健康に乗り切るための最強のアプローチを、
+        クリニックのドクターになったつもりで分かりやすく解説していきます。
+      </p>
+      <p>
+        まずひとつ、皆さんに考えてみてほしいことがあります。
+        「いつもより多めに水を飲んでいれば大丈夫だろう」——そう思っていませんか？
+        実はその思い込みは見直す必要があります。単純に水分を取るだけでは全然足りないケースが、非常に多いのです。
+      </p>
+
+      <!-- セクション1：隠れた熱中症の脅威 -->
+      <h3 class="section-heading">セクション1：隠れた熱中症の脅威</h3>
+      <p>
+        極端な暑さによって、私たちの体はどう壊れていくのでしょうか。まずは伝統的な西洋医学の視点からお話しします。
+        体のダメージは、大きく3つのステップで進みます。
+      </p>
+
+      <div class="step-cards">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-body">
+            <div class="step-title">大量の汗による深刻な水分喪失</div>
+            <div class="step-desc">汗を大量にかくことで、体内の水分が急速に失われていきます。</div>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-body">
+            <div class="step-title">電解質の枯渇</div>
+            <div class="step-desc">汗と一緒に塩分などのミネラルが失われ、すっからかんの状態になる「電解質の枯渇」が起こります。</div>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-body">
+            <div class="step-title">体温調節機能の破綻</div>
+            <div class="step-desc">最後に、体を冷やす自律神経がパンクしてしまい、体温調節機能が完全に破綻してしまいます。</div>
+          </div>
+        </div>
+      </div>
+
+      <p>
+        つまり、全身の冷却システムと保湿システムが、文字どおり完全にフリーズしてしまう状態。
+        それが熱中症の正体です。
+      </p>
+
+      <!-- セクション2：東洋と西洋の融合 -->
+      <h3 class="section-heading">セクション2：東洋と西洋、身体バランスの融合</h3>
+      <p>
+        西洋医学で起きた体のエラーを、全く違う角度からアプローチするのが東洋医学のすばらしいところです。
+        ここが本当に面白いのですが、さきほどの西洋医学の症状は、科学的な厳密さをキープしたまま、
+        伝統的な漢方の哲学にそのまま翻訳することができます。
+      </p>
+      <p>
+        ミネラル不足や体温調節の乱れは、東洋医学のレンズを通すと、
+        生命エネルギーが尽きる「気虚（ききょ）」、体液が足りない「陰虚（いんきょ）」、
+        そして水分の渋滞である「水毒（すいどく）」という、エネルギーと水分のアンバランスとして見事に説明できるのです。
+        同じ症状でも、見方が変わるとワクワクしませんか？
+      </p>
+
+      <div class="highlight-box">
+        ここで絶対に覚えておいてほしいのが「水毒」というキーワードです。
+        これは単に体内の水分が多いか少ないかという話ではありません。
+        <strong>水分が体の中で偏って分布している状態</strong>のことを指します。
+      </div>
+
+      <p>
+        一生懸命水を飲んでいるのに血管の中はカラカラで、代わりに細胞の隙間に水がダブついてむくんでしまう——。
+        だからただ水をガブ飲みしても脱水は治らないばかりか、胃がチャポチャポになって余計に気持ち悪くなってしまう。
+        その原因が、まさにこの水毒なのです。
+      </p>
+
+      <!-- セクション3：補中益気湯 -->
+      <h3 class="section-heading">セクション3：補中益気湯によるエネルギーの回復へ</h3>
+      <p>
+        ここからは具体的な解決策です。まずは夏のダメージから体を守る予防の盾、<strong>補中益気湯（ほちゅうえっきとう）</strong>
+        という漢方薬をご紹介します。
+      </p>
+      <p>
+        これが本当に優秀なんです。深刻な夏バテをやっつけて、鉛のように重い体のだるさをふわっと軽くし、
+        落ちた食欲をぐっと復活させてくれます。
+        猛暑であなたの「気」、つまり生命エネルギーが完全にすり減ってしまったとき、
+        予防としても回復の切り札としても、これがドンピシャで効いてくれるのです。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">💡 エビデンスについて</div>
+        <p>
+          ちなみに、熱中症に対する補中益気湯の厳密な比較試験（RCT）のデータは、実はまだこれからの段階です。
+          ですが、ご高齢の方の免疫力アップや疲労回復に関する確かなデータはすでに数多くそろっています。
+          だからこそ私たちも、夏のエネルギー切れには自信を持ってご提案できるのです。
+        </p>
+      </div>
+
+      <!-- セクション4：五苓散とアクアポリン -->
+      <h3 class="section-heading">セクション4：五苓散とアクアポリンの秘密</h3>
+      <p>
+        お待たせしました。今回の解説のクライマックス、最新科学の秘密に迫りましょう。
+        皆さん、「<strong>アクアポリン</strong>」って聞いたことがありますか？
+        これは細胞の膜にあるミクロの賢い水のゲートだと思ってください。水分子だけを選んで通してくれるのです。
+        このミクロのゲートの働きこそが、現代の水分補給メカニズムを解き明かす重要な鍵なんですよ。
+      </p>
+      <p>
+        そしてここで登場するのが<strong>五苓散（ごれいさん）</strong>です。
+        五苓散の何がすごいかというと、このアクアポリンを操る双方向のスーパーパワーを持っているという点です。
+      </p>
+
+      <div class="effect-cards">
+        <div class="effect-card">
+          <div class="effect-card-icon">💧</div>
+          <div class="effect-card-title">水が多ければ出す</div>
+          <div class="effect-card-desc">体がむくんで水が余っていれば、おしっことして外に出します。</div>
+        </div>
+        <div class="effect-card">
+          <div class="effect-card-icon">🌵</div>
+          <div class="effect-card-title">水が足りなければ保つ</div>
+          <div class="effect-card-desc">逆に脱水でカラカラなら、水分をしっかりキープします。</div>
+        </div>
+        <div class="effect-card">
+          <div class="effect-card-icon">⚖️</div>
+          <div class="effect-card-title">電解質バランスは崩さない</div>
+          <div class="effect-card-desc">しかも大切な電解質のバランスは一切崩しません。</div>
+        </div>
+      </div>
+
+      <p>
+        足りなければ保ち、多ければ出す。こんな理想的な働きを自動でやってくれるなんて、
+        人間の体と漢方の仕組みは本当にすごいですよね。
+      </p>
+
+      <div class="highlight-box">
+        だからこそ五苓散は、私たちがよく知る<strong>経口補水液（ORS）</strong>と組み合わせると、
+        とんでもない相乗効果を生み出します。
+        経口補水液で水分と電解質をしっかり入れて、五苓散が水を調整して正しい場所に振り分ける。
+        これぞまさに、夏の水分補給の最強タッグと言っていいでしょう。
+      </div>
+
+      <p>
+        これは単なる経験談ではありません。重厚な臨床データがしっかり裏付けています。
+        たとえばマウスの実験では脳のむくみを減らすことが分かっており、これは重症の熱中症による脳のダメージ予防にもつながります。
+        さらに札幌医科大学のICUでの重症患者さんの水分管理や、腎不全の患者さんの尿量増加など、
+        厳しい医療現場でも五苓散のパワーが科学的に証明されているのです。
+      </p>
+
+      <!-- セクション5：点滴との相乗効果 -->
+      <h3 class="section-heading">セクション5：究極の点滴との相乗効果</h3>
+      <p>
+        いよいよ最後のセクションです。漢方の力でベースを整えたら、総仕上げとして現代医学の点滴を組み合わせます。
+        点滴の中身は、エネルギー代謝に必須の<strong>ビタミンB群</strong>、筋肉や神経を助ける<strong>マグネシウム</strong>、
+        そして細胞を修復する<strong>プラセンタ</strong>の3本柱です。
+      </p>
+      <p>
+        夏バテで胃腸がやられて栄養が吸収できないときでも、血管から直接、一瞬で細胞のすみずみまで栄養をチャージできる。
+        これが点滴の圧倒的な強みです。
+      </p>
+
+      <ul class="point-list">
+        <li>補中益気湯や五苓散といった東洋の漢方で、体の水分とエネルギーのバランスを優雅に整える</li>
+        <li>そこに西洋医学の点滴で速効性のあるダイレクトな栄養補給をガツンと行う</li>
+        <li>この2つの役割分担が組み合わさることで、熱中症に対する究極の防衛・回復システムが完成する</li>
+      </ul>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            もし今年の夏も強い疲労感が抜けなかったり、熱中症のダメージが気になっている方は、どうか一人で我慢しないでくださいね。
+            今日ご紹介したような科学的に裏付けられた統合的なアプローチは、医療機関で受けることができます。
+            ぜひお近くのクリニックにご相談いただき、ご自身の体にぴったり合ったケアを見つけてみてください。
+          </p>
+        </div>
+      </div>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">今年の夏、あなたはどちらを選びますか？</h3>
+      <p>
+        さあ、最後に皆さんに一つだけ質問させてください。
+        今年の夏も、ただ水をガブ飲みするだけのこれまでと同じ作戦でいきますか？
+        それとも、今日学んだ科学と伝統のハイブリッド知識で、あなたの体の防衛システムを最新版にアップグレードしますか？
+      </p>
+      <p>
+        答えはもうお分かりですよね。今日のお話が、あなたとあなたの大切な人の夏を救うヒントになれば嬉しいです。
+        それではまた次回お会いしましょう。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        体質や持病・お薬との相互作用などが気になる方は、受診前に医師にご相談ください。
+        効果には個人差があります。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>夏バテ・熱中症対策のご相談は当院へ</h3>
+        <p>漢方と点滴を組み合わせた統合的な夏バテ・熱中症ケアを行っています。<br>強い疲労感が抜けない方は、お気軽にご相談ください。</p>
+        <a href="index.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
