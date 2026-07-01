@@ -290,84 +290,7 @@ section { padding: 56px 32px; }
 </head>
 <body>
 
-<header class="site-header" id="siteHeader">
-  <div class="header-inner">
-    <a href="index.html" class="site-logo">
-      <span class="logo-mark">新</span>
-      <div class="logo-text">
-        <div class="logo-name">新本町诊所</div>
-        <div class="logo-sub">内科 · 心身医学科 · 汉方</div>
-      </div>
-    </a>
-    <nav class="header-nav" id="headerNav">
-      <a href="index.html" class="nav-link">首页</a>
-      <a href="section_shinryo_annai.html" class="nav-link">诊疗科目</a>
-      <a href="section_staff.html" class="nav-link">医师介绍</a>
-      <a href="section_ryokin.html" class="nav-link">费用说明</a>
-      <a href="section_shisetsu.html" class="nav-link">设施介绍</a>
-      <a href="section_shop.html" class="nav-link">院内商店</a>
-      <a href="section_access.html" class="nav-link">交通·时间</a>
-      <a href="../index.html" class="nav-link lang-switch">🇯🇵 日本語</a>
-    </nav>
-    <div class="header-actions">
-      <a href="tel:088-856-7511" class="header-tel">088-856-7511</a>
-      <a href="../index.html" class="btn-lang">🇯🇵 JP</a>
-      <button class="hamburger" id="hamburger" aria-label="菜单" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-    <a href="index.html" class="mobile-nav-link">首页</a>
-    <a href="section_shinryo_annai.html" class="mobile-nav-link">诊疗科目</a>
-    <a href="section_staff.html" class="mobile-nav-link">医师介绍</a>
-    <a href="section_ryokin.html" class="mobile-nav-link">费用说明</a>
-    <a href="section_shisetsu.html" class="mobile-nav-link">设施介绍</a>
-    <a href="section_shop.html" class="mobile-nav-link">院内商店</a>
-    <a href="section_access.html" class="mobile-nav-link">交通·时间</a>
-    <div class="mobile-nav-divider"></div>
-    <a href="../index.html" class="mobile-nav-link lang-link">🇯🇵 切换至日语网站</a>
-  </div>
-</header>
-<style>
-.site-header{position:sticky;top:0;z-index:200;background:rgba(255,255,255,0.96);backdrop-filter:blur(12px);border-bottom:1px solid var(--border,#ede8e3);box-shadow:0 1px 8px rgba(0,0,0,.05);}
-.header-inner{max-width:860px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;gap:16px;}
-.site-logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0;}
-.logo-mark{width:36px;height:36px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-size:16px;font-weight:600;}
-.logo-name{font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);line-height:1.2;}
-.logo-sub{font-size:9px;color:#8a7a72;line-height:1.3;}
-.header-nav{display:flex;align-items:center;gap:2px;margin-left:auto;}
-.nav-link{font-size:12px;color:var(--text,#2a2220);text-decoration:none;padding:6px 9px;border-radius:8px;transition:all .18s;white-space:nowrap;}
-.nav-link:hover{background:var(--sakura-light,#fdf0ef);color:var(--sakura-deep,#c0514d);}
-.nav-link.lang-switch{border:1px solid var(--border,#ede8e3);margin-left:4px;font-size:11px;}
-.header-actions{display:none;align-items:center;gap:10px;flex-shrink:0;}
-.header-tel{font-size:13px;font-weight:600;color:var(--sakura-deep,#c0514d);text-decoration:none;}
-.btn-lang{font-size:11px;color:var(--text,#2a2220);text-decoration:none;border:1px solid var(--border,#ede8e3);padding:4px 8px;border-radius:8px;}
-.hamburger{background:none;border:none;cursor:pointer;padding:6px;display:flex;flex-direction:column;gap:5px;}
-.hamburger span{display:block;width:22px;height:2px;background:var(--text,#2a2220);border-radius:2px;transition:all .25s;}
-.hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
-.hamburger.open span:nth-child(2){opacity:0;}
-.hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
-.mobile-nav{display:none;flex-direction:column;background:white;border-top:1px solid var(--border,#ede8e3);padding:8px 0 16px;}
-.mobile-nav.open{display:flex;}
-.mobile-nav-link{font-size:14px;color:var(--text,#2a2220);text-decoration:none;padding:12px 24px;transition:background .15s;}
-.mobile-nav-link:hover{background:var(--cream,#faf7f4);}
-.mobile-nav-divider{height:1px;background:var(--border,#ede8e3);margin:8px 24px;}
-.lang-link{color:#8a7a72;font-size:13px;}
-@media(max-width:700px){.header-nav{display:none;}.header-actions{display:flex;}}
-@media(min-width:701px){.mobile-nav{display:none!important;}}
-</style>
-<script>
-(function(){
-  var hb=document.getElementById('hamburger');
-  var mn=document.getElementById('mobileNav');
-  if(!hb||!mn)return;
-  hb.addEventListener('click',function(){var o=mn.classList.toggle('open');hb.classList.toggle('open',o);hb.setAttribute('aria-expanded',o);mn.setAttribute('aria-hidden',!o);});
-  document.addEventListener('click',function(e){var sh=document.getElementById('siteHeader');if(sh&&!sh.contains(e.target)){mn.classList.remove('open');hb.classList.remove('open');hb.setAttribute('aria-expanded',false);mn.setAttribute('aria-hidden',true);}});
-  var cur=location.pathname.split('/').pop()||'index.html';
-  document.querySelectorAll('.nav-link,.mobile-nav-link').forEach(function(a){var h=a.getAttribute('href')||'';if(h.split('/').pop()===cur){a.style.color='var(--sakura-deep,#c0514d)';a.style.fontWeight='500';}});
-})();
-</script>
+<div id="header-placeholder"></div>
 
 <!-- ① Hero Slider -->
 <div class="hero-slider" id="heroSlider">
@@ -624,43 +547,9 @@ section { padding: 56px 32px; }
   </div>
 </section>
 
-<footer class="site-footer-en">
-  <div class="footer-inner-en">
-    <div class="footer-logo-en">
-      <span style="width:30px;height:30px;font-size:14px;background:var(--sakura-deep,#c0514d);color:white;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-family:'Noto Serif JP',serif;font-weight:600;">新</span>
-      <span style="font-family:'Noto Serif JP',serif;font-size:14px;font-weight:600;color:var(--text,#2a2220);margin-left:8px;">新本町诊所</span>
-    </div>
-    <div class="footer-info-en">
-      <p>高知县高知市北金田11-22 索菲亚大厦5楼 〒781-0073</p>
-      <p>电话: <a href="tel:088-856-7511">088-856-7511</a>&nbsp;|&nbsp;诊疗时间: 周一～三 9:00–12:00 / 14:00–18:00，周五 9:00–12:00 / 14:00–18:30&nbsp;|&nbsp;周六 9:00–12:00</p>
-      <p>休诊日: 周四、周六下午、周日及法定节假日</p>
-    </div>
-    <div class="footer-nav-en">
-      <a href="index.html">首页</a>
-      <a href="section_shinryo_annai.html">诊疗科目</a>
-      <a href="section_staff.html">医师介绍</a>
-      <a href="section_ryokin.html">费用说明</a>
-      <a href="section_shisetsu.html">设施介绍</a>
-      <a href="section_shop.html">院内商店</a>
-      <a href="section_access.html">交通·时间</a>
-      <a href="../index.html" style="color:#8a7a72;">🇯🇵 日本語</a>
-    </div>
-    <div class="footer-copy-en">© 新本町诊所. All rights reserved.</div>
-  </div>
-</footer>
-<style>
-.site-footer-en{background:var(--cream,#faf7f4);border-top:1px solid var(--border,#ede8e3);padding:36px 20px 24px;margin-top:60px;}
-.footer-inner-en{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:16px;}
-.footer-logo-en{display:flex;align-items:center;}
-.footer-info-en{font-size:12px;color:#5a504a;line-height:1.9;}
-.footer-info-en a{color:var(--sakura-deep,#c0514d);text-decoration:none;}
-.footer-nav-en{display:flex;flex-wrap:wrap;gap:6px 16px;}
-.footer-nav-en a{font-size:12px;color:var(--text,#2a2220);text-decoration:none;}
-.footer-nav-en a:hover{color:var(--sakura-deep,#c0514d);}
-.footer-copy-en{font-size:11px;color:#8a7a72;margin-top:4px;}
-</style>
+<div id="footer-placeholder"></div>
 
-<script src="../common.js"></script>
+<script src="common_cn.js"></script>
 <script>
 /* Show only the latest 3 news items; show "View All" link if there are more */
 (function () {
