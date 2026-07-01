@@ -1,225 +1,52 @@
-<header class="site-header" id="siteHeader">
-  <div class="header-inner">
-    <a href="index.html" class="site-logo">
-      <span class="logo-mark">新</span>
-      <div class="logo-text">
-        <div class="logo-name">신혼마치 클리닉</div>
-        <div class="logo-sub">내과 · 심신의학과 · 한방</div>
-      </div>
-    </a>
-
-    <nav class="header-nav" id="headerNav">
-      <a href="index.html" class="nav-link">홈</a>
-      <a href="section_shinryo_annai.html" class="nav-link">진료 안내</a>
-      <a href="section_staff.html" class="nav-link">스태프</a>
-      <a href="section_ryokin.html" class="nav-link">진료비</a>
-      <a href="section_shisetsu.html" class="nav-link">시설 안내</a>
-      <a href="section_shop.html" class="nav-link">샵</a>
-      <a href="section_access.html" class="nav-link">오시는 길</a>
-      <a href="../index.html" class="nav-link lang-switch" title="日本語サイトへ">🇯🇵 日本語</a>
-    </nav>
-
-    <div class="header-actions">
-      <a href="tel:088-856-7511" class="header-tel">088-856-7511</a>
-      <a href="../index.html" class="btn-lang" title="Switch to Japanese">🇯🇵 JP</a>
-      <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+<!-- ヘッダー上段：ロゴ＋電話番号 -->
+<div class="header-top">
+  <a href="index.html" class="logo">
+    <div class="logo-icon">🏥</div>
+    <div class="logo-text">
+      <span class="logo-name">신혼마치 클리닉</span>
+      <span class="logo-sub">내과・심신의학과・한방</span>
     </div>
+  </a>
+  <a href="tel:088-856-7511" class="header-tel">
+    <span class="header-tel-label">전화 예약・문의</span>
+    <span class="header-tel-number">📞 088-856-7511</span>
+    <span class="header-tel-hours">접수 시간：진료 시간 내（목・일・공휴일 제외）</span>
+  </a>
+  <button class="nav-hamburger" aria-label="메뉴 열기" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</div>
+
+<!-- ヘッダー下段：ナビゲーション -->
+<nav>
+  <ul class="nav-links">
+    <li><a href="index.html">홈</a></li>
+    <li><a href="section_staff.html">원장 인사말</a></li>
+    <li><a href="section_shinryo_annai.html">진료 안내</a></li>
+    <li><a href="section_shisetsu.html">시설 안내</a></li>
+    <li><a href="section_ryokin.html">진료비</a></li>
+    <li><a href="section_shop.html">샵</a></li>
+    <li><a href="section_access.html">오시는 길</a></li>
+    <li class="lang-switch-group">
+      <a href="../index.html" class="lang-btn" title="日本語">🇯🇵 JP</a>
+    </li>
+  </ul>
+</nav>
+
+<!-- ドロワーメニュー（モバイル） -->
+<div class="nav-drawer" aria-hidden="true">
+  <ul>
+    <li><a href="index.html">홈</a></li>
+    <li><a href="section_staff.html">원장 인사말</a></li>
+    <li><a href="section_shinryo_annai.html">진료 안내</a></li>
+    <li><a href="section_shisetsu.html">시설 안내</a></li>
+    <li><a href="section_ryokin.html">진료비</a></li>
+    <li><a href="section_shop.html">샵</a></li>
+    <li><a href="section_access.html">오시는 길</a></li>
+  </ul>
+  <div class="nav-drawer-lang">
+    <a href="../index.html">🇯🇵 日本語</a>
   </div>
-
-  <!-- Mobile menu -->
-  <div class="mobile-nav" id="mobileNav" aria-hidden="true">
-    <a href="index.html" class="mobile-nav-link">홈</a>
-    <a href="section_shinryo_annai.html" class="mobile-nav-link">진료 안내</a>
-    <a href="section_staff.html" class="mobile-nav-link">스태프</a>
-    <a href="section_ryokin.html" class="mobile-nav-link">진료비</a>
-    <a href="section_shisetsu.html" class="mobile-nav-link">시설 안내</a>
-    <a href="section_shop.html" class="mobile-nav-link">샵</a>
-    <a href="section_access.html" class="mobile-nav-link">오시는 길</a>
-    <div class="mobile-nav-divider"></div>
-    <a href="../index.html" class="mobile-nav-link lang-link">🇯🇵 日本語サイトへ</a>
-  </div>
-</header>
-
-<style>
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 200;
-  background: rgba(255,255,255,0.96);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border, #ede8e3);
-  box-shadow: 0 1px 8px rgba(0,0,0,0.05);
-}
-.header-inner {
-  max-width: 860px;
-  margin: 0 auto;
-  padding: 0 20px;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-.site-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  flex-shrink: 0;
-}
-.logo-mark {
-  width: 36px;
-  height: 36px;
-  background: var(--sakura-deep, #c0514d);
-  color: white;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Noto Serif JP', serif;
-  font-size: 16px;
-  font-weight: 600;
-}
-.logo-name {
-  font-family: 'Noto Serif JP', serif;
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--text, #2a2220);
-  line-height: 1.2;
-}
-.logo-sub {
-  font-size: 9px;
-  color: #8a7a72;
-  line-height: 1.3;
-  letter-spacing: 0.01em;
-}
-.header-nav {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  margin-left: auto;
-}
-.nav-link {
-  font-size: 12px;
-  color: var(--text, #2a2220);
-  text-decoration: none;
-  padding: 6px 9px;
-  border-radius: 8px;
-  transition: all 0.18s;
-  white-space: nowrap;
-  font-weight: 400;
-}
-.nav-link:hover {
-  background: var(--sakura-light, #fdf0ef);
-  color: var(--sakura-deep, #c0514d);
-}
-.nav-link.lang-switch {
-  border: 1px solid var(--border, #ede8e3);
-  margin-left: 4px;
-  font-size: 11px;
-}
-.header-actions {
-  display: none;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-}
-.header-tel {
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--sakura-deep, #c0514d);
-  text-decoration: none;
-  font-family: 'Noto Serif JP', serif;
-}
-.btn-lang {
-  font-size: 11px;
-  color: var(--text, #2a2220);
-  text-decoration: none;
-  border: 1px solid var(--border, #ede8e3);
-  padding: 4px 8px;
-  border-radius: 8px;
-  white-space: nowrap;
-}
-.hamburger {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 6px;
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-.hamburger span {
-  display: block;
-  width: 22px;
-  height: 2px;
-  background: var(--text, #2a2220);
-  border-radius: 2px;
-  transition: all 0.25s;
-}
-.hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-.hamburger.open span:nth-child(2) { opacity: 0; }
-.hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  background: white;
-  border-top: 1px solid var(--border, #ede8e3);
-  padding: 8px 0 16px;
-}
-.mobile-nav.open { display: flex; }
-.mobile-nav-link {
-  font-size: 14px;
-  color: var(--text, #2a2220);
-  text-decoration: none;
-  padding: 12px 24px;
-  transition: background 0.15s;
-}
-.mobile-nav-link:hover { background: var(--cream, #faf7f4); }
-.mobile-nav-divider {
-  height: 1px;
-  background: var(--border, #ede8e3);
-  margin: 8px 24px;
-}
-.lang-link { color: #8a7a72; font-size: 13px; }
-
-@media (max-width: 700px) {
-  .header-nav { display: none; }
-  .header-actions { display: flex; }
-}
-@media (min-width: 701px) {
-  .mobile-nav { display: none !important; }
-}
-</style>
-
-<script>
-(function() {
-  const hamburger = document.getElementById('hamburger');
-  const mobileNav = document.getElementById('mobileNav');
-  if (!hamburger || !mobileNav) return;
-  hamburger.addEventListener('click', function() {
-    const isOpen = mobileNav.classList.toggle('open');
-    hamburger.classList.toggle('open', isOpen);
-    hamburger.setAttribute('aria-expanded', isOpen);
-    mobileNav.setAttribute('aria-hidden', !isOpen);
-  });
-  // Close on outside click
-  document.addEventListener('click', function(e) {
-    if (!document.getElementById('siteHeader').contains(e.target)) {
-      mobileNav.classList.remove('open');
-      hamburger.classList.remove('open');
-      hamburger.setAttribute('aria-expanded', false);
-      mobileNav.setAttribute('aria-hidden', true);
-    }
-  });
-  // Highlight active nav link
-  const currentPage = location.pathname.split('/').pop() || 'index.html';
-  document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(function(a) {
-    if (a.getAttribute('href') && a.getAttribute('href').includes(currentPage)) {
-      a.style.color = 'var(--sakura-deep, #c0514d)';
-      a.style.fontWeight = '500';
-    }
-  });
-})();
-</script>
+  <a href="tel:088-856-7511" class="nav-drawer-tel">📞 088-856-7511</a>
+</div>
+<div class="nav-overlay"></div>
