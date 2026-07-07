@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>気象病によるだるさとこれからの夏バテ予防ケア｜新本町クリニック コラム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    :root {
+      --sakura: #e8b4b8;
+      --sakura-light: #fdf3f4;
+      --sakura-deep: #b5686e;
+      --green: #6a9e80;
+      --green-light: #f0f7f3;
+      --cream: #faf8f5;
+      --text: #3a3530;
+      --text-muted: #857e78;
+      --border: #e8e3de;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Noto Sans JP', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+    }
+
+    .page-hero {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border-bottom: 1px solid var(--border);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    .page-label {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--sakura-deep);
+      text-transform: uppercase;
+    }
+    .page-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 26px;
+      font-weight: 600;
+      margin: 8px 0 6px;
+    }
+    .page-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a { color: var(--sakura-deep); text-decoration: none; }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header { margin-bottom: 36px; }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* アイキャッチ画像 */
+    .article-eyecatch {
+      width: 100%;
+      border-radius: 12px;
+      margin-bottom: 32px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+    }
+    .article-eyecatch img {
+      width: 100%;
+      display: block;
+    }
+
+    /* YouTube埋め込み */
+    .article-eyecatch-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+    }
+    .article-eyecatch-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p { margin-bottom: 1.6em; }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p { margin: 0; font-size: 14px; line-height: 1.9; }
+
+    /* 引用ボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* ステップカード */
+    .step-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin: 24px 0 32px;
+    }
+    .step-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .step-number {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: var(--sakura-deep);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Noto Serif JP', serif;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .step-body {}
+    .step-title { font-size: 14px; font-weight: 700; margin-bottom: 4px; color: var(--text); }
+    .step-desc { font-size: 13px; line-height: 1.8; color: var(--text-muted); }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* 2軸比較カード（現在／未来） */
+    .compare-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+      margin: 24px 0 32px;
+    }
+    .compare-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px 20px;
+    }
+    .compare-card-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      border-radius: 14px;
+      padding: 3px 12px;
+      margin-bottom: 10px;
+    }
+    .compare-card.now .compare-card-tag { background: var(--sakura-light); color: var(--sakura-deep); }
+    .compare-card.future .compare-card-tag { background: var(--green-light); color: var(--green); }
+    .compare-card-title { font-size: 15px; font-weight: 700; margin-bottom: 8px; }
+    .compare-card-desc { font-size: 13px; line-height: 1.8; color: var(--text-muted); }
+
+    /* 3つの働きカード */
+    .effect-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .effect-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 16px;
+      text-align: center;
+    }
+    .effect-card-icon { font-size: 30px; margin-bottom: 10px; }
+    .effect-card-title { font-size: 13px; font-weight: 700; color: var(--sakura-deep); margin-bottom: 6px; }
+    .effect-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* 記事末フッター */
+    .article-footer {
+      margin-top: 56px;
+      padding-top: 40px;
+      border-top: 1px solid var(--border);
+      text-align: center;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border-radius: 16px;
+      padding: 32px 24px;
+      margin-bottom: 28px;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 11px 28px;
+      border-radius: 24px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .disclaimer {
+      font-size: 11px;
+      color: var(--text-muted);
+      background: #f5f5f2;
+      border-radius: 6px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .effect-cards { grid-template-columns: 1fr 1fr; }
+      .compare-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>気象病によるだるさとこれからの夏バテ予防ケア</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">漢方・和漢素材</span>
+      <h2 class="article-title">そのだるさ、気のせいじゃありません<br>―― 気象病によるだるさとこれからの夏バテ予防ケア</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年7月</span>
+      </div>
+    </header>
+
+    <!-- YouTube埋め込み -->
+    <div class="article-eyecatch-video">
+      <iframe src="https://www.youtube.com/embed/M12_2QRIUZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">季節の変わり目、なんだか体がすっきりしませんか</h3>
+      <p>
+        季節の変わり目、特に気圧が不安定な時期になると、なんだか体がすっきりしない。そんな経験はありませんか。
+        最近診察室でも、この時期に本当によく耳にするお悩みです。今日は気圧の変動によるだるさから、これから本格化する夏バテの予防まで、一連の流れで分かりやすく解説していきます。
+      </p>
+      <p>
+        午後になると異常に眠くなる。お昼ご飯のあとデスクワークをしていると急にまぶたが重くなって、コーヒーを何杯飲んでも頭がぼーっとしてしまう。
+        そのお気持ち、よく分かります。でもそれは決して、あなたが怠けているわけでも、単なる睡眠不足なわけでもありません。
+        実は最近の激しい気圧の変動が、体に直接ダメージを与えている可能性が高いのです。
+      </p>
+
+      <!-- だるさ・眠気のメカニズム -->
+      <h3 class="section-heading">そのだるさ・眠気、体の中で何が起きているのか</h3>
+      <p>
+        このだるさや眠気、体の中で何が起きているのか少し覗いてみましょう。ポイントになるのは、次の3つのステップです。まるでドミノ倒しのような現象なんですよ。
+      </p>
+
+      <div class="step-cards">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <div class="step-body">
+            <div class="step-title">内耳のセンサーが気圧の変化を敏感にキャッチ</div>
+            <div class="step-desc">雨の前など気圧が下がる場面で、耳の奥にある内耳のセンサーがそのわずかな変化を敏感に感知します。</div>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <div class="step-body">
+            <div class="step-title">脳への過剰なアラート</div>
+            <div class="step-desc">内耳から脳に対して「気圧が変わった」という情報が過剰に伝わり、体の警戒信号がオンになります。</div>
+          </div>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <div class="step-body">
+            <div class="step-title">自律神経の乱れと強制お休みモード</div>
+            <div class="step-desc">交感神経と副交感神経のバランスが崩れ、体が強制的にお休みモードに入ってしまいます。あのひどいだるさや異常な眠気は、こうして生まれるのです。</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 水滞について -->
+      <h3 class="section-heading">自律神経の乱れと深く関わる「水滞」という考え方</h3>
+      <p>
+        この自律神経の乱れと、実はとても深く関わっているのが、東洋医学でいう「<strong>水滞（すいたい）</strong>」という概念です。
+        専門用語っぽく聞こえますが、実はとても身近な状態を指しています。
+      </p>
+
+      <div class="highlight-box">
+        シンプルに言うと、<strong>体内の水分の巡りが悪くなり、余分な水分が体に溜まってむくみを引き起こしている状態</strong>のことです。
+        気圧が下がると細胞が膨張しやすくなり、体内の水はけが極端に悪くなってしまいます。
+        これが体を重く感じさせたり、頭をぼーっとさせたりする、水滞の正体なんですね。
+      </div>
+
+      <p>
+        では、この水滞にどう対処すればよいのでしょうか。そこで登場するのが<strong>五苓散（ごれいさん）</strong>という漢方薬です。
+        この薬は、体内にたまった余分な水分の排出を促し、水はけをさっと良くしてくれます。
+        つまり、今あなたが感じている重だるさや眠気に対して、すぐに効く「盾」になってくれるお薬です。むくみが取れることで、頭のどんよりした重さもすっきりしてきます。
+      </p>
+
+      <!-- 気虚と補中益気湯 -->
+      <h3 class="section-heading">今の不調の先にある「気虚」というもう一つの問題</h3>
+      <p>
+        さて、ここまでは今起きている不調、つまり現在のだるさへの対処法でした。でも体づくりはこれで終わりではありません。
+        気圧の変動を乗り越えたら、次に来るのは過酷な夏の暑さです。今のうちから先回りしてケアしておかないと、本格的な夏バテに引きずり込まれてしまいます。
+      </p>
+      <p>
+        そこでぜひ知っておいていただきたいのが「<strong>気虚（ききょ）</strong>」という状態です。
+        先ほどの水滞が水分のトラブルだとすれば、こちらはずばりエネルギーのトラブル。ベースとなる生命エネルギーそのものが不足してしまっている状態です。
+        たとえるなら、スマホのバッテリーが常に残量20%の赤色表示になっているような、あのヒヤヒヤする感じです。気温が上がると体力の消耗も進むため、このエネルギー不足がさらに加速してしまう。これが夏バテの根本的な原因なのです。
+      </p>
+
+      <div class="trivia-box">
+        <div class="trivia-box-label">💡 補中益気湯という味方</div>
+        <p>
+          この気虚を防ぐための頼もしい味方が「<strong>補中益気湯（ほちゅうえっきとう）</strong>」という漢方薬です。
+          五苓散が水はけをよくする役割だとすれば、こちらは強力なモバイルバッテリーのようなもの。胃腸の働きを底上げして、食べたものをしっかりエネルギーに変える力を取り戻してくれます。
+          これから来る厳しい暑さに打ち勝つための、事前のバッテリーチャージとして有効です。
+        </p>
+      </div>
+
+      <!-- 現在と未来の比較 -->
+      <h3 class="section-heading">「今日のケア」と「明日への備え」、2つの時間軸</h3>
+      <p>
+        ここで少し頭を整理してみましょう。五苓散と補中益気湯、この2つのアプローチは、時間軸がまったく違います。
+      </p>
+
+      <div class="compare-cards">
+        <div class="compare-card now">
+          <span class="compare-card-tag">現在</span>
+          <div class="compare-card-title">五苓散 ―― 今日を快適に</div>
+          <div class="compare-card-desc">今のむくみや眠気を解決する、速効性のあるアプローチです。</div>
+        </div>
+        <div class="compare-card future">
+          <span class="compare-card-tag">未来</span>
+          <div class="compare-card-title">補中益気湯 ―― 明日のために</div>
+          <div class="compare-card-desc">夏の体力維持や胃腸機能の低下防止を担う、エネルギーの備蓄です。</div>
+        </div>
+      </div>
+
+      <p>
+        今の症状のケアと、これからのベースアップ。この2つはまったく違う役割を持っています。
+        いくら五苓散で今の眠気をとっても、胃腸が弱っていてご飯が食べられなければ、結局エネルギー不足でバテてしまいます。
+        逆に補中益気湯でエネルギーを補おうとしても、体中が水分でうまく巡らず自律神経が乱れていては、せっかくのお薬もうまく吸収されません。
+        今の眠気とだるさをしっかり管理しつつ、食事をきちんと取れる体をキープする。この両輪を回すことこそが、本格的な夏を乗り切る戦略なのです。
+      </p>
+
+      <!-- 生活習慣のヒント -->
+      <h3 class="section-heading">今日から始められる、生活習慣のヒント</h3>
+      <p>
+        ここからはお薬だけでなく、毎日のちょっとした工夫をご紹介します。まずは食事から、ポイントは2つです。
+      </p>
+
+      <ul class="point-list">
+        <li>カリウムを多く含む食材（バナナ、アボカド、ほうれん草など）で、余分な塩分や水分の排出をサポート</li>
+        <li>生姜やネギなど体を温める食材で、冷房や冷たい飲み物で冷えきった内臓を内側からあたためる</li>
+      </ul>
+
+      <p>
+        続いては運動のヒントです。これがなかなか面白いアプローチで、お天気によって運動の質を変えるのがポイントです。
+      </p>
+
+      <div class="effect-cards">
+        <div class="effect-card">
+          <div class="effect-card-icon">☔</div>
+          <div class="effect-card-title">気圧が低い日</div>
+          <div class="effect-card-desc">無理は禁物。自律神経が敏感になっているので、深呼吸や軽いストレッチでリラックスを心がけましょう。</div>
+        </div>
+        <div class="effect-card">
+          <div class="effect-card-icon">☀️</div>
+          <div class="effect-card-title">高気圧の晴れた日</div>
+          <div class="effect-card-desc">チャンスです。ウォーキングなど軽く汗をかくアクティブな運動を取り入れてみましょう。</div>
+        </div>
+      </div>
+
+      <p>
+        高気圧の日に軽く汗をかくことには、もう一つ重要な意味があります。それが「<strong>暑熱順化（しょねつじゅんか）</strong>」です。
+        本格的な夏が来る前に体を暑さに慣れさせ、上手に汗をかける体質を作っておくプロセスのこと。
+        今の時期から軽い運動でこの暑熱順化を進めておけば、真夏になっても体温調節がスムーズにでき、熱中症や夏バテのリスクを大きく下げることができます。
+      </p>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            人間の体は本当に十人十色です。水滞が強く出ている方もいれば、気虚が強く出ている方もいて、それは人によってまったく違います。
+            だからこそ「自分はこうだ」という自己判断だけで終わらせず、ぜひ私たちのような専門家を頼ってください。
+            お一人お一人の声を聞き、脈を見て、あなたにぴったりの最適なバランスを一緒に見つけるのが私たちの仕事です。皆さんが毎日を快適に過ごせるよう、心からサポートしたいと思っています。
+          </p>
+        </div>
+      </div>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">おわりに</h3>
+      <p>
+        もうお天気に自分のエネルギーレベルを振り回されるのは、そろそろ終わりにしませんか。
+        今日お話しした知識、つまり今のむくみを改善して未来のエネルギーを蓄えるという視点を持てば、気圧の変化も夏の暑さも、ただ怖がるだけのものではなくなります。
+      </p>
+      <p>
+        今日始めた小さなアクションが、明日の大きな活力に必ずつながります。ぜひできることから始めてみてくださいね。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。
+        体質や持病・お薬との相互作用などが気になる方は、受診前に医師にご相談ください。
+        効果には個人差があります。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>気象病・夏バテ予防のご相談は当院へ</h3>
+        <p>五苓散と補中益気湯を使い分けた、気象病・夏バテの漢方ケアを行っています。<br>だるさや眠気が続く方は、お気軽にご相談ください。</p>
+        <a href="index.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
