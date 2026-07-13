@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Shinhonmachi | Medicina Interna · Medicina Psicosomática · Kampo | Ciudad de Kochi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<meta name="description" content="Clínica Shinhonmachi en Kitakaneda, Ciudad de Kochi. Medicina interna, medicina psicosomática y Kampo (medicina tradicional china). Tratamos enfermedades relacionadas con el estilo de vida, problemas de salud mental y mejora de la constitución. Abierto de lunes a sábado (cerrado los jueves y sábado por la tarde). Llame al 088-856-7511.">
+<link rel="canonical" href="https://shinhonmachi.jp/es/index.html">
+<link rel="alternate" hreflang="ja" href="https://shinhonmachi.jp/">
+<link rel="alternate" hreflang="en" href="https://shinhonmachi.jp/en/index.html">
+<link rel="alternate" hreflang="zh-CN" href="https://shinhonmachi.jp/cn/index.html">
+<link rel="alternate" hreflang="ko" href="https://shinhonmachi.jp/kr/index.html">
+<link rel="alternate" hreflang="es" href="https://shinhonmachi.jp/es/index.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Clínica Shinhonmachi | Kampo · Medicina Psicosomática · Medicina Interna | Ciudad de Kochi">
+<meta property="og:description" content="Clínica Shinhonmachi en Kitakaneda, Ciudad de Kochi. Medicina interna, medicina psicosomática y Kampo (medicina tradicional china). Tratamos enfermedades relacionadas con el estilo de vida, problemas de salud mental y mejora de la constitución. Abierto de lunes a sábado (cerrado los jueves y sábado por la tarde). Llame al 088-856-7511.">
+<meta property="og:url" content="https://shinhonmachi.jp/">
+<meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.webp">
+<meta property="og:site_name" content="Shinhonmachi Clinic">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Clínica Shinhonmachi | Kampo · Medicina Psicosomática · Medicina Interna | Ciudad de Kochi">
+<meta name="twitter:description" content="Clínica Shinhonmachi en Kitakaneda, Ciudad de Kochi. Medicina interna, medicina psicosomática y Kampo (medicina tradicional china). Tratamos enfermedades relacionadas con el estilo de vida, problemas de salud mental y mejora de la constitución. Abierto de lunes a sábado (cerrado los jueves y sábado por la tarde). Llame al 088-856-7511.">
+<meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.webp">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Shinhonmachi Clinic",
+  "url": "https://shinhonmachi.jp",
+  "image": "https://shinhonmachi.jp/pics/gaikan.webp",
+  "description": "Una clínica de Kampo, medicina psicosomática y medicina interna en Kitakaneda, Ciudad de Kochi. Nos comprometemos a brindar una atención cuidadosa y personalizada a cada paciente.",
+  "telephone": "088-856-7511",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "11-22 Kitakaneda, Sophia Bldg. 5F",
+    "addressLocality": "Kochi City",
+    "addressRegion": "Kochi Prefecture",
+    "postalCode": "781-0073",
+    "addressCountry": "JP"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 33.5588, "longitude": 133.5514 },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Friday"], "opens": "09:00", "closes": "12:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "14:00", "closes": "18:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday"], "opens": "14:00", "closes": "18:30" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Saturday"], "opens": "09:00", "closes": "12:00" }
+  ],
+  "medicalSpecialty": ["InternalMedicine","MentalHealth"],
+  "priceRange": "¥"
+}
+</script>
+<style>
+/* ===== Hero Slider ===== */
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 460px;
+  overflow: hidden;
+  background: #2a1f1c;
+}
+.hero-slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.hero-slide {
+  min-width: 100%;
+  height: 100%;
+  position: relative;
+  flex-shrink: 0;
+}
+.hero-slide img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.hero-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(30,20,18,0.62) 0%,
+    rgba(30,20,18,0.28) 55%,
+    rgba(30,20,18,0.10) 100%
+  );
+}
+.hero-caption {
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  transform: translateY(-50%);
+  z-index: 2;
+  max-width: 400px;
+}
+.hero-tag {
+  display: inline-block;
+  background: rgba(247,197,197,0.22);
+  border: 1px solid rgba(247,197,197,0.5);
+  color: #f9d8d8;
+  font-size: 11px;
+  padding: 4px 16px;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  letter-spacing: 0.12em;
+  backdrop-filter: blur(4px);
+}
+.hero-caption h1 {
+  font-family: 'Noto Serif JP', serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.6;
+  color: #fff;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.3);
+  margin-bottom: 16px;
+}
+.hero-caption p {
+  font-size: 13px;
+  color: rgba(255,255,255,0.85);
+  line-height: 2;
+  margin-bottom: 28px;
+}
+.hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn-primary { background: var(--sakura-deep); color: white; border: none; padding: 12px 28px; border-radius: 30px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.2s; font-weight: 500; text-decoration: none; display: inline-block; }
+.btn-primary:hover { background: #d97a77; transform: translateY(-1px); box-shadow: 0 6px 20px rgba(232,145,142,0.4); }
+.btn-outline { background: rgba(255,255,255,0.12); color: white; border: 1.5px solid rgba(255,255,255,0.55); padding: 12px 28px; border-radius: 30px; font-size: 14px; cursor: pointer; font-family: inherit; transition: all 0.2s; font-weight: 500; text-decoration: none; display: inline-block; backdrop-filter: blur(4px); }
+.btn-outline:hover { background: rgba(255,255,255,0.22); transform: translateY(-1px); }
+
+/* Slider Controls */
+.slider-prev, .slider-next {
+  position: absolute;
+  top: 50%; transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255,255,255,0.18);
+  border: 1.5px solid rgba(255,255,255,0.4);
+  color: white;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  backdrop-filter: blur(4px);
+  transition: background 0.2s;
+  display: flex; align-items: center; justify-content: center;
+}
+.slider-prev { left: 16px; }
+.slider-next { right: 16px; }
+.slider-prev:hover, .slider-next:hover { background: rgba(255,255,255,0.32); }
+
+/* Dots */
+.slider-dots {
+  position: absolute;
+  bottom: 16px;
+  left: 50%; transform: translateX(-50%);
+  display: flex; gap: 8px;
+  z-index: 10;
+}
+.slider-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.45);
+  border: none; cursor: pointer;
+  padding: 0;
+  transition: background 0.3s, transform 0.3s;
+}
+.slider-dot.active {
+  background: white;
+  transform: scale(1.3);
+}
+
+@media (max-width: 600px) {
+  .hero-slider { height: 280px; }
+  .hero-caption { left: 24px; right: 24px; max-width: none; }
+  .hero-caption h1 { font-size: 22px; }
+  .hero-caption p { display: none; }
+  .slider-prev, .slider-next { width: 34px; height: 34px; font-size: 14px; }
+}
+
+/* ===== Common Section Styles ===== */
+section { padding: 56px 32px; }
+.section-header { text-align: center; margin-bottom: 36px; }
+.section-label { display: inline-block; font-size: 11px; color: #c0514d; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 10px; }
+.section-title { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 600; color: var(--text); }
+.section-sub { font-size: 13px; color: var(--text-muted); margin-top: 8px; line-height: 1.8; }
+
+/* ===== Departments ===== */
+.departments { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; max-width: 660px; margin: 0 auto 28px; }
+.dept-card { background: white; border: 1px solid var(--border); border-radius: 20px; padding: 28px 20px 22px; text-align: center; transition: all 0.25s; text-decoration: none; display: block; }
+.dept-card:hover { border-color: var(--sakura); box-shadow: 0 6px 24px rgba(232,145,142,0.14); transform: translateY(-3px); }
+.dept-icon { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 16px; font-size: 24px; }
+.dept-name { font-size: 15px; font-weight: 500; color: var(--text); margin-bottom: 8px; font-family: 'Noto Serif JP', serif; }
+.dept-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; margin-bottom: 12px; }
+.dept-symptoms { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; }
+.dept-symptom { font-size: 10px; background: var(--sakura-light); color: #c0514d; border-radius: 10px; padding: 2px 9px; }
+.dept-symptom.green { background: var(--green-light); color: var(--green); }
+.dept-cta { text-align: center; }
+.dept-cta a { font-size: 13px; color: #c0514d; text-decoration: none; border-bottom: 1px solid var(--sakura); padding-bottom: 1px; }
+.dept-cta a:hover { opacity: 0.7; }
+
+/* ===== First-Time Visitors ===== */
+.first-visit-section { background: linear-gradient(135deg, #fdf6f6 0%, #f0f7f2 100%); }
+.first-visit-inner { max-width: 640px; margin: 0 auto; }
+.steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.step { position: relative; text-align: center; padding: 20px 12px; }
+.step::after { content: '›'; position: absolute; right: -4px; top: 38px; font-size: 18px; color: var(--sakura); line-height: 1; }
+.step:last-child::after { display: none; }
+.step-num { width: 36px; height: 36px; background: var(--sakura-deep); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; margin: 0 auto 10px; }
+.step-icon { font-size: 22px; margin-bottom: 6px; }
+.step-title { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 4px; }
+.step-desc { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+.first-visit-note { margin-top: 24px; background: white; border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; display: flex; align-items: flex-start; gap: 12px; font-size: 13px; color: var(--text-muted); line-height: 1.85; }
+.first-visit-note .note-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+/* ===== Self-Pay Services ===== */
+.selfpay-section { background: white; }
+.selfpay-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 14px; max-width: 660px; margin: 0 auto 24px; }
+.selfpay-card { border: 1px solid var(--border); border-radius: 16px; padding: 20px 14px 16px; text-align: center; transition: all 0.2s; background: var(--cream); }
+.selfpay-card:hover { border-color: var(--sakura); box-shadow: 0 4px 16px rgba(232,145,142,0.1); transform: translateY(-2px); }
+.selfpay-icon { font-size: 26px; margin-bottom: 10px; }
+.selfpay-name { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 5px; }
+.selfpay-desc { font-size: 11px; color: var(--text-muted); line-height: 1.6; }
+.selfpay-cta { text-align: center; }
+.selfpay-cta a { display: inline-block; font-size: 13px; color: #c0514d; text-decoration: none; border: 1px solid var(--sakura); padding: 8px 24px; border-radius: 20px; transition: all 0.2s; }
+.selfpay-cta a:hover { background: var(--sakura-light); }
+
+/* ===== News ===== */
+.news-section { background: var(--cream); }
+.news-list { max-width: 580px; margin: 0 auto 20px; }
+.news-item { display: flex; align-items: flex-start; gap: 14px; padding: 15px 0; border-bottom: 1px solid var(--border); }
+.news-item:last-child { border-bottom: none; }
+.news-date { font-size: 12px; color: var(--text-muted); min-width: 80px; padding-top: 2px; }
+.news-badge { font-size: 10px; padding: 2px 8px; border-radius: 10px; min-width: 54px; text-align: center; font-weight: 500; flex-shrink: 0; }
+.badge-info { background: #e8f4fd; color: #3b85c0; }
+.badge-new { background: var(--sakura-light); color: #c0514d; }
+.badge-holiday { background: var(--green-light); color: var(--green); }
+.news-text { font-size: 13px; color: var(--text); flex: 1; line-height: 1.7; }
+.news-more { text-align: center; }
+.news-more a { font-size: 13px; color: #c0514d; text-decoration: none; border-bottom: 1px solid var(--sakura); padding-bottom: 1px; }
+
+/* ===== Director's Message ===== */
+.doctor-section { background: white; }
+.doctor-inner { max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, #fdf6f6 0%, #f0f7f2 100%); border: 1px solid var(--border); border-radius: 24px; padding: 32px; display: flex; gap: 28px; align-items: flex-start; }
+.doctor-avatar { width: 88px; height: 88px; border-radius: 50%; background: var(--sakura-light); border: 3px solid var(--sakura); display: flex; align-items: center; justify-content: center; font-size: 36px; flex-shrink: 0; }
+.doctor-role { font-size: 11px; color: #c0514d; letter-spacing: 0.1em; margin-bottom: 4px; }
+.doctor-name { font-family: 'Noto Serif JP', serif; font-size: 20px; font-weight: 600; margin-bottom: 14px; color: var(--text); }
+.doctor-msg { font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 16px; }
+.doctor-link a { font-size: 13px; color: #c0514d; text-decoration: none; border-bottom: 1px solid var(--sakura); padding-bottom: 1px; }
+
+/* ===== Office Hours ===== */
+.hours-section { background: var(--sakura-light); }
+.hours-card { background: white; border-radius: 20px; padding: 28px; max-width: 560px; margin: 0 auto; border: 1px solid var(--border); }
+.hours-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.hours-table th { text-align: center; padding: 8px 6px; font-size: 12px; color: var(--text); font-weight: 600; border-bottom: 1px solid var(--border); }
+.hours-table td { text-align: center; padding: 10px 6px; border-bottom: 1px dashed var(--border); }
+.hours-table tr:last-child td { border-bottom: none; }
+.hours-table td:first-child { text-align: left; font-weight: 500; padding-left: 0; color: var(--text); }
+.check { color: #c0514d; font-size: 16px; }
+.dash  { color: #a89890; }
+.note  { display: flex; align-items: center; gap: 6px; margin-top: 16px; font-size: 12px; color: #5a504a; background: var(--green-light); padding: 10px 14px; border-radius: 10px; }
+
+/* ===== Access ===== */
+.access-section { background: white; }
+.access-inner { max-width: 560px; margin: 0 auto; display: grid; gap: 14px; }
+.access-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.access-card { background: var(--cream); border: 1px solid var(--border); border-radius: 16px; padding: 18px 20px; display: flex; align-items: flex-start; gap: 14px; }
+.access-icon { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 17px; }
+.access-icon.pink  { background: var(--sakura-light); }
+.access-icon.green { background: var(--green-light); }
+.access-label { font-size: 11px; color: var(--text-muted); margin-bottom: 3px; }
+.access-value { font-size: 13px; color: var(--text); font-weight: 500; line-height: 1.6; }
+.access-value a { color: #c0514d; text-decoration: none; }
+.map-embed { border-radius: 16px; overflow: hidden; border: 1px solid var(--border); }
+.map-embed iframe { display: block; width: 100%; height: 220px; border: none; }
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .hero h1 { font-size: 26px; }
+  .hero-content { padding: 56px 24px 48px; }
+  section { padding: 44px 20px; }
+  .steps { grid-template-columns: 1fr 1fr; }
+  .step::after { display: none; }
+  .access-cards { grid-template-columns: 1fr; }
+  .doctor-inner { flex-direction: column; align-items: center; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<!-- ① Hero Slider -->
+<div class="hero-slider" id="heroSlider">
+  <div class="hero-slider-track" id="heroTrack">
+    <div class="hero-slide">
+      <img src="../pics/gaikan.webp" alt="Exterior de la clínica">
+      <div class="hero-slide-overlay"></div>
+    </div>
+    <div class="hero-slide">
+      <img src="../pics/shinsatsu_fukei.webp" alt="Sala de consulta">
+      <div class="hero-slide-overlay"></div>
+    </div>
+  </div>
+
+  <!-- Caption (shared across all slides) -->
+  <div class="hero-caption">
+    <div class="hero-tag">Su Clínica de Barrio de Confianza</div>
+    <h1>Su salud,<br>siempre nuestra prioridad.</h1>
+    <p>Escuchamos atentamente a cada paciente,<br>esforzándonos por ser una clínica donde se sienta seguro y bienvenido.</p>
+    <div class="hero-btns">
+      <a href="tel:088-856-7511" class="btn-primary">📞 088-856-7511</a>
+      <a href="section_shinryo_annai.html" class="btn-outline">Ver Servicios Médicos</a>
+    </div>
+  </div>
+
+  <!-- Prev/Next Buttons -->
+  <button class="slider-prev" id="sliderPrev" aria-label="Anterior">&#8249;</button>
+  <button class="slider-next" id="sliderNext" aria-label="Siguiente">&#8250;</button>
+
+  <!-- Dots -->
+  <div class="slider-dots" id="sliderDots"></div>
+</div>
+
+<!-- ① News (latest 3 items) -->
+<section class="news-section">
+  <div class="section-header">
+    <div class="section-label">Noticias</div>
+    <div class="section-title">Noticias y Actualizaciones</div>
+  </div>
+  <div class="news-list" id="news-placeholder"></div>
+  <div class="news-more" id="news-more" style="display:none;">
+    <a href="#">Ver Todas las Noticias →</a>
+  </div>
+</section>
+
+<!-- ② Director's Message -->
+<section class="doctor-section">
+  <div class="section-header">
+    <div class="section-label">Médico</div>
+    <div class="section-title">Mensaje de la Directora</div>
+  </div>
+  <div class="doctor-inner">
+    <div class="doctor-avatar">👩‍⚕️</div>
+    <div>
+      <div class="doctor-role">Directora, Doctora en Medicina</div>
+      <div class="doctor-name">Naoko Yoshimura</div>
+      <div class="doctor-msg">Quiero que esta clínica sea un lugar donde cualquier persona de la comunidad pueda compartir libremente sus inquietudes de salud. Ya sea sobre su cuerpo, su mente o su estilo de vida, pensémoslo juntos.</div>
+      <div class="doctor-link"><a href="section_staff.html">Leer Perfil y Mensaje de la Directora →</a></div>
+    </div>
+  </div>
+</section>
+
+<!-- ③ Departments -->
+<section>
+  <div class="section-header">
+    <div class="section-label">Especialidades</div>
+    <div class="section-title">Especialidades</div>
+    <div class="section-sub">Desde medicina interna y salud mental hasta Kampo, atendemos una amplia variedad de afecciones</div>
+  </div>
+  <div class="departments">
+    <a href="section_shinryo_annai.html" class="dept-card">
+      <div class="dept-icon" style="background:#eef5f0;">🌿</div>
+      <div class="dept-name">Medicina Kampo</div>
+      <div class="dept-desc">Recetamos medicina herbal Kampo para tratar la raíz de su constitución.</div>
+      <div class="dept-symptoms">
+        <span class="dept-symptom green">Menopausia</span>
+        <span class="dept-symptom green">Extremidades frías / Edema</span>
+        <span class="dept-symptom green">Problemas digestivos</span>
+        <span class="dept-symptom green">Mejora de la constitución</span>
+      </div>
+    </a>
+    
+    <a href="section_shinryo_annai.html" class="dept-card">
+      <div class="dept-icon" style="background:#edf3fb;">🧠</div>
+      <div class="dept-name">Medicina Psicosomática</div>
+      <div class="dept-desc">Nos tomamos el tiempo necesario para atender con cuidado el estrés y los problemas de salud mental.</div>
+      <div class="dept-symptoms">
+        <span class="dept-symptom">Insomnio</span>
+        <span class="dept-symptom">Depresión / Ansiedad</span>
+        <span class="dept-symptom">Trastornos del sistema nervioso autónomo</span>
+        <span class="dept-symptom">Trastorno de pánico</span>
+      </div>
+    </a>
+
+
+        <a href="section_shinryo_annai.html" class="dept-card">
+      <div class="dept-icon" style="background:#fdf0f0;">🩺</div>
+      <div class="dept-name">Medicina Interna</div>
+      <div class="dept-desc">Diagnosticamos desde dolencias cotidianas hasta enfermedades relacionadas con el estilo de vida.</div>
+      <div class="dept-symptoms">
+        <span class="dept-symptom">Hipertensión</span>
+        <span class="dept-symptom">Diabetes</span>
+        <span class="dept-symptom">Consulta posterior a chequeo médico</span>
+      </div>
+    </a>
+  </div>
+  <div class="dept-cta">
+    <a href="section_shinryo_annai.html">Ver Servicios Médicos Detallados →</a>
+  </div>
+</section>
+
+<!-- ④ Self-Pay Services -->
+<section class="selfpay-section">
+  <div class="section-header">
+    <div class="section-label">Tratamiento Particular</div>
+    <div class="section-title">Menú de Tratamientos Particulares</div>
+    <div class="section-sub">Además de los tratamientos cubiertos, ofrecemos una variedad de servicios particulares</div>
+  </div>
+  <div class="selfpay-grid">
+    <div class="selfpay-card">
+      <div class="selfpay-icon">🌸</div>
+      <div class="selfpay-name">Inyecciones de Placenta</div>
+      <div class="selfpay-desc">Alivio de la menopausia · recuperación de la fatiga · mejora de la piel</div>
+    </div>
+    <div class="selfpay-card">
+      <div class="selfpay-icon">🌀</div>
+      <div class="selfpay-name">Suero de Ozono</div>
+      <div class="selfpay-desc">Refuerzo inmunológico · antioxidante · fatiga crónica</div>
+    </div>
+    <div class="selfpay-card">
+      <div class="selfpay-icon">✨</div>
+      <div class="selfpay-name">Suero de Glutatión y Vitamina C</div>
+      <div class="selfpay-desc">Aclarado de la piel · manchas · mejora de la opacidad</div>
+    </div>
+    <div class="selfpay-card">
+      <div class="selfpay-icon">🌿</div>
+      <div class="selfpay-name">Kampo y Acupuntura</div>
+      <div class="selfpay-desc">Mejora de la constitución · extremidades frías · sistema nervioso autónomo</div>
+    </div>
+  </div>
+  <div class="selfpay-cta">
+    <a href="section_ryokin.html">Ver Detalles →</a>
+  </div>
+</section>
+
+  
+<!-- ⑤ First-Time Visitors -->
+<section class="first-visit-section">
+  <div class="section-header">
+    <div class="section-label">Primera Visita</div>
+    <div class="section-title">Pacientes de Primera Vez</div>
+    <div class="section-sub">Los pacientes de primera vez son siempre bienvenidos. Le guiaremos en cada paso, desde la recepción hasta el pago.</div>
+  </div>
+  <div class="first-visit-inner">
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <div class="step-icon">📞</div>
+        <div class="step-title">Llame o Venga Directamente</div>
+        <div class="step-desc">Se aceptan visitas sin cita previa. Llamar con antelación ayuda a que la visita sea más fluida.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <div class="step-icon">📋</div>
+        <div class="step-title">Complete el Formulario de Admisión</div>
+        <div class="step-desc">Le entregaremos un formulario en la recepción. Por favor, indique sus síntomas y los medicamentos que toma actualmente.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <div class="step-icon">🩺</div>
+        <div class="step-title">Consulta</div>
+        <div class="step-desc">El médico realizará una entrevista y un examen exhaustivos. No dude en compartir cualquier inquietud.</div>
+      </div>
+      <div class="step">
+        <div class="step-num">4</div>
+        <div class="step-icon">💊</div>
+        <div class="step-title">Pago y Receta</div>
+        <div class="step-desc">La mayoría de las recetas (incluido el Kampo) se dispensan en el mismo lugar.</div>
+      </div>
+    </div>
+    <div class="first-visit-note">
+      <span class="note-icon">🎒</span>
+      <span>Por favor traiga su <strong>tarjeta My Number o documento de confirmación de elegibilidad</strong>, cualquier certificado médico y su libreta de medicamentos. Contar con información sobre sus medicamentos actuales ayudará a que la consulta se desarrolle sin inconvenientes.</span>
+    </div>
+  </div>
+</section>
+
+<!-- ⑥ Office Hours -->
+<section class="hours-section">
+  <div class="section-header">
+    <div class="section-label">Horario</div>
+    <div class="section-title">Horario de Atención</div>
+  </div>
+  <div class="hours-card">
+    <table class="hours-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Lun</th><th>Mar</th><th>Mié</th><th>Jue</th><th>Vie</th><th>Sáb</th><th>Dom/Fest</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Mañana<br><small style="color:var(--text-muted);font-weight:400;">9:00–12:00</small></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="dash">Cerrado</span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="dash">Cerrado</span></td>
+        </tr>
+        <tr>
+          <td>Tarde<br><small style="color:var(--text-muted);font-weight:400;">14:00–17:30</small></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="check"><b>◯</b></span></td>
+          <td><span class="dash">Cerrado</span></td>
+          <td><span class="check"><b><font size="-2">14:00〜<br>18:30</font></b></span></td>
+          <td><span class="dash">Cerrado</span></td>
+          <td><span class="dash">Cerrado</span></td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="note">🌿 Cerrado los jueves, sábados por la tarde, domingos y días festivos. Los viernes se atiende hasta las 18:30. Los sábados solo por la mañana (9:00–12:00).</div>
+  </div>
+</section>
+
+<!-- ⑦ Access -->
+<section class="access-section">
+  <div class="section-header">
+    <div class="section-label">Acceso</div>
+    <div class="section-title">Cómo Llegar</div>
+  </div>
+  <div class="access-inner">
+    <div class="access-cards">
+      <div class="access-card">
+        <div class="access-icon pink">📍</div>
+        <div>
+          <div class="access-label">Dirección</div>
+          <div class="access-value">Edificio Sophia, 5º piso, 11-22 Kitakaneda, Ciudad de Kochi, Kochi 781-0073</div>
+        </div>
+      </div>
+    </div>
+    <div class="map-embed">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3324.523028083669!2d133.5585686!3d33.5657669!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354e1ea99f25a341%3A0x5e28a60ba852b561!2z44CSNzgxLTAwNzMg6auY55-l55yM6auY55-l5biC5YyX6YeR55Sw77yR77yR4oiS77yS77ySIOOCveODleOCo-OCouODk-ODqyA1Zg!5e0!3m2!1sja!2sjp!4v1777948753661!5m2!1sja!2sjp"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Mapa de la Clínica Shinhonmachi">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<div id="footer-placeholder"></div>
+
+<script src="common_en.js"></script>
+<script>
+/* Show only the latest 3 news items; show "View All" link if there are more */
+(function () {
+  const MAX = 3;
+  const target = document.getElementById('news-placeholder');
+  if (!target) return;
+  new MutationObserver(function () {
+    const items = target.querySelectorAll('.news-item');
+    if (items.length > MAX) {
+      for (let i = MAX; i < items.length; i++) items[i].style.display = 'none';
+      const more = document.getElementById('news-more');
+      if (more) more.style.display = 'block';
+    }
+  }).observe(target, { childList: true });
+})();
+
+/* Hero Slider */
+(function () {
+  const track  = document.getElementById('heroTrack');
+  const slides = track ? track.querySelectorAll('.hero-slide') : [];
+  const dotsEl = document.getElementById('sliderDots');
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer;
+
+  // Generate dots
+  slides.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'slider-dot' + (i === 0 ? ' active' : '');
+    d.setAttribute('aria-label', 'Slide ' + (i + 1));
+    d.addEventListener('click', () => goTo(i));
+    dotsEl.appendChild(d);
+  });
+
+  function goTo(n) {
+    current = (n + slides.length) % slides.length;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dotsEl.querySelectorAll('.slider-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current)
+    );
+  }
+
+  function next() { goTo(current + 1); }
+  function prev() { goTo(current - 1); }
+
+  function startAuto() { timer = setInterval(next, 4500); }
+  function resetAuto() { clearInterval(timer); startAuto(); }
+
+  document.getElementById('sliderNext').addEventListener('click', () => { next(); resetAuto(); });
+  document.getElementById('sliderPrev').addEventListener('click', () => { prev(); resetAuto(); });
+
+  // Touch swipe
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - startX;
+    if (Math.abs(dx) > 40) { dx < 0 ? next() : prev(); resetAuto(); }
+  });
+
+  startAuto();
+})();
+</script>
+</body>
+</html>
