@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique de la clinique | Clinique Shinhonmachi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet"></noscript>
+<link rel="stylesheet" href="../common.css">
+<meta name="description" content="Produits disponibles à la Clinique Shinhonmachi — compléments alimentaires, collagène, et plus encore.">
+<link rel="canonical" href="https://shinhonmachi.jp/fr/section_shop.html">
+<link rel="alternate" hreflang="ja" href="https://shinhonmachi.jp/section_shop.html">
+<link rel="alternate" hreflang="en" href="https://shinhonmachi.jp/en/section_shop.html">
+<link rel="alternate" hreflang="zh-CN" href="https://shinhonmachi.jp/cn/section_shop.html">
+<link rel="alternate" hreflang="ko" href="https://shinhonmachi.jp/kr/section_shop.html">
+<link rel="alternate" hreflang="fr" href="https://shinhonmachi.jp/fr/section_shop.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Boutique de la clinique | Clinique Shinhonmachi">
+<meta property="og:description" content="Produits pour la beauté, la prévention et l'amélioration de la constitution.">
+<meta property="og:url" content="https://shinhonmachi.jp/fr/section_shop.html">
+<meta property="og:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+<meta property="og:site_name" content="Clinique Shinhonmachi">
+<meta property="og:locale" content="fr_FR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="| Clinique Shinhonmachi">
+<meta name="twitter:description" content="Compléments alimentaires, collagène, et plus encore.">
+<meta name="twitter:image" content="https://shinhonmachi.jp/pics/gaikan.JPG">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+  .container { max-width: 800px; margin: 0 auto; padding: 48px 32px; }
+
+  /* Section Heading */
+  .section-heading {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px; font-weight: 600;
+    margin: 48px 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .section-heading:first-of-type { margin-top: 0; }
+  .section-heading::before {
+    content: ''; display: inline-block;
+    width: 4px; height: 20px;
+    background: var(--sakura-deep); border-radius: 2px; flex-shrink: 0;
+  }
+
+  /* Product Grid */
+  .shop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 18px;
+    margin-bottom: 8px;
+  }
+
+  /* Product Card */
+  .shop-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    overflow: hidden;
+    transition: all 0.25s;
+    display: flex; flex-direction: column;
+  }
+  .shop-card:hover {
+    box-shadow: 0 6px 24px rgba(232,145,142,0.13);
+    transform: translateY(-3px);
+  }
+
+  /* Photo */
+  .card-img {
+    width: 100%; aspect-ratio: 4/3;
+    object-fit: cover; display: block;
+    background: var(--sakura-light);
+    transition: transform 0.4s ease;
+  }
+  .shop-card:hover .card-img { transform: scale(1.04); }
+
+  /* No-Photo Placeholder */
+  .card-img-placeholder {
+    width: 100%; aspect-ratio: 4/3;
+    background: var(--sakura-light);
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 8px;
+    color: var(--sakura-deep); opacity: 0.45;
+  }
+  .card-img-placeholder svg { width: 32px; height: 32px; }
+  .card-img-placeholder span { font-size: 11px; }
+
+  /* Text Area */
+  .card-body { padding: 16px 18px 20px; flex: 1; display: flex; flex-direction: column; }
+  .card-name { font-size: 14px; font-weight: 500; color: var(--text); margin-bottom: 6px; }
+  .card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; flex: 1; margin-bottom: 14px; }
+  .card-price {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px; font-weight: 600; color: var(--sakura-deep);
+  }
+  .card-price.inquiry { font-size: 13px; font-weight: 500; font-family: 'Noto Sans JP', sans-serif; }
+
+  /* Note */
+  .info-box {
+    background: var(--green-light); border: 1px solid #c5dece;
+    border-radius: 12px; padding: 18px 22px; margin-top: 48px;
+  }
+  .info-box-title { font-size: 14px; font-weight: 500; color: var(--green); margin-bottom: 8px; }
+  .info-box ul { padding-left: 16px; }
+  .info-box li { font-size: 13px; color: var(--text-muted); line-height: 1.9; }
+
+  @media (max-width: 540px) {
+    .container { padding: 32px 16px; }
+    .shop-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .card-body { padding: 12px 14px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+
+<div class="page-hero">
+  <span class="page-label">Boutique et menu</span>
+  <div class="page-title">Boutique de la clinique</div>
+  <div class="page-sub">Produits pour la beauté, la prévention et l'amélioration de la constitution</div>
+</div>
+
+<div class="container">
+
+  <!--
+    =====================================================
+    How to add or update products
+
+    [With photo]
+    <div class="shop-card">
+      <img class="card-img" src="../pics/product.webp" alt="Product Name" loading="lazy">
+      <div class="card-body">
+        <div class="card-name">Product Name</div>
+        <div class="card-desc">Product description</div>
+        <div class="card-price">¥0,000</div>
+      </div>
+    </div>
+
+    [No photo] → Use the card-img-placeholder block as-is
+
+    [Price on request] → Change class to "card-price inquiry"
+    =====================================================
+  -->
+
+  <!-- Supplements -->
+  <div class="section-heading">Compléments alimentaires</div>
+  <div class="shop-grid">
+
+    <div class="shop-card">
+      <img class="card-img" src="../pics/shop_collagen.webp" alt="Photo du produit" loading="lazy">
+      <div class="card-body">
+        <div class="card-name">Collagène de qualité médicale</div>
+        <div class="card-desc">30 sachets par boîte</div>
+        <div class="card-price"></div>
+      </div>
+    </div>
+
+    <div class="shop-card">
+     <img class="card-img" src="../pics/shop_ginseng.webp" alt="Photo du produit" loading="lazy">
+      <div class="card-body">
+        <div class="card-name">Capsules de saponine de ginseng coréen</div>
+        <div class="card-desc">90 capsules par sachet</div>
+        <div class="card-price"></div>
+      </div>
+    </div>
+
+    <div class="shop-card">
+     <img class="card-img" src="../pics/shop_CplusD.webp" alt="Photo du produit" loading="lazy">
+      <div class="card-body">
+        <div class="card-name">Vitamine C+D liposomale en capsules</div>
+        <div class="card-desc">30 sachets par boîte</div>
+        <div class="card-price"></div>
+      </div>
+    </div> 
+
+  </div>
+
+</div>
+
+<div id="footer-placeholder"></div>
+
+<script src="common_en.js"></script>
+</body>
+</html>
