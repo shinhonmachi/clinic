@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>바디체커（자율신경 및 혈관 나이） | 신혼마치 클리닉</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<meta name="description" content="신혼마치 클리닉의 바디체커는 약 3분 만에 자율신경 균형, 심신 스트레스, 말초 혈액순환, 혈관 나이를 측정할 수 있습니다. 손끝 센서만으로 간편하게 검사할 수 있으며 결과는 즉시 출력됩니다.">
+<link rel="canonical" href="https://shinhonmachi.jp/kr/subsection_bodychecker.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="바디체커（자율신경 및 혈관 나이） | 신혼마치 클리닉">
+<meta property="og:description" content="신혼마치 클리닉의 바디체커는 약 3분 만에 자율신경 균형, 심신 스트레스, 말초 혈액순환, 혈관 나이를 측정할 수 있습니다.">
+<meta property="og:url" content="https://shinhonmachi.jp/kr/subsection_bodychecker.html">
+<meta property="og:site_name" content="신혼마치 클리닉">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="바디체커（자율신경 및 혈관 나이） | 신혼마치 클리닉">
+<meta name="twitter:description" content="신혼마치 클리닉의 바디체커는 약 3분 만에 자율신경 균형, 심신 스트레스, 말초 혈액순환, 혈관 나이를 측정할 수 있습니다.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
+
+  .lead-box {
+    background: linear-gradient(135deg, #fdf6f6 0%, #f0f7f2 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 2;
+  }
+  .lead-box strong { color: var(--sakura-deep); }
+
+  .dept-section { margin-bottom: 48px; }
+  .dept-header {
+    display: flex; align-items: center; gap: 14px;
+    background: white; border: 1px solid var(--border);
+    border-radius: 16px; padding: 20px 24px; margin-bottom: 16px;
+    border-left: 4px solid var(--sakura-deep);
+  }
+  .dept-icon-lg { font-size: 28px; }
+  .dept-title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; }
+  .dept-title-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .dept-body {
+    background: white; border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px 28px;
+  }
+  .dept-body p { font-size: 13px; color: var(--text); line-height: 2; margin-bottom: 14px; }
+  .dept-body p:last-of-type { margin-bottom: 0; }
+
+  /* Measurement item cards */
+  .measure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .measure-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+  .measure-icon { font-size: 26px; margin-bottom: 8px; }
+  .measure-title { font-size: 13px; font-weight: 500; color: var(--sakura-deep); margin-bottom: 6px; font-family: 'Noto Serif JP', serif; }
+  .measure-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+  .point-list { margin: 20px 0; display: flex; flex-direction: column; gap: 10px; }
+  .point-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; color: var(--text); line-height: 1.8;
+  }
+  .point-icon {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--green-light); color: var(--green);
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* Procedure steps */
+  .step-list { display: flex; flex-direction: column; gap: 12px; margin: 20px 0; }
+  .step-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    font-size: 13px; color: var(--text); line-height: 1.8;
+  }
+  .step-num {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--sakura-deep); color: white;
+    font-size: 13px; font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .symptom-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--border); }
+  .symptom-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; width: 100%; }
+  .symptom-tag { background: var(--sakura-light); color: var(--sakura-deep); font-size: 12px; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--sakura); }
+
+  .section-divider { border: none; border-top: 1px dashed var(--border); margin: 48px 0; }
+
+  .price-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-top: 20px;
+  }
+  .price-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; margin-bottom: 10px; }
+  .price-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 0; border-bottom: 1px dashed var(--border);
+    font-size: 13px;
+  }
+  .price-row:last-child { border-bottom: none; }
+  .price-name { color: var(--text); }
+  .price-amount { font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 600; color: var(--sakura-deep); }
+
+  .info-box { background: var(--green-light); border: 1px solid #c5dece; border-radius: 16px; padding: 28px 32px; margin-top: 16px; }
+  .info-box-title { font-size: 15px; font-weight: 500; color: var(--green); margin-bottom: 14px; font-family: 'Noto Serif JP', serif; }
+  .info-box p { font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 10px; }
+  .info-box p:last-child { margin-bottom: 0; }
+
+  .consult-cta {
+    text-align: center; margin-top: 40px; padding: 32px;
+    background: white; border: 1px solid var(--border); border-radius: 16px;
+  }
+  .consult-cta p { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.8; }
+  .consult-tel {
+    display: inline-block; font-family: 'Noto Serif JP', serif;
+    font-size: 26px; font-weight: 600; color: var(--sakura-deep);
+    text-decoration: none; margin-bottom: 6px;
+  }
+  .consult-hours { font-size: 12px; color: var(--text-muted); }
+
+  @media (max-width: 540px) {
+    .container { padding: 32px 20px; }
+    .lead-box { padding: 22px 20px; }
+    .dept-body { padding: 20px 18px; }
+    .info-box { padding: 22px 20px; }
+    .measure-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <span class="page-label">바디체커</span>
+  <div class="page-title">바디체커</div>
+  <div class="page-sub">약 3분 만에 자율신경 균형, 스트레스, 혈관 나이를 측정</div>
+</div>
+
+<div class="container">
+
+  <!-- Lead text -->
+  <div class="lead-box">
+    <strong>바디체커</strong>는 손끝에 센서를 대는 것만으로 약 3분 만에 <strong>자율신경 균형, 신체 스트레스, 정신 스트레스, 말초 혈액순환, 혈관 나이</strong>를 측정할 수 있는 검사 장비입니다.<br><br>
+    터치패널로 조작이 간편하여 대기 시간에 직접 측정하실 수도 있습니다. 검사 결과는 내장 열전사 프린터로 즉시 출력되어 집에 가져가실 수 있습니다. 전반적으로 컨디션이 좋지 않으시거나 본인의 자율신경 상태가 궁금하신 분께 한번 받아보시기를 권해드립니다.
+  </div>
+
+  <!-- Measurement items -->
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">📊</div>
+      <div>
+        <div class="dept-title">4가지 주요 측정 항목</div>
+        <div class="dept-title-sub">자율신경계와 혈관 나이</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>심박변이도（맥파） 분석을 기반으로 자율신경 기능과 혈관 상태를 종합적으로 평가합니다. 채혈이나 통증을 동반하는 시술 없이, 클립형 센서를 손끝에 대는 것만으로 측정이 완료됩니다.</p>
+
+      <div class="measure-grid">
+        <div class="measure-card">
+          <div class="measure-icon">⚖️</div>
+          <div class="measure-title">자율신경 균형</div>
+          <div class="measure-desc">교감신경과 부교감신경 사이의 균형을 평가하여 어느 쪽이 우세한지 수치화하고, 자율신경 실조 상태를 시각화합니다.</div>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">💪</div>
+          <div class="measure-title">신체 스트레스</div>
+          <div class="measure-desc">신체에 가해지는 생리적 스트레스 정도를 측정하여 과로, 수면 부족, 컨디션 난조의 징후를 파악하는 데 도움을 줍니다.</div>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">🧠</div>
+          <div class="measure-title">정신 스트레스</div>
+          <div class="measure-desc">심리적・정서적 스트레스 정도를 평가하여, 업무나 대인관계로 인한 스트레스가 자율신경에 미치는 영향을 객관적으로 파악할 수 있습니다.</div>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">🫀</div>
+          <div class="measure-title">말초 순환 및 혈관 나이</div>
+          <div class="measure-desc">손끝 모세혈관의 혈류와 혈관의 경직도를 평가하여 실제 연령과 비교한 「혈관 나이」로 표시합니다. 동맥경화 위험도를 파악하는 데 도움이 됩니다.</div>
+        </div>
+      </div>
+
+      <div class="symptom-list">
+        <span class="symptom-label">이런 분께 추천합니다</span>
+        <span class="symptom-tag">전반적인 피로 및 무기력감</span>
+        <span class="symptom-tag">스트레스가 많다고 느끼시는 분</span>
+        <span class="symptom-tag">자율신경 실조가 걱정되는 분</span>
+        <span class="symptom-tag">본인의 혈관 나이가 궁금하신 분</span>
+        <span class="symptom-tag">지속적인 수족냉증이나 두근거림</span>
+        <span class="symptom-tag">정기적으로 건강을 체크하고 싶으신 분</span>
+      </div>
+
+
+      
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- Test procedure -->
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">🖐️</div>
+      <div>
+        <div class="dept-title">검사 절차</div>
+        <div class="dept-title-sub">약 3분 만에 완료 — 결과 즉시 출력</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>검사 과정 중 통증이나 채혈은 전혀 없습니다.</p>
+
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <span>터치패널로 측정을 시작합니다. 직원이 성함, 연령 등 기본 정보를 입력합니다.</span>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <span>클립형 센서를 손끝에 착용하고 약 3분간 편안히 안정을 취하며 맥파를 측정합니다.</span>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <span>측정 완료 후 내장 열전사 프린터에서 검사 결과가 자동으로 출력됩니다. 결과지는 집에 가져가실 수 있습니다.</span>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <span>검사 결과에 대해 궁금하시거나 걱정되시는 부분이 있으시면 진료 시 의사와 상담해 주세요.</span>
+        </div>
+      </div>
+
+      <div class="point-list">
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>채혈이나 주사 불필요</strong>: 손끝에 센서를 대는 것만으로 측정이 완료되어 통증이 전혀 없습니다.</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>약 3분 만에 완료</strong>: 대기 시간이나 진료 사이에 편하게 받으실 수 있습니다.</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>결과 즉시 출력</strong>: 내장 열전사 프린터에서 결과지가 바로 출력되어 집에 가져가서 확인하실 수 있습니다.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional notes -->
+  <div class="info-box">
+    <div class="info-box-title">🌿 검사 결과 활용에 관하여</div>
+    <p>바디체커의 검사 결과는 자율신경 및 혈관 상태를 파악하기 위한 참고 지표이며, 명확한 의학적 진단은 아닙니다. 수치가 걱정되시거나 지속적인 변화를 확인하고 싶으신 분은 의사와 상담해 주세요.</p>
+    <p>슈퍼라이저（근적외선 요법）나 태반주사 등 자율신경 균형과 혈류 개선을 목표로 하는 치료와의 병행도 제안해 드릴 수 있습니다. 먼저 검사부터 시작하여 본인의 몸 상태를 파악해 보시기 바랍니다.</p>
+  </div>
+
+  <!-- Phone CTA -->
+  <div class="consult-cta">
+    <p>본 검사는 예약이 필요 없으며 진료 시간 내 언제든 편하게 방문해 주세요.<br>궁금하신 점은 전화로도 문의해 주실 수 있습니다.</p>
+    <a href="tel:088-856-7511" class="consult-tel">📞 088-856-7511</a>
+    <div class="consult-hours">접수 시간: 진료 시간 내（목요일, 일요일, 공휴일 휴진）</div>
+  </div>
+
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="common_kr.js"></script>
+</body>
+</html>
