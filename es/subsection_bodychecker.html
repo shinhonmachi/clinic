@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body Checker (Sistema Nervioso Autónomo y Edad Vascular) | Clínica Shinhonmachi</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<meta name="description" content="La prueba Body Checker de la Clínica Shinhonmachi mide el equilibrio nervioso autónomo, el estrés físico y mental, la circulación sanguínea periférica y la edad vascular en aproximadamente 3 minutos. Una prueba simple con sensor en la yema del dedo con resultados impresos en el acto.">
+<link rel="canonical" href="https://shinhonmachi.jp/es/subsection_bodychecker.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Body Checker (Sistema Nervioso Autónomo y Edad Vascular) | Clínica Shinhonmachi">
+<meta property="og:description" content="La prueba Body Checker de la Clínica Shinhonmachi mide el equilibrio nervioso autónomo, el estrés físico y mental, la circulación sanguínea periférica y la edad vascular en aproximadamente 3 minutos.">
+<meta property="og:url" content="https://shinhonmachi.jp/es/subsection_bodychecker.html">
+<meta property="og:site_name" content="Clínica Shinhonmachi">
+<meta property="og:locale" content="es_ES">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Body Checker (Sistema Nervioso Autónomo y Edad Vascular) | Clínica Shinhonmachi">
+<meta name="twitter:description" content="La prueba Body Checker de la Clínica Shinhonmachi mide el equilibrio nervioso autónomo, el estrés físico y mental, la circulación sanguínea periférica y la edad vascular en aproximadamente 3 minutos.">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
+
+  .lead-box {
+    background: linear-gradient(135deg, #fdf6f6 0%, #f0f7f2 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 2;
+  }
+  .lead-box strong { color: var(--sakura-deep); }
+
+  .dept-section { margin-bottom: 48px; }
+  .dept-header {
+    display: flex; align-items: center; gap: 14px;
+    background: white; border: 1px solid var(--border);
+    border-radius: 16px; padding: 20px 24px; margin-bottom: 16px;
+    border-left: 4px solid var(--sakura-deep);
+  }
+  .dept-icon-lg { font-size: 28px; }
+  .dept-title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; }
+  .dept-title-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .dept-body {
+    background: white; border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px 28px;
+  }
+  .dept-body p { font-size: 13px; color: var(--text); line-height: 2; margin-bottom: 14px; }
+  .dept-body p:last-of-type { margin-bottom: 0; }
+
+  /* Measurement item cards */
+  .measure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .measure-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+  .measure-icon { font-size: 26px; margin-bottom: 8px; }
+  .measure-title { font-size: 13px; font-weight: 500; color: var(--sakura-deep); margin-bottom: 6px; font-family: 'Noto Serif JP', serif; }
+  .measure-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+  .point-list { margin: 20px 0; display: flex; flex-direction: column; gap: 10px; }
+  .point-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; color: var(--text); line-height: 1.8;
+  }
+  .point-icon {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--green-light); color: var(--green);
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* Procedure steps */
+  .step-list { display: flex; flex-direction: column; gap: 12px; margin: 20px 0; }
+  .step-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    font-size: 13px; color: var(--text); line-height: 1.8;
+  }
+  .step-num {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--sakura-deep); color: white;
+    font-size: 13px; font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .symptom-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--border); }
+  .symptom-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; width: 100%; }
+  .symptom-tag { background: var(--sakura-light); color: var(--sakura-deep); font-size: 12px; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--sakura); }
+
+  .section-divider { border: none; border-top: 1px dashed var(--border); margin: 48px 0; }
+
+  .price-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-top: 20px;
+  }
+  .price-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; margin-bottom: 10px; }
+  .price-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 0; border-bottom: 1px dashed var(--border);
+    font-size: 13px;
+  }
+  .price-row:last-child { border-bottom: none; }
+  .price-name { color: var(--text); }
+  .price-amount { font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 600; color: var(--sakura-deep); }
+
+  .info-box { background: var(--green-light); border: 1px solid #c5dece; border-radius: 16px; padding: 28px 32px; margin-top: 16px; }
+  .info-box-title { font-size: 15px; font-weight: 500; color: var(--green); margin-bottom: 14px; font-family: 'Noto Serif JP', serif; }
+  .info-box p { font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 10px; }
+  .info-box p:last-child { margin-bottom: 0; }
+
+  .consult-cta {
+    text-align: center; margin-top: 40px; padding: 32px;
+    background: white; border: 1px solid var(--border); border-radius: 16px;
+  }
+  .consult-cta p { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.8; }
+  .consult-tel {
+    display: inline-block; font-family: 'Noto Serif JP', serif;
+    font-size: 26px; font-weight: 600; color: var(--sakura-deep);
+    text-decoration: none; margin-bottom: 6px;
+  }
+  .consult-hours { font-size: 12px; color: var(--text-muted); }
+
+  @media (max-width: 540px) {
+    .container { padding: 32px 20px; }
+    .lead-box { padding: 22px 20px; }
+    .dept-body { padding: 20px 18px; }
+    .info-box { padding: 22px 20px; }
+    .measure-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <span class="page-label">Body Checker</span>
+  <div class="page-title">Body Checker</div>
+  <div class="page-sub">Mida el equilibrio nervioso autónomo, el estrés y la edad vascular en aproximadamente 3 minutos</div>
+</div>
+
+<div class="container">
+
+  <!-- Lead text -->
+  <div class="lead-box">
+    <strong>Body Checker</strong> es un dispositivo de prueba que simplemente coloca un sensor en la yema de su dedo para medir el <strong>equilibrio nervioso autónomo, el estrés físico, el estrés mental, la circulación sanguínea periférica y la edad vascular</strong> en aproximadamente 3 minutos.<br><br>
+    Es fácil de operar mediante un panel táctil, y los pacientes pueden incluso realizar la medición ellos mismos mientras esperan. Los resultados se imprimen instantáneamente desde la impresora térmica incorporada, para que pueda llevarse las cifras a casa. Animamos a cualquiera que se sienta generalmente mal o que quiera conocer el estado de su sistema nervioso autónomo a probarlo.
+  </div>
+
+  <!-- Measurement items -->
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">📊</div>
+      <div>
+        <div class="dept-title">Cuatro Elementos Principales de Medición</div>
+        <div class="dept-title-sub">Sistema Nervioso Autónomo y Edad Vascular</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>Basado en un análisis de la variabilidad de la frecuencia cardíaca (onda de pulso), la prueba evalúa de manera integral la función nerviosa autónoma y la condición vascular. No hay extracción de sangre ni procedimiento doloroso involucrado — la medición se completa simplemente colocando un sensor tipo pinza en la yema de su dedo.</p>
+
+      <div class="measure-grid">
+        <div class="measure-card">
+          <div class="measure-icon">⚖️</div>
+          <div class="measure-title">Equilibrio Nervioso Autónomo</div>
+          <div class="measure-desc">Evalúa el equilibrio entre los sistemas nerviosos simpático y parasimpático, cuantificando cuál es dominante y visualizando cualquier desequilibrio autónomo.</div>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">💪</div>
+          <div class="measure-title">Estrés Físico</div>
+          <div class="measure-desc">Mide el grado de estrés físico y fisiológico en el cuerpo, ayudando a identificar signos de exceso de trabajo, falta de sueño o mala condición física.</div>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">🧠</div>
+          <div class="measure-title">Estrés Mental</div>
+          <div class="measure-desc">Evalúa el grado de estrés psicológico y emocional, permitiendo una comprensión objetiva de cómo el estrés del trabajo o las relaciones afecta al sistema nervioso autónomo.</div>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">🫀</div>
+          <div class="measure-title">Circulación Periférica y Edad Vascular</div>
+          <div class="measure-desc">Evalúa el flujo sanguíneo capilar y la rigidez de los vasos sanguíneos en la yema del dedo, mostrando el resultado como una "edad vascular" comparada con su edad real. Útil para comprender el riesgo de arteriosclerosis.</div>
+        </div>
+      </div>
+
+      <div class="symptom-list">
+        <span class="symptom-label">Recomendado Para</span>
+        <span class="symptom-tag">Fatiga general o letargo</span>
+        <span class="symptom-tag">Sentir altos niveles de estrés</span>
+        <span class="symptom-tag">Preocupación por el desequilibrio autónomo</span>
+        <span class="symptom-tag">Deseando conocer su edad vascular</span>
+        <span class="symptom-tag">Sensación de frío o palpitaciones persistentes</span>
+        <span class="symptom-tag">Deseando revisar su salud regularmente</span>
+      </div>
+
+
+      
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- Test procedure -->
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">🖐️</div>
+      <div>
+        <div class="dept-title">Procedimiento de la Prueba</div>
+        <div class="dept-title-sub">Completada en aproximadamente 3 minutos — resultados impresos en el acto</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>No se requiere dolor ni extracción de sangre en ningún momento.</p>
+
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <span>La medición se inicia mediante panel táctil. El personal ingresará información básica como su nombre y edad.</span>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <span>Se coloca un sensor tipo pinza en la yema de su dedo. La onda de pulso se mide durante aproximadamente 3 minutos mientras descansa tranquilamente.</span>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <span>Una vez completada la medición, los resultados se imprimen automáticamente desde la impresora térmica incorporada. Puede llevarse las cifras a casa.</span>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <span>Si tiene alguna pregunta o preocupación sobre sus resultados, no dude en discutirlos con el médico durante su consulta.</span>
+        </div>
+      </div>
+
+      <div class="point-list">
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>Sin extracción de sangre ni inyección</strong>: La medición se completa simplemente colocando un sensor en la yema de su dedo. No hay ningún dolor en absoluto.</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>Completada en aproximadamente 3 minutos</strong>: Fácil de realizar durante el tiempo de espera o entre consultas.</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>Resultados impresos en el acto</strong>: Se imprime una hoja de resultados desde la impresora térmica incorporada para que pueda llevarse las cifras a casa para revisar.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional notes -->
+  <div class="info-box">
+    <div class="info-box-title">🌿 Sobre el Uso de Sus Resultados</div>
+    <p>Los resultados de Body Checker son un indicador de referencia para comprender el estado de su sistema nervioso autónomo y sus vasos sanguíneos. No constituyen un diagnóstico médico definitivo, pero si le preocupan los números o desea rastrear cambios a lo largo del tiempo, consulte a un médico.</p>
+    <p>También podemos sugerir combinar esto con tratamientos destinados a mejorar el equilibrio autónomo y el flujo sanguíneo, como Super Lizer (terapia de infrarrojos cercanos) o inyecciones de placenta. No dude en comenzar con la prueba en sí.</p>
+  </div>
+
+  <!-- Phone CTA -->
+  <div class="consult-cta">
+    <p>No se necesita cita previa para esta prueba. No dude en venir durante el horario de la clínica.<br>También puede llamarnos con cualquier pregunta.</p>
+    <a href="tel:088-856-7511" class="consult-tel">📞 088-856-7511</a>
+    <div class="consult-hours">Horario de recepción: Durante el horario de la clínica (cerrado jueves, domingos y días festivos)</div>
+  </div>
+
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="common_es.js"></script>
+</body>
+</html>
