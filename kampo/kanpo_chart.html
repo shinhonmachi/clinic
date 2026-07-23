@@ -89,9 +89,9 @@
   }
   .chart-option input { position: absolute; opacity: 0; width: 0; height: 0; }
   .chart-option-card {
-    display: flex; align-items: center; gap: 10px;
+    display: flex; align-items: center; gap: 12px;
     background: white;
-    border: 1.5px solid var(--border);
+    border: 2px solid var(--border);
     border-radius: 12px;
     padding: 12px 16px;
     font-size: 12.5px;
@@ -99,27 +99,50 @@
     line-height: 1.6;
     transition: all 0.15s;
     height: 100%;
+    position: relative;
+  }
+  .chart-option-card:hover {
+    border-color: var(--sakura);
+    background: var(--sakura-light);
   }
   .chart-option-check {
     flex-shrink: 0;
-    width: 18px; height: 18px; border-radius: 5px;
-    border: 1.5px solid var(--border);
-    background: var(--cream);
+    width: 24px; height: 24px; border-radius: 50%;
+    border: 2px solid #cfc3bc;
+    background: white;
     display: flex; align-items: center; justify-content: center;
-    font-size: 11px; color: transparent;
+    font-size: 14px; font-weight: 700; color: transparent;
     transition: all 0.15s;
   }
   .chart-option input:checked + .chart-option-card {
-    background: var(--sakura-light);
-    border-color: var(--sakura-deep);
-  }
-  .chart-option input:checked + .chart-option-card .chart-option-check {
     background: var(--sakura-deep);
     border-color: var(--sakura-deep);
     color: white;
+    box-shadow: 0 4px 14px rgba(232,145,142,0.45);
+    transform: scale(1.02);
+  }
+  .chart-option input:checked + .chart-option-card::after {
+    content: "選択中";
+    position: absolute;
+    top: -9px;
+    right: 10px;
+    background: var(--green);
+    color: white;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    padding: 2px 8px;
+    border-radius: 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  .chart-option input:checked + .chart-option-card .chart-option-check {
+    background: white;
+    border-color: white;
+    color: var(--sakura-deep);
+    transform: scale(1.1);
   }
   .chart-option input:focus-visible + .chart-option-card {
-    outline: 2px solid var(--sakura-deep);
+    outline: 3px solid var(--sakura-deep);
     outline-offset: 2px;
   }
 
@@ -252,18 +275,56 @@
   }
   .consult-hours { font-size: 12px; color: var(--text-muted); }
 
+  /* ===== Floating selection counter ===== */
+  .select-counter {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 300;
+    background: var(--sakura-deep);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 12px 20px;
+    border-radius: 30px;
+    box-shadow: 0 6px 20px rgba(232,145,142,0.4);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(12px);
+    pointer-events: none;
+    transition: opacity 0.25s, transform 0.25s;
+  }
+  .select-counter.show { opacity: 1; transform: translateY(0); }
+  .select-counter .sc-num {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 16px;
+    background: white;
+    color: var(--sakura-deep);
+    border-radius: 50%;
+    width: 24px; height: 24px;
+    display: flex; align-items: center; justify-content: center;
+  }
+
   @media (max-width: 640px) {
     .container { padding: 32px 20px; }
     .lead-box { padding: 22px 20px; }
     .chart-options { grid-template-columns: 1fr; }
     .score-board { grid-template-columns: repeat(2, 1fr); }
     .info-box { padding: 22px 20px; }
+    .select-counter { right: 12px; bottom: 12px; font-size: 11px; padding: 10px 16px; }
   }
 </style>
 </head>
 <body>
 
 <div id="header-placeholder"></div>
+
+<div class="select-counter" id="selectCounter">
+  <span class="sc-num" id="selectCounterNum">0</span>
+  <span>個 選択中</span>
+</div>
 
 <div class="page-hero">
   <span class="page-label">漢方内科 体質チェック</span>
@@ -720,11 +781,15 @@
 <script>
   var TYPES = ["a","b","c","d","e","f","g","h"];
 
+  var counterHideTimer = null;
+
   function calcScore() {
     var totals = { a:0, b:0, c:0, d:0, e:0, f:0, g:0, h:0 };
+    var checkedCount = 0;
     document.querySelectorAll('#chartForm input[type="checkbox"]:checked').forEach(function (el) {
       var t = el.getAttribute('data-type');
       if (totals.hasOwnProperty(t)) totals[t]++;
+      checkedCount++;
     });
 
     var max = 0;
@@ -743,6 +808,20 @@
         if (detail) detail.removeAttribute('open');
       }
     });
+
+    // フローティングの「選択中」カウンターを更新
+    var counter = document.getElementById('selectCounter');
+    var counterNum = document.getElementById('selectCounterNum');
+    counterNum.textContent = checkedCount;
+    if (checkedCount > 0) {
+      counter.classList.add('show');
+      clearTimeout(counterHideTimer);
+      counterHideTimer = setTimeout(function () {
+        counter.classList.remove('show');
+      }, 2500);
+    } else {
+      counter.classList.remove('show');
+    }
   }
 
   function resetChart() {
