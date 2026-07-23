@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>肝臓は文句を言わない｜新本町クリニック コラム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header {
+      margin-bottom: 36px;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* 動画埋め込み */
+    .article-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+    }
+    .article-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p {
+      margin-bottom: 1.6em;
+    }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* 引用・コラムボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .highlight-box cite {
+      display: block;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-body {}
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* ステップカード群 */
+    .step-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .step-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .step-card-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sakura-deep);
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+    .step-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .step-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ページフッター（記事末） */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .disclaimer {
+      font-size: 12px;
+      color: var(--text-muted);
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>肝臓は文句を言わない</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">点滴・注射</span>
+      <h2 class="article-title">肝臓は文句を言わない<br>―― 「沈黙の臓器」を今日から守る、ダブルケアという考え方</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年7月</span>
+      </div>
+    </header>
+
+    <!-- 動画 -->
+    <div class="article-video">
+      <iframe
+        src="https://www.youtube.com/embed/tI7gTRmZBIc"
+        title="肝臓は文句を言わない"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">週末たっぷり寝たはずなのに、月曜の朝から体が重い</h3>
+      <p>
+        毎日忙しく過ごしていると、どうしても夜遅くまでお酒を飲んだり、手軽な脂っこい食事で済ませてしまったり――そんなことはよくありますよね。「ちょっと体に負担をかけているかも」と、薄々感じている方も多いのではないでしょうか。
+      </p>
+      <p>
+        週末にたっぷり寝たはずなのに、月曜の朝からなんだか体が重い。どれだけ休んでもしつこい疲れが抜けない。もしそんな経験があるなら、それは単なる寝不足や気のせいではないかもしれません。あなたの体の中で毎日フル稼働しているある臓器が、限界を迎えて必死にSOSサインを出しているのかもしれないのです。
+      </p>
+      <p>
+        今回は、私たちの毎日を根底から支えてくれている肝臓のケアについて、最新の臨床アプローチをわかりやすく解説していきます。
+      </p>
+
+      <!-- 沈黙の臓器 -->
+      <h3 class="section-heading">沈黙の臓器からの警告</h3>
+      <p>
+        肝臓は医学的に「沈黙の臓器」と呼ばれています。これは本当にその通りで、とにかく我慢強いのです。他の場所なら激痛が走るような大きなダメージを受けても、限界を超えてボロボロになるまで、決して「痛い」と文句を言いません。
+      </p>
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔇 沈黙の臓器と呼ばれる理由</div>
+        <p>
+          肝臓には痛みを感じる神経がほとんど分布していないため、炎症やダメージが進行してもなかなか自覚症状として現れません。健康診断の数値で初めて異常に気づく、というケースが非常に多いのはこのためです。
+        </p>
+      </div>
+      <p>
+        でも、だからこそ怖いと思いませんか？肝臓が自ら悲鳴をあげるのを待っていたら、それこそ手遅れになりかねません。つまり私たちが先回りして、プロアクティブにケアをしてあげる必要があるのです。
+      </p>
+
+      <!-- ダブルケアアプローチ -->
+      <h3 class="section-heading">ダブルケアアプローチという考え方</h3>
+      <p>
+        文句ひとつ言わずに働き続けてくれる肝臓という心強いパートナーをサポートするために、科学的根拠に基づいた2方向からのアプローチをご紹介します。このアプローチの何がすごいかというと、「時間軸の組み合わせ」にあります。
+      </p>
+      <table class="comparison-table">
+        <tr>
+          <th>アプローチ</th>
+          <th>今すぐのケア</th>
+          <th>未来のケア</th>
+        </tr>
+        <tr>
+          <td>方法</td>
+          <td>静脈点滴</td>
+          <td>筋肉注射</td>
+        </tr>
+        <tr>
+          <td>ねらい</td>
+          <td>今まさに溜まっている疲労やダメージに、ダイレクトに解毒を促す</td>
+          <td>細胞の再生そのものを促し、将来に向けた回復力のベースラインを底上げする</td>
+        </tr>
+      </table>
+      <p>
+        「今」と「未来」。この両輪でアプローチすることが、肝臓ケアではとても重要になってきます。
+      </p>
+
+      <!-- 今すぐのケア -->
+      <h3 class="section-heading">点滴による「今すぐのケア」がどう働くのか</h3>
+      <p>
+        ここからは少しだけ専門的な成分の話になりますが、ご心配なく。この点滴は、いってみれば働き詰めの肝臓にダイレクトに届く、特性の医療用カクテルのようなものです。
+      </p>
+      <ul class="point-list">
+        <li><strong>強力ネオミノファーゲンC</strong>：肝臓の炎症をすっと鎮めて、細胞をしっかり保護してくれます。</li>
+        <li><strong>グルタチオン</strong>：体内最強の抗酸化物質ともいわれ、まさに解毒の要となる成分です。</li>
+        <li><strong>ビタミンC</strong>：グルタチオンの働きを長持ちさせる役割を担います。</li>
+        <li><strong>ビタミンB群</strong>：肝臓がアルコールなどを代謝するのに欠かせない栄養素です。</li>
+      </ul>
+      <p>
+        これらが一気に血流に乗ることで、限界を超えて働いている肝臓を今すぐ助けてくれるというわけです。
+      </p>
+
+      <!-- 科学的根拠 -->
+      <h3 class="section-heading">単なるコンセプトではない、細胞修復の科学的証拠</h3>
+      <p>
+        とはいえ「本当に効くの？」と思いますよね。これは単なるコンセプトの話ではなく、しっかりとした臨床データに裏付けられています。
+      </p>
+      <div class="step-cards">
+        <div class="step-card">
+          <div class="step-card-num">1977年</div>
+          <div class="step-card-title">二重盲検比較試験</div>
+          <div class="step-card-desc">肝炎の患者さん133名を対象に実施。強力ネオミノファーゲンCを使ったグループは、プラセボのグループに比べて肝臓のストレスサイン（ALT値）が明らかに改善しました。</div>
+        </div>
+        <div class="step-card">
+          <div class="step-card-num">1983年</div>
+          <div class="step-card-title">投与量に関する研究</div>
+          <div class="step-card-desc">標準量の40mLでは改善しきらなかった患者さんに対し、量を100mLに増やしたところ、有効率が25.5%からなんと50%へと倍増しました。</div>
+        </div>
+        <div class="step-card">
+          <div class="step-card-num">1996年</div>
+          <div class="step-card-title">組織学的な検証</div>
+          <div class="step-card-desc">実際に肝臓の組織を一部採取して顕微鏡で確認したところ、肝細胞の壊死や炎症といった物理的なダメージそのものが修復されていることが確認されました。</div>
+        </div>
+      </div>
+      <div class="highlight-box">
+        血液検査の数字を一時的によく見せているだけではありません。組織そのものが修復されていることが確認された――これはまさに、細胞レベルでの立て直しです。
+      </div>
+
+      <!-- 未来のケア -->
+      <h3 class="section-heading">肝臓の未来を守る「もうひとつのケア」</h3>
+      <p>
+        ここまでは、今起きているダメージをどう抑えて修復するかというお話でした。ここからはダブルケアの後半戦、「未来のケア」についてです。
+      </p>
+      <p>
+        未来のケアを担ってくれるのが、胎盤由来のプラセンタエキスを使った筋肉注射です。肝臓が本来持っている細胞の再生プロセスを、強力に後押ししてくれます。これは一時的な絆創膏のようなものではありません。継続していくことで肝臓の細胞が自分で回復する力そのものをブーストし、臓器そのものの若返りをめざすものです。いわば、自分の体の未来へのすごく価値のある長期投資といえます。
+      </p>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">院長より</div>
+          <p class="doctor-comment-text">
+            「今すぐのケア」と「未来のケア」、どちらか一方だけでは片手落ちです。今の負担をやわらげながら、将来の回復力そのものを育てていく。この両輪の発想が、肝臓ケアではとても大切だと感じています。
+          </p>
+        </div>
+      </div>
+
+      <!-- どんな人に向いているか -->
+      <h3 class="section-heading">このアプローチはどんな人に向いている？</h3>
+      <p>
+        もちろん、頻繁にお酒を飲む方や、健康診断で数値がひっかかってしまった方にはぴったりです。でもそれだけではありません。
+      </p>
+      <ul class="point-list">
+        <li><strong>休んでも取れない慢性的な疲労感</strong>に悩んでいる方</li>
+        <li><strong>健康診断の数値</strong>が気になり始めた方</li>
+        <li>内側からのデトックスを通じて<strong>お肌の調子</strong>も整えたい方</li>
+        <li>健康と美容、どちらも欲張りに両立させたい方</li>
+      </ul>
+      <p>
+        ただし、ひとつだけ忘れないでいただきたいことがあります。これはあくまで強力なサポートであって、魔法の薬ではありません。ご自身の普段の食事や睡眠、生活習慣を見直すことが、あくまで前提になります。
+      </p>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">肝臓は文句を言いません。だからこそ、私たちが働きかける番です</h3>
+      <p>
+        一切の不満も漏らさず、あなたの体の中で今日も黙々と働き続けている細胞たち。今日からあなたは、彼らにとってどんな良きパートナーになれるでしょうか。ぜひこの機会に、ご自身の体の声に少しだけ耳を傾けて、積極的なケアについて考えてみてください。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療を目的とするものではありません。治療の効果には個人差があり、すべての方に同じ効果を保証するものではありません。体質や持病・お薬との相互作用などが気になる方は、受診前に医師または薬剤師にご相談ください。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>肝臓ケアのご相談は当院へ</h3>
+        <p>点滴・注射によるケアについて、まずはお気軽にご相談ください。</p>
+        <a href="../index.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
