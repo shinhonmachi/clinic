@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Body Checker (အလိုအလျောက်အာရုံကြောစနစ်နှင့် သွေးကြောသက်တမ်း) | Shinhonmachi Clinic</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../common.css">
+<meta name="description" content="Shinhonmachi Clinic ၏ Body Checker စစ်ဆေးမှုသည် အလိုအလျောက်အာရုံကြောစနစ်ချိန်ခွင်လျှာ၊ ခန္ဓာကိုယ်နှင့်စိတ်ပိုင်းဆိုင်ရာစိတ်ဖိစီးမှု၊ အပြင်ဘက်သွေးလည်ပတ်မှုနှင့် သွေးကြောသက်တမ်းကို ၃ မိနစ်ခန့်ဖြင့် တိုင်းတာပေးသည်။ လက်ချောင်းဖျား sensor ဖြင့် လွယ်ကူစွာ စစ်ဆေးနိုင်ပြီး ရလဒ်များကို ချက်ချင်းထုတ်ပေးသည်။">
+<link rel="canonical" href="https://shinhonmachi.jp/mm/subsection_bodychecker.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Body Checker (အလိုအလျောက်အာရုံကြောစနစ်နှင့် သွေးကြောသက်တမ်း) | Shinhonmachi Clinic">
+<meta property="og:description" content="Shinhonmachi Clinic ၏ Body Checker စစ်ဆေးမှုသည် အလိုအလျောက်အာရုံကြောစနစ်ချိန်ခွင်လျှာ၊ ခန္ဓာကိုယ်နှင့်စိတ်ပိုင်းဆိုင်ရာစိတ်ဖိစီးမှု၊ အပြင်ဘက်သွေးလည်ပတ်မှုနှင့် သွေးကြောသက်တမ်းကို ၃ မိနစ်ခန့်ဖြင့် တိုင်းတာပေးသည်။">
+<meta property="og:url" content="https://shinhonmachi.jp/mm/subsection_bodychecker.html">
+<meta property="og:site_name" content="Shinhonmachi Clinic">
+<meta property="og:locale" content="my_MM">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Body Checker (အလိုအလျောက်အာရုံကြောစနစ်နှင့် သွေးကြောသက်တမ်း) | Shinhonmachi Clinic">
+<meta name="twitter:description" content="Shinhonmachi Clinic ၏ Body Checker စစ်ဆေးမှုသည် အလိုအလျောက်အာရုံကြောစနစ်ချိန်ခွင်လျှာ၊ ခန္ဓာကိုယ်နှင့်စိတ်ပိုင်းဆိုင်ရာစိတ်ဖိစီးမှု၊ အပြင်ဘက်သွေးလည်ပတ်မှုနှင့် သွေးကြောသက်တမ်းကို ၃ မိနစ်ခန့်ဖြင့် တိုင်းတာပေးသည်။">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<style>
+  .container { max-width: 720px; margin: 0 auto; padding: 48px 32px; }
+
+  .lead-box {
+    background: linear-gradient(135deg, #fdf6f6 0%, #f0f7f2 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 2;
+  }
+  .lead-box strong { color: var(--sakura-deep); }
+
+  .dept-section { margin-bottom: 48px; }
+  .dept-header {
+    display: flex; align-items: center; gap: 14px;
+    background: white; border: 1px solid var(--border);
+    border-radius: 16px; padding: 20px 24px; margin-bottom: 16px;
+    border-left: 4px solid var(--sakura-deep);
+  }
+  .dept-icon-lg { font-size: 28px; }
+  .dept-title { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 600; }
+  .dept-title-sub { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+  .dept-body {
+    background: white; border: 1px solid var(--border);
+    border-radius: 12px; padding: 24px 28px;
+  }
+  .dept-body p { font-size: 13px; color: var(--text); line-height: 2; margin-bottom: 14px; }
+  .dept-body p:last-of-type { margin-bottom: 0; }
+
+  /* Measurement item cards */
+  .measure-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .measure-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 20px;
+  }
+  .measure-icon { font-size: 26px; margin-bottom: 8px; }
+  .measure-title { font-size: 13px; font-weight: 500; color: var(--sakura-deep); margin-bottom: 6px; font-family: 'Noto Serif JP', serif; }
+  .measure-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+  .point-list { margin: 20px 0; display: flex; flex-direction: column; gap: 10px; }
+  .point-item {
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 13px; color: var(--text); line-height: 1.8;
+  }
+  .point-icon {
+    width: 22px; height: 22px; border-radius: 50%;
+    background: var(--green-light); color: var(--green);
+    font-size: 11px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+  }
+
+  /* Procedure steps */
+  .step-list { display: flex; flex-direction: column; gap: 12px; margin: 20px 0; }
+  .step-item {
+    display: flex; align-items: flex-start; gap: 14px;
+    font-size: 13px; color: var(--text); line-height: 1.8;
+  }
+  .step-num {
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--sakura-deep); color: white;
+    font-size: 13px; font-weight: 600;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; margin-top: 1px;
+    font-family: 'Noto Serif JP', serif;
+  }
+
+  .symptom-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; padding-top: 16px; border-top: 1px dashed var(--border); }
+  .symptom-label { font-size: 11px; color: var(--text-muted); margin-bottom: 4px; width: 100%; }
+  .symptom-tag { background: var(--sakura-light); color: var(--sakura-deep); font-size: 12px; padding: 4px 12px; border-radius: 20px; border: 1px solid var(--sakura); }
+
+  .section-divider { border: none; border-top: 1px dashed var(--border); margin: 48px 0; }
+
+  .price-box {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 22px;
+    margin-top: 20px;
+  }
+  .price-label { font-size: 11px; color: var(--text-muted); letter-spacing: 0.1em; margin-bottom: 10px; }
+  .price-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 0; border-bottom: 1px dashed var(--border);
+    font-size: 13px;
+  }
+  .price-row:last-child { border-bottom: none; }
+  .price-name { color: var(--text); }
+  .price-amount { font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 600; color: var(--sakura-deep); }
+
+  .info-box { background: var(--green-light); border: 1px solid #c5dece; border-radius: 16px; padding: 28px 32px; margin-top: 16px; }
+  .info-box-title { font-size: 15px; font-weight: 500; color: var(--green); margin-bottom: 14px; font-family: 'Noto Serif JP', serif; }
+  .info-box p { font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 10px; }
+  .info-box p:last-child { margin-bottom: 0; }
+
+  .consult-cta {
+    text-align: center; margin-top: 40px; padding: 32px;
+    background: white; border: 1px solid var(--border); border-radius: 16px;
+  }
+  .consult-cta p { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.8; }
+  .consult-tel {
+    display: inline-block; font-family: 'Noto Serif JP', serif;
+    font-size: 26px; font-weight: 600; color: var(--sakura-deep);
+    text-decoration: none; margin-bottom: 6px;
+  }
+  .consult-hours { font-size: 12px; color: var(--text-muted); }
+
+  @media (max-width: 540px) {
+    .container { padding: 32px 20px; }
+    .lead-box { padding: 22px 20px; }
+    .dept-body { padding: 20px 18px; }
+    .info-box { padding: 22px 20px; }
+    .measure-grid { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <span class="page-label">Body Checker</span>
+  <div class="page-title">Body Checker</div>
+  <div class="page-sub">၃ မိနစ်ခန့်ဖြင့် အလိုအလျောက်အာရုံကြောစနစ်ချိန်ခွင်လျှာ၊ စိတ်ဖိစီးမှုနှင့် သွေးကြောသက်တမ်းကို တိုင်းတာပါ</div>
+</div>
+
+<div class="container">
+
+  <!-- Lead text -->
+  <div class="lead-box">
+    <strong>Body Checker</strong> သည် လက်ချောင်းဖျားတွင် sensor တစ်ခုတပ်ဆင်ရုံဖြင့် <strong>အလိုအလျောက်အာရုံကြောစနစ်ချိန်ခွင်လျှာ၊ ခန္ဓာကိုယ်ဆိုင်ရာစိတ်ဖိစီးမှု၊ စိတ်ပိုင်းဆိုင်ရာစိတ်ဖိစီးမှု၊ အပြင်ဘက်သွေးလည်ပတ်မှုနှင့် သွေးကြောသက်တမ်း</strong>ကို ၃ မိနစ်ခန့်ဖြင့် တိုင်းတာပေးသော စစ်ဆေးရေးကိရိယာတစ်ခုဖြစ်သည်။<br><br>
+    Touch panel ဖြင့် အလွယ်တကူ လည်ပတ်နိုင်ပြီး၊ လူနာများကိုယ်တိုင်ပင် စောင့်ဆိုင်းချိန်တွင် တိုင်းတာနိုင်သည်။ ရလဒ်များကို built-in thermal printer မှ ချက်ချင်းထုတ်ပေးသဖြင့် သင့်ကိုယ်ပိုင်ကိန်းဂဏန်းများကို အိမ်သို့ ယူဆောင်သွားနိုင်သည်။ ခန္ဓာကိုယ်တစ်ခုလုံး နေမကောင်းသလိုခံစားရသူ (သို့) မိမိ၏ အလိုအလျောက်အာရုံကြောစနစ်အခြေအနေကို သိလိုသူ မည်သူမဆို စမ်းသပ်ကြည့်ရန် အားပေးပါသည်။
+  </div>
+
+  <!-- Measurement items -->
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">📊</div>
+      <div>
+        <div class="dept-title">အဓိကတိုင်းတာသည့် အချက် ၄ ချက်</div>
+        <div class="dept-title-sub">အလိုအလျောက်အာရုံကြောစနစ်နှင့် သွေးကြောသက်တမ်း</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>နှလုံးခုန်နှုန်းအပြောင်းအလဲ (pulse wave) ခွဲခြမ်းစိတ်ဖြာမှုကို အခြေခံ၍ အလိုအလျောက်အာရုံကြောစနစ်လုပ်ဆောင်ချက်နှင့် သွေးကြောအခြေအနေကို ပြည့်စုံစွာ အကဲဖြတ်ပေးသည်။ သွေးထုတ်ခြင်း (သို့) နာကျင်စေသော လုပ်ငန်းစဉ် လုံးဝမပါဝင်ပါ — လက်ချောင်းဖျားတွင် clip အမျိုးအစား sensor တစ်ခု တပ်ဆင်ရုံဖြင့် တိုင်းတာမှု ပြီးမြောက်သည်။</p>
+
+      <div class="measure-grid">
+        <div class="measure-card">
+          <div class="measure-icon">⚖️</div>
+          <div class="measure-title">အလိုအလျောက်အာရုံကြောစနစ် ချိန်ခွင်လျှာ</div>
+          <div class="measure-desc">Sympathetic နှင့် parasympathetic အာရုံကြောစနစ်များအကြား ချိန်ခွင်လျှာကို အကဲဖြတ်ပြီး၊ မည်သည့်စနစ်က လွှမ်းမိုးနေသည်ကို ပမာဏချ၍ အလိုအလျောက်အာရုံကြောစနစ် မမျှတမှုကို မြင်သာစေသည်။</div>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">💪</div>
+          <div class="measure-title">ခန္ဓာကိုယ်ဆိုင်ရာစိတ်ဖိစီးမှု</div>
+          <div class="measure-desc">ခန္ဓာကိုယ်အပေါ် သက်ရောက်နေသော ရုပ်ပိုင်းဆိုင်ရာနှင့် physiological စိတ်ဖိစီးမှုအတိုင်းအတာကို တိုင်းတာပြီး၊ အလုပ်ပင်ပန်းခြင်း၊ အိပ်ရေးမဝခြင်း (သို့) ကျန်းမာရေးအခြေအနေ မကောင်းခြင်းလက္ခဏာများကို ရှာဖွေဖော်ထုတ်ရန် ကူညီပေးသည်။</div>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">🧠</div>
+          <div class="measure-title">စိတ်ပိုင်းဆိုင်ရာစိတ်ဖိစီးမှု</div>
+          <div class="measure-desc">စိတ်ပိုင်းဆိုင်ရာနှင့် ခံစားချက်ဆိုင်ရာစိတ်ဖိစီးမှုအတိုင်းအတာကို အကဲဖြတ်ပြီး၊ အလုပ် (သို့) ဆက်ဆံရေးများမှ စိတ်ဖိစီးမှုသည် အလိုအလျောက်အာရုံကြောစနစ်ကို မည်သို့သက်ရောက်နေသည်ကို ဓမ္မဓိဋ္ဌာန်ကျစွာ နားလည်နိုင်စေသည်။</div>
+        </div>
+        <div class="measure-card">
+          <div class="measure-icon">🫀</div>
+          <div class="measure-title">အပြင်ဘက်သွေးလည်ပတ်မှုနှင့် သွေးကြောသက်တမ်း</div>
+          <div class="measure-desc">လက်ချောင်းဖျားရှိ သွေးကြောမျှင်များ၏ သွေးစီးဆင်းမှုနှင့် သွေးကြောမာကြောမှုကို အကဲဖြတ်ပြီး၊ ရလဒ်ကို သင့်အမှန်တကယ်အသက်နှင့် နှိုင်းယှဉ်ကာ "သွေးကြောသက်တမ်း" အဖြစ် ပြသသည်။ သွေးကြောခိုင်မာမှုရောဂါ (arteriosclerosis) အန္တရာယ်ကို နားလည်ရန် အသုံးဝင်သည်။</div>
+        </div>
+      </div>
+
+      <div class="symptom-list">
+        <span class="symptom-label">ဤစစ်ဆေးမှုကို အကြံပြုအပ်သူများ</span>
+        <span class="symptom-tag">ယေဘုယျပင်ပန်းနွမ်းနယ်မှု (သို့) ပျင်းရိမှု</span>
+        <span class="symptom-tag">စိတ်ဖိစီးမှု များစွာခံစားနေရသူ</span>
+        <span class="symptom-tag">အလိုအလျောက်အာရုံကြောစနစ်မမျှတမှုကို စိုးရိမ်နေသူ</span>
+        <span class="symptom-tag">မိမိ၏သွေးကြောသက်တမ်းကို သိလိုသူ</span>
+        <span class="symptom-tag">အမြဲတမ်းလက်ခြေအေးခြင်း (သို့) နှလုံးခုန်ခြင်း</span>
+        <span class="symptom-tag">မိမိကျန်းမာရေးကို ပုံမှန်စစ်ဆေးလိုသူ</span>
+      </div>
+
+
+      
+    </div>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- Test procedure -->
+  <div class="dept-section">
+    <div class="dept-header">
+      <div class="dept-icon-lg">🖐️</div>
+      <div>
+        <div class="dept-title">စစ်ဆေးနည်းလမ်း</div>
+        <div class="dept-title-sub">၃ မိနစ်ခန့်ဖြင့် ပြီးမြောက်ပြီး — ရလဒ်များကို ချက်ချင်းထုတ်ပေးသည်</div>
+      </div>
+    </div>
+    <div class="dept-body">
+      <p>မည်သည့်အဆင့်တွင်မျှ နာကျင်မှု (သို့) သွေးထုတ်ခြင်း လုံးဝမလိုအပ်ပါ။</p>
+
+      <div class="step-list">
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <span>Touch panel မှတစ်ဆင့် တိုင်းတာမှုကို စတင်သည်။ ဝန်ထမ်းများက သင့်အမည်နှင့် အသက်အစရှိသော အခြေခံအချက်အလက်များကို ထည့်သွင်းပေးမည်။</span>
+        </div>
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <span>လက်ချောင်းဖျားတွင် clip အမျိုးအစား sensor တပ်ဆင်ပေးမည်။ တိတ်ဆိတ်စွာ နားနေစဉ် ၃ မိနစ်ခန့် pulse wave ကို တိုင်းတာမည်။</span>
+        </div>
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <span>တိုင်းတာမှုပြီးဆုံးပါက built-in thermal printer မှ ရလဒ်များကို အလိုအလျောက်ထုတ်ပေးမည်။ သင့်ကိန်းဂဏန်းများကို အိမ်သို့ ယူဆောင်သွားနိုင်သည်။</span>
+        </div>
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <span>ရလဒ်များနှင့်ပတ်သက်၍ မေးခွန်း (သို့) စိုးရိမ်စရာများရှိပါက ဆေးစစ်ချိန်တွင် ဆရာဝန်နှင့် လွတ်လပ်စွာ ဆွေးနွေးနိုင်ပါသည်။</span>
+        </div>
+      </div>
+
+      <div class="point-list">
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>သွေးထုတ်ခြင်း (သို့) ဆေးထိုးခြင်း မလိုအပ်ပါ</strong>: လက်ချောင်းဖျားတွင် sensor တပ်ဆင်ရုံဖြင့် တိုင်းတာမှု ပြီးမြောက်သည်။ လုံးဝနာကျင်မှု မရှိပါ။</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>၃ မိနစ်ခန့်ဖြင့် ပြီးမြောက်သည်</strong>: စောင့်ဆိုင်းချိန် (သို့) ဆေးစစ်ချိန်ကြားတွင် လွယ်ကူစွာ တိုင်းတာနိုင်သည်။</span>
+        </div>
+        <div class="point-item">
+          <div class="point-icon">✓</div>
+          <span><strong>ရလဒ်များကို ချက်ချင်းထုတ်ပေးသည်</strong>: built-in thermal printer မှ ရလဒ်စာရွက်ကို ထုတ်ပေးသဖြင့် အိမ်တွင် ပြန်လည်လေ့လာနိုင်သည်။</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Additional notes -->
+  <div class="info-box">
+    <div class="info-box-title">🌿 ရလဒ်များ အသုံးပြုခြင်းနှင့်ပတ်သက်၍</div>
+    <p>Body Checker ရလဒ်များသည် သင့်အလိုအလျောက်အာရုံကြောစနစ်နှင့် သွေးကြောများ၏ အခြေအနေကို နားလည်ရန် ကိုးကားနိုင်သော ညွှန်ကိန်းတစ်ခုဖြစ်သည်။ ၎င်းတို့သည် တိကျသေချာသော ဆေးဘက်ဆိုင်ရာရောဂါရှာဖွေတွေ့ရှိမှု မဟုတ်ပါ၊ သို့သော် ကိန်းဂဏန်းများနှင့်ပတ်သက်၍ စိုးရိမ်ပါက (သို့) အချိန်ကြာလာသည်နှင့်အမျှ ပြောင်းလဲမှုကို ခြေရာခံလိုပါက ဆရာဝန်နှင့် တိုင်ပင်ပါ။</p>
+    <p>Super Lizer (နီးယ်ဖရာရက်အနီရောင်ကုသမှု) (သို့) placenta ထိုးနှံခြင်းကဲ့သို့ အလိုအလျောက်အာရုံကြောစနစ်ချိန်ခွင်လျှာနှင့် သွေးလည်ပတ်မှု တိုးတက်ကောင်းမွန်စေရန် ရည်ရွယ်သည့် ကုသမှုများနှင့် ပေါင်းစပ်ရန်လည်း အကြံပြုနိုင်ပါသည်။ ဤစစ်ဆေးမှုကိုယ်တိုင်မှ စတင်ကြည့်ရှုနိုင်ပါသည်။</p>
+  </div>
+
+  <!-- Phone CTA -->
+  <div class="consult-cta">
+    <p>ဤစစ်ဆေးမှုအတွက် ကြိုတင်ချိန်းဆိုမှု မလိုအပ်ပါ။ ဆေးခန်းဖွင့်ချိန်အတွင်း လွတ်လပ်စွာ ကြွရောက်နိုင်ပါသည်။<br>မေးခွန်းများရှိပါက ဖုန်းခေါ်ဆိုနိုင်ပါသည်။</p>
+    <a href="tel:088-856-7511" class="consult-tel">📞 088-856-7511</a>
+    <div class="consult-hours">ခံယူချိန်: ဆေးခန်းဖွင့်ချိန်အတွင်း（ကြာသပတေးနေ့၊ တနင်္ဂနွေနေ့နှင့် အားလပ်ရက်များ ပိတ်သည်）</div>
+  </div>
+
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="common_mm.js"></script>
+</body>
+</html>
