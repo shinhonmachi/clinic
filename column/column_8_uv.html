@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>守りながら、育てる。｜新本町クリニック コラム</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header {
+      margin-bottom: 36px;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* 動画埋め込み */
+    .article-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+    }
+    .article-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* 動画埋め込み */
+    .article-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+    }
+    .article-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p {
+      margin-bottom: 1.6em;
+    }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* 引用・コラムボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+    .highlight-box cite {
+      display: block;
+      font-style: normal;
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-body {}
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* ステップカード群 */
+    .step-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .step-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .step-card-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sakura-deep);
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+    .step-card-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .step-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* ページフッター（記事末） */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .disclaimer {
+      font-size: 12px;
+      color: var(--text-muted);
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>守りながら、育てる。</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">スキンケア</span>
+      <h2 class="article-title">守りながら、育てる。<br>―― 「毎日使う不安」に応える、ノンケミカル日焼け止めの科学</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年7月</span>
+      </div>
+    </header>
+
+    <!-- 動画 -->
+    <div class="article-video">
+      <iframe
+        src="https://www.youtube.com/embed/y4UHDRSi8ew"
+        title="守りながら、育てる。"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+    </div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">「毎日使い続けて、本当に大丈夫？」という声</h3>
+      <p>
+        日々のスキンケアにおいて、「日焼け止めを毎日使い続けて、肌に負担はないのだろうか」という不安を抱く方は少なくありません。
+      </p>
+      <p>
+        紫外線対策の必要性は広く知られている一方で、毎日肌を覆うことが長期的には隠れたダメージにつながるのではないか、という懸念も根強くあります。
+      </p>
+      <p>
+        今回は、この「隠れた負担」の正体と、それに応えるノンケミカルという選択について解説します。
+      </p>
+
+      <!-- 隠れた負担の正体 -->
+      <h3 class="section-heading">日焼け止めの不安、隠れた負担の正体</h3>
+      <p>
+        当院に寄せられる声のなかには、一般的な日焼け止めに含まれる化学成分が、肌本来のバリア機能を損なっているのではないかと懸念する患者さんが少なくありません。
+      </p>
+      <p>
+        こうした背景から、安心して毎日使用できる日焼け止めへのニーズが高まっています。
+      </p>
+
+      <!-- ノンケミカルという選択 -->
+      <h3 class="section-heading">ノンケミカルという選択 ―― 肌への負担を減らす科学</h3>
+      <p>
+        この課題を解く鍵は、一般的な「紫外線吸収剤」と、化学成分を使わない「紫外線散乱剤」の違いにあります。吸収剤を〈スポンジ〉、散乱剤を〈鏡〉にたとえると、その仕組みの違いが分かりやすくなります。
+      </p>
+      <div class="trivia-box">
+        <div class="trivia-box-label">🔬 吸収剤と散乱剤、何がちがう？</div>
+        <p>
+          一般的な紫外線吸収剤（オキシベンゾンなど）は、紫外線を肌の表面で吸収し、熱エネルギーに変換して放出する仕組みを持っています。塗布時に感じる刺激や、成分の経皮吸収に関する懸念は、主にこの化学反応に起因します。<br><br>
+          一方、酸化亜鉛や酸化チタンといった紫外線散乱剤は、光を肌の表面で物理的に反射するバリアとして働きます。化学反応を伴わないため、肌への負担を抑えられる点が特徴です。
+        </p>
+      </div>
+
+      <!-- LNC UVプロテクター -->
+      <h3 class="section-heading">LNC UVプロテクター ―― 肌に優しい科学の答え</h3>
+      <p>
+        こうした「肌に優しい科学」を製品化したのが、<strong>LNC UVプロテクター</strong>です。オキシベンゾンなどの吸収剤を一切使用しないノンケミカル処方でありながら、SPF50+・PA++++という高い防御力を備え、ウォータープルーフ性能も有しています。
+      </p>
+      <div class="highlight-box">
+        耐水性と高い紫外線防御力を両立させるために、必ずしも化学成分を必要としないことを、LNC UVプロテクターは示しています。肌への負担を抑えながら高い機能性を実現している点が特長です。
+      </div>
+
+      <!-- 配合成分 -->
+      <h3 class="section-heading">嬉しい配合成分 ―― 守りながら育てるスキンケア</h3>
+      <p>
+        配合されている成分にも、それぞれ肌をサポートする役割があります。
+      </p>
+      <ul class="point-list">
+        <li><strong>馬由来のプラセンタエキス・ビタミンC誘導体</strong>：肌をしっかり保湿し、透明感をサポートします。</li>
+        <li><strong>甘草由来の成分</strong>：敏感肌が悩みやすい炎症や肌荒れを防ぎます。</li>
+        <li><strong>ビタミンE</strong>：抗酸化の役割を担い、肌をすこやかに保ちます。</li>
+      </ul>
+      <p>
+        紫外線を防ぐだけでなく、肌を育てることも意図した設計になっています。
+      </p>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            スキンケアの基本は、強い化学物質で肌を覆うことではなく、肌が本来持つ力を的確にサポートすることだと考えています。ケミカル成分による負担を抑えながら肌本来の力を守れる点が、当院がこの製品をおすすめしている理由です。
+          </p>
+        </div>
+      </div>
+
+      <!-- どんな人に向いているか -->
+      <h3 class="section-heading">どのような方に適しているか</h3>
+      <p>
+        特に次のような方に適しています。
+      </p>
+      <ul class="point-list">
+        <li><strong>プラセンタ治療や点滴</strong>を受けている患者さん</li>
+        <li><strong>敏感肌や炎症トラブル</strong>を抱えている方</li>
+        <li><strong>毎日安心して使える日焼け止め</strong>を求めている方</li>
+      </ul>
+      <p>
+        肌がデリケートな方や、日々使用する化学成分をできるだけ減らしたいと考えている方にとって、ノンケミカルという選択は理にかなっています。
+      </p>
+
+      <!-- 使い方 -->
+      <h3 class="section-heading">使い方と、ひとつの注意点</h3>
+      <p>
+        使用方法は一般的な日焼け止めと同様ですが、1点だけ注意が必要です。<strong>使用前にボトルをよく振ること</strong>です。
+      </p>
+      <p>
+        本製品は化学的に溶け込む吸収剤ではなく、微細な物理的粒子である散乱剤を使用しているため、よく振って成分を均一に分散させてから使用することで、ムラのない保護層を形成できます。
+      </p>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">明日、日焼け止めを手に取るときに</h3>
+      <p>
+        日焼け止めに対する不安の背景には、肌への負担を減らしながら紫外線から守りたいという切実なニーズがあります。ノンケミカルという選択肢は、そうしたニーズに応える一つの解決策といえます。
+      </p>
+      <p>
+        毎日のスキンケアを見直す際に、今回の内容が参考になれば幸いです。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の症状や肌質への効果を保証するものではありません。肌に合わない場合は使用を中止し、心配な点がある方は使用前に医師にご相談ください。効果には個人差があります。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>LNC UVプロテクターについてのご相談は当院へ</h3>
+        <p>プラセンタ治療や敏感肌のケアと合わせて、まずはお気軽にご相談ください。</p>
+        <a href="../section_shop.html" class="cta-btn">クリニック内ショップを見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
