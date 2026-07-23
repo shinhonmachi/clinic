@@ -106,14 +106,14 @@
       from { opacity: 0; transform: translateY(14px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
+ 
     /* ===== ラッパー ===== */
     .column-list-wrap {
       max-width: 840px;
       margin: 0 auto;
       padding: 60px 24px 96px;
     }
-
+ 
     /* ===== セクション見出し ===== */
     .section-label {
       display: flex;
@@ -134,14 +134,14 @@
       height: 1px;
       background: linear-gradient(to right, var(--border), transparent);
     }
-
+ 
     /* ===== カードグリッド ===== */
     .column-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
       gap: 24px;
     }
-
+ 
     /* ===== 記事カード ===== */
     .column-card {
       display: flex;
@@ -159,7 +159,7 @@
       box-shadow: 0 12px 40px rgba(58,53,48,0.13);
       transform: translateY(-6px);
     }
-
+ 
     /* サムネイル */
     .card-thumb-wrap {
       position: relative;
@@ -198,7 +198,7 @@
       background: rgba(238,245,240,0.88);
       border: 1px solid #c8ddd0;
     }
-
+ 
     /* カード本文 */
     .card-body {
       padding: 22px 24px 26px;
@@ -263,7 +263,7 @@
       background: var(--green-light);
     }
     .card-readmore.green:hover { background: #ddeee5; }
-
+ 
     /* ===== 近日公開カード ===== */
     .column-card-soon {
       background: #fafaf8;
@@ -291,7 +291,7 @@
       font-size: 18px;
     }
     .soon-text { font-size: 13px; line-height: 1.85; }
-
+ 
     /* ===== CTA ===== */
     .column-cta {
       margin-top: 64px;
@@ -356,7 +356,7 @@
       box-shadow: 0 4px 16px rgba(232,145,142,0.35);
     }
     .cta-btn:hover { opacity: 0.88; transform: translateY(-2px); }
-
+ 
     /* ===== レスポンシブ ===== */
     @media (max-width: 640px) {
       .page-hero { padding: 60px 20px 52px; }
@@ -369,10 +369,10 @@
   </style>
 </head>
 <body>
-
+ 
   <!-- ヘッダー -->
   <div id="header-placeholder"></div>
-
+ 
   <!-- ページヒーロー -->
   <div class="page-hero">
     <img src="pics/deco1.webp" alt="" class="page-hero-bg" aria-hidden="true" />
@@ -385,35 +385,35 @@
       <span></span>
     </div>
   </div>
-
+ 
   <!-- コラム一覧 -->
   <div class="column-list-wrap">
-
+ 
     <div class="section-label">
       <span class="section-label-text">最新コラム</span>
       <span class="section-label-line"></span>
     </div>
-
+ 
     <div class="column-grid" id="column">
-
-      <!-- 記事7： -->
+ 
+      <!-- 記事7：肝臓ケア -->
       <a class="column-card" href="column_7_liver.html">
         <div class="card-thumb-wrap">
           <img src="pics/liver.webp" alt="" class="card-thumb" loading="lazy" />
-          <span class="card-badge green">漢方・和漢素材</span>
+          <span class="card-badge green">点滴・注射</span>
         </div>
         <div class="card-body">
           <div class="card-meta">
             <span class="card-date">2026年7月</span>
           </div>
-          <div class="card-title"></div>
+          <div class="card-title">肝臓は文句を言わない<br>―― 「沈黙の臓器」を今日から守る、ダブルケアという考え方</div>
           <p class="card-excerpt">
-            「最近疲れが抜けない…」それは肝臓からのサインかもしれません。症状が出る前に始めたい、今と未来を守る肝臓ケアをご紹介します。
+            自覚症状が出にくい「沈黙の臓器」肝臓。点滴による今のケアとプラセンタ筋注による未来のケアを組み合わせた「ダブルケアアプローチ」を、臨床データとともに当院院長が解説します。
           </p>
           <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
         </div>
       </a>
-
+ 
       
       <!-- 記事6：気象病・夏バテ予防 -->
       <a class="column-card" href="column_6_kikyo.html">
@@ -432,7 +432,7 @@
           <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
         </div>
       </a>
-
+ 
       <!-- 記事5：夏バテ・熱中症対策 -->
       <a class="column-card" href="column_5_natsubate.html">
         <div class="card-thumb-wrap">
@@ -450,7 +450,7 @@
           <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
         </div>
       </a>
-
+ 
       <!-- 記事4：後鼻漏 -->
       <a class="column-card" href="column_4_koubiro.html">
         <div class="card-thumb-wrap">
@@ -469,7 +469,7 @@
           <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
         </div>
       </a>
-
+ 
       <!-- 記事3：加味逍遙散 -->
       <a class="column-card" href="column_3_kamishoyosan.html">
         <div class="card-thumb-wrap">
@@ -488,7 +488,7 @@
           <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
         </div>
       </a>
-
+ 
       <!-- 記事2：高麗人参 -->
       <a class="column-card" href="column_2_ginseng.html">
         <div class="card-thumb-wrap">
@@ -506,7 +506,7 @@
           <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
         </div>
       </a>
-
+ 
       <!-- 記事1：コラーゲン -->
       <a class="column-card" href="column_1_collagen.html">
         <div class="card-thumb-wrap">
@@ -524,15 +524,15 @@
           <span class="card-readmore pink">続きを読む <span class="arrow">→</span></span>
         </div>
       </a>
-
+ 
       <!-- 近日公開 -->
       <div class="column-card-soon">
         <div class="soon-dot">📝</div>
         <p class="soon-text">次回のコラムを<br>準備中です。お楽しみに！</p>
       </div>
-
+ 
     </div>
-
+ 
     <!-- CTA -->
     <div class="column-cta">
       <span class="cta-eyebrow">Consultation</span>
@@ -540,9 +540,9 @@
       <p>内科・心療内科・漢方内科として、体の内側からのアプローチをご提案します。<br>コラムの内容についてもお気軽にご相談ください。</p>
       <a href="../index.html" class="cta-btn">診療案内を見る →</a>
     </div>
-
+ 
   </div>
-
+ 
   <script src="common.js"></script>
 </body>
 </html>
