@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>体質チェックチャート｜あなたの漢方体質タイプ診断｜新本町クリニック</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="common.css">
+<meta name="description" content="8つの質問でわかる、あなたの中医学的な体質タイプ。瘀血・気滞・血虚・気虚・陽虚・陽盛・陰虚・バランス型の8タイプから、体質に合わせた養生法や漢方薬の一例をご紹介します。高知市北金田の新本町クリニック漢方内科。">
+<link rel="canonical" href="https://shinhonmachi.jp/kanpo_chart.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="体質チェックチャート｜あなたの漢方体質タイプ診断｜新本町クリニック">
+<meta property="og:description" content="8つの質問でわかる、あなたの中医学的な体質タイプ。体質に合わせた養生法や漢方薬の一例をご紹介します。">
+<meta property="og:url" content="https://shinhonmachi.jp/kanpo_chart.html">
+<meta property="og:site_name" content="新本町クリニック">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="体質チェックチャート｜あなたの漢方体質タイプ診断｜新本町クリニック">
+<meta name="twitter:description" content="8つの質問でわかる、あなたの中医学的な体質タイプ。体質に合わせた養生法や漢方薬の一例をご紹介します。">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<style>
+  .container { max-width: 780px; margin: 0 auto; padding: 48px 32px; }
+
+  .lead-box {
+    background: linear-gradient(135deg, #fdf6f6 0%, #f0f7f2 100%);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 28px 32px;
+    margin-bottom: 32px;
+    font-size: 14px;
+    color: var(--text);
+    line-height: 2;
+  }
+  .lead-box strong { color: var(--sakura-deep); }
+
+  .caution-banner {
+    background: #fff8e1;
+    border: 1px solid #f0c040;
+    border-radius: 12px;
+    padding: 16px 22px;
+    margin-bottom: 40px;
+    font-size: 12px;
+    color: #7a6010;
+    line-height: 1.8;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  .caution-banner .caution-icon { font-size: 18px; flex-shrink: 0; }
+
+  .howto-box {
+    background: var(--green-light);
+    border: 1px solid #c5dece;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 40px;
+    font-size: 13px;
+    color: var(--text);
+    line-height: 1.95;
+  }
+  .howto-box strong { color: var(--green); }
+
+  /* ===== Chart / Questions ===== */
+  .chart-question { margin-bottom: 32px; }
+  .chart-q-num {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--sakura-deep); color: white;
+    font-family: 'Noto Serif JP', serif; font-size: 13px; font-weight: 600;
+    margin-right: 10px; flex-shrink: 0;
+  }
+  .chart-q-title {
+    display: flex; align-items: center;
+    font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 600;
+    color: var(--text);
+    background: white; border: 1px solid var(--border); border-left: 4px solid var(--sakura-deep);
+    border-radius: 14px; padding: 14px 18px; margin-bottom: 14px;
+  }
+  .chart-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .chart-option {
+    display: block;
+    cursor: pointer;
+  }
+  .chart-option input { position: absolute; opacity: 0; width: 0; height: 0; }
+  .chart-option-card {
+    display: flex; align-items: center; gap: 10px;
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    font-size: 12.5px;
+    color: var(--text);
+    line-height: 1.6;
+    transition: all 0.15s;
+    height: 100%;
+  }
+  .chart-option-check {
+    flex-shrink: 0;
+    width: 18px; height: 18px; border-radius: 5px;
+    border: 1.5px solid var(--border);
+    background: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; color: transparent;
+    transition: all 0.15s;
+  }
+  .chart-option input:checked + .chart-option-card {
+    background: var(--sakura-light);
+    border-color: var(--sakura-deep);
+  }
+  .chart-option input:checked + .chart-option-card .chart-option-check {
+    background: var(--sakura-deep);
+    border-color: var(--sakura-deep);
+    color: white;
+  }
+  .chart-option input:focus-visible + .chart-option-card {
+    outline: 2px solid var(--sakura-deep);
+    outline-offset: 2px;
+  }
+
+  .section-divider { border: none; border-top: 1px dashed var(--border); margin: 44px 0; }
+
+  /* ===== Score board ===== */
+  .score-title {
+    text-align: center;
+    font-family: 'Noto Serif JP', serif;
+    font-size: 18px; font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .score-title-sub {
+    text-align: center;
+    font-size: 12px; color: var(--text-muted);
+    margin-bottom: 24px;
+  }
+  .score-board {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .score-card {
+    background: white;
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 10px;
+    text-align: center;
+    transition: all 0.2s;
+  }
+  .score-card.score-top {
+    background: var(--sakura-light);
+    border-color: var(--sakura-deep);
+    box-shadow: 0 4px 16px rgba(232,145,142,0.25);
+    transform: translateY(-2px);
+  }
+  .score-card-label { font-size: 10px; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 4px; }
+  .score-card-name { font-family: 'Noto Serif JP', serif; font-size: 13px; font-weight: 600; color: var(--sakura-deep); margin-bottom: 6px; line-height: 1.3; }
+  .score-card-num { font-family: 'Noto Serif JP', serif; font-size: 22px; font-weight: 600; color: var(--text); }
+  .score-card-num span { font-size: 11px; color: var(--text-muted); font-family: 'Noto Sans JP', sans-serif; }
+
+  .reset-row { text-align: center; margin: 20px 0 8px; }
+  .reset-btn {
+    display: inline-block;
+    background: white;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 12px;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.15s;
+  }
+  .reset-btn:hover { border-color: var(--sakura-deep); color: var(--sakura-deep); }
+
+  .jump-btn {
+    display: block;
+    width: fit-content;
+    margin: 28px auto 0;
+    background: var(--sakura-deep);
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 12px 32px;
+    border-radius: 24px;
+    box-shadow: 0 4px 16px rgba(232,145,142,0.3);
+  }
+
+  /* ===== Type detail cards ===== */
+  .type-detail {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    margin-bottom: 14px;
+    overflow: hidden;
+    scroll-margin-top: 90px;
+  }
+  .type-detail[open] { border-color: var(--sakura-deep); }
+  .type-detail summary {
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 22px;
+    background: var(--cream);
+  }
+  .type-detail summary::-webkit-details-marker { display: none; }
+  .type-detail-icon {
+    width: 40px; height: 40px; border-radius: 50%;
+    background: var(--sakura-light); border: 1.5px solid var(--sakura);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0;
+  }
+  .type-detail-heading { flex: 1; }
+  .type-detail-label { font-size: 10px; color: var(--text-muted); letter-spacing: 0.1em; }
+  .type-detail-name { font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 600; color: var(--text); }
+  .type-detail-arrow { font-size: 12px; color: var(--text-muted); transition: transform 0.2s; flex-shrink: 0; }
+  .type-detail[open] .type-detail-arrow { transform: rotate(180deg); }
+  .type-detail-body { padding: 22px; border-top: 1px solid var(--border); }
+  .type-detail-body p { font-size: 13px; color: var(--text); line-height: 2; margin-bottom: 14px; }
+  .type-detail-body p:last-of-type { margin-bottom: 0; }
+  .td-row { margin-bottom: 16px; }
+  .td-row:last-child { margin-bottom: 0; }
+  .td-row-label {
+    display: inline-block;
+    font-size: 11px; font-weight: 600; color: var(--green);
+    background: var(--green-light); border: 1px solid #c5dece;
+    padding: 3px 12px; border-radius: 20px; margin-bottom: 8px;
+  }
+  .td-row-label.warn { color: var(--sakura-deep); background: var(--sakura-light); border-color: var(--sakura); }
+  .kanpo-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+  .kanpo-tag { background: var(--cream); border: 1px solid var(--border); color: var(--text); font-size: 12px; padding: 5px 14px; border-radius: 20px; }
+
+  .info-box { background: var(--green-light); border: 1px solid #c5dece; border-radius: 16px; padding: 28px 32px; margin-top: 8px; }
+  .info-box-title { font-size: 15px; font-weight: 500; color: var(--green); margin-bottom: 14px; font-family: 'Noto Serif JP', serif; }
+  .info-box p { font-size: 13px; color: var(--text-muted); line-height: 2; margin-bottom: 10px; }
+  .info-box p:last-child { margin-bottom: 0; }
+
+  .consult-cta {
+    text-align: center; margin-top: 40px; padding: 32px;
+    background: white; border: 1px solid var(--border); border-radius: 16px;
+  }
+  .consult-cta p { font-size: 13px; color: var(--text-muted); margin-bottom: 16px; line-height: 1.8; }
+  .consult-tel {
+    display: inline-block; font-family: 'Noto Serif JP', serif;
+    font-size: 26px; font-weight: 600; color: var(--sakura-deep);
+    text-decoration: none; margin-bottom: 6px;
+  }
+  .consult-hours { font-size: 12px; color: var(--text-muted); }
+
+  @media (max-width: 640px) {
+    .container { padding: 32px 20px; }
+    .lead-box { padding: 22px 20px; }
+    .chart-options { grid-template-columns: 1fr; }
+    .score-board { grid-template-columns: repeat(2, 1fr); }
+    .info-box { padding: 22px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div id="header-placeholder"></div>
+
+<div class="page-hero">
+  <span class="page-label">漢方内科 体質チェック</span>
+  <div class="page-title">あなたの体質は何タイプ？</div>
+  <div class="page-sub">8つの質問でわかる、中医学的な体質タイプ診断チャート</div>
+</div>
+
+<div class="container">
+
+  <!-- Lead text -->
+  <div class="lead-box">
+    漢方医学（中医学）では、同じ「冷え」や「疲れ」でも、その人の体質によって合う養生法や漢方薬がまったく異なります。まずはご自身の体質の傾向を知ることが、不調改善の第一歩です。<br><br>
+    このチャートでは、<strong>瘀血（おけつ）・気滞（きたい）・血虚（けっきょ）・気虚（ききょ）・陽虚（ようきょ）・陽盛（ようせい）・陰虚（いんきょ）・バランス型</strong>の8タイプから、あなたに近い体質傾向をチェックできます。
+  </div>
+
+  <div class="caution-banner">
+    <span class="caution-icon">⚠️</span>
+    <span>このチャートは、体質の傾向を知っていただくための<strong>簡易セルフチェック</strong>であり、医学的な診断ではありません。実際の漢方処方は、当院での問診（体質・体調・生活習慣などの詳しいお聞き取り）を踏まえて医師が判断いたします。気になる症状がある方は、自己判断で市販薬を選ぶ前に、まず当院にご相談ください。</span>
+  </div>
+
+  <div class="howto-box">
+    <strong>チェックのしかた</strong>：各質問で、当てはまるものを<strong>いくつでも</strong>選んでください（複数選択可）。すべての質問に答えると、下のスコアボードに合計点が表示されます。一番点数が高いタイプが、あなたの体質傾向です。<br>
+    ※ 複数のタイプが同じくらいの点数になることもあります。その場合は、複数の体質を併せ持っている可能性があります。
+  </div>
+
+  <!-- ===== Questions ===== -->
+  <form id="chartForm">
+
+    <div class="chart-question">
+      <div class="chart-q-title"><span class="chart-q-num">1</span>顔色・肌の様子は？</div>
+      <div class="chart-options">
+        <label class="chart-option"><input type="checkbox" data-type="a" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>くすんだ暗い色・シミやくまが出やすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="b" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>顔色が変わりやすい・青白くなることがある</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="c" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>血の気のない白さ・つやがない</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="d" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>顔色が黄色っぽい・むくみやすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="e" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>色白で血色に乏しい・唇が青白い</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="f" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>赤ら顔・のぼせやすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="g" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>頬が赤い・ほてりやすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="h" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>血色がよく、つやがある</span></label>
+      </div>
+    </div>
+
+    <div class="chart-question">
+      <div class="chart-q-title"><span class="chart-q-num">2</span>鏡で舌を見ると？</div>
+      <div class="chart-options">
+        <label class="chart-option"><input type="checkbox" data-type="a" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>暗紫色っぽい・点々とした斑点がある</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="b" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>舌の両端が赤みを帯びやすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="c" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>色が薄く小さい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="d" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>淡い色で、縁に歯の痕がつく</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="e" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>大きく水っぽい・苔が白い</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="f" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>赤みが強い・苔が黄色い</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="g" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>赤みが強いが苔が少ない・ひび割れる</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="h" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>ほどよい赤みで、うっすら白い苔</span></label>
+      </div>
+    </div>
+
+    <div class="chart-question">
+      <div class="chart-q-title"><span class="chart-q-num">3</span>痛みやコリの特徴は？</div>
+      <div class="chart-options">
+        <label class="chart-option"><input type="checkbox" data-type="a" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>刺すような痛みで場所が固定・夜に悪化しやすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="b" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>張るような痛みで場所が移動する・ため息が出る</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="c" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>しびれを伴う・こむら返りしやすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="d" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>だるさを伴う鈍い痛み・動くと少し楽になる</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="e" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>冷えると悪化・温めると楽になる</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="f" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>熱っぽい痛み・炎症を伴いやすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="g" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>夕方から夜にかけて痛みやほてりが強まる</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="h" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>痛みやコリはほとんどない</span></label>
+      </div>
+    </div>
+
+    <div class="chart-question">
+      <div class="chart-q-title"><span class="chart-q-num">4</span>汗・体温の感じ方は？</div>
+      <div class="chart-options">
+        <label class="chart-option"><input type="checkbox" data-type="a" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>特に決まった傾向はない</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="b" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>緊張すると汗をかきやすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="c" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>汗をかきにくい・皮膚が乾燥しやすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="d" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>少し動いただけで汗をかく・汗の後どっと疲れる</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="e" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>手足が冷たい・寒がりで汗はあまりかかない</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="f" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>暑がり・すぐ汗をかく、冷たい物がほしくなる</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="g" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>寝汗をかきやすい・手足がほてる</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="h" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>暑さ寒さへの適応が普通にできる</span></label>
+      </div>
+    </div>
+
+    <div class="chart-question">
+      <div class="chart-q-title"><span class="chart-q-num">5</span>睡眠の質は？</div>
+      <div class="chart-options">
+        <label class="chart-option"><input type="checkbox" data-type="a" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>寝つきは悪くないが、途中で目が覚めやすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="b" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>考え事で寝つきが悪い・眠りが浅い</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="c" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>夢をよく見る・寝ても疲れが取れない</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="d" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>眠いのに眠れない・日中の眠気が強い</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="e" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>長時間眠れる・朝起きるのがつらい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="f" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>寝つきは良いが、寝苦しさを感じることがある</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="g" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>寝つきが悪く、夜中に目が覚めて再入眠しにくい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="h" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>ぐっすり眠れて、朝の目覚めもよい</span></label>
+      </div>
+    </div>
+
+    <div class="chart-question">
+      <div class="chart-q-title"><span class="chart-q-num">6</span>お通じの様子は？</div>
+      <div class="chart-options">
+        <label class="chart-option"><input type="checkbox" data-type="a" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>便が黒っぽい・出にくいことがある</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="b" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>便秘と下痢を繰り返す・ストレスで変わりやすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="c" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>便が硬い・コロコロしている</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="d" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>軟便になりやすい・食後にお腹がゆるむ</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="e" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>下痢しやすい・冷えるとすぐお腹を壊す</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="f" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>便が臭う・出た後もすっきりしないことがある</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="g" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>便が硬くコロコロしている・便秘がち</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="h" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>毎日快便でバナナ状</span></label>
+      </div>
+    </div>
+
+    <div class="chart-question">
+      <div class="chart-q-title"><span class="chart-q-num">7</span>気分や行動パターンは？</div>
+      <div class="chart-options">
+        <label class="chart-option"><input type="checkbox" data-type="a" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>イライラしやすい・怒りっぽい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="b" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>ため息が多い・気分の浮き沈みが激しい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="c" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>不安になりやすい・物忘れが気になる</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="d" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>やる気が出ない・疲れやすくじっとしていたい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="e" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>億劫でひきこもりがち・寒い時期は特に不調</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="f" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>せっかち・興奮しやすい</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="g" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>焦燥感がある・落ち着きがない</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="h" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>気分は安定していて、前向きに過ごせている</span></label>
+      </div>
+    </div>
+
+    <div class="chart-question">
+      <div class="chart-q-title"><span class="chart-q-num">8</span>好きな食べ物・飲み物は？</div>
+      <div class="chart-options">
+        <label class="chart-option"><input type="checkbox" data-type="a" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>味の濃いもの・脂っこいもの</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="b" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>柑橘類・香りの強いもの・お酒</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="c" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>レバーなど鉄分が多いもの、または甘いもの</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="d" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>甘いもの・ご飯やうどんなど炭水化物</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="e" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>温かい飲み物・スープ・生姜など体を温めるもの</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="f" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>冷たい飲み物・アイス・辛いもの</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="g" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>水分をよくほしがる・さっぱりしたもの</span></label>
+        <label class="chart-option"><input type="checkbox" data-type="h" onchange="calcScore()"><span class="chart-option-card"><span class="chart-option-check">✓</span>何でも好き嫌いなく食べられる</span></label>
+      </div>
+    </div>
+
+    <a href="#result" class="jump-btn">結果を見る ↓</a>
+  </form>
+
+  <hr class="section-divider" id="result">
+
+  <!-- ===== Score board ===== -->
+  <div class="score-title">あなたの体質スコア</div>
+  <div class="score-title-sub">一番点数の高いタイプが、あなたの体質傾向です</div>
+
+  <div class="score-board" id="scoreBoard">
+    <div class="score-card" id="card-a">
+      <div class="score-card-label">TYPE A</div>
+      <div class="score-card-name">瘀血タイプ</div>
+      <div class="score-card-num" id="score-a">0<span>点</span></div>
+    </div>
+    <div class="score-card" id="card-b">
+      <div class="score-card-label">TYPE B</div>
+      <div class="score-card-name">気滞タイプ</div>
+      <div class="score-card-num" id="score-b">0<span>点</span></div>
+    </div>
+    <div class="score-card" id="card-c">
+      <div class="score-card-label">TYPE C</div>
+      <div class="score-card-name">血虚タイプ</div>
+      <div class="score-card-num" id="score-c">0<span>点</span></div>
+    </div>
+    <div class="score-card" id="card-d">
+      <div class="score-card-label">TYPE D</div>
+      <div class="score-card-name">気虚タイプ</div>
+      <div class="score-card-num" id="score-d">0<span>点</span></div>
+    </div>
+    <div class="score-card" id="card-e">
+      <div class="score-card-label">TYPE E</div>
+      <div class="score-card-name">陽虚タイプ</div>
+      <div class="score-card-num" id="score-e">0<span>点</span></div>
+    </div>
+    <div class="score-card" id="card-f">
+      <div class="score-card-label">TYPE F</div>
+      <div class="score-card-name">陽盛タイプ</div>
+      <div class="score-card-num" id="score-f">0<span>点</span></div>
+    </div>
+    <div class="score-card" id="card-g">
+      <div class="score-card-label">TYPE G</div>
+      <div class="score-card-name">陰虚タイプ</div>
+      <div class="score-card-num" id="score-g">0<span>点</span></div>
+    </div>
+    <div class="score-card" id="card-h">
+      <div class="score-card-label">TYPE H</div>
+      <div class="score-card-name">バランス型</div>
+      <div class="score-card-num" id="score-h">0<span>点</span></div>
+    </div>
+  </div>
+
+  <div class="reset-row">
+    <button type="button" class="reset-btn" onclick="resetChart()">最初からやり直す</button>
+  </div>
+
+  <hr class="section-divider">
+
+  <!-- ===== Type detail cards ===== -->
+  <div class="score-title">8つの体質タイプ解説</div>
+  <div class="score-title-sub">タイプ名をタップすると詳しい説明が開きます</div>
+  <br>
+
+  <details class="type-detail" id="detail-a">
+    <summary>
+      <div class="type-detail-icon">🟣</div>
+      <div class="type-detail-heading">
+        <div class="type-detail-label">TYPE A ｜ 血がめぐりにくい</div>
+        <div class="type-detail-name">瘀血（おけつ）タイプ</div>
+      </div>
+      <div class="type-detail-arrow">▼</div>
+    </summary>
+    <div class="type-detail-body">
+      <p>血液の流れが滞りがちな体質です。古い血が体内に溜まりやすく、顔色のくすみやシミ、固定した場所の刺すような痛みなど、「流れが悪いこと」に由来する不調が出やすい傾向があります。肩こりや頭痛、生理痛が重いなどのお悩みにもつながりやすいタイプです。</p>
+      <div class="td-row">
+        <div class="td-row-label">気をつけたい不調</div>
+        <p style="margin:0;">肩こり・頭痛・冷えのぼせ、慢性的な痛み、シミ・くすみ、月経トラブルなど</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label">養生のポイント</div>
+        <p style="margin:0;">体を冷やさないこと、適度な運動で血流を促すこと、長時間同じ姿勢を避けることが大切です。脂っこいもの・味の濃いものは控えめに、玉ねぎ・青魚・黒酢など血の巡りを助ける食材を意識してみましょう。</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label warn">当院で処方することがある漢方薬の例</div>
+        <div class="kanpo-tags">
+          <span class="kanpo-tag">桂枝茯苓丸（けいしぶくりょうがん）</span>
+          <span class="kanpo-tag">桃核承気湯（とうかくじょうきとう）</span>
+          <span class="kanpo-tag">当帰芍薬散（とうきしゃくやくさん）</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="type-detail" id="detail-b">
+    <summary>
+      <div class="type-detail-icon">🍃</div>
+      <div class="type-detail-heading">
+        <div class="type-detail-label">TYPE B ｜ 気がめぐりにくい</div>
+        <div class="type-detail-name">気滞（きたい）タイプ</div>
+      </div>
+      <div class="type-detail-arrow">▼</div>
+    </summary>
+    <div class="type-detail-body">
+      <p>ストレスや緊張によって「気」の巡りが滞りやすい体質です。気分の浮き沈みが激しい、ため息が多い、お腹やわき腹が張って痛むなど、ストレスと連動して症状が変化しやすいのが特徴です。几帳面・完璧主義な方に多く見られる傾向があります。</p>
+      <div class="td-row">
+        <div class="td-row-label">気をつけたい不調</div>
+        <p style="margin:0;">ストレス性の胃腸症状、PMS・月経前のイライラ、緊張性頭痛、のどのつかえ感など</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label">養生のポイント</div>
+        <p style="margin:0;">気分転換の時間を意識的に作ること、深呼吸やストレッチで体をゆるめることが有効です。柑橘類やハーブティーなど香りのよいものは気の巡りを助けます。趣味や運動でこまめにストレスを発散しましょう。</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label warn">当院で処方することがある漢方薬の例</div>
+        <div class="kanpo-tags">
+          <span class="kanpo-tag">加味逍遙散（かみしょうようさん）</span>
+          <span class="kanpo-tag">半夏厚朴湯（はんげこうぼくとう）</span>
+          <span class="kanpo-tag">柴胡加竜骨牡蛎湯（さいこかりゅうこつぼれいとう）</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="type-detail" id="detail-c">
+    <summary>
+      <div class="type-detail-icon">🌸</div>
+      <div class="type-detail-heading">
+        <div class="type-detail-label">TYPE C ｜ 血が足りない</div>
+        <div class="type-detail-name">血虚（けっきょ）タイプ</div>
+      </div>
+      <div class="type-detail-arrow">▼</div>
+    </summary>
+    <div class="type-detail-body">
+      <p>体を潤し栄養を届ける「血」が不足しがちな体質です。顔色が青白い、めまいや立ちくらみ、肌や髪の乾燥、眠りが浅く夢をよく見るといった、うるおい不足・栄養不足のサインが出やすい傾向があります。無理なダイエットや偏った食事、慢性的な睡眠不足が背景にあることも少なくありません。</p>
+      <div class="td-row">
+        <div class="td-row-label">気をつけたい不調</div>
+        <p style="margin:0;">立ちくらみ・めまい、肌や髪の乾燥・抜け毛、不眠、月経量の減少、動悸・不安感など</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label">養生のポイント</div>
+        <p style="margin:0;">十分な睡眠と、鉄分・たんぱく質を意識した食事が基本になります。レバー・黒ごま・ほうれん草・なつめなど「血」を補うとされる食材を取り入れ、目の使いすぎ（スマホ・PC）はほどほどにしましょう。</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label warn">当院で処方することがある漢方薬の例</div>
+        <div class="kanpo-tags">
+          <span class="kanpo-tag">四物湯（しもつとう）</span>
+          <span class="kanpo-tag">当帰芍薬散（とうきしゃくやくさん）</span>
+          <span class="kanpo-tag">十全大補湯（じゅうぜんたいほとう）</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="type-detail" id="detail-d">
+    <summary>
+      <div class="type-detail-icon">🍂</div>
+      <div class="type-detail-heading">
+        <div class="type-detail-label">TYPE D ｜ 気が足りない</div>
+        <div class="type-detail-name">気虚（ききょ）タイプ</div>
+      </div>
+      <div class="type-detail-arrow">▼</div>
+    </summary>
+    <div class="type-detail-body">
+      <p>生命活動の原動力である「気」が不足し、エネルギー切れを起こしやすい体質です。疲れやすい、少し動いただけで汗をかく、風邪をひきやすい、胃腸が弱いなど、「頑張る力」が足りない状態です。働きすぎや不摂生、慢性的な胃腸の弱さが背景にあることが多いタイプです。</p>
+      <div class="td-row">
+        <div class="td-row-label">気をつけたい不調</div>
+        <p style="margin:0;">慢性的な疲労感、食欲不振・軟便、風邪をひきやすい、息切れ、内臓下垂感など</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label">養生のポイント</div>
+        <p style="margin:0;">「頑張りすぎない」ことが何より大切です。よく噛んで消化のよいものを腹八分目で食べ、山芋・かぼちゃ・米・鶏肉など気を補う食材を意識しましょう。睡眠時間の確保と、過度な運動を避けることもポイントです。</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label warn">当院で処方することがある漢方薬の例</div>
+        <div class="kanpo-tags">
+          <span class="kanpo-tag">補中益気湯（ほちゅうえっきとう）</span>
+          <span class="kanpo-tag">六君子湯（りっくんしとう）</span>
+          <span class="kanpo-tag">四君子湯（しくんしとう）</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="type-detail" id="detail-e">
+    <summary>
+      <div class="type-detail-icon">❄️</div>
+      <div class="type-detail-heading">
+        <div class="type-detail-label">TYPE E ｜ 冷えが強い</div>
+        <div class="type-detail-name">陽虚（ようきょ）タイプ</div>
+      </div>
+      <div class="type-detail-arrow">▼</div>
+    </summary>
+    <div class="type-detail-body">
+      <p>体を温める力（陽気）が不足し、強い冷えを感じやすい体質です。手足が氷のように冷たい、寒がり、下痢しやすい、長時間眠っても朝がつらいなど、体全体の機能が「省エネモード」になっているようなイメージです。気虚がさらに進んだ状態と考えられることもあります。</p>
+      <div class="td-row">
+        <div class="td-row-label">気をつけたい不調</div>
+        <p style="margin:0;">強い冷え性、慢性的な下痢・軟便、むくみ、頻尿、月経周期の乱れなど</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label">養生のポイント</div>
+        <p style="margin:0;">冷たい飲食物を避け、体を温める食材（生姜・ねぎ・シナモン・根菜類）を積極的に。特に下半身を冷やさない服装を心がけ、湯船にしっかり浸かる習慣もおすすめです。</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label warn">当院で処方することがある漢方薬の例</div>
+        <div class="kanpo-tags">
+          <span class="kanpo-tag">八味地黄丸（はちみじおうがん）</span>
+          <span class="kanpo-tag">真武湯（しんぶとう）</span>
+          <span class="kanpo-tag">人参湯（にんじんとう）</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="type-detail" id="detail-f">
+    <summary>
+      <div class="type-detail-icon">🔥</div>
+      <div class="type-detail-heading">
+        <div class="type-detail-label">TYPE F ｜ 熱がこもっている</div>
+        <div class="type-detail-name">陽盛（ようせい）タイプ</div>
+      </div>
+      <div class="type-detail-arrow">▼</div>
+    </summary>
+    <div class="type-detail-body">
+      <p>体の中に余分な熱がこもりやすい体質です。暑がりで冷たいものを好む、顔が赤い、便が臭う、イライラして興奮しやすいなど、活動的でエネルギッシュな反面、熱の症状が出やすい傾向があります。脂っこいもの・味の濃いもの・アルコールの摂りすぎで悪化しやすいタイプです。</p>
+      <div class="td-row">
+        <div class="td-row-label">気をつけたい不調</div>
+        <p style="margin:0;">のぼせ・ほてり、口内炎、吹き出物、便秘、イライラ・怒りっぽさ、口臭など</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label">養生のポイント</div>
+        <p style="margin:0;">脂っこいもの・辛いもの・アルコールを控えめに、きゅうり・トマト・ゴーヤなど体の熱を冷ますとされる食材を取り入れましょう。夜更かしを避け、湯船よりぬるめのシャワーで済ませるのもよいでしょう。</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label warn">当院で処方することがある漢方薬の例</div>
+        <div class="kanpo-tags">
+          <span class="kanpo-tag">黄連解毒湯（おうれんげどくとう）</span>
+          <span class="kanpo-tag">大柴胡湯（だいさいことう）</span>
+          <span class="kanpo-tag">防風通聖散（ぼうふうつうしょうさん）</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="type-detail" id="detail-g">
+    <summary>
+      <div class="type-detail-icon">💧</div>
+      <div class="type-detail-heading">
+        <div class="type-detail-label">TYPE G ｜ 潤い不足でほてる</div>
+        <div class="type-detail-name">陰虚（いんきょ）タイプ</div>
+      </div>
+      <div class="type-detail-arrow">▼</div>
+    </summary>
+    <div class="type-detail-body">
+      <p>体を潤す「陰」が不足し、内側からほてりやすい体質です。寝汗をかく、手足がほてる、口や喉が渇きやすい、肌が乾燥するなど、「乾き」と「熱感」を併せ持つのが特徴です。加齢や慢性的な睡眠不足、更年期の時期に現れやすい傾向があります。</p>
+      <div class="td-row">
+        <div class="td-row-label">気をつけたい不調</div>
+        <p style="margin:0;">ほてり・寝汗、更年期症状、口の渇き、肌の乾燥、不眠（寝つきが悪い）など</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label">養生のポイント</div>
+        <p style="margin:0;">夜更かしを避け、体を潤す食材（白きくらげ・れんこん・梨・豆乳など）を意識しましょう。辛いものや刺激物、長風呂・サウナなど発汗のしすぎは陰をさらに消耗させるため控えめに。</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label warn">当院で処方することがある漢方薬の例</div>
+        <div class="kanpo-tags">
+          <span class="kanpo-tag">六味地黄丸（ろくみじおうがん）</span>
+          <span class="kanpo-tag">麦門冬湯（ばくもんどうとう）</span>
+          <span class="kanpo-tag">知柏地黄丸（ちばくじおうがん）</span>
+        </div>
+      </div>
+    </div>
+  </details>
+
+  <details class="type-detail" id="detail-h">
+    <summary>
+      <div class="type-detail-icon">🌿</div>
+      <div class="type-detail-heading">
+        <div class="type-detail-label">TYPE H ｜ 気血がバランスよく巡っている</div>
+        <div class="type-detail-name">バランス型（健康タイプ）</div>
+      </div>
+      <div class="type-detail-arrow">▼</div>
+    </summary>
+    <div class="type-detail-body">
+      <p>気・血・水のバランスが取れている、理想的な体質です。特に大きな不調がなく、睡眠・食欲・お通じも安定している方が多いタイプです。ただし、季節の変わり目や過労・ストレスによって体質は変化するため、今の良い状態を維持することを意識しましょう。</p>
+      <div class="td-row">
+        <div class="td-row-label">養生のポイント</div>
+        <p style="margin:0;">規則正しい生活・バランスの良い食事・適度な運動を続けることが、今の体質を保つ一番のコツです。無理なダイエットや過度な夜更かしは避け、体調の変化に気づいたら早めにケアしましょう。</p>
+      </div>
+      <div class="td-row">
+        <div class="td-row-label warn">漢方薬について</div>
+        <p style="margin:0;">現時点で気になる症状がなければ、漢方薬は特に必要ありません。季節の変わり目の不調予防や、体質維持を目的としたご相談も承っております。</p>
+      </div>
+    </div>
+  </details>
+
+  <!-- Consultation process -->
+  <div class="info-box">
+    <div class="info-box-title">🌿 ご相談の流れ</div>
+    <p>初診時は、このチャートの結果を参考にしつつ、現在の体調・生活習慣・睡眠・食事・ストレスの状態などを詳しくお伺いします。同じ「冷え」でも体質によって合う漢方薬はまったく異なるため、問診をもとに、お一人おひとりに合わせた処方を組み立てていきます。</p>
+    <p>西洋薬を服用中の方も、遠慮なくご相談ください。西洋医学との併用も可能です。基本的に院内処方となります。</p>
+  </div>
+
+  <!-- Phone CTA -->
+  <div class="consult-cta">
+    <p>体質チェックの結果について、詳しくお話をお伺いしながらご相談に乗ります。<br>お気軽にお電話ください。</p>
+    <a href="tel:088-856-7511" class="consult-tel">📞 088-856-7511</a>
+    <div class="consult-hours">受付時間：診療時間内（木・日・祝除く）</div>
+  </div>
+
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="common.js"></script>
+<script>
+  var TYPES = ["a","b","c","d","e","f","g","h"];
+
+  function calcScore() {
+    var totals = { a:0, b:0, c:0, d:0, e:0, f:0, g:0, h:0 };
+    document.querySelectorAll('#chartForm input[type="checkbox"]:checked').forEach(function (el) {
+      var t = el.getAttribute('data-type');
+      if (totals.hasOwnProperty(t)) totals[t]++;
+    });
+
+    var max = 0;
+    TYPES.forEach(function (t) { if (totals[t] > max) max = totals[t]; });
+
+    TYPES.forEach(function (t) {
+      var numEl = document.getElementById('score-' + t);
+      numEl.innerHTML = totals[t] + '<span>点</span>';
+      var card = document.getElementById('card-' + t);
+      var detail = document.getElementById('detail-' + t);
+      if (max > 0 && totals[t] === max) {
+        card.classList.add('score-top');
+        if (detail) detail.setAttribute('open', '');
+      } else {
+        card.classList.remove('score-top');
+        if (detail) detail.removeAttribute('open');
+      }
+    });
+  }
+
+  function resetChart() {
+    document.querySelectorAll('#chartForm input[type="checkbox"]').forEach(function (el) { el.checked = false; });
+    calcScore();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+</body>
+</html>
