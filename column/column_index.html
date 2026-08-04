@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>コラム｜新本町クリニック</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <meta name="description" content="新本町クリニックの院長コラム。美容・栄養・漢方など、健康と美に関するテーマを医師の視点でわかりやすく解説します。" />
+  <style>
+    /* ===== ヒーロー ===== */
+    .page-hero {
+      position: relative;
+      overflow: hidden;
+      padding: 80px 32px 72px;
+      text-align: center;
+      background: linear-gradient(160deg, #fdf6f6 0%, #fdf0f0 55%, #f0f7f2 100%);
+      border-bottom: 1px solid var(--border);
+    }
+    .page-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      opacity: 0.18;
+      pointer-events: none;
+      user-select: none;
+      transform: scale(1.04);
+    }
+    .page-hero::before,
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      left: 0; right: 0;
+      height: 60px;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .page-hero::before {
+      top: 0;
+      background: linear-gradient(to bottom, #fdf6f6, transparent);
+    }
+    .page-hero::after {
+      bottom: 0;
+      background: linear-gradient(to top, #f8f3f0, transparent);
+    }
+    .page-hero > :not(.page-hero-bg) {
+      position: relative;
+      z-index: 2;
+    }
+    .page-label {
+      font-size: 11px;
+      color: var(--sakura-deep);
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      display: block;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.1s;
+    }
+    .page-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 32px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      line-height: 1.4;
+      color: var(--text);
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.25s;
+    }
+    .page-sub {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 12px;
+      letter-spacing: 0.04em;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.4s;
+    }
+    .hero-rule {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 28px;
+      opacity: 0;
+      animation: fadeUp 0.6s ease forwards 0.5s;
+    }
+    .hero-rule span {
+      display: block;
+      height: 1px;
+      width: 48px;
+      background: var(--sakura);
+    }
+    .hero-rule em {
+      font-style: normal;
+      font-size: 14px;
+      color: var(--sakura);
+      line-height: 1;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ===== ラッパー ===== */
+    .column-list-wrap {
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 60px 24px 96px;
+    }
+
+    /* ===== セクション見出し ===== */
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+    .section-label-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--text);
+      letter-spacing: 0.06em;
+      white-space: nowrap;
+    }
+    .section-label-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right, var(--border), transparent);
+    }
+
+    /* ===== カードグリッド ===== */
+    .column-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 24px;
+    }
+
+    /* ===== 記事カード ===== */
+    .column-card {
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.3s, transform 0.3s;
+      box-shadow: 0 2px 12px rgba(58,53,48,0.05);
+    }
+    .column-card:hover {
+      box-shadow: 0 12px 40px rgba(58,53,48,0.13);
+      transform: translateY(-6px);
+    }
+
+    /* サムネイル */
+    .card-thumb-wrap {
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+      height: 210px;
+    }
+    .card-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+    .column-card:hover .card-thumb {
+      transform: scale(1.06);
+    }
+    .card-badge {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      border-radius: 20px;
+      padding: 4px 13px;
+      font-weight: 600;
+      backdrop-filter: blur(6px);
+    }
+    .card-badge.pink {
+      color: var(--sakura-deep);
+      background: rgba(253,240,240,0.88);
+      border: 1px solid var(--sakura);
+    }
+    .card-badge.green {
+      color: var(--green);
+      background: rgba(238,245,240,0.88);
+      border: 1px solid #c8ddd0;
+    }
+
+    /* カード本文 */
+    .card-body {
+      padding: 22px 24px 26px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 11px;
+    }
+    .card-date {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+    .card-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 17px;
+      font-weight: 600;
+      line-height: 1.6;
+      color: var(--text);
+      margin-bottom: 11px;
+    }
+    .card-excerpt {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.9;
+      flex: 1;
+      margin-bottom: 20px;
+    }
+    .card-readmore {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      padding: 10px 16px;
+      border-radius: 10px;
+      border: 1px solid;
+      transition: background 0.2s;
+    }
+    .card-readmore .arrow {
+      font-size: 14px;
+      transition: transform 0.2s;
+    }
+    .column-card:hover .card-readmore .arrow {
+      transform: translateX(4px);
+    }
+    .card-readmore.pink {
+      color: var(--sakura-deep);
+      border-color: var(--sakura);
+      background: var(--sakura-light);
+    }
+    .card-readmore.pink:hover { background: #f9e0e0; }
+    .card-readmore.green {
+      color: var(--green);
+      border-color: #c8ddd0;
+      background: var(--green-light);
+    }
+    .card-readmore.green:hover { background: #ddeee5; }
+
+    /* ===== 近日公開カード ===== */
+    .column-card-soon {
+      background: #fafaf8;
+      border: 1.5px dashed var(--border);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 220px;
+      padding: 40px 24px;
+      color: var(--text-muted);
+      text-align: center;
+    }
+    .soon-dot {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+    }
+    .soon-text { font-size: 13px; line-height: 1.85; }
+
+    /* ===== CTA ===== */
+    .column-cta {
+      margin-top: 64px;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, #fdf6f6 0%, #f5f9f6 100%);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 48px 32px 44px;
+      text-align: center;
+    }
+    .column-cta::before,
+    .column-cta::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 4px;
+      border-radius: 4px;
+    }
+    .column-cta::before {
+      left: 0;
+      background: linear-gradient(to bottom, var(--sakura), var(--green));
+    }
+    .column-cta::after {
+      right: 0;
+      background: linear-gradient(to bottom, var(--green), var(--sakura));
+    }
+    .cta-eyebrow {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--sakura-deep);
+      margin-bottom: 12px;
+      display: block;
+    }
+    .column-cta h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      line-height: 1.7;
+    }
+    .column-cta p {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 2;
+      margin-bottom: 24px;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      padding: 13px 34px;
+      border-radius: 28px;
+      transition: opacity 0.2s, transform 0.2s;
+      box-shadow: 0 4px 16px rgba(232,145,142,0.35);
+    }
+    .cta-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    /* ===== レスポンシブ ===== */
+    @media (max-width: 640px) {
+      .page-hero { padding: 60px 20px 52px; }
+      .page-title { font-size: 24px; }
+      .column-list-wrap { padding: 44px 16px 72px; }
+      .column-grid { grid-template-columns: 1fr; gap: 18px; }
+      .card-thumb-wrap { height: 180px; }
+      .column-cta { padding: 36px 22px 32px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <img src="pics/deco1.webp" alt="" class="page-hero-bg" aria-hidden="true" />
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+    <div class="hero-rule">
+      <span></span>
+      <em>✦</em>
+      <span></span>
+    </div>
+  </div>
+
+  <!-- コラム一覧 -->
+  <div class="column-list-wrap">
+
+    <div class="section-label">
+      <span class="section-label-text">最新コラム</span>
+      <span class="section-label-line"></span>
+    </div>
+
+    <div class="column-grid" id="column">
+
+      <!-- 記事9：高濃度ビタミンC点滴と心臓保護 -->
+      <a class="column-card" href="column_9_vitaminc_heart.html">
+        <div class="card-thumb-wrap">
+          <img src="pics/vitaminc_heart.webp" alt="心臓カテーテル治療・バイパス手術から心臓を守る高濃度ビタミンC点滴とは" class="card-thumb" loading="lazy" />
+          <span class="card-badge green">点滴・注射</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">2026年8月</span>
+          </div>
+          <div class="card-title">心臓は、休まない。<br>―― 高濃度ビタミンC点滴という「錆止め」が、心臓を守る科学</div>
+          <p class="card-excerpt">
+            心臓カテーテル治療やバイパス手術という過酷な処置から心臓を守る高濃度ビタミンC点滴。872人・7件の臨床試験を統合した2023年海外メタ解析データをもとに、当院院長が解説します。
+          </p>
+          <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+            <!-- 記事8：ノンケミカル日焼け止め -->
+      <a class="column-card" href="column_8_uv.html">
+        <div class="card-thumb-wrap">
+          <img src="pics/uv.webp" alt="" class="card-thumb" loading="lazy" />
+          <span class="card-badge pink">スキンケア</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">2026年7月</span>
+          </div>
+          <div class="card-title">守りながら、育てる。<br>―― 「毎日使う不安」に応える、ノンケミカル日焼け止めの科学</div>
+          <p class="card-excerpt">
+            紫外線吸収剤と紫外線散乱剤の違いから、ノンケミカル処方のLNC UVプロテクターが肌への負担を抑えながら高い防御力を実現する仕組みまで、当院院長が解説します。
+          </p>
+          <span class="card-readmore pink">続きを読む <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+
+      <!-- 記事7：肝臓ケア -->
+      <a class="column-card" href="column_7_liver.html">
+        <div class="card-thumb-wrap">
+          <img src="pics/liver.webp" alt="" class="card-thumb" loading="lazy" />
+          <span class="card-badge green">点滴・注射</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">2026年7月</span>
+          </div>
+          <div class="card-title">肝臓は文句を言わない<br>―― 「沈黙の臓器」を今日から守る、ダブルケアという考え方</div>
+          <p class="card-excerpt">
+            自覚症状が出にくい「沈黙の臓器」肝臓。点滴による今のケアとプラセンタ筋注による未来のケアを組み合わせた「ダブルケアアプローチ」を、臨床データとともに当院院長が解説します。
+          </p>
+          <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      
+      <!-- 記事6：気象病・夏バテ予防 -->
+      <a class="column-card" href="column_6_kikyo.html">
+        <div class="card-thumb-wrap">
+          <img src="pics/kishoubyo_natsubate.webp" alt="気象病によるだるさとこれからの夏バテ予防ケア" class="card-thumb" loading="lazy" />
+          <span class="card-badge green">漢方・和漢素材</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">2026年7月</span>
+          </div>
+          <div class="card-title">そのだるさ、気のせいじゃありません<br>―― 気象病によるだるさとこれからの夏バテ予防ケア</div>
+          <p class="card-excerpt">
+            気圧の変動で起こる原因不明のだるさ・眠気の正体を、東洋医学の「水滞」「気虚」という視点から解説。五苓散・補中益気湯を使い分けた、今日からできる夏バテ予防ケアをご紹介します。
+          </p>
+          <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 記事5：夏バテ・熱中症対策 -->
+      <a class="column-card" href="column_5_natsubate.html">
+        <div class="card-thumb-wrap">
+          <img src="pics/natsubate.webp" alt="科学的に正しい夏バテ・熱中症対策" class="card-thumb" loading="lazy" />
+          <span class="card-badge green">漢方・和漢素材</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">2026年6月</span>
+          </div>
+          <div class="card-title">今年の夏を健康に乗り切る最強アプローチ<br>―― 西洋医学と漢方のハイブリッド熱中症対策</div>
+          <p class="card-excerpt">
+            水を飲むだけでは防げない熱中症。補中益気湯・五苓散と点滴を組み合わせた、科学と漢方のハイブリッドアプローチを当院院長が解説します。
+          </p>
+          <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 記事4：後鼻漏 -->
+      <a class="column-card" href="column_4_koubiro.html">
+        <div class="card-thumb-wrap">
+          <img src="pics/Koubiro.webp" alt="咳・鼻づまり・不眠" class="card-thumb" loading="lazy" />
+          <span class="card-badge green">漢方・和漢素材</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">2026年6月</span>
+          </div>
+          <div class="card-title">咳・鼻づまり・不眠の意外な共通原因 <br>―後鼻漏とは？
+          </div>
+          <p class="card-excerpt">
+            ただの鼻水ではない。後鼻漏を、当院院長が解説します。
+          </p>
+          <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 記事3：加味逍遙散 -->
+      <a class="column-card" href="column_3_kamishoyosan.html">
+        <div class="card-thumb-wrap">
+          <img src="pics/kamishoyosan.webp" alt="漢方生薬のイメージ" class="card-thumb" loading="lazy" />
+          <span class="card-badge green">漢方・和漢素材</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">2026年5月</span>
+          </div>
+          <div class="card-title">漢方療法ってどうなの？
+<br>――更年期・PMSの臨床を元に詳しく解説</div>
+          <p class="card-excerpt">
+            更年期・PMSに伴う不安・不眠・自律神経症状に対する加味逍遙散・半夏厚朴湯の臨床5症例を、当院院長が解説します。
+          </p>
+          <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 記事2：高麗人参 -->
+      <a class="column-card" href="column_2_ginseng.html">
+        <div class="card-thumb-wrap">
+          <img src="pics/ginseng.webp" alt="高麗人参のイメージ" class="card-thumb" loading="lazy" />
+          <span class="card-badge green">漢方・和漢素材</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">2026年5月</span>
+          </div>
+          <div class="card-title">高麗人参のすごい歴史と効能<br>―― 二千年の時を超えた「万能の薬草」</div>
+          <p class="card-excerpt">
+            古代中国の文献にも登場する高麗人参。徳川家康も愛用した歴史から、最新科学で解明されたジンセノサイドの働き、アダプトゲンとしての現代的な意義まで詳しく解説します。
+          </p>
+          <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 記事1：コラーゲン -->
+      <a class="column-card" href="column_1_collagen.html">
+        <div class="card-thumb-wrap">
+          <img src="pics/collagen.webp" alt="コラーゲンのイメージ" class="card-thumb" loading="lazy" />
+          <span class="card-badge pink">美容・栄養</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">2026年5月</span>
+          </div>
+          <div class="card-title">コラーゲンはすごい<br>―― 体の「接着剤」が担う美と健康の秘密</div>
+          <p class="card-excerpt">
+            体内タンパク質の約30％を占めるコラーゲン。加齢や紫外線で失われるメカニズムから、「食べても意味がない」説の真偽、効率よく補う栄養素まで、医学的に解説します。
+          </p>
+          <span class="card-readmore pink">続きを読む <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+      <!-- 記事0：体質チェックチャート -->
+      <a class="column-card" href="column_0_chart.html">
+        <div class="card-thumb-wrap">
+          <img src="pics/chart.webp" alt="" class="card-thumb" loading="lazy" />
+          <span class="card-badge green">体質チェック</span>
+        </div>
+        <div class="card-body">
+          <div class="card-meta">
+            <span class="card-date">2026年7月</span>
+          </div>
+          <div class="card-title">あなたの体質は何タイプ？<br>―― 8つの質問でわかる、中医学的な体質タイプ診断チャート</div>
+          <p class="card-excerpt">
+            瘀血・気滞・血虚・気虚・陽虚・陽盛・陰虚・バランス型の8タイプから、ご自身の体質傾向をチェック。タイプ別の養生法や漢方薬の一例もご紹介します。
+          </p>
+          <span class="card-readmore green">続きを読む <span class="arrow">→</span></span>
+        </div>
+      </a>
+
+
+    </div>
+
+    <!-- CTA -->
+    <div class="column-cta">
+      <span class="cta-eyebrow">Consultation</span>
+      <h3>健康・美容のご相談は<br>新本町クリニックへ</h3>
+      <p>内科・心療内科・漢方内科として、体の内側からのアプローチをご提案します。<br>コラムの内容についてもお気軽にご相談ください。</p>
+      <a href="../index.html" class="cta-btn">診療案内を見る →</a>
+    </div>
+
+  </div>
+
+  <script src="common.js"></script>
+</body>
+</html>
