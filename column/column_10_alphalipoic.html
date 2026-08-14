@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>焦げているのは、パンだけじゃない。｜新本町クリニック コラム</title>
+  <meta name="description" content="疲労感やお肌のくすみの裏に潜む「AGE（終末糖化産物）」という体の焦げ。その正体と血管・皮膚・関節への影響、そして水にも油にも溶けるユニークな抗酸化成分アルファリポ酸による点滴サポートについて、当院院長が解説します。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="common.css" />
+  <style>
+    /* ===== コラムページ固有スタイル ===== */
+    .column-wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* パンくず */
+    .breadcrumb {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .breadcrumb a {
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover { text-decoration: underline; }
+    .breadcrumb-sep { color: var(--border); }
+
+    /* 記事ヘッダー */
+    .article-header {
+      margin-bottom: 36px;
+    }
+    .article-category {
+      display: inline-block;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--sakura-deep);
+      background: var(--sakura-light);
+      border: 1px solid var(--sakura);
+      border-radius: 20px;
+      padding: 4px 14px;
+      margin-bottom: 14px;
+    }
+    .article-title {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 28px;
+      font-weight: 600;
+      line-height: 1.5;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .article-meta {
+      font-size: 12px;
+      color: var(--text-muted);
+      display: flex;
+      gap: 16px;
+    }
+
+    /* 動画埋め込み */
+    .article-video {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+    }
+    .article-video iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* アイキャッチバナー */
+    .article-eyecatch-banner {
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(135deg, #fdeceb 0%, #fdf0d8 50%, #f3e3c0 100%);
+      border-radius: 12px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 24px rgba(58,53,48,0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .article-eyecatch-banner .banner-icon {
+      font-size: 64px;
+    }
+    .article-eyecatch-banner .banner-text {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: #8a5a3a;
+      letter-spacing: 0.06em;
+    }
+
+    /* 記事本文 */
+    .article-body {
+      font-size: 15px;
+      line-height: 2;
+      color: var(--text);
+    }
+    .article-body p {
+      margin-bottom: 1.6em;
+    }
+
+    /* セクション見出し */
+    .section-heading {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--text);
+      border-left: 4px solid var(--sakura-deep);
+      padding-left: 14px;
+      margin: 44px 0 18px;
+      line-height: 1.5;
+    }
+
+    /* 豆知識ボックス */
+    .trivia-box {
+      background: var(--green-light);
+      border: 1px solid #c8ddd0;
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 28px 0;
+    }
+    .trivia-box-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      color: var(--green);
+      margin-bottom: 8px;
+    }
+    .trivia-box p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* 引用・コラムボックス */
+    .highlight-box {
+      background: var(--sakura-light);
+      border-left: 4px solid var(--sakura-deep);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 28px 0;
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* ポイントリスト */
+    .point-list {
+      list-style: none;
+      margin: 20px 0 28px;
+      padding: 0;
+    }
+    .point-list li {
+      padding: 10px 14px 10px 40px;
+      position: relative;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .point-list li:first-child { border-top: 1px solid var(--border); }
+    .point-list li::before {
+      content: "✓";
+      position: absolute;
+      left: 12px;
+      color: var(--sakura-deep);
+      font-weight: 700;
+    }
+
+    /* テーブル */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13px;
+      margin: 24px 0 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .comparison-table th {
+      background: var(--sakura-deep);
+      color: #fff;
+      padding: 12px 16px;
+      text-align: left;
+      font-weight: 500;
+    }
+    .comparison-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    .comparison-table tr:nth-child(even) td { background: var(--sakura-light); }
+    .comparison-table tr:last-child td { border-bottom: none; }
+
+    /* 医師コメントカード */
+    .doctor-comment {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 36px 0;
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+    }
+    .doctor-avatar {
+      flex-shrink: 0;
+      width: 52px;
+      height: 52px;
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 2px solid var(--sakura);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+    }
+    .doctor-comment-body {}
+    .doctor-comment-name {
+      font-size: 12px;
+      color: var(--sakura-deep);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .doctor-comment-text {
+      font-size: 14px;
+      line-height: 1.9;
+      color: var(--text);
+    }
+
+    /* ダメージ部位カード群 */
+    .step-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 14px;
+      margin: 24px 0 32px;
+    }
+    .step-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 16px;
+      text-align: center;
+    }
+    .step-card-num {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--sakura-deep);
+      letter-spacing: 0.1em;
+      margin-bottom: 6px;
+    }
+    .step-card-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+    .step-card-desc { font-size: 12px; color: var(--text-muted); line-height: 1.7; }
+
+    /* 施術ステップ */
+    .flow-steps {
+      counter-reset: flow;
+      margin: 24px 0 32px;
+      padding: 0;
+      list-style: none;
+    }
+    .flow-steps li {
+      position: relative;
+      padding: 4px 0 20px 44px;
+      border-left: 2px solid var(--sakura);
+      margin-left: 14px;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .flow-steps li:last-child { border-left: 2px solid transparent; padding-bottom: 0; }
+    .flow-steps li::before {
+      counter-increment: flow;
+      content: counter(flow);
+      position: absolute;
+      left: -15px;
+      top: 0;
+      width: 28px;
+      height: 28px;
+      background: var(--sakura-deep);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .flow-steps strong { color: var(--sakura-deep); }
+
+    /* ページフッター（記事末） */
+    .article-footer {
+      margin-top: 60px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .cta-block {
+      background: linear-gradient(135deg, var(--sakura-light), var(--green-light));
+      border: 1px solid var(--sakura);
+      border-radius: 12px;
+      padding: 28px 28px 24px;
+      text-align: center;
+    }
+    .cta-block h3 {
+      font-family: 'Noto Serif JP', serif;
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .cta-block p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 18px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: var(--sakura-deep);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 12px 32px;
+      border-radius: 24px;
+      transition: opacity 0.2s;
+    }
+    .cta-btn:hover { opacity: 0.85; }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      color: var(--sakura-deep);
+      text-decoration: none;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    .disclaimer {
+      font-size: 12px;
+      color: var(--text-muted);
+      background: var(--cream);
+      border-radius: 8px;
+      padding: 12px 16px;
+      line-height: 1.8;
+      margin-top: 32px;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .article-title { font-size: 22px; }
+      .doctor-comment { flex-direction: column; gap: 12px; }
+      .comparison-table { font-size: 12px; }
+      .comparison-table th, .comparison-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ヘッダー -->
+  <div id="header-placeholder"></div>
+
+  <!-- ページヒーロー -->
+  <div class="page-hero">
+    <span class="page-label">Column</span>
+    <h1 class="page-title">クリニックコラム</h1>
+    <p class="page-sub">院長が綴る、健康と美容のヒント</p>
+  </div>
+
+  <!-- 記事本体 -->
+  <div class="column-wrap">
+
+    <!-- パンくずリスト -->
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <a href="index.html">TOP</a>
+      <span class="breadcrumb-sep">›</span>
+      <span>コラム</span>
+      <span class="breadcrumb-sep">›</span>
+      <span>焦げているのは、パンだけじゃない。</span>
+    </nav>
+
+    <!-- 記事ヘッダー -->
+    <header class="article-header">
+      <span class="article-category">点滴・注射</span>
+      <h2 class="article-title">焦げているのは、パンだけじゃない。<br>―― 体に潜む「AGE」の正体と、アルファリポ酸点滴という処方箋</h2>
+      <div class="article-meta">
+        <span>新本町クリニック 院長</span>
+        <span>2026年8月</span>
+      </div>
+    </header>
+
+    <!-- 動画 -->
+    <div class="article-video">
+      <iframe
+        src="https://www.youtube.com/embed/3uioLni3nr8"
+        title="焦げているのは、パンだけじゃない。"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+        loading="lazy"
+      ></iframe>
+    </div>
+
+    <!-- 本文 -->
+    <div class="article-body">
+
+      <!-- 導入 -->
+      <h3 class="section-heading">体の中で「焦げ」が起きている、と言われたら</h3>
+      <p>
+        「体の中で焦げが起きている」――そう聞くと、多くの方が「焼肉じゃあるまいし」と少し驚かれるかもしれません。
+        ですがこれは決して大げさな例え話ではなく、皆さんが日頃感じている抜けない疲労感やお肌のくすみ、むくみといった不調のサインを、実に的確に言い表しているキーワードなのです。
+      </p>
+      <p>
+        今回は、この体内の「焦げ」の正体から、なぜ当院がアルファリポ酸の点滴治療をご提供しているのか、その背景にある科学と、当院独自のホリスティックなアプローチについて、じっくりと解説していきます。
+      </p>
+
+      <!-- AGEとは -->
+      <h3 class="section-heading">体内に潜む「焦げ」の正体――それがAGEです</h3>
+      <p>
+        まず知っておいていただきたいのが「AGE（エージーイー、終末糖化産物）」という物質です。
+        これは食事から取り込んだ糖とタンパク質が結びつき、体内に蓄積していく現象で、その仕組みから「生物学的な焦げ」と呼ばれることがあります。
+      </p>
+      <div class="trivia-box">
+        <div class="trivia-box-label">🍞 トースターでパンを焼くのと同じ原理</div>
+        <p>
+          トースターでパンを焼くと自然にこんがりと焦げ目がつきますよね。あれとまさに同じ反応が、私たちの体の中でもゆっくりと進んでいます。
+          専門的には「メイラード反応」と呼ばれるこの化学変化は、年齢を重ねたり、普通の生活を送っていれば誰にでも起こる、ごく自然な現象です。特別な病気のサインというわけではありませんので、過度に心配する必要はありません。
+        </p>
+      </div>
+      <p>
+        では、このAGEが体内に蓄積していくと、時間の経過とともに私たちの体のどこにダメージを与えていくのでしょうか。
+      </p>
+
+      <div class="step-cards">
+        <div class="step-card">
+          <div class="step-card-num">影響部位①</div>
+          <div class="step-card-title">血管</div>
+          <div class="step-card-desc">血管の柔軟性が失われ、負担がかかりやすくなる</div>
+        </div>
+        <div class="step-card">
+          <div class="step-card-num">影響部位②</div>
+          <div class="step-card-title">皮膚</div>
+          <div class="step-card-desc">コラーゲンが変性し、弾力の低下につながる</div>
+        </div>
+        <div class="step-card">
+          <div class="step-card-num">影響部位③</div>
+          <div class="step-card-title">関節</div>
+          <div class="step-card-desc">関節まわりの組織に負荷が蓄積しやすくなる</div>
+        </div>
+      </div>
+      <div class="highlight-box">
+        特に負担がかかりやすいのが、血管・皮膚・そして関節です。年齢とともに「なんだか肌の弾力がなくなってきた」「関節がギシギシする気がする」と感じることはありませんか。実はその裏側に、この糖化ストレスがしっかりと関わっているケースが少なくないのです。
+      </div>
+
+      <!-- アルファリポ酸 -->
+      <h3 class="section-heading">この厄介な糖化ストレスに、どう立ち向かうか</h3>
+      <p>
+        ここで登場するのが「アルファリポ酸」です。アルファリポ酸の何がすごいかというと、ちょっとした科学の魔法のような特徴を持っている点にあります。
+      </p>
+      <p>
+        一般的な抗酸化物質は、水に溶けやすいタイプか、油に溶けやすいタイプか、どちらか一方の性質しか持たないことがほとんどです。
+        ところがアルファリポ酸はめちゃくちゃユニークで、水にも油にも、両方の環境で働くことができます。つまり体の隅々まで入り込んでサポートしてくれるという、非常に強力なアドバンテージを持っているのです。
+      </p>
+      <div class="trivia-box">
+        <div class="trivia-box-label">💡 「両親媒性」というアルファリポ酸の強み</div>
+        <p>
+          このように水にも油にも溶ける性質を、専門的には「両親媒性（りょうしんばいせい）」と呼びます。
+          細胞は水分の多い部分と油（脂質）でできた膜の両方から成り立っているため、両方の環境で働けるアルファリポ酸は、細胞の内側から外側まで幅広くサポートできる点で、他の抗酸化成分とは一線を画す存在なのです。
+        </p>
+      </div>
+
+      <!-- 品質へのこだわり -->
+      <h3 class="section-heading">だからこそ、品質にはこだわりたい</h3>
+      <p>
+        アルファリポ酸のようなユニークな成分だからこそ、当院では品質にこだわっています。
+        新本町クリニックでは、安全性と質を最大限に確保するため、ドイツのメーカーが製造している完全未開封の正規輸入品を、わざわざ採用しています。
+        ヨーロッパでは、すでに長年にわたり医療現場で使われてきた実績のあるものです。
+      </p>
+      <p>
+        こうしたところからも、当院がどれだけ品質や安全なルートでの調達にこだわっているかが伝わるのではないかと思います。
+      </p>
+
+      <!-- 正しい位置づけ -->
+      <h3 class="section-heading">ただし、誤解してほしくない大事なポイントがあります</h3>
+      <p>
+        この治療の本当の目的は、全身の糖化ストレスをやわらげるためのサポートです。
+        つまり「一晩寝たら焦げが全部消えている」というような怪しい魔法ではなく、体に寄り添いながら堅実にサポートしていくという、現実的で誠実なアプローチだとご理解ください。
+      </p>
+
+      <!-- ビタミンB群との相乗効果 -->
+      <h3 class="section-heading">アルファリポ酸の働きを引き上げる、ビタミンB群という相棒</h3>
+      <p>
+        続いて重要なのが、ビタミンB群の相乗効果についてです。この点滴には、ビタミンB1・B6・B12が含まれていますが、これらはエネルギー代謝や神経伝達に欠かせない栄養素として、体の中でとても良い仕事をしてくれています。
+        毎日のずしんと来る疲労感を軽くしたり、神経系を健やかに保ったりするためのベースとなる栄養サポートとして、欠かせない存在です。
+      </p>
+      <p>
+        では、なぜアルファリポ酸とわざわざ一緒に配合するのでしょうか。実は、両者を組み合わせることでビタミンB群がアルファリポ酸にとって最高の相棒となり、その働きをぐんと引き上げてくれるのです。
+        バラバラに働くよりもタッグを組むことで、お互いをカバーし合い、体の中でより効率よく力を発揮できるように、非常に計算されて設計されています。
+      </p>
+
+      <!-- 施術の流れ -->
+      <h3 class="section-heading">実際に受ける時の流れと、ちょっとした注意点</h3>
+      <p>
+        実際の施術プロセスはとてもシンプルです。ただし新本町クリニックでは、患者さんの納得感を大切にしているため、点滴の前にスタッフが所要時間や一般的な副作用のリスク、医学的な注意点などをしっかりと説明します。
+      </p>
+      <ol class="flow-steps">
+        <li><strong>カウンセリング</strong>：現在の体調や気になる症状、既往歴などをうかがいます。</li>
+        <li><strong>事前説明</strong>：所要時間、想定される副作用、注意点をスタッフが丁寧にご案内します。</li>
+        <li><strong>点滴の実施</strong>：ベッドで安静にしていただきながら、点滴を行います。</li>
+        <li><strong>アフターフォロー</strong>：体調の変化や気になる点があれば、その都度ご相談いただけます。</li>
+      </ol>
+      <p>
+        やる前にモヤモヤしていた疑問を全部クリアにできるからこそ、安心感が違います。
+      </p>
+
+      <!-- クリニックの誠実な姿勢 -->
+      <h3 class="section-heading">「絶対に効きます」とは言わない、誠実なスタンス</h3>
+      <p>
+        個人的に、このクリニックのスタンスはとても良いなと感じています。「これを打てば絶対に効果がありますよ」といった過剰なアピールは一切しません。
+        効果には個人差がありますとしっかり伝えたうえで、あくまで目的は糖化ストレスへのサポートであるということを、患者さん一人ひとりに理解してもらうようにしているのです。
+      </p>
+      <p>
+        こうした正直で誠実な姿勢こそ、本当に信頼できるクリニックの条件ではないかと思います。
+      </p>
+
+      <!-- 医師コメント -->
+      <div class="doctor-comment">
+        <div class="doctor-avatar">👩‍⚕️</div>
+        <div class="doctor-comment-body">
+          <div class="doctor-comment-name">新本町クリニック 院長より</div>
+          <p class="doctor-comment-text">
+            体内のAGE（糖化ストレス）は、加齢とともに誰にでも自然に蓄積していくものです。だからこそ、正しい知識を持ったうえで、無理のない形で寄り添うようにケアしていくことが大切だと考えています。
+            アルファリポ酸点滴は「魔法の若返り注射」ではなく、糖化ストレスに対する堅実なサポートです。効果には個人差がありますので、まずは診察でお体の状態やお悩みをうかがいながら、ご自身に合った点滴プランをご提案いたします。
+          </p>
+        </div>
+      </div>
+
+      <!-- まとめ -->
+      <h3 class="section-heading">まとめ：焦げに気づき、寄り添うようにケアする</h3>
+      <p>
+        抜けない疲労感やお肌のくすみ、関節の違和感――その背景には、体内でじわじわと進む「AGE」という焦げが関わっているかもしれません。
+        アルファリポ酸は、水にも油にも溶けるユニークな性質を活かし、ビタミンB群という相棒とともに、そんな糖化ストレスに堅実に寄り添うサポート役です。
+      </p>
+      <p>
+        「なんとなく不調が続く」「疲れが抜けにくくなった」と感じている方は、ぜひ一度当院にご相談ください。
+      </p>
+
+      <!-- 注意書き -->
+      <p class="disclaimer">
+        ※本コラムの内容は一般的な情報提供を目的としたものであり、特定の疾患の診断・治療・予防効果を保証するものではありません。アルファリポ酸点滴・ビタミンB群点滴は、あくまで糖化ストレスへの補助的なサポートを目的としたものであり、効果には個人差があります。体質や持病・お薬との相互作用が気になる方は、施術前に医師にご相談ください。
+      </p>
+
+    </div>
+    <!-- /article-body -->
+
+    <!-- 記事末フッター -->
+    <div class="article-footer">
+      <div class="cta-block">
+        <h3>アルファリポ酸点滴のご相談は当院へ</h3>
+        <p>糖化ストレスケア・疲労サポート・アンチエイジングまで、あなたに合った点滴プランをご提案します。<br>まずはお気軽にご相談ください。</p>
+        <a href="../index.html" class="cta-btn">診療案内を見る</a>
+      </div>
+      <a href="index.html#column" class="back-link">← コラム一覧に戻る</a>
+    </div>
+
+  </div>
+  <!-- /column-wrap -->
+
+  <script src="common.js"></script>
+</body>
+</html>
