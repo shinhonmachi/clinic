@@ -287,6 +287,9 @@ section { padding: 56px 32px; }
   .access-cards { grid-template-columns: 1fr; }
   .doctor-inner { flex-direction: column; align-items: center; text-align: center; }
 }
+
+.doctor-avatar { overflow: hidden; }
+.doctor-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
 </style>
 </head>
 <body>
@@ -344,7 +347,7 @@ section { padding: 56px 32px; }
     <div class="section-title">निर्देशकको सन्देश</div>
   </div>
   <div class="doctor-inner">
-    <div class="doctor-avatar">👩‍⚕️</div>
+    <div class="doctor-avatar"><img src="../pics/director.webp" alt="Dr. Naoko Yoshimura, Director of Shinhonmachi Clinic" width="605" height="605" loading="lazy"></div>
     <div>
       <div class="doctor-role">निर्देशक, एम.डी.</div>
       <div class="doctor-name">नाओको योशिमुरा</div>
