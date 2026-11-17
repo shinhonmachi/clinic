@@ -281,6 +281,9 @@ section { padding: 56px 32px; }
   .access-cards { grid-template-columns: 1fr; }
   .doctor-inner { flex-direction: column; align-items: center; text-align: center; }
 }
+
+.doctor-avatar { overflow: hidden; }
+.doctor-avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; display: block; }
 </style>
 </head>
 <body>
@@ -338,7 +341,7 @@ section { padding: 56px 32px; }
     <div class="section-title">院長ごあいさつ</div>
   </div>
   <div class="doctor-inner">
-    <div class="doctor-avatar">👩‍⚕️</div>
+    <div class="doctor-avatar"><img src="pics/director.webp" alt="新本町クリニック院長 吉村 尚子" width="605" height="605" loading="lazy"></div>
     <div>
       <div class="doctor-role">院長</div>
       <div class="doctor-name">吉村 尚子</div>
